@@ -1,0 +1,478 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Social Lib</title>
+    <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+    <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+</head>
+
+<body>
+<section class="main_layout">
+    {% include 'components/left_menu.html' %}
+
+    <section class="content_layout">
+        {% include 'components/header.html' %}
+
+        <main class="main_content_layout">
+            <div class="main_content_container">
+                <div class="main_books_content_block">
+                    <div class="main_upper_block">
+                        <div style="width: 100%;">
+                            <h1 class="category_books_page_content_block_title">Моя <span class="orange_text">книжная полка</span>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="margin_top_30px"></div>
+
+                    <input class="radio_input" type="radio" name="tabs" id="tab_favour" checked/>
+                    <label class="radio_label" for="tab_favour">Избранные</label>
+                    <input class="radio_input" type="radio" name="tabs" id="tab_on_road"/>
+                    <label class="radio_label" for="tab_on_road">В ожидании доставки</label>
+                    <input class="radio_input" type="radio" name="tabs" id="tab_i_read"/>
+                    <label class="radio_label" for="tab_i_read">Я читаю</label>
+                    <input class="radio_input" type="radio" name="tabs" id="tab_history"/>
+                    <label class="radio_label" for="tab_history">Прочтенные</label>
+                    <div class="margin_bottom_30px"></div>
+
+
+                    <div class="tab favour_tab">
+
+                        <div class="shelf_books_block">
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
+                                             alt="">
+
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <div class="column_flex">
+                                        <form method="POST">
+                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                        </form>
+                                        <form>
+                                            <button class="return_book_button" type="submit">Удалить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="tab on_road_tab">
+                        <div class="shelf_books_block">
+
+                            <div class="shelf_book_info_block background_lightgreen background_lightgreen_hover">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str">Ожидайте звонка с
+                                        подтверждением <span class="underlined_text">отправки</span> вам вашей <span
+                                                class="underlined_text">книги</span>.</p>
+                                    <div class="column_flex">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block background_lightred background_lightred_hover">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <p class="search_book_table_book_author_str">Ожидайте звонка с подтверждением
+                                        регистрации <span class="underlined_text">возврата вашей книги</span>.</p>
+                                    <div class="column_flex">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab i_read_tab">
+                        <div class="shelf_books_block">
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                получения:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.11.2023</p>
+                                        </div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.12.2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="column_flex">
+                                        <form>
+                                            <button class="return_book_button" type="submit">Оформить возврат</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                получения:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.11.2023</p>
+                                        </div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.12.2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="column_flex">
+                                        <form>
+                                            <button class="return_book_button" type="submit">Оформить возврат</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab books_history_tab">
+                        <div class="shelf_books_block">
+
+                            <div class="shelf_book_info_block"
+                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href="">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                получения:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.11.2023</p>
+                                        </div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                18.11.2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="column_flex">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shelf_book_info_block">
+                                <div class="shelf_book_info_container">
+                                    <a class="book_link" href=""
+                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                        <img class="book_small_cover"
+                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             alt="">
+                                        <p class="catalog_book_cover_name">Android. Программирование для
+                                            профессионалов</p>
+                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
+                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    </a>
+                                </div>
+                                <div class="shelf_book_info_container_2">
+                                    <div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                получения:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                01.11.2023</p>
+                                        </div>
+                                        <div>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
+                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
+                                                23.11.2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="column_flex">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </section>
+</section>
+
+
+</body>
+</html>
+
