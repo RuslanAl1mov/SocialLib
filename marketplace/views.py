@@ -25,3 +25,7 @@ def user_profile_page(request):
 
 def books_shelf_page(request):
     return render(request, 'book_shelf_page/book_shelf.html')
+
+
+def book_donate_page(request):
+    return render(request, 'book_donate_page/book_donate.html')

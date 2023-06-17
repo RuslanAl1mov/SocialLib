@@ -758,6 +758,10 @@ input[name="r"] {
     font-weight: 600;
 }
 
+.margin_0 {
+    margin: 0 !important;
+}
+
 .margin_right_30px {
     margin: 0 30px 0 0;
 }
@@ -779,15 +783,44 @@ input[name="r"] {
 }
 
 .margin_top_15px {
-    margin-top: 15px;
+    margin-top: 15px !important;
 }
 
 .margin_top_30px {
-    margin-top: 30px;
+    margin-top: 30px !important;
 }
+
+.margin_top_40px {
+    margin-top: 40px !important;
+}
+
+.margin_top_50px {
+    margin-top: 50px !important;
+}
+
+.margin_top_60px {
+    margin-top: 60px !important;
+}
+
 
 .margin_bottom_30px {
     margin-bottom: 30px;
+}
+
+.padding_0 {
+    padding: 0 !important;
+}
+
+.padding_left_50px {
+    padding-left: 50px !important;
+}
+
+.padding_left_60px {
+    padding-left: 60px !important;
+}
+
+.padding_left_70px {
+    padding-left: 70px !important;
 }
 
 .book_info_author_link {
@@ -1062,12 +1095,11 @@ table {
 
 /* hide contents */
 /* show contents only for selected tab */
-#tab_profile:checked ~ .profile,
-#tab_favour:checked ~ .favour_tab,
-#tab_on_road:checked ~ .on_road_tab,
-#tab_i_read:checked ~ .i_read_tab,
-#tab_history:checked ~ .books_history_tab,
-#tab_security:checked ~ .security {
+#tab_1:checked ~ ._1_tab,
+#tab_2:checked ~ ._2_tab,
+#tab_3:checked ~ ._3_tab,
+#tab_4:checked ~ ._4_tab,
+#tab_5:checked ~ ._5_tab{
     display: block;
 }
 
@@ -1417,3 +1449,15 @@ table {
     text-decoration: none;
     color: #4D4D4D;
 }
+
+.profile_textarea_field {
+    max-width: 80%;
+    min-height: 60px;
+    min-width: 600px;
+    height: 200px;
+    margin-left: 60px;
+    display: block;
+    padding-top: 10px;
+}
+
+
