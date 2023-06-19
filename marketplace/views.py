@@ -3,6 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 
 
+def registration_page(request):
+    return render(request, 'authorization/registration.html')
+
+
+def authorization_page(request):
+    return render(request, 'authorization/authorization.html')
+
 def home_page(request):
     return render(request, 'home/home.html')
 
