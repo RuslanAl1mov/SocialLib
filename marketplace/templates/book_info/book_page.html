@@ -23,26 +23,33 @@
                 <div class="main_upper_block" >
                     <div class="big_book_cover_block">
                         <img class="big_book_cover_img"
-                             src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
+                             src="{{ book_info.img.url }}"
                              alt="">
                     </div>
                     <div class="main_book_info_block">
-                        <p class="book_info_book_name">Android. Программирование для настоящих профессионалов</p>
+                        <p class="book_info_book_name">{{ book_info.short_name }}</p>
                         <div class="book_info_paragraph_block">
                             <p class="book_info_paragraph">Авторы:</p>
-                            <a class="book_info_author_link" href="">Б.Филлипс</a>
-                            <p class="book_info_paragraph">,</p>
-                            <a class="book_info_author_link" href="">К.Стюарт</a>
-                            <p class="book_info_paragraph">,</p>
-                            <a class="book_info_author_link" href="">К.Марсикано</a>
+                            {% for author in book_info.author.all %}
+                                <form method="POST" action="{% url 'book_search' %}" class="book_info_author_form">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="search_value" value="{{ author.name }}">
+                                    <a class="book_info_author_link" href="#" onclick="this.parentNode.submit(); return false;">
+                                        {{ author.name }}
+                                    </a>
+                                </form>
+                                {% if not forloop.last %},{% endif %}
+                            {% endfor %}
                         </div>
                         <div class="book_info_paragraph_block">
                             <p class="book_info_paragraph">Год издания:</p>
-                            <p class="book_info_paragraph">2023</p>
-                            <p class="book_info_paragraph grey_paragraph margin_left_20px">3-е издание</p>
+                            <p class="book_info_paragraph">{{ book_info.year }}</p>
+                            {% if book_info.publications%}
+                            <p class="book_info_paragraph grey_paragraph margin_left_20px">Издание: {{ book_info.publications }} </p>
+                            {% endif %}
                         </div>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">Язык: Русский</p>
+                            <p class="book_info_paragraph">Язык: {{ book_info.get_language_display }}</p>
 
                         </div>
 
@@ -57,20 +64,43 @@
                         <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">Варианты доступа:</p>
                         <div class="book_info_paragraph_block">
                             <div class="book_info_paragraph_block" style="margin-top:15px">
+                                {% if book_info.is_paper %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
                                          href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
                                 </svg>
+                                {% else %}
+                                <svg class="header_menu_icon" style="margin-left:25px">
+                                    <use height="22px" width="22px" fill="#4D4D4D"
+                                         href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
+                                </svg>
+                                {% endif %}
                                 <p class="book_info_paragraph bold_paragraph">Бумажная книга</p>
+
+                                {% if book_info.is_eBook %}
+                                <svg class="header_menu_icon">
+                                    <use height="20px" width="20px" fill="#42BB4E"
+                                         href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                </svg>
+                                {% else %}
                                 <svg class="header_menu_icon" style="margin-left:25px">
                                     <use height="22px" width="22px" fill="#4D4D4D"
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
+                                {% endif %}
                                 <p class="book_info_paragraph bold_paragraph">Электронная книга</p>
+
+                                {% if book_info.is_audio %}
+                                <svg class="header_menu_icon">
+                                    <use height="20px" width="20px" fill="#42BB4E"
+                                         href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                </svg>
+                                {% else %}
                                 <svg class="header_menu_icon" style="margin-left:25px">
                                     <use height="22px" width="22px" fill="#4D4D4D"
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
+                                {% endif %}
                                 <p class="book_info_paragraph bold_paragraph">Аудиокнига</p>
                             </div>
                         </div>
@@ -89,33 +119,16 @@
                 </div>
                 <div class="main_description_block">
                     <h1 class="book_info_secondary_title"><span class="orange_text">Аннотация</span> к книге:</h1>
-                    <p class="text_paragraph">Чтобы протестировать класс, написанный на PHP, с использованием фреймворка PHPUnit, необходимо
-                        создать тестовый класс, расширяющий базовый класс PHPUnit_Framework_TestCase. Затем создать в
-                        этом классе публичные методы, начинающиеся со слова test (если создать метод, который будет
-                        называться по-другому, он не будет автоматически вызван при прогоне тестов), и поместить в них
-                        код, выполняющий действия с объектами тестируемого класса и проверяющий результат. На этом можно
-                        закончить и скормить полученный класс phpunit, который, в свою очередь, последовательно вызовет
-                        все тестовые методы и любезно предоставит отчет об их работе. Однако в большинстве случаев в
-                        каждом из тестовых методов будет повторяющийся код, подготавливающий систему для работы с
-                        тестируемым объектом. Для того, чтобы избежать дублирования кода, в классе
-                        PHPUnit_Framework_TestCase созданы защищенные методы setUp и tearDown, имеющие пустую
-                        реализацию. Эти методы вызываются перед и после запуска очередного тестового метода
-                        соответственно и служат для подготовки системы к выполнению тестовых действий и очистки ее после
-                        завершения каждого теста. В тестовом классе, расширяющем PHPUnit_Framework_TestCase, можно
-                        переопределить эти методы и поместить повторяющийся ранее в каждом тестовом методе код в них. В
-                        результате последовательность вызова методов при прогонке тестов будет следующая.
-                    </p>
+                    <p class="text_paragraph">{{ book_info.caption }}</p>
                 </div>
                 <div class="main_description_block">
                     <h1 class="book_info_secondary_title"><span class="orange_text">Ключевые</span> слова:</h1>
-                    <form method="POST">
+                    <form method="POST" action="{% url 'book_search' %}">
+                        {% csrf_token %}
                         <div class="book_info_keywords_block">
-                            <input class="keyword_text" type="submit" name="searched" value="Android,">
-                            <input class="keyword_text" type="submit" name="searched" value="Kotlin,">
-                            <input class="keyword_text" type="submit" name="searched" value="Для профессионалов,">
-                            <input class="keyword_text" type="submit" name="searched" value="Программирование,">
-                            <input class="keyword_text" type="submit" name="searched" value="Создание приложений,">
-                            <input class="keyword_text" type="submit" name="searched" value="Телефоны">
+                            {% for keyword in book_info.keyword.all %}
+                            <input class="keyword_text" type="submit" name="search_value" value="{{ keyword.name }}{% if not forloop.last %},{% endif %}">
+                            {% endfor %}
                         </div>
                     </form>
                 </div>
@@ -123,51 +136,14 @@
                     <h1 class="book_info_secondary_title"><span class="orange_text">Еще книги</span> от Авторов:</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                            {% for books in author_books%}
+                            <a href="{% url 'book' books.pk %}">
+                            <div class="book_cover_only_block" title="{{ books.full_name }}">
                                 <img class="book_small_cover"
-                                     src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}">
+                                     src="{{ books.img.url }}">
                             </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}">
-                            </div>
-
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}">
-                            </div>
+                            </a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -175,51 +151,14 @@
                     <h1 class="book_info_secondary_title"><span class="orange_text">Похожие</span> Книги:</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
-                            <div class="book_cover_only_block">
+                            {% for books in similar_books%}
+                            <a href="{% url 'book' books.pk %}">
+                            <div class="book_cover_only_block" title="{{ books.full_name }}">
                                 <img class="book_small_cover"
-                                     src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}">
+                                     src="{{ books.img.url }}">
                             </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}">
-                            </div>
-
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block" title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}">
-                            </div>
+                            </a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

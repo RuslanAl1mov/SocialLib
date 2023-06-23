@@ -3,7 +3,7 @@
 <aside class="side_menu">
     <div class="menu_list">
         <div class="menu_logo_container">
-            <a class="menu_logo_link" href="#">
+            <a class="menu_logo_link" href="{% url 'home' %}">
                 <img class="menu_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
             </a>
         </div>
@@ -12,21 +12,21 @@
                 <nav class="menu_list">
                     <dl>
                         <dt class="menu_item">
-                            <a class="menu_item_link menu_item_link_active" href="#">
+                            <a class="menu_item_link menu_item_link_active" href="{% url 'home' %}">
                                 <svg class="menu_item_icon menu_item_icon_active">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#home"></use>
                                 </svg>
                                 Дом</a>
                         </dt>
                         <dt class="menu_item">
-                            <a class="menu_item_link" href="#">
+                            <a class="menu_item_link" href="{% url 'book_shelf' %}">
                                 <svg class="menu_item_icon">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
                                 Моя полка</a>
                         </dt>
                         <dt class="menu_item">
-                            <a class="menu_item_link" href="#">
+                            <a class="menu_item_link" href="{% url 'book_donate' %}">
                                 <svg class="menu_item_icon" style="padding: 0 5px 0 4px">
                                     <use height="17px" width="17px"
                                          href="{% static 'marketplace/img/icons.svg' %}#arm_gift"></use>

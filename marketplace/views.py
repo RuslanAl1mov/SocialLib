@@ -1,6 +1,8 @@
-from django.shortcuts import render
-
-# Create your views here.
+import random
+from django.db.models import Q
+from django.db.models import Count
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Genres, Keywords, Author, Books, Quotes
 
 
 def registration_page(request):
@@ -10,12 +12,61 @@ def registration_page(request):
 def authorization_page(request):
     return render(request, 'authorization/authorization.html')
 
+
 def home_page(request):
-    return render(request, 'home/home.html')
+    unique_books = []
+    seen_names = set()
+
+    template = "home/home.html"
+    all_quotes = Quotes.objects.all()
+    quote_count = all_quotes.count()
+    if quote_count >= 4:
+        random_quotes = all_quotes.order_by('?')[:4]
+    else:
+        random_quotes = all_quotes
+    all_books = Books.objects.all().filter(is_occupied=0, is_removed=0).order_by('-date')
+    for book in all_books:
+        if book.full_name not in seen_names:
+            unique_books.append(book)
+            seen_names.add(book.full_name)
+
+    context = {
+        "new_books": unique_books[:10],
+        "main_books": unique_books[:16],
+        'quotes': random_quotes,
+    }
+    return render(request, template, context)
 
 
-def book_page(request):
-    return render(request, 'book_info/book_page.html')
+def book_page(request, book_id):
+    template = 'book_info/book_page.html'
+    unique_author_books = []
+    seen_author_books = set()
+    unique_similar_books = []
+    seen_similar_books = set()
+
+    book_info = get_object_or_404(Books, pk=book_id)
+
+    author_books = Books.objects.filter(author__in=book_info.author.all(), is_occupied=0, is_removed=0).exclude(
+        pk=book_info.pk)
+    for book in author_books:
+        if book.full_name not in seen_author_books:
+            unique_author_books.append(book)
+            seen_author_books.add(book.full_name)
+
+    similar_books = Books.objects.filter(genre__in=book_info.genre.all(), is_occupied=0, is_removed=0).exclude(
+        pk=book_info.pk)
+    for book in similar_books:
+        if book.full_name not in seen_similar_books:
+            unique_similar_books.append(book)
+            seen_similar_books.add(book.full_name)
+
+    context = {
+        "book_info": book_info,
+        "author_books": unique_author_books,
+        "similar_books": unique_similar_books
+    }
+    return render(request, template, context)
 
 
 def category_books_page(request):
@@ -23,7 +74,50 @@ def category_books_page(request):
 
 
 def search_result_page(request):
-    return render(request, 'search_result_page/search_result.html')
+    unique_books = []
+    seen_books = set()
+    template = 'search_result_page/search_result.html'
+    context = {}
+    if request.method == "POST":
+        search_value = str(request.POST["search_value"]).replace(",", "")
+        search_books = Books.objects.filter(
+            is_occupied=False,
+            is_removed=False,
+        ).filter(
+            Q(genre__name__icontains=search_value) |
+            Q(keyword__name__icontains=search_value) |
+            Q(full_name=search_value) |
+            Q(short_name=search_value) |
+            Q(author__name__icontains=search_value) |
+            Q(caption__icontains=search_value)
+        )
+        for book in search_books:
+            if book.full_name not in seen_books:
+                unique_books.append(book)
+                seen_books.add(book.full_name)
+        context['search_books'] = unique_books
+        context['search_value'] = search_value
+    elif request.method == "GET":
+        search_value = request.GET.get('search_value')
+        sort_param = request.GET.get('sort')
+        search_books = Books.objects.filter(
+            is_occupied=False,
+            is_removed=False,
+        ).filter(
+            Q(genre__name__icontains=search_value) |
+            Q(keyword__name__icontains=search_value) |
+            Q(full_name=search_value) |
+            Q(short_name=search_value) |
+            Q(author__name__icontains=search_value) |
+            Q(caption__icontains=search_value)
+        ).order_by(sort_param)
+        for book in search_books:
+            if book.full_name not in seen_books:
+                unique_books.append(book)
+                seen_books.add(book.full_name)
+        context['search_books'] = unique_books
+        context['search_value'] = search_value
+    return render(request, template, context)
 
 
 def user_profile_page(request):

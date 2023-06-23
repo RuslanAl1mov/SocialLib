@@ -21,10 +21,10 @@
                         </li>
                     </ul>
                 </nav>
-                <form action="" method="POST">
+                <form action="{% url 'book_search' %}" method="POST">
                     {% csrf_token %}
                     <input class="search_text_input" type="text"
-                           placeholder="Поиск">
+                           placeholder="Поиск" name="search_value">
                     <button type="submit" class="search_submit">
                         <svg class="header_search_submit_icon">
                             <use height="17px" width="16px" fill="#F76B56"
@@ -49,24 +49,9 @@
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_catalog_menu_dropdown_content">
                                 <div class="content_list">
+                                    {% for n in list_category %}
                                     <a class="header_menu_item header_catalog_menu_item">Детективы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Боевики, остросюжетная литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Любовные романы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Фантастика</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Фэнтези</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Приключения</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Ужасы/мистика</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Юмористическая литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Young adult</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Классика жанра</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Легкая проза</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Комиксы/манга</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Биографии и мемуары</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Современная проза</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Об истории серьезно</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Классическая литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Пьесы, драматургия</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Cтихи, поэзия</a>
+                                    {% endfor %}
                                 </div>
                                 <div class="content_list">
                                     <a class="header_menu_item header_catalog_menu_item">Исторические детективы</a>
