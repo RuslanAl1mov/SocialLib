@@ -36,3 +36,31 @@ def books_shelf_page(request):
 
 def book_donate_page(request):
     return render(request, 'book_donate_page/book_donate.html')
+
+
+def not_found_page(request):
+    return render(request, 'notifications/error_404.html')
+
+
+def book_reserved_page(request):
+    return render(request, 'notifications/book_reserved.html')
+
+
+def order_book_page(request):
+    return render(request, 'order_book/order_book.html')
+
+
+def order_success_page(request):
+    return render(request, 'notifications/order_success.html')
+
+
+def terms_of_use_page(request):
+    return render(request, 'additional_content_pages/oferta.html')
+
+
+def about_us_page(request):
+    return render(request, 'additional_content_pages/about_us.html')
+
+
+def tech_support_page(request):
+    return render(request, 'additional_content_pages/tech_support.html')
