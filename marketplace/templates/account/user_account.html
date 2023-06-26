@@ -8,8 +8,13 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Social Lib</title>
     <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+    <link rel="stylesheet" href="{% static 'marketplace/css/wave_style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+    <script>
+        window.console = window.console || function (t) {
+        };
+    </script>
 </head>
 
 <body>
@@ -22,14 +27,17 @@
         <main class="main_content_layout">
             <div class="main_content_container">
 
-                <input class="radio_input" type="radio" name="tabs" id="tab_1" checked/>
+                <input class="radio_input" type="radio" name="tabs" id="tab_1" {% if tab == 1 %} checked {% endif %}/>
                 <label class="radio_label" for="tab_1">Профиль</label>
-                <input class="radio_input" type="radio" name="tabs" id="tab_2"/>
+                <input class="radio_input" type="radio" name="tabs" id="tab_2" {% if tab == 2 %} checked {% endif %}/>
                 <label class="radio_label" for="tab_2">Пароли и Безопасность</label>
+                <input class="radio_input" type="radio" name="tabs" id="tab_3" {% if tab == 3 %} checked {% endif %}/>
+                <label class="radio_label" for="tab_3">Депозит и Баланс</label>
 
                 <div class="tab _1_tab">
                     <div class="profile_white_block">
-                        <form method="POST">
+                        <form action="{% url 'user_profile' 1 %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="main_upper_block -block_space-between">
 
                                 <div class="profile_content_block">
@@ -38,7 +46,9 @@
                                            id="user_avatar_file" accept=".jpg, .jpeg, .png"
                                            onchange="userAvatarImgPreview(this);">
                                     <label for="user_avatar_file" class="load_avatar_img_label">
-                                        <img id="user_avatar_preview" src="" class="load_avatar_img_preview" alt="">
+                                        {% if request.user.customuser.img and request.user.customuser.img.url %}
+                                            <img id="user_avatar_preview" src="{{ request.user.customuser.img.url }}" class="load_avatar_img_preview" alt="">
+                                        {% endif %}
                                         <div class="avatar_img_load_btn_block" id="avatar_img_load_btn_block">
                                             <svg class="add_image_icon"
                                                  style="width: 35px; height: 35px;">
@@ -46,7 +56,7 @@
                                             </svg>
                                         </div>
                                     </label>
-                                    <p class="profile_id_text">ID: 123456789</p>
+                                    <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>
 
 
@@ -60,7 +70,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#open_book"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">120</p>
+                                                <p class="user_statistic_info_number_text">{{ read_books }}</p>
                                             </div>
                                             <p class="user_statistic_info_text">Прочтено</p>
                                         </div>
@@ -75,7 +85,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#arm_gift"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">9812</p>
+                                                <p class="user_statistic_info_number_text">{{ help_pro }}</p>
                                             </div>
                                             <p class="user_statistic_info_text">Помощи</p>
                                         </div>
@@ -90,7 +100,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#clock"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">328</p>
+                                                <p class="user_statistic_info_number_text">0</p>
                                             </div>
                                             <p class="user_statistic_info_text">Аренда</p>
                                         </div>
@@ -105,7 +115,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#cash_from_hand_to_hand"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">238</p>
+                                                <p class="user_statistic_info_number_text">0</p>
                                             </div>
                                             <p class="user_statistic_info_text">Продажи</p>
                                         </div>
@@ -120,26 +130,29 @@
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="first_name">Имя</label>
                                             <input class="profile_input_field" type="text" name="first_name"
-                                                   placeholder="Имя" id="first_name" required>
+                                                   placeholder="Имя" id="first_name"
+                                                   value="{{request.user.first_name}}" required>
 
                                         </td>
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="last_name">Фамилия</label>
                                             <input class="profile_input_field" type="text" name="last_name"
-                                                   placeholder="Фамилия" id="last_name" required>
+                                                   placeholder="Фамилия" id="last_name"
+                                                   value="{{request.user.last_name}}" required>
                                         </td>
                                     </tr>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="phone">Номер телефона</label>
                                             <input class="profile_input_field" type="tel" name="phone_number" id="phone"
-                                                   placeholder="Номер телефона" pattern="[0-9]{2} [0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                                   placeholder="Номер телефона" value="{{request.user.customuser.phone_number}}"
                                                    required>
                                         </td>
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="email">Электронная почта</label>
                                             <input class="profile_input_field" type="email" name="email"
-                                                   placeholder="Электронная почта" id="email" required>
+                                                   placeholder="Электронная почта" id="email"
+                                                   value="{{request.user.email}}" required>
 
                                         </td>
                                     </tr>
@@ -157,9 +170,10 @@
 
                 <div class="tab _2_tab">
                     <div class="profile_white_block">
-                        <form method="POST">
+                        <form action="{% url 'user_profile' 2 %}" method="POST">
+                             {% csrf_token %}
                             <div class="main_upper_block margin_left_40px margin_top_30px">
-                            <h1 class="category_books_page_content_block_title "> Изменение пароля</h1>
+                                <h1 class="category_books_page_content_block_title "> Изменение пароля</h1>
                             </div>
                             <div class="main_upper_block -block_space-between">
                                 <table>
@@ -177,7 +191,8 @@
                                                    placeholder="Новый пароль" id="new_password" required>
                                         </td>
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="new_password_replay">Повтор нового пароля </label>
+                                            <label class="input_label_bold" for="new_password_replay">Повтор нового
+                                                пароля </label>
                                             <input class="profile_input_field" type="text" name="new_password_replay"
                                                    placeholder="Повтор нового пароля" id="new_password_replay" required>
                                         </td>
@@ -186,11 +201,303 @@
                                 </table>
                             </div>
                             <div class="bottom_button_block">
-                                    <input class="input_submit_btn" type="submit" value="Обновить пароль">
-                                </div>
+                                <input class="input_submit_btn" type="submit" value="Обновить пароль">
+                            </div>
                         </form>
                     </div>
                 </div>
+
+                <div class="tab _3_tab">
+                    <div class="profile_white_block padding_bottom_50px">
+                        <div class="main_upper_block margin_left_40px margin_top_30px">
+                            <div class="-width_100percent">
+                                <h1 class="category_books_page_content_block_title ">Информация о <span
+                                        class="orange_text">вашем Депозите</span></h1>
+                            </div>
+                            <div class="to_set_right_bottom_position_block padding_right_40px">
+                                <a class="blue_link_btn add_money_btn margin_right_30px -text_align_center" href="#poplnit">Пополнить баланс депозита</a>
+                                <a class="input_submit_btn" href="{% url 'user_profile' 3 %}">Обновить данные</a>
+
+                            </div>
+                        </div>
+                        <div class="main_upper_block -block_space-between margin_left_40px">
+                            <p class="book_info_book_name">Информация о балансе</p>
+                        </div>
+
+                        <div class="main_upper_block">
+                            <div class="user_money_info_block margin_left_60px">
+                                <p class=" font_16pt">На Балансе:<span class="bold_paragraph"> 650 000 сум.</span></p>
+                                <p class=" font_16pt margin_top_20px">Ваш Уровень:<span
+                                        class="bold_paragraph"> 6.</span></p>
+                                <div class="main_upper_block margin_top_50px -flex_direction_column margin_left_60px">
+                                    <p class="book_info_book_name grey_paragraph margin_0">Распределение уровней:</p>
+                                    <table class="profile_levels_table margin_left_20px">
+                                        <tbody>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 0</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">БЕСПЛАТНО</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 1</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">100 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 2</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">200 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 3</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">300 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 4</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">400 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 5</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">500 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 6</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">600 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 7</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">700 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 8</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">800 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 9</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">900 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 10</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 000 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 11</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 100 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 12</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 200 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 13</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 300 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 14</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 400 000сум</td>
+                                        </tr>
+                                        <tr class="tr_raw">
+                                            <td class="td_raw">Уровень 15</td>
+                                            <td class="td_raw --tire">—</td>
+                                            <td class="td_raw">1 500 000сум</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="-width_100percent -justify_content_center -flex_direction_column -align_items_center">
+                                <div class="colba_block">
+                                    <div>
+                                        {# max:403px | min:-165px #}
+                                        <div class="svg_home" style="bottom:100px">
+                                            <svg class="labSVG" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 600 600">
+                                                <defs>
+                                                    <linearGradient id="frontGrad" gradientUnits="userSpaceOnUse"
+                                                                    x1="300"
+                                                                    y1="100" x2="300" y2="600">
+                                                        <stop offset="0.5" style="stop-color:#F76B56"/>
+                                                        <stop offset="0.8" style="stop-color:#F76B56"/>
+                                                    </linearGradient>
+
+                                                    <clipPath id="sphereMask">
+
+                                                        <rect width="301" height="200" stroke-width="0.4957"
+                                                              stroke-miterlimit="10" y="200" x="160"></rect>
+                                                    </clipPath>
+
+
+                                                    <filter id="goo" color-interpolation-filters="sRGB">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="7 7"
+                                                                        result="blur"/>
+                                                        <feColorMatrix in="blur" mode="matrix"
+                                                                       values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -7"
+                                                                       result="cm"/>
+
+                                                        <feComposite in="SourceGraphic" in2="cm"/>
+                                                    </filter>
+                                                </defs>
+                                                <g class="liquidMaskGroup" clip-path="url(#sphereMask)">
+                                                    <path class="liquidBack" fill="none" d="M1199.9,365.1c-41.8,0-79.4,9.8-107.4,8.1c-38.9-2.3-54.5-16.4-83.6-19.9
+	c-29.1-3.5-71.5,3.4-110.4,1c-28-1.7-56.4-13.7-98.2-13.7c-41.8,0-70.2,12-98.2,13.7c-38.9,2.3-81.4-4.6-110.4-1
+	c-29.1,3.5-44.7,17.5-83.6,19.9c-28,1.7-65.7-8.2-107.5-8.2c-41.8,0-79.5,9.9-107.5,8.2c-38.9-2.3-54.5-16.3-83.6-19.9
+	c-29.1-3.5-72,3.4-110.9,1c-28-1.7-56.7-13.7-98.7-13.7V438h1200L1199.9,365.1z"/>
+                                                    <g class="liquidBubblesGroup" fill="url(#frontGrad)"
+                                                       clip-path="url(#sphereMask)">
+                                                        <path class="liquidFront" fill="url(#frontGrad)"
+                                                              d="M1199.9,329.6c-44,0-70.6,29.4-96.4,33c-36.1,5.1-70.7-14.5-106.8-9.4	c-25.8,3.7-52.4,33.3-96.4,33.3c-44,0-70.7-29.7-96.4-33.4c-36.1-5.1-70.7,14.4-106.8,9.2c-25.8-3.7-52.4-33.3-96.5-33.3	c-44,0-70.7,29.7-96.5,33.3c-36.1,5.1-70.7-14.4-106.8-9.3c-25.8,3.7-52.4,33.3-96.5,33.3c-44,0-70.7-29.7-96.5-33.3	c-36.1-5.1-71.2,14.4-107.3,9.3c-25.8-3.7-52-33.3-97-33.3V533h1200L1199.9,329.6z"/>
+                                                        <circle class="bubble0" cx="350" cy="400" r="8"/>
+                                                        <circle class="bubble1" cx="320" cy="400" r="6"/>
+                                                        <circle class="bubble2" cx="300" cy="400" r="12"/>
+                                                        <circle class="bubble3" cx="276" cy="400" r="3"/>
+                                                        <circle class="bubble4" cx="244" cy="400" r="4"/>
+                                                        <circle class="bubblePop0" cx="280" cy="400" r="5"/>
+                                                        <circle class="bubblePop1" cx="310" cy="390" r="5"/>
+                                                        <circle class="bubblePop2" cx="350" cy="410" r="5"/>
+                                                    </g>
+
+                                                    <path class="pop" fill="none" stroke="none" stroke-width="4"
+                                                          stroke-linecap="round" stroke-linejoin="round"
+                                                          stroke-miterlimit="10"
+                                                          d="
+    M37.4,9c2.1-2.1,4.2-4.2,6.3-6.3 M2,44.4c2.2-2.2,4.5-4.5,6.7-6.7 M37.4,37.4c2.1,2.1,4.2,4.2,6.3,6.3 M2,2c2.2,2.2,4.5,4.5,6.7,6.7
+    "/>
+                                                </g>
+
+                                                <!-- 		<path class="flask" opacity="1" fill="none" stroke="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="		M379.2,108.2l-20.5,20.5l0.1,126.3h0.2c39.7,21,66.7,62.9,66.7,111c0,69.4-56.3,125.7-125.7,125.7S174.3,435.4,174.3,366
+                                                        c0-48.1,27.1-89.9,66.8-111l0.1-126.3l-20.5-20.5"/>   -->
+
+
+                                            </svg>
+                                        </div>
+                                        <div class="tipa_water" style="height: 265px;"></div>
+                                        <div class="sosud_block"></div>
+
+                                        <div class="sosud_long_line active_sosud_line" style="bottom: 15px"></div>
+                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 15px">0</p>
+
+                                        <div class="sosud_long_line sosud_right_line active_sosud_line" style="bottom: 53px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 53px">1</p>
+
+                                        <div class="sosud_long_line active_sosud_line" style="bottom: 91px"></div>
+                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 91px">2</p>
+
+                                        <div class="sosud_long_line sosud_right_line active_sosud_line" style="bottom: 129px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 129px">3</p>
+
+                                        <div class="sosud_long_line active_sosud_line" style="bottom: 167px"></div>
+                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 167px">4</p>
+
+                                        <div class="sosud_long_line sosud_right_line active_sosud_line" style="bottom: 205px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 205px">5</p>
+
+                                        <div class="sosud_long_line active_sosud_line" style="bottom: 243px"></div>
+                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 243px">6</p>
+
+                                        <div class="sosud_long_line sosud_right_line" style="bottom: 281px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 281px">7</p>
+
+                                        <div class="sosud_long_line" style="bottom: 319px"></div>
+                                        <p class="sosud_level_number" style="bottom: 319px">8</p>
+
+                                        <div class="sosud_long_line sosud_right_line" style="bottom: 357px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 357px">9</p>
+
+                                        <div class="sosud_long_line" style="bottom: 395px"></div>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 395px">10</p>
+
+                                        <div class="sosud_long_line sosud_right_line" style="bottom: 433px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 433px">11</p>
+
+                                        <div class="sosud_long_line" style="bottom: 471px"></div>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 471px">12</p>
+
+                                        <div class="sosud_long_line sosud_right_line" style="bottom: 509px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 509px">13</p>
+
+                                        <div class="sosud_long_line" style="bottom: 547px"></div>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 547px">14</p>
+
+                                        <div class="sosud_long_line sosud_right_line" style="bottom: 585px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 585px">15</p>
+
+                                    </div>
+                                </div>
+                                <input class="input_submit_btn margin_top_50px" type="submit"
+                                       value="Снять все средства с депозита">
+                            </div>
+                        </div>
+
+                        <div class="main_upper_block margin_top_50px -flex_direction_column margin_left_60px">
+                            <p class="book_info_book_name" id="poplnit">Пополнение баланса:</p>
+                            <div class="main_upper_block margin_top_30px margin_left_20px -flex_direction_column">
+
+                                <p class="main_books_content_block_secondary_title font_15pt">Переводы доступны только с
+                                    карт <span class="bold_paragraph">Узбекских Банков</span>!</p>
+
+                                <div class="shelf_books_block">
+                                    <div class="profile_payment_qr_block">
+                                        <a class="profile_payment_link_to_qr"
+                                           href="{% static 'marketplace/img/payme_qr.png' %}" target="_blank">
+                                            <img class="profile_qr_img"
+                                                 src="{% static 'marketplace/img/payme_qr.png' %}"
+                                                 alt="payme_qr"/>
+                                            <p class="qr_payment_name_paragraph">PayMe</p>
+                                        </a>
+                                    </div>
+                                    <div class="profile_payment_qr_block">
+                                        <a class="profile_payment_link_to_qr"
+                                           href="{% static 'marketplace/img/click_qr.png' %}" target="_blank">
+                                            <img class="profile_qr_img"
+                                                 src="{% static 'marketplace/img/click_qr.png' %}"
+                                                 alt="click_qr"/>
+                                            <p class="qr_payment_name_paragraph">Click</p>
+                                        </a>
+                                    </div>
+                                    <div class="profile_payment_qr_block">
+                                        <a class="profile_payment_link_to_qr"
+                                           href="{% static 'marketplace/img/uzum_qr.png' %}" target="_blank">
+                                            <img class="profile_qr_img"
+                                                 src="{% static 'marketplace/img/uzum_qr.png' %}"
+                                                 alt="uzum_qr"/>
+                                            <p class="qr_payment_name_paragraph">Uzum</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <p class="main_books_content_block_secondary_title font_15pt margin_top_30px">Для
+                                    выполнения перевода
+                                    выполните следующие действия:</p>
+                                <ul class="main_books_content_block_secondary_title font_15pt">
+                                    <li>Установить одно из приложений для переводов: "PayMe", "Click", "Uzum".</li>
+                                    <li>Отсканируйте QR-код при помощи камеры телефона.</li>
+                                    <li>Укажите сумму пополнения депозита.</li>
+                                    <li>В поле комментария укажите ваше <span
+                                            class="underlined_text orange_text">Имя</span>, <span
+                                            class="underlined_text orange_text">Фамилию</span> и этот номер <span
+                                            class="underlined_text orange_text">123456789</span>.
+                                    </li>
+                                    <li>Отправьте перевод и ожидайте звонка.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
 
 
             </div>
@@ -198,6 +505,8 @@
     </section>
 </section>
 
+<script src="{% static 'marketplace/js/TweenMax.min.js' %}"></script>
+<script src="{% static 'marketplace/js/wave_js.js' %}"></script>
 
 </body>
 </html>

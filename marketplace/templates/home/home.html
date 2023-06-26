@@ -28,51 +28,19 @@
                             <input type="radio" name="r" id="r2">
                             <input type="radio" name="r" id="r3">
                             <input type="radio" name="r" id="r4">
+                            {% for quote in quotes %}
+                             <div class="slide s{{ forloop.counter }}">
+                                <div class="slide_info">
+                                    <p class="slide_info_main_text">
+                                        <q>{{ quote.text }}</q>
+                                    </p>
+                                    <p class="slide_info_author_name">
+                                        – {{ quote.author }}
+                                    </p>
+                                </div>
+                            </div>
+                            {% endfor %}
 
-                            <div class="slide s1">
-                                <div class="slide_info">
-                                    <p class="slide_info_main_text">
-                                        <q>Своим успехом я обязана тому, что никогда не оправдывалась и не принимала
-                                            оправданий от других.</q>
-                                    </p>
-                                    <p class="slide_info_author_name">
-                                        – Флоренс Найтингейл
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slide s2">
-                                <div class="slide_info">
-                                    <p class="slide_info_main_text">
-                                        <q>Сложнее всего начать действовать, все остальное зависит только от
-                                            упорства.</q>
-                                    </p>
-                                    <p class="slide_info_author_name">
-                                        – Амелия Эрхарт
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slide s3">
-                                <div class="slide_info">
-                                    <p class="slide_info_main_text">
-                                        <q>Через 20 лет вы будете больше разочарованы теми вещами, которые вы не делали,
-                                            чем теми, которые вы сделали. Двигайтесь вперед, действуйте,
-                                            открывайте!</q>
-                                    </p>
-                                    <p class="slide_info_author_name">
-                                        – Марк Твен
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slide s4">
-                                <div class="slide_info">
-                                    <p class="slide_info_main_text">
-                                        <q>Настоящая ответственность бывает только личной.</q>
-                                    </p>
-                                    <p class="slide_info_author_name">
-                                        – Фазиль Искандер
-                                    </p>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="navigation">
@@ -85,41 +53,13 @@
                     <div class="new_books_info_block">
                         <p class="new_books_block_title">Новинки</p>
                         <div class="new_books_block">
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}">
-                            </div>
-                            <div class="book_cover_only_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                <img class="book_small_cover"
-                                     src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}">
-                            </div>
+                            {% for book in new_books %}
+                                <div class="book_cover_only_block" title="{{ book.full_name }}">
+                                <a href="{% url 'book' book.pk %}">
+                                <img class="book_small_cover" src="{{ book.img.url }}">
+                                </a>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -128,156 +68,18 @@
                     <p class="main_books_content_block_secondary_title">Подборка для Вас</p>
 
                     <div class="books_catalog_block">
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-                        <div class="book_cover_only_block book_cover_with_info_block"
-                             title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                            <img class="book_small_cover"
-                                 src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
-                                 alt="">
-                            <p class="catalog_book_cover_name">Android. Программирование для профессионалов</p>
-                            <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                            <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                        </div>
-
-
+                        {% for book in new_books %}
+                            <a href="{% url 'book' book.pk %}">
+                                <div class="book_cover_only_block book_cover_with_info_block" title="{{ book.full_name }}">
+                                    <img class="book_small_cover" src="{{ book.img.url }}" alt="">
+                                    <p class="catalog_book_cover_name">{{ book.short_name }}</p>
+                                    <p class="catalog_book_cover_author_name">{{ book.author.first.name }}</p>
+                                    <p class="catalog_book_cover_author_name">Язык: {{ book.get_language_display }}</p>
+                                </div>
+                            </a>
+                        {% endfor %}
                     </div>
+
                 </div>
             </div>
         </main>

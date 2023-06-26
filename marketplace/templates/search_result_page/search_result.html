@@ -24,9 +24,8 @@
             <div class="main_content_container">
                 <div class="main_upper_block">
                     <div style="width:100%">
-                        <h1 class="category_books_page_content_block_title">Поиск: <q>Учебник по черной магии 1682
-                            года</q></h1>
-                        <p class="main_books_content_block_secondary_title">Результаты поиска</p>
+                        <h1 class="category_books_page_content_block_title">Поиск: <q>{{ search_value }}</q></h1>
+                        <p class="main_books_content_block_secondary_title">Результаты поиска: {{search_quantity}}</p>
                     </div>
                     <div class="to_set_right_bottom_position_block">
                         <nav class="header_menu sort_settings_menu header_block_shadow">
@@ -38,14 +37,16 @@
                                                  href="{% static 'marketplace/img/icons.svg' %}#sort_arrow_up"></use>
                                         </svg>
                                         Сортировать<i class="arrow down"></i></button>
-                                    <div class="header_menu_dropdown_content_block">
-                                        <div class="header_menu_dropdown_content sort_settings_dropdown_content">
-                                            <a class="header_menu_item">Название</a>
-                                            <a class="header_menu_item">Автор</a>
-                                            <a class="header_menu_item">Год издания</a>
-                                            <a class="header_menu_item">Цена</a>
+                                    <form action="{% url 'book_search' %}" method="get">
+                                        <div class="header_menu_dropdown_content_block">
+                                            <div class="header_menu_dropdown_content sort_settings_dropdown_content">
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-full_name">Название</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-author">Автор</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-year">Год издания</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-price">Цена</a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </li>
                             </ul>
                         </nav>
@@ -60,38 +61,61 @@
                             <th class="th_raw book_search_result_book_level_table_column">Доступность</th>
                             <th class="th_raw book_search_result_shelf_table_column">Просмотр</th>
                         </tr>
-
+                        {% for book in search_books %}
                         <tr class="tr_raw tr_raw_hover">
                             <td class="td_raw first_td_raw book_search_result_book_info_table_column">
                                 <div class="table_book_info_block">
                                     <img class="table_book_info_img"
-                                         src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
+                                         src="{{ book.img.url }}"
                                          alt=""/>
                                     <div class="first_table_book_info_paragraph_block">
                                         <div>
-                                            <p class="search_book_table_book_name_str">Android. Программирование для
-                                                профессионалов</p>
-                                            <p class="search_book_table_book_author_str">Б.Филлипс, К.Стюарт,
-                                                К.Марсикано</p>
-                                            <p class="search_book_table_book_author_str">3-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: Русский</p>
+                                            <p class="search_book_table_book_name_str">{{ book.short_name }}</p>
+                                            <p class="search_book_table_book_author_str">{% for author in book.author.all %}
+                                                                                                {{ author.name }}
+                                                                                                {% if not forloop.last %},{% endif %}
+                                                                                          {% endfor %}
+                                            </p>
+                                            <p class="search_book_table_book_author_str">{{book.publications}}-е издание</p>
+                                            <p class="search_book_table_book_author_str">Язык: {{ book.get_language_display }}</p>
 
                                         </div>
                                         <div class="book_info_paragraph_block">
+                                            {% if book.is_paper %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
                                                      href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
                                             </svg>
+                                            {% else %}
+                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
+                                                <use height="18px" width="18px" fill="#4D4D4D"
+                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
+                                            </svg>
+                                            {% endif %}
                                             <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
+                                            {% if book.is_eBook %}
+                                            <svg class="header_menu_icon margin_right_4px">
+                                                <use height="18px" width="18px" fill="#42BB4E"
+                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                            </svg>
+                                            {% else %}
                                             <svg class="header_menu_icon margin_right_4px margin_left_7px">
                                                 <use height="18px" width="18px" fill="#4D4D4D"
                                                      href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                             </svg>
+                                            {% endif %}
                                             <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
+                                            {% if book.is_audio %}
+                                            <svg class="header_menu_icon margin_right_4px">
+                                                <use height="18px" width="18px" fill="#42BB4E"
+                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                            </svg>
+                                            {% else %}
                                             <svg class="header_menu_icon margin_right_4px margin_left_7px">
                                                 <use height="18px" width="18px" fill="#4D4D4D"
                                                      href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                             </svg>
+                                            {% endif %}
                                             <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
                                         </div>
                                     </div>
@@ -100,247 +124,29 @@
                             <td class="td_raw book_search_result_janr_table_column">
                                 <div class="table_book_info_block">
                                     <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str">Боевики, остросюжетная литература</p>
+                                        <p class="search_book_table_janr_str">
+                                            {% for genre in book.genre.all %}
+                                            {{ genre.name }}
+                                            {% if not forloop.last %},{% endif %}
+                                            {% endfor %}
+                                        </p>
                                     </div>
                                 </div>
                             </td>
                             <td class="td_raw book_search_result_book_level_table_column">
                                 <div class="table_book_info_block centralize_with_margin">
                                     <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень 3</p>
+                                        <p class="search_book_table_janr_str orange_text">Уровень {{ book.level }}</p>
                                     </div>
                                 </div>
                             </td>
                             <td class="td_raw last_td_raw book_search_result_shelf_table_column">
                                 <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="">Посмотреть</a>
+                                    <a class="got_to_preview_btn_link" href="{% url 'book' book.pk %}">Посмотреть</a>
                                 </div>
                             </td>
                         </tr>
-
-                        <tr class="tr_raw tr_raw_hover">
-                            <td class="td_raw first_td_raw book_search_result_book_info_table_column">
-                                <div class="table_book_info_block">
-                                    <img class="table_book_info_img"
-                                         src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                         alt=""/>
-                                    <div class="first_table_book_info_paragraph_block">
-                                        <div>
-                                            <p class="search_book_table_book_name_str">Android. Программирование для
-                                                профессионалов</p>
-                                            <p class="search_book_table_book_author_str">Б.Филлипс, К.Стюарт,
-                                                К.Марсикано</p>
-                                            <p class="search_book_table_book_author_str">3-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: Русский</p>
-                                        </div>
-                                        <div class="book_info_paragraph_block">
-                                            <svg class="header_menu_icon margin_right_4px">
-                                                <use height="18px" width="18px" fill="#42BB4E"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_janr_table_column">
-                                <div class="table_book_info_block">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str">Боевики, остросюжетная литература</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_book_level_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень 3</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw last_td_raw book_search_result_shelf_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="">Посмотреть</a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="tr_raw tr_raw_hover">
-                            <td class="td_raw first_td_raw book_search_result_book_info_table_column">
-                                <div class="table_book_info_block">
-                                    <img class="table_book_info_img"
-                                         src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                         alt=""/>
-                                    <div class="first_table_book_info_paragraph_block">
-                                        <div>
-                                            <p class="search_book_table_book_name_str">Android. Программирование для
-                                                профессионалов</p>
-                                            <p class="search_book_table_book_author_str">Б.Филлипс, К.Стюарт,
-                                                К.Марсикано</p>
-                                            <p class="search_book_table_book_author_str">3-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: Русский</p>
-                                        </div>
-                                        <div class="book_info_paragraph_block ">
-                                            <svg class="header_menu_icon margin_right_4px">
-                                                <use height="18px" width="18px" fill="#42BB4E"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_janr_table_column">
-                                <div class="table_book_info_block">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str">Боевики, остросюжетная литература</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_book_level_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень 3</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw last_td_raw book_search_result_shelf_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="">Посмотреть</a>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="tr_raw tr_raw_hover">
-                            <td class="td_raw first_td_raw book_search_result_book_info_table_column">
-                                <div class="table_book_info_block">
-                                    <img class="table_book_info_img"
-                                         src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                         alt=""/>
-                                    <div class="first_table_book_info_paragraph_block">
-                                        <div>
-                                            <p class="search_book_table_book_name_str">Android. Программирование для
-                                                профессионалов</p>
-                                            <p class="search_book_table_book_author_str">Б.Филлипс, К.Стюарт,
-                                                К.Марсикано</p>
-                                            <p class="search_book_table_book_author_str">3-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: Русский</p>
-                                        </div>
-                                        <div class="book_info_paragraph_block">
-                                            <svg class="header_menu_icon margin_right_4px">
-                                                <use height="18px" width="18px" fill="#42BB4E"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_janr_table_column">
-                                <div class="table_book_info_block">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str">Боевики, остросюжетная литература</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_book_level_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень 3</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw last_td_raw book_search_result_shelf_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="">Посмотреть</a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="tr_raw tr_raw_hover">
-                            <td class="td_raw first_td_raw book_search_result_book_info_table_column">
-                                <div class="table_book_info_block">
-                                    <img class="table_book_info_img"
-                                         src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                         alt=""/>
-                                    <div class="first_table_book_info_paragraph_block">
-                                        <div>
-                                            <p class="search_book_table_book_name_str">Android. Программирование для
-                                                профессионалов</p>
-                                            <p class="search_book_table_book_author_str">Б.Филлипс, К.Стюарт,
-                                                К.Марсикано</p>
-                                            <p class="search_book_table_book_author_str">3-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: Русский</p>
-                                        </div>
-                                        <div class="book_info_paragraph_block">
-                                            <svg class="header_menu_icon margin_right_4px">
-                                                <use height="18px" width="18px" fill="#42BB4E"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
-                                            <svg class="header_menu_icon margin_right_4px margin_left_7px">
-                                                <use height="18px" width="18px" fill="#4D4D4D"
-                                                     href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                            </svg>
-                                            <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_janr_table_column">
-                                <div class="table_book_info_block">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str">Боевики, остросюжетная литература</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw book_search_result_book_level_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень 3</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="td_raw last_td_raw book_search_result_shelf_table_column">
-                                <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="">Посмотреть</a>
-                                </div>
-                            </td>
-                        </tr>
-
-
+                        {% endfor %}
                         <tr>
                             <div style="height: 70vh"></div>
                         </tr>

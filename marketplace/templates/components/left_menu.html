@@ -3,7 +3,7 @@
 <aside class="side_menu">
     <div class="menu_list">
         <div class="menu_logo_container">
-            <a class="menu_logo_link" href="#">
+            <a class="menu_logo_link" href="{% url 'home' %}">
                 <img class="menu_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
             </a>
         </div>
@@ -12,21 +12,29 @@
                 <nav class="menu_list">
                     <dl>
                         <dt class="menu_item">
-                            <a class="menu_item_link menu_item_link_active" href="#">
+                            <a class="menu_item_link menu_item_link_active" href="{% url 'home' %}">
                                 <svg class="menu_item_icon menu_item_icon_active">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#home"></use>
                                 </svg>
                                 Дом</a>
                         </dt>
                         <dt class="menu_item">
-                            <a class="menu_item_link" href="#">
+                            {% if request.user.is_authenticated %}
+                            <a class="menu_item_link" href="{% url 'book_shelf' %}">
                                 <svg class="menu_item_icon">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
                                 Моя полка</a>
+                            {% else %}
+                            <a class="menu_item_link" href="{% url 'authorization' %}">
+                                <svg class="menu_item_icon">
+                                    <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
+                                </svg>
+                                Моя полка</a>
+                            {% endif %}
                         </dt>
                         <dt class="menu_item">
-                            <a class="menu_item_link" href="#">
+                            <a class="menu_item_link" href="{% url 'book_donate' %}">
                                 <svg class="menu_item_icon" style="padding: 0 5px 0 4px">
                                     <use height="17px" width="17px"
                                          href="{% static 'marketplace/img/icons.svg' %}#arm_gift"></use>
@@ -34,13 +42,13 @@
                                 Делать добро</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="#">О нас</a>
+                            <a class="menu_item_link" href="{% url 'about_us' %}">О нас</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="#">Поддержка</a>
+                            <a class="menu_item_link" href="{% url 'tech_support' %}">Поддержка</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="#">Условия пользования</a>
+                            <a class="menu_item_link" href="{% url 'terms_of_use' %}">Условия пользования</a>
                         </dt>
                     </dl>
                 </nav>
@@ -48,13 +56,13 @@
             <div class="addition_menu_container">
                 <dl style="bottom: 10px ">
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="#">О нас</a>
+                        <a class="additional_menu_item_link" href="{% url 'about_us' %}">О нас</a>
                     </dt>
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="#">Поддержка</a>
+                        <a class="additional_menu_item_link" href="{% url 'tech_support' %}">Поддержка</a>
                     </dt>
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="#">Условия пользования</a>
+                        <a class="additional_menu_item_link" href="{% url 'terms_of_use' %}">Условия пользования</a>
                     </dt>
                 </dl>
             </div>

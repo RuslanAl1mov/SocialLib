@@ -1,30 +1,30 @@
 {% load static %}
-
+{% load i18n %}
 
 <header class="header">
     <div class="header_info_block">
         <div class="header_search_block">
             <div class="search_block header_block_shadow">
                 <nav class="header_menu header_search_menu">
-                    <ul class="header_menu_list">
-                        <li class="header_menu_dropdown header_search_menu_dropdown">
-                            <button class="header_menu_dropbtn header_search_menu_dropbtn">Все<i
-                                    class="arrow down"></i></button>
-                            <div class="header_menu_dropdown_content_block header_search_menu_dropdown_content">
-                                <div class="header_menu_dropdown_content">
-                                    <a class="header_menu_item header_menu_item_active">Все</a>
-                                    <a class="header_menu_item">Название</a>
-                                    <a class="header_menu_item ">Жанр</a>
-                                    <a class="header_menu_item">Автор</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                  <ul class="header_menu_list">
+                    <li class="header_menu_dropdown header_search_menu_dropdown">
+                      <button id="dropdown_button" class="header_menu_dropbtn header_search_menu_dropbtn" onclick="toggleDropdown()">Все<i class="arrow down"></i></button>
+                      <div id="dropdown_content" class="header_menu_dropdown_content_block header_search_menu_dropdown_content">
+                        <div class="header_menu_dropdown_content">
+                          <a class="header_menu_item header_menu_item_active" onclick="setSearchValue(this, 'Все')">Все</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Название')">Название</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Жанр')">Жанр</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Автор')">Автор</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </nav>
-                <form action="" method="POST">
+                <form action="{% url 'book_search' %}" method="POST">
                     {% csrf_token %}
+                    <input id="search_value_input" type="hidden" name="search_type" value="{{ search_type }}">
                     <input class="search_text_input" type="text"
-                           placeholder="Поиск">
+                           placeholder="Поиск" name="search_value">
                     <button type="submit" class="search_submit">
                         <svg class="header_search_submit_icon">
                             <use height="17px" width="16px" fill="#F76B56"
@@ -49,24 +49,9 @@
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_catalog_menu_dropdown_content">
                                 <div class="content_list">
-                                    <a class="header_menu_item header_catalog_menu_item">Детективы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Боевики, остросюжетная литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Любовные романы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Фантастика</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Фэнтези</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Приключения</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Ужасы/мистика</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Юмористическая литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Young adult</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Классика жанра</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Легкая проза</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Комиксы/манга</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Биографии и мемуары</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Современная проза</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Об истории серьезно</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Классическая литература</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Пьесы, драматургия</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Cтихи, поэзия</a>
+                                    {% for category in list_category %}
+                                    <a class="header_menu_item header_catalog_menu_item" href="{% url 'category_books' category.id %}">{{ category.name }}</a>
+                                    {% endfor %}
                                 </div>
                                 <div class="content_list">
                                     <a class="header_menu_item header_catalog_menu_item">Исторические детективы</a>
@@ -96,17 +81,32 @@
             <nav class="header_menu header_block_shadow">
                 <ul class="header_menu_list">
                     <li class="header_menu_dropdown">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+
                         <button class="header_menu_dropbtn">
                             <svg class="header_menu_icon">
                                 <use height="17px" width="16px" fill="#F76B56"
                                      href="{% static 'marketplace/img/icons.svg' %}#language"></use>
                             </svg>
-                            Русский<i class="arrow down"></i></button>
+                            {% if  LANGUAGE_CODE == "ru" %}
+                            Русский
+                            {% elif  LANGUAGE_CODE == "uz" %}
+                            o`zbek
+                            {% else %}
+                            English
+                            {% endif %}
+                            <i class="arrow down"></i></button>
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content">
-                                <a class="header_menu_item">O'zbek</a>
-                                <a class="header_menu_item header_menu_item_active">Русский</a>
-                                <a class="header_menu_item">English</a>
+                                <form id="language_form" action="{% url 'set_language' %}" method="post">
+                                  {% csrf_token %}
+                                  <a class="header_menu_item" onclick="changeLanguage('uz')">O'zbek</a>
+                                  <a class="header_menu_item" onclick="changeLanguage('ru')">Русский</a>
+                                  <a class="header_menu_item" onclick="changeLanguage('en')">English</a>
+                                  <input id="language_input" type="hidden" name="language" value="">
+                                </form>
                             </div>
                         </div>
                     </li>
@@ -115,17 +115,26 @@
         </div>
 
         <div class="header_user_block header_block_shadow">
-            <img class="user_header_avatar" src="{% static 'marketplace/img/avatar.jpg' %}" alt="">
+            {% if request.user.is_authenticated and request.user.customuser.img.url %}
+
+            <img class="user_header_avatar" src="{{ request.user.customuser.img.url }}" alt="">
+            {% endif %}
             <nav class="header_menu header_avatar_menu">
                 <ul class="header_menu_list">
                     <li class="header_menu_dropdown">
                         <button class="header_menu_dropbtn">Профиль<i class="arrow down"></i></button>
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_menu_account_dropdown_content">
-                                <a class="header_menu_item">Мой аккаунт</a>
-                                <a class="header_menu_item ">Моя полка</a>
-                                <a class="header_menu_item ">Задать вопрос</a>
-                                <a class="header_menu_item header_menu_item_red_text">Выйти</a>
+                                {% if request.user.is_authenticated %}
+                                <a class="header_menu_item" href="{% url 'user_profile' 1 %}">Мой аккаунт</a>
+                                <a class="header_menu_item " href="{% url 'book_shelf' %}">Моя полка</a>
+                                {% endif %}
+                                <a class="header_menu_item " href="{% url 'tech_support' %}">Задать вопрос</a>
+                                {% if request.user.is_authenticated %}
+                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'log_out' %}">Выйти</a>
+                                {% else %}
+                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'authorization' %}">Войти</a>
+                                {% endif %}
                             </div>
                         </div>
                     </li>
@@ -135,3 +144,56 @@
         </div>
     </div>
 </header>
+
+
+<script>
+
+  function changeLanguage(language) {
+    document.getElementById("language_input").value = language;
+    document.getElementById("language_form").submit();
+  }
+
+  function setSearchValue(element, value) {
+    // Удаление класса "header_menu_item_active" у всех элементов
+    var menuItems = document.getElementsByClassName('header_menu_item');
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].classList.remove('header_menu_item_active');
+    }
+
+    // Добавление класса "header_menu_item_active" выбранному элементу
+    element.classList.add('header_menu_item_active');
+
+    // Установка значения в скрытое поле
+    document.getElementById('search_value_input').value = value;
+
+    // Установка значения в кнопку "Все"
+    document.getElementById('dropdown_button').innerHTML = value + '<i class="arrow down"></i>';
+
+    // Закрытие выпадающего списка
+    toggleDropdown();
+  }
+
+  function updateSearchValue(value) {
+    document.getElementById('search_value_input').value = value;
+  }
+
+  function toggleDropdown() {
+    var dropdownContent = document.getElementById('dropdown_content');
+    dropdownContent.classList.toggle('show');
+  }
+
+  // Закрытие выпадающего списка при клике вне него
+  window.onclick = function(event) {
+    if (!event.target.matches('.header_menu_dropbtn')) {
+      var dropdowns = document.getElementsByClassName('header_menu_dropdown_content_block');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+
+</script>

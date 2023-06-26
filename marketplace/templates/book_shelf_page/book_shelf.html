@@ -44,242 +44,51 @@
                     <div class="tab _1_tab">
 
                         <div class="shelf_books_block">
-
+                            {% for book in stat_1_books %}
                             <div class="shelf_book_info_block">
                                 <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
-                                             alt="">
-
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                    <a class="book_link" href="{% url 'book' book.book.id %}"
+                                       title="{{ book.book.full_name }}">
+                                        <img class="book_small_cover" src="{{ book.book.img.url }}" alt="">
+                                        <p class="catalog_book_cover_name">{{ book.book.short_name }}</p>
+                                        <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
+                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
-                                <div class="shelf_book_info_container_2">
+                                <div class="shelf_book_info_container_2" >
                                     <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
                                         книгу сроком на 30 дней (Бесплатно)</p>
                                     <div class="column_flex">
-                                        <form method="POST">
+                                        <form action="{% url 'order_book' book.book.id  %}" method="POST">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="order_id" value="None">
                                             <button class="rent_book_button" type="submit">Заказать</button>
                                         </form>
-                                        <form>
+                                        <form action="{% url 'del_favorites' book.book.id  %}" method="POST">
+                                            {% csrf_token %}
                                             <button class="return_book_button" type="submit">Удалить</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Angular._Сборник_рецептов__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Django_2.1._Практика_создания_веб-сайтов_на_Python__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Django__Практика_создания_Web-сайтов_на_Python__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Hello_World_Занимательное_программирование__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
-                                    <div class="column_flex">
-                                        <form method="POST">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
-                                        </form>
-                                        <form>
-                                            <button class="return_book_button" type="submit">Удалить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
+                            {% endfor %}
                         </div>
                     </div>
 
 
                     <div class="tab _2_tab">
                         <div class="shelf_books_block">
-
+                            {% for book in stat_2_books %}
                             <div class="shelf_book_info_block background_lightgreen background_lightgreen_hover">
                                 <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                    <a class="book_link" href="{% url 'book' book.book.id %}"
+                                       title="{{ book.book.full_name  }}">
                                         <img class="book_small_cover"
-                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             src="{{ book.book.img.url }}"
                                              alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                        <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
+                                        <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
+                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
@@ -290,18 +99,18 @@
                                     </div>
                                 </div>
                             </div>
-
+                            {% endfor %}
+                            {% for book in stat_4_books %}
                             <div class="shelf_book_info_block background_lightred background_lightred_hover">
                                 <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                    <a class="book_link" href="{% url 'book' book.book.id %}"
+                                       title="{{ book.book.full_name  }}">
                                         <img class="book_small_cover"
-                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
+                                             src="{{ book.book.img.url }}"
                                              alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                        <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
+                                        <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
+                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
@@ -311,24 +120,24 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
 
 
                     <div class="tab _3_tab">
                         <div class="shelf_books_block">
-
+                            {% for book in stat_3_books %}
                             <div class="shelf_book_info_block">
                                 <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                    <a class="book_link" href="{% url 'book' book.book.id %}"
+                                       title="{{ book.book.full_name  }}">
                                         <img class="book_small_cover"
-                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             src="{{ book.book.img.url }}"
                                              alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                        <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
+                                        <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
+                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
@@ -337,76 +146,41 @@
                                             <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
                                                 получения:</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.11.2023</p>
+                                               {{ book.date_sending.date  }}</p>
                                         </div>
                                         <div>
                                             <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
                                                 возврата:</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.12.2023</p>
+                                                {{ book.date_deadline.date  }}</p>
                                         </div>
                                     </div>
                                     <div class="column_flex">
-                                        <form>
+                                        <form method="POST" action="{% url 'return_to_book' book.id %}">
+                                            {% csrf_token %}
                                             <button class="return_book_button" type="submit">Оформить возврат</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <div>
-                                        <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                получения:</p>
-                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.11.2023</p>
-                                        </div>
-                                        <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                возврата:</p>
-                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.12.2023</p>
-                                        </div>
-                                    </div>
-                                    <div class="column_flex">
-                                        <form>
-                                            <button class="return_book_button" type="submit">Оформить возврат</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
 
 
                     <div class="tab _4_tab">
                         <div class="shelf_books_block">
-
+                            {% for book in stat_5_books %}
                             <div class="shelf_book_info_block"
-                                 title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
+                                 title="{{ book.book.full_name  }}">
                                 <div class="shelf_book_info_container">
-                                    <a class="book_link" href="">
+                                    <a class="book_link" href="{% url 'book' book.book.id %}">
                                         <img class="book_small_cover"
-                                             src="{% static 'books/covers/Бизнес_в_удовольствие.png' %}"
+                                             src="{{ book.book.img.url }}"
                                              alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
+                                        <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
+                                        <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
+                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
@@ -415,13 +189,12 @@
                                             <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
                                                 получения:</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.11.2023</p>
+                                                {{ book.date_sending.date  }}</p>
                                         </div>
                                         <div>
                                             <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
                                                 возврата:</p>
-                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                18.11.2023</p>
+                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">{{ book.date_return.date  }}</p>
                                         </div>
                                     </div>
                                     <div class="column_flex">
@@ -429,40 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="shelf_book_info_block">
-                                <div class="shelf_book_info_container">
-                                    <a class="book_link" href=""
-                                       title="Android. Программирование для профессионалов. Стивен Кинг. 2020">
-                                        <img class="book_small_cover"
-                                             src="{% static 'books/covers/ASP.NET._Сборник_рецептов__PDFDrive_.png' %}"
-                                             alt="">
-                                        <p class="catalog_book_cover_name">Android. Программирование для
-                                            профессионалов</p>
-                                        <p class="catalog_book_cover_author_name">Стивен Кинг</p>
-                                        <p class="catalog_book_cover_author_name">Язык: Русский</p>
-                                    </a>
-                                </div>
-                                <div class="shelf_book_info_container_2">
-                                    <div>
-                                        <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                получения:</p>
-                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                01.11.2023</p>
-                                        </div>
-                                        <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                возврата:</p>
-                                            <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
-                                                23.11.2023</p>
-                                        </div>
-                                    </div>
-                                    <div class="column_flex">
-
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
 

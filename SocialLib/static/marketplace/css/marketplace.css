@@ -16,12 +16,14 @@ body {
     color: #4D4D4D;
     cursor: default;
     min-height: 100%;
-    position: relative;
+
 }
 
 .main_layout {
     min-height: 80vh;
+    max-width: 2000px;
     position: relative;
+    margin:auto;
     border-top-left-radius: 10px;
 }
 
@@ -754,6 +756,10 @@ input[name="r"] {
     color: #9A9A9A;
 }
 
+.darkgrey_paragraph {
+    color: #707070;
+}
+
 .bold_paragraph {
     font-weight: 600;
 }
@@ -782,6 +788,18 @@ input[name="r"] {
     margin-left: 40px;
 }
 
+.margin_left_60px {
+    margin-left: 60px;
+}
+
+.margin_top_5px {
+    margin-top: 5px !important;
+}
+
+.margin_top_10px {
+    margin-top: 10px !important;
+}
+
 .margin_top_15px {
     margin-top: 15px !important;
 }
@@ -802,13 +820,44 @@ input[name="r"] {
     margin-top: 60px !important;
 }
 
+.margin_top_70px {
+    margin-top: 70px !important;
+}
+
+.margin_top_80px {
+    margin-top: 80px !important;
+}
 
 .margin_bottom_30px {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
+}
+
+.margin_bottom_40px {
+    margin-bottom: 40px !important;
+}
+
+.margin_bottom_50px {
+    margin-bottom: 50px !important;
+}
+
+.margin_bottom_60px {
+    margin-bottom: 60px !important;
 }
 
 .padding_0 {
     padding: 0 !important;
+}
+
+.padding_left_20px {
+    padding-left: 20px !important;
+}
+
+.padding_left_30px {
+    padding-left: 30px !important;
+}
+
+.padding_left_40px {
+    padding-left: 40px !important;
 }
 
 .padding_left_50px {
@@ -821,6 +870,59 @@ input[name="r"] {
 
 .padding_left_70px {
     padding-left: 70px !important;
+}
+
+
+.padding_right_20px {
+    padding-right: 20px !important;
+}
+
+.padding_right_30px {
+    padding-right: 30px !important;
+}
+
+.padding_right_40px {
+    padding-right: 40px !important;
+}
+
+.padding_right_50px {
+    padding-right: 50px !important;
+}
+
+.padding_bottom_40px {
+    padding-bottom: 40px !important;
+}
+
+.padding_bottom_50px {
+    padding-bottom: 60px !important;
+}
+
+.padding_bottom_60px {
+    padding-bottom: 60px !important;
+}
+
+.padding_top_10px {
+    padding-top: 10px !important;
+}
+
+.padding_top_20px {
+    padding-top: 20px !important;
+}
+
+.padding_top_30px {
+    padding-top: 30px !important;
+}
+
+.padding_top_40px {
+    padding-top: 40px !important;
+}
+
+.padding_top_50px {
+    padding-top: 50px !important;
+}
+
+.padding_top_60px {
+    padding-top: 60px !important;
 }
 
 .book_info_author_link {
@@ -1127,7 +1229,7 @@ table {
 }
 
 .profile_white_block {
-    max-width: 1500px;
+    padding: 40px;
     background: white;
     border-radius: 10px;
     margin-top: 40px;
@@ -1445,6 +1547,22 @@ table {
     font-size: 12pt;
 }
 
+.font_14pt {
+    font-size: 14pt;
+}
+
+.font_15pt {
+    font-size: 15pt;
+}
+
+.font_16pt {
+    font-size: 16pt;
+}
+
+.font_17pt {
+    font-size: 17pt;
+}
+
 .book_link {
     text-decoration: none;
     color: #4D4D4D;
@@ -1455,9 +1573,266 @@ table {
     min-height: 60px;
     min-width: 600px;
     height: 200px;
-    margin-left: 60px;
+    margin-left: 20px;
     display: block;
     padding-top: 10px;
 }
 
+.registration_block {
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
+.auth_logo_str_block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth_logo_block {
+    display: flex;
+    justify-content: center;
+}
+
+.auth_logo {
+    height: 150px;
+}
+
+.auth_logo_text {
+    margin: 0;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.auth_title {
+    font-size: 20pt;
+}
+
+.auth_input_field {
+    width: 346px;
+    height: 45px;
+    background: linear-gradient(0deg, #FAFBFC, #FAFBFC), #FFFFFF;
+    border: 1px solid #E0E4EC;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 12pt;
+    outline: none;
+}
+
+.auth_td{
+    padding: 10px 60px 0 60px;
+}
+
+
+.auth_submit_btn {
+    padding: 15px;
+    font-size: 13pt;
+    font-weight: 600;
+    background: #F76B56;
+    color: white;
+    border: 1px solid #F76B56;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.auth_submit_btn:hover {
+    background: #F75F48;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.-display_flex {
+    display: flex;
+}
+
+.-justify_content_center {
+    display: flex;
+    justify-content: center;
+}
+
+.-justify_content_right {
+    display: flex;
+    justify-content: right;
+}
+
+.-flex_direction_column {
+    flex-direction: column;
+}
+
+.auth_registration_link {
+    font-size: 11pt;
+}
+
+.-align_items_center {
+    align-items: center;
+}
+
+.auth_password_input_field {
+    width: 314px;
+    border:0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.-width_100percent {
+    width: 100%;
+}
+
+.-width_50percent {
+    width: 50%;
+}
+
+
+.auth_psw_block {
+    border-radius: 10px;
+    border: 1px solid #E0E4EC;
+    display: flex;
+}
+
+.psw_eye_block {
+    width: 32px;
+    background: #FAFBFC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.psw_eye_block i {
+    cursor: pointer;
+}
+
+.auth_google_icon {
+    height: 43px;
+    width: 43px;
+    padding-right: 10px;
+    fill: #8A8A8A;
+    transition: fill 0.3s;
+}
+
+.user_money_info_block {
+    width: 100%;
+}
+
+.profile_payment_qr_block {
+    width: 220px;
+    padding: 10px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.profile_payment_qr_block:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    background: #FAFAFA;
+}
+
+.profile_qr_img {
+    width: 200px;
+    height: 200px;
+}
+
+.qr_payment_name_paragraph {
+    font-size: 16pt;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.profile_payment_link_to_qr {
+    text-decoration: none;
+    color: #4D4D4D;
+    text-align: center;
+}
+
+.price_list_profile {
+    font-size: 14pt;
+    font-weight: 600;
+    color: #9A9A9A;
+    line-height: 30px;
+}
+
+.profile_levels_table {
+    width: 290px;
+    margin-top: 20px;
+}
+
+.profile_levels_table tr{
+    font-size: 14pt;
+    font-weight: 600;
+    line-height: 30px;
+    color: #9A9A9A;
+    text-align: left;
+}
+
+.profile_levels_table tr .--tire{
+    text-align: center;
+    padding-right: 10px;
+}
+
+
+.blue_link_btn {
+    padding: 15px 15px;
+    font-size: 15pt;
+    color: #3A00CC;
+    border: 1px solid #3A00CC;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.blue_link_btn:hover {
+    background: #3A00CC;
+    color: white;
+    border-color: white;
+}
+
+.orange_link_btn {
+    padding: 15px 15px;
+    font-size: 14pt;
+    color: #F76B56;
+    border: 1px solid #F76B56;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.orange_link_btn:hover {
+    background: #F76B56;
+    color: white;
+    border-color: white;
+}
+
+.add_money_btn {
+    width: 300px;
+}
+
+.book_donate_input_paddings {
+    padding: 10px 60px 10px 20px;
+}
+
+.red_color_button {
+    color: red;
+    background: white;
+    border-color: red;
+    transition: all 0.3s;
+}
+
+.red_color_button:hover {
+    color: white;
+    background: red;
+    border-color: white;
+}
