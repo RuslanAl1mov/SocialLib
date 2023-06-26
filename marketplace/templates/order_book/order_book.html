@@ -60,6 +60,7 @@
                             <div class="book_info_paragraph_block">
                                 <p class="book_info_paragraph">Язык: {{ book_info.get_language_display }}</p>
 
+
                             </div>
 
                             <div class="book_info_paragraph_block" style="margin-top:30px">
@@ -72,6 +73,7 @@
                             </div>
                             <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">Варианты доступа:</p>
                             <div class="book_info_paragraph_block">
+                              
                             <div class="book_info_paragraph_block" style="margin-top:15px">
                                 {% if book_info.is_paper %}
                                 <svg class="header_menu_icon">
@@ -121,8 +123,10 @@
                         </div>
                     </div>
                     <div class="margin_top_30px">
+
                         <form method="POST" action="{% url 'order_book' book_info.id %}" class="book_info_author_form">
                             {% csrf_token %}
+
                         <p class="main_books_content_block_secondary_title padding_0 margin_0 margin_top_50px bold_paragraph">
                             Информация о пользователе</p>
                         <table>
@@ -133,6 +137,7 @@
                                     <input class="profile_input_field" type="text" name="first_name"
                                            placeholder="Имя" id="first_name"
                                            value="{{request.user.first_name}}" required>
+
 
                                 </td>
                                 <td class="td_raw book_donate_input_paddings">
@@ -148,17 +153,19 @@
                                     <input class="profile_input_field" type="tel" name="phone_number" id="phone"
                                            placeholder="Номер телефона"
                                            value="{{request.user.customuser.phone_number}}"
+                                           pattern="[0-9]{2} [0-9]{3}-[0-9]{2}-[0-9]{2}"
                                            required>
                                 </td>
                                 <td class="td_raw book_donate_input_paddings">
                                     <label class="input_label_bold" for="text">Адрес доставки</label>
                                     <input class="profile_input_field" type="text" name="address"
-                                           placeholder="Адрес доставки" id="text">
+                                           placeholder="Адрес доставки" id="text" required>
+
                                 </td>
                             </tr>
                             <tr>
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="text">Приблизительная дата возврата книги</label>
+                                    <label class="input_label_bold" for="text">Дата возврата книги</label>
                                     <input class="profile_input_field bold_paragraph" type="text" name="date_of_expire"
                                            id="text" disabled value="25.06.2023">
                                 </td>

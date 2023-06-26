@@ -1,8 +1,8 @@
 from django.contrib import admin
+
 from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, \
     DepositUser, DonateBook, History_User_Book
 from modeltranslation.admin import TranslationAdmin
-
 
 class GenresAdmin(TranslationAdmin):
     prepopulated_fields = {
@@ -10,10 +10,12 @@ class GenresAdmin(TranslationAdmin):
     }
 
 
+
 class KeywordsAdmin(TranslationAdmin):
     prepopulated_fields = {
         'slug': ('name',),
     }
+
 
 
 class AuthorAdmin(TranslationAdmin):
@@ -34,6 +36,7 @@ class QuotesAdmin(TranslationAdmin):
     list_filter = ('author',)
     list_editable = ('is_removed',)
     search_fields = ('author', 'text',)
+
 
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('get_full_name', 'phone_number', 'get_email')
@@ -83,6 +86,7 @@ class History_User_BookAdmin(admin.ModelAdmin):
     get_book_short_name.short_description = 'Наименование книги'
 
 
+
 admin.site.register(Genres, GenresAdmin)
 admin.site.register(Keywords, KeywordsAdmin)
 admin.site.register(Author, AuthorAdmin)
@@ -92,3 +96,4 @@ admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(DepositUser, DepositUserAdmin)
 admin.site.register(DonateBook, DonateBookAdmin)
 admin.site.register(History_User_Book, History_User_BookAdmin)
+

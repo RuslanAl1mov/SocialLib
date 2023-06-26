@@ -1,3 +1,4 @@
+
 import random, telebot
 from django.db.models import Q
 from django.db.models import Count
@@ -57,6 +58,7 @@ def log_out(request):
     return redirect('home')
 
 
+
 def home_page(request):
     unique_books = []
     seen_names = set()
@@ -78,6 +80,7 @@ def home_page(request):
         "new_books": unique_books[:10],
         "main_books": unique_books[:16],
         'quotes': random_quotes,
+
         'list_category': Genres.objects.all()
     }
     return render(request, template, context)
@@ -91,6 +94,7 @@ def book_page(request, book_id):
     seen_similar_books = set()
 
     book_info = get_object_or_404(Books, pk=book_id)
+
 
     author_books = Books.objects.filter(author__in=book_info.author.all(), is_occupied=0, is_removed=0).exclude(
         pk=book_info.pk)
@@ -221,6 +225,7 @@ def search_result_page(request):
             ).filter(
                 Q(author__name__icontains=search_value))
 
+
         for book in search_books:
             if book.full_name not in seen_books:
                 unique_books.append(book)
@@ -228,6 +233,7 @@ def search_result_page(request):
         context['search_books'] = unique_books
         context['search_value'] = search_value
         context['search_quantity'] = len(unique_books)
+
     elif request.method == "GET":
         search_value = request.GET.get('search_value')
         sort_param = request.GET.get('sort')
@@ -331,7 +337,6 @@ def not_found_page(request):
 def book_reserved_page(request):
     return render(request, 'notifications/book_reserved.html')
 
-
 def order_book_page(request, book_id):
     if request.method == "POST" and request.POST['order_id'] != "None": # Оформление книги
         order_info = get_object_or_404(History_User_Book, id=int(request.POST['order_id'])) # Информация о брони книги со стороны пользователя
@@ -416,8 +421,6 @@ def return_to_book(request, id):
     return render(request, 'notifications/return_success.html', {'list_category': Genres.objects.all(),})
 
 
-
-
 def order_success_page(request):
     return render(request, 'notifications/order_success.html', {'list_category': Genres.objects.all(),})
 
@@ -432,3 +435,4 @@ def about_us_page(request):
 
 def tech_support_page(request):
     return render(request, 'additional_content_pages/tech_support.html', {'list_category': Genres.objects.all(),})
+

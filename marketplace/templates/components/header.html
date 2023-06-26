@@ -49,6 +49,7 @@
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_catalog_menu_dropdown_content">
                                 <div class="content_list">
+
                                     {% for category in list_category %}
                                     <a class="header_menu_item header_catalog_menu_item" href="{% url 'category_books' category.id %}">{{ category.name }}</a>
                                     {% endfor %}

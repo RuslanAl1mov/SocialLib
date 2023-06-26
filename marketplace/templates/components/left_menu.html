@@ -20,6 +20,7 @@
                         </dt>
                         <dt class="menu_item">
                             {% if request.user.is_authenticated %}
+
                             <a class="menu_item_link" href="{% url 'book_shelf' %}">
                                 <svg class="menu_item_icon">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
