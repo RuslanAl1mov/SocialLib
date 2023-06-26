@@ -25,7 +25,8 @@
             <h1 class="auth_title margin_top_10px margin_top_40px">Авторизация</h1>
         </div>
 
-        <form method="POST">
+
+        <form action="{% url 'authorization' %}" method="POST">
             {% csrf_token %}
             <div class="auth_info_block">
                 <table>
@@ -72,8 +73,9 @@
                         </svg>
                         </a>
                 </div>
-
-                <a class="auth_registration_link orange_text margin_top_30px" href="">У меня нет аккаунта</a>
+              
+                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'registration' %}">У меня нет аккаунта</a>
+              
             </div>
         </form>
 

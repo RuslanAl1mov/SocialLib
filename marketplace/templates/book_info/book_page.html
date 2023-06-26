@@ -38,14 +38,14 @@
                                         {{ author.name }}
                                     </a>
                                 </form>
-                                {% if not forloop.last %},{% endif %}
+                                {% if not forloop.last %}<p class="book_info_paragraph">,</p>{% endif %}
                             {% endfor %}
                         </div>
                         <div class="book_info_paragraph_block">
                             <p class="book_info_paragraph">Год издания:</p>
                             <p class="book_info_paragraph">{{ book_info.year }}</p>
                             {% if book_info.publications%}
-                            <p class="book_info_paragraph grey_paragraph margin_left_20px">Издание: {{ book_info.publications }} </p>
+                            <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}-е издание</p>
                             {% endif %}
                         </div>
                         <div class="book_info_paragraph_block">
@@ -55,11 +55,11 @@
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
                             <p class="book_info_paragraph bold_paragraph">Сейчас читают:</p>
-                            <p class="book_info_paragraph bold_paragraph margin_right_30px">12</p>
+                            <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_currently_reading }}</p>
                             <p class="book_info_paragraph bold_paragraph">Уже прочли:</p>
-                            <p class="book_info_paragraph bold_paragraph margin_right_30px">37</p>
+                            <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_already_read }}</p>
                             <p class="book_info_paragraph bold_paragraph">Всего книг:</p>
-                            <p class="book_info_paragraph bold_paragraph">58</p>
+                            <p class="book_info_paragraph bold_paragraph">{{ total_books }}</p>
                         </div>
                         <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">Варианты доступа:</p>
                         <div class="book_info_paragraph_block">
@@ -106,8 +106,8 @@
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
-                            <a class="borrow_button_link" href="">ЗАКАЗАТЬ</a>
-                            <a class="put_on_shelf_button_link" href="">
+                            <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">ЗАКАЗАТЬ</a>
+                            <a class="put_on_shelf_button_link" href="{% url 'favorites' book_info.id %}">
                                 <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>

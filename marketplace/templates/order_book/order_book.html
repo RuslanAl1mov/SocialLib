@@ -32,26 +32,34 @@
                     <div class="main_upper_block">
                         <div class="big_book_cover_block">
                             <img class="big_book_cover_img"
-                                 src="{% static 'books/covers/Android._Программирование_для_профессионалов.__PDFDrive_.png' %}"
+                                 src="{{ book_info.img.url }}"
                                  alt="">
                         </div>
                         <div class="main_book_info_block">
-                            <p class="book_info_book_name">Android. Программирование для настоящих профессионалов</p>
+                            <p class="book_info_book_name">{{ book_info.short_name }}</p>
                             <div class="book_info_paragraph_block">
                                 <p class="book_info_paragraph">Авторы:</p>
-                                <a class="book_info_author_link" href="">Б.Филлипс</a>
-                                <p class="book_info_paragraph">,</p>
-                                <a class="book_info_author_link" href="">К.Стюарт</a>
-                                <p class="book_info_paragraph">,</p>
-                                <a class="book_info_author_link" href="">К.Марсикано</a>
+                                {% for author in book_info.author.all %}
+                                <form method="POST" action="{% url 'book_search' %}" class="book_info_author_form">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="search_value" value="{{ author.name }}">
+                                    <a class="book_info_author_link" href="#" onclick="this.parentNode.submit(); return false;">
+                                        {{ author.name }}
+                                    </a>
+                                </form>
+                                {% if not forloop.last %}<p class="book_info_paragraph">,</p>{% endif %}
+                            {% endfor %}
+
+
                             </div>
                             <div class="book_info_paragraph_block">
                                 <p class="book_info_paragraph">Год издания:</p>
-                                <p class="book_info_paragraph">2023</p>
-                                <p class="book_info_paragraph grey_paragraph margin_left_20px">3-е издание</p>
+                                <p class="book_info_paragraph">{{ book_info.year }}</p>
+                                <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}-е издание</p>
                             </div>
                             <div class="book_info_paragraph_block">
-                                <p class="book_info_paragraph">Язык: Русский</p>
+                                <p class="book_info_paragraph">Язык: {{ book_info.get_language_display }}</p>
+
 
                             </div>
 
@@ -65,32 +73,60 @@
                             </div>
                             <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">Варианты доступа:</p>
                             <div class="book_info_paragraph_block">
-                                <div class="book_info_paragraph_block" style="margin-top:15px">
-                                    <svg class="header_menu_icon">
-                                        <use height="20px" width="20px" fill="#42BB4E"
-                                             href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
-                                    </svg>
-                                    <p class="book_info_paragraph bold_paragraph">Бумажная книга</p>
-                                    <svg class="header_menu_icon" style="margin-left:25px">
-                                        <use height="22px" width="22px" fill="#4D4D4D"
-                                             href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                    </svg>
-                                    <p class="book_info_paragraph bold_paragraph">Электронная книга</p>
-                                    <svg class="header_menu_icon" style="margin-left:25px">
-                                        <use height="22px" width="22px" fill="#4D4D4D"
-                                             href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
-                                    </svg>
-                                    <p class="book_info_paragraph bold_paragraph">Аудиокнига</p>
-                                </div>
+                              
+                            <div class="book_info_paragraph_block" style="margin-top:15px">
+                                {% if book_info.is_paper %}
+                                <svg class="header_menu_icon">
+                                    <use height="20px" width="20px" fill="#42BB4E"
+                                         href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                </svg>
+                                {% else %}
+                                <svg class="header_menu_icon" style="margin-left:25px">
+                                    <use height="22px" width="22px" fill="#4D4D4D"
+                                         href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
+                                </svg>
+                                {% endif %}
+                                <p class="book_info_paragraph bold_paragraph">Бумажная книга</p>
+
+                                {% if book_info.is_eBook %}
+                                <svg class="header_menu_icon">
+                                    <use height="20px" width="20px" fill="#42BB4E"
+                                         href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                </svg>
+                                {% else %}
+                                <svg class="header_menu_icon" style="margin-left:25px">
+                                    <use height="22px" width="22px" fill="#4D4D4D"
+                                         href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
+                                </svg>
+                                {% endif %}
+                                <p class="book_info_paragraph bold_paragraph">Электронная книга</p>
+
+                                {% if book_info.is_audio %}
+                                <svg class="header_menu_icon">
+                                    <use height="20px" width="20px" fill="#42BB4E"
+                                         href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
+                                </svg>
+                                {% else %}
+                                <svg class="header_menu_icon" style="margin-left:25px">
+                                    <use height="22px" width="22px" fill="#4D4D4D"
+                                         href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
+                                </svg>
+                                {% endif %}
+                                <p class="book_info_paragraph bold_paragraph">Аудиокнига</p>
                             </div>
+                        </div>
 
                             <div class="book_info_paragraph_block" style="margin-top:30px">
-                                <a class="put_on_shelf_button_link margin_0 -width_50percent" href="#">Открыть страницу
+                                <a class="put_on_shelf_button_link margin_0 -width_50percent" href="{% url 'book' book_info.id %}">Открыть страницу
                                     книги</a>
                             </div>
                         </div>
                     </div>
                     <div class="margin_top_30px">
+
+                        <form method="POST" action="{% url 'order_book' book_info.id %}" class="book_info_author_form">
+                            {% csrf_token %}
+
                         <p class="main_books_content_block_secondary_title padding_0 margin_0 margin_top_50px bold_paragraph">
                             Информация о пользователе</p>
                         <table>
@@ -99,13 +135,16 @@
                                 <td class="td_raw book_donate_input_paddings">
                                     <label class="input_label_bold" for="first_name">Имя</label>
                                     <input class="profile_input_field" type="text" name="first_name"
-                                           placeholder="Имя" id="first_name" required>
+                                           placeholder="Имя" id="first_name"
+                                           value="{{request.user.first_name}}" required>
+
 
                                 </td>
                                 <td class="td_raw book_donate_input_paddings">
                                     <label class="input_label_bold" for="last_name">Фамилия</label>
                                     <input class="profile_input_field" type="text" name="last_name"
-                                           placeholder="Фамилия" id="last_name" required>
+                                           placeholder="Фамилия" id="last_name"
+                                           value="{{request.user.last_name}}" required>
                                 </td>
                             </tr>
                             <tr class="tr_raw">
@@ -113,6 +152,7 @@
                                     <label class="input_label_bold" for="phone">Номер телефона</label>
                                     <input class="profile_input_field" type="tel" name="phone_number" id="phone"
                                            placeholder="Номер телефона"
+                                           value="{{request.user.customuser.phone_number}}"
                                            pattern="[0-9]{2} [0-9]{3}-[0-9]{2}-[0-9]{2}"
                                            required>
                                 </td>
@@ -120,6 +160,7 @@
                                     <label class="input_label_bold" for="text">Адрес доставки</label>
                                     <input class="profile_input_field" type="text" name="address"
                                            placeholder="Адрес доставки" id="text" required>
+
                                 </td>
                             </tr>
                             <tr>
@@ -129,19 +170,19 @@
                                            id="text" disabled value="25.06.2023">
                                 </td>
                             </tr>
+                            <tr><input type="hidden" name="order_id" value="{{ order_id }}"></tr>
                             </tbody>
                         </table>
                         <div class="bottom_button_block -display_flex padding_0 padding_bottom_40px padding_left_20px padding_right_30px margin_top_70px">
                             <div class="main_upper_block -width_100percent">
-                                <input class="input_submit_btn red_color_button" type="submit"
-                                       value="Я передумал">
+                                <a class="input_submit_btn red_color_button" href="{{ previous_page }}">Я передумал(а)</a>
                             </div>
                             <div class="main_upper_block -justify_content_center -justify_content_right -width_100percent">
-                                <input class="input_submit_btn" type="submit"
+                                <input class="input_submit_btn" type="submit" name="input_submit"
                                        value="Отправить заявку на получение книги">
                             </div>
                         </div>
-
+                        </form>
 
                     </div>
                 </div>

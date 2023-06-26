@@ -27,16 +27,17 @@
         <main class="main_content_layout">
             <div class="main_content_container">
 
-                <input class="radio_input" type="radio" name="tabs" id="tab_1" checked/>
+                <input class="radio_input" type="radio" name="tabs" id="tab_1" {% if tab == 1 %} checked {% endif %}/>
                 <label class="radio_label" for="tab_1">Профиль</label>
-                <input class="radio_input" type="radio" name="tabs" id="tab_2"/>
+                <input class="radio_input" type="radio" name="tabs" id="tab_2" {% if tab == 2 %} checked {% endif %}/>
                 <label class="radio_label" for="tab_2">Пароли и Безопасность</label>
-                <input class="radio_input" type="radio" name="tabs" id="tab_3"/>
+                <input class="radio_input" type="radio" name="tabs" id="tab_3" {% if tab == 3 %} checked {% endif %}/>
                 <label class="radio_label" for="tab_3">Депозит и Баланс</label>
 
                 <div class="tab _1_tab">
                     <div class="profile_white_block">
-                        <form method="POST">
+                        <form action="{% url 'user_profile' 1 %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="main_upper_block -block_space-between">
 
                                 <div class="profile_content_block">
@@ -45,7 +46,9 @@
                                            id="user_avatar_file" accept=".jpg, .jpeg, .png"
                                            onchange="userAvatarImgPreview(this);">
                                     <label for="user_avatar_file" class="load_avatar_img_label">
-                                        <img id="user_avatar_preview" src="" class="load_avatar_img_preview" alt="">
+                                        {% if request.user.customuser.img and request.user.customuser.img.url %}
+                                            <img id="user_avatar_preview" src="{{ request.user.customuser.img.url }}" class="load_avatar_img_preview" alt="">
+                                        {% endif %}
                                         <div class="avatar_img_load_btn_block" id="avatar_img_load_btn_block">
                                             <svg class="add_image_icon"
                                                  style="width: 35px; height: 35px;">
@@ -53,7 +56,7 @@
                                             </svg>
                                         </div>
                                     </label>
-                                    <p class="profile_id_text">ID: 123456789</p>
+                                    <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>
 
 
@@ -67,7 +70,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#open_book"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">120</p>
+                                                <p class="user_statistic_info_number_text">{{ read_books }}</p>
                                             </div>
                                             <p class="user_statistic_info_text">Прочтено</p>
                                         </div>
@@ -82,7 +85,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#arm_gift"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">9812</p>
+                                                <p class="user_statistic_info_number_text">{{ help_pro }}</p>
                                             </div>
                                             <p class="user_statistic_info_text">Помощи</p>
                                         </div>
@@ -97,7 +100,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#clock"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">328</p>
+                                                <p class="user_statistic_info_number_text">0</p>
                                             </div>
                                             <p class="user_statistic_info_text">Аренда</p>
                                         </div>
@@ -112,7 +115,7 @@
                                                              href="{% static 'marketplace/img/icons.svg' %}#cash_from_hand_to_hand"></use>
                                                     </svg>
                                                 </div>
-                                                <p class="user_statistic_info_number_text">238</p>
+                                                <p class="user_statistic_info_number_text">0</p>
                                             </div>
                                             <p class="user_statistic_info_text">Продажи</p>
                                         </div>
@@ -127,27 +130,30 @@
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="first_name">Имя</label>
                                             <input class="profile_input_field" type="text" name="first_name"
-                                                   placeholder="Имя" id="first_name" required>
+                                                   placeholder="Имя" id="first_name"
+                                                   value="{{request.user.first_name}}" required>
 
                                         </td>
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="last_name">Фамилия</label>
                                             <input class="profile_input_field" type="text" name="last_name"
-                                                   placeholder="Фамилия" id="last_name" required>
+                                                   placeholder="Фамилия" id="last_name"
+                                                   value="{{request.user.last_name}}" required>
                                         </td>
                                     </tr>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="phone">Номер телефона</label>
                                             <input class="profile_input_field" type="tel" name="phone_number" id="phone"
-                                                   placeholder="Номер телефона"
+                                                   placeholder="Номер телефона" value="{{request.user.customuser.phone_number}}"
                                                    pattern="[0-9]{2} [0-9]{3}-[0-9]{2}-[0-9]{2}"
                                                    required>
                                         </td>
                                         <td class="td_raw user_profile_td">
                                             <label class="input_label_bold" for="email">Электронная почта</label>
                                             <input class="profile_input_field" type="email" name="email"
-                                                   placeholder="Электронная почта" id="email" required>
+                                                   placeholder="Электронная почта" id="email"
+                                                   value="{{request.user.email}}" required>
 
                                         </td>
                                     </tr>
@@ -165,7 +171,8 @@
 
                 <div class="tab _2_tab">
                     <div class="profile_white_block">
-                        <form method="POST">
+                        <form action="{% url 'user_profile' 2 %}" method="POST">
+                             {% csrf_token %}
                             <div class="main_upper_block margin_left_40px margin_top_30px">
                                 <h1 class="category_books_page_content_block_title "> Изменение пароля</h1>
                             </div>
@@ -210,7 +217,7 @@
                             </div>
                             <div class="to_set_right_bottom_position_block padding_right_40px">
                                 <a class="blue_link_btn add_money_btn margin_right_30px -text_align_center" href="#poplnit">Пополнить баланс депозита</a>
-                                <input class="input_submit_btn" type="submit" value="Обновить данные">
+                                <a class="input_submit_btn" href="{% url 'user_profile' 3 %}">Обновить данные</a>
                             </div>
                         </div>
                         <div class="main_upper_block -block_space-between margin_left_40px">
@@ -489,8 +496,6 @@
 
 
                     </div>
-
-
                 </div>
             </div>
 
