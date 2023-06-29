@@ -49,18 +49,18 @@
                                         {% if request.user.customuser.img and request.user.customuser.img.url %}
                                             <img id="user_avatar_preview" src="{{ request.user.customuser.img.url }}" class="load_avatar_img_preview" alt="">
                                         {% endif %}
-                                        <div class="avatar_img_load_btn_block" id="avatar_img_load_btn_block">
-                                            <svg class="add_image_icon"
-                                                 style="width: 35px; height: 35px;">
-                                                <use href="{% static 'marketplace/img/icons.svg' %}#plus"></use>
-                                            </svg>
-                                        </div>
+{#                                        <div class="avatar_img_load_btn_block -justify_content_center -align_items_center" id="avatar_img_load_btn_block">#}
+{#                                            <svg class="add_image_icon"#}
+{#                                                 style="width: 30px; height: 30px;">#}
+{#                                                <use href="{% static 'marketplace/img/icons.svg' %}#plus"></use>#}
+{#                                            </svg>#}
+{#                                        </div>#}
                                     </label>
                                     <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>
 
 
-                                <div class="user_statistics_block -center_statistics">
+                                <div class="user_statistics_block -center_statistics -justify_content_left padding_left_70px">
                                     <div class="profile_content_block">
                                         <div class="user_book_statistic_info_block background_orange">
                                             <div class="main_upper_block">
@@ -91,35 +91,35 @@
                                         </div>
                                     </div>
 
-                                    <div class="profile_content_block">
-                                        <div class="user_book_statistic_info_block background_pink">
-                                            <div class="main_upper_block">
-                                                <div class="user_statistic_info_icon_block background_white">
-                                                    <svg class="user_statistic_info_icon">
-                                                        <use height="25px" width="25px" fill="#FF5474"
-                                                             href="{% static 'marketplace/img/icons.svg' %}#clock"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="user_statistic_info_number_text">0</p>
-                                            </div>
-                                            <p class="user_statistic_info_text">Аренда</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="profile_content_block">
-                                        <div class="user_book_statistic_info_block background_green">
-                                            <div class="main_upper_block">
-                                                <div class="user_statistic_info_icon_block background_white">
-                                                    <svg class="user_statistic_info_icon">
-                                                        <use height="25px" width="25px" fill="#42BB4E"
-                                                             href="{% static 'marketplace/img/icons.svg' %}#cash_from_hand_to_hand"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="user_statistic_info_number_text">0</p>
-                                            </div>
-                                            <p class="user_statistic_info_text">Продажи</p>
-                                        </div>
-                                    </div>
+{#                                    <div class="profile_content_block">#}
+{#                                        <div class="user_book_statistic_info_block background_pink">#}
+{#                                            <div class="main_upper_block">#}
+{#                                                <div class="user_statistic_info_icon_block background_white">#}
+{#                                                    <svg class="user_statistic_info_icon">#}
+{#                                                        <use height="25px" width="25px" fill="#FF5474"#}
+{#                                                             href="{% static 'marketplace/img/icons.svg' %}#clock"></use>#}
+{#                                                    </svg>#}
+{#                                                </div>#}
+{#                                                <p class="user_statistic_info_number_text">0</p>#}
+{#                                            </div>#}
+{#                                            <p class="user_statistic_info_text">Аренда</p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{##}
+{#                                    <div class="profile_content_block">#}
+{#                                        <div class="user_book_statistic_info_block background_green">#}
+{#                                            <div class="main_upper_block">#}
+{#                                                <div class="user_statistic_info_icon_block background_white">#}
+{#                                                    <svg class="user_statistic_info_icon">#}
+{#                                                        <use height="25px" width="25px" fill="#42BB4E"#}
+{#                                                             href="{% static 'marketplace/img/icons.svg' %}#cash_from_hand_to_hand"></use>#}
+{#                                                    </svg>#}
+{#                                                </div>#}
+{#                                                <p class="user_statistic_info_number_text">0</p>#}
+{#                                            </div>#}
+{#                                            <p class="user_statistic_info_text">Продажи</p>#}
+{#                                        </div>#}
+{#                                    </div>#}
 
                                 </div>
                             </div>

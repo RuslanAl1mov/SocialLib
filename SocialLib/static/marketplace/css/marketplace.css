@@ -23,7 +23,7 @@ body {
     min-height: 80vh;
     max-width: 2000px;
     position: relative;
-    margin:auto;
+    margin: auto;
     border-top-left-radius: 10px;
 }
 
@@ -102,7 +102,7 @@ body {
     color: #6B6B6B;
 }
 
-.menu_item_link:hover .menu_item_icon{
+.menu_item_link:hover .menu_item_icon {
     fill: #6B6B6B;
 }
 
@@ -169,10 +169,9 @@ body {
     display: flex;
 }
 
-
 .search_block {
     height: 35px;
-    width: 455px;
+    width: calc(100% + 40px);
     border-radius: 40px;
     white-space: nowrap;
     display: flex;
@@ -353,7 +352,7 @@ body {
 }
 
 .header_catalog_menu_block {
-    margin-left: 25px;
+    margin-left: 55px;
 }
 
 .header_catalog_menu_dropdown_content {
@@ -415,7 +414,8 @@ body {
 .header_search_menu {
     border-radius: 40px 0 0 40px;
     background: #F5F5FA;
-    width: 80px;
+    width: auto;
+    max-width: 120px;
 }
 
 .header_search_menu_dropdown_content {
@@ -625,12 +625,14 @@ input[name="r"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 30px 0 0 ;
+    margin: 0 30px 0 0;
     transition: padding 0.3s;
 }
 
 .book_small_cover {
-    max-height: 185px;
+    max-height: 166px;
+    min-height: 166px;
+    min-width: 123px;
     max-width: 123px;
     border-radius: 5px;
     padding: 1px;
@@ -1077,6 +1079,9 @@ table {
     background: #F0F0F0;
 }
 
+.search_tr_raw {
+    max-height: 185px;
+}
 
 .first_td_raw {
     border-top-left-radius: 10px;
@@ -1201,7 +1206,7 @@ table {
 #tab_2:checked ~ ._2_tab,
 #tab_3:checked ~ ._3_tab,
 #tab_4:checked ~ ._4_tab,
-#tab_5:checked ~ ._5_tab{
+#tab_5:checked ~ ._5_tab {
     display: block;
 }
 
@@ -1285,19 +1290,19 @@ table {
     background: #FF5474;
 }
 
-.background_lightred{
+.background_lightred {
     background: #FFE3E3 !important;
 }
 
-.background_lightred_hover:hover{
+.background_lightred_hover:hover {
     background: #F7DCDC !important;
 }
 
-.background_lightgreen{
+.background_lightgreen {
     background: #E3FFE8 !important;
 }
 
-.background_lightgreen_hover:hover{
+.background_lightgreen_hover:hover {
     background: #DCF7E1 !important;
 }
 
@@ -1436,7 +1441,7 @@ table {
     transition: all 1s;
 }
 
-.load_avatar_img_label:hover .add_image_icon{
+.load_avatar_img_label:hover .add_image_icon {
     fill: #F76B56;
 }
 
@@ -1447,7 +1452,7 @@ table {
 }
 
 .avatar_img_load_btn_block {
-    margin: 30px 15px 15px 15px;
+    height: 130px;
 }
 
 .shelf_book_info_block {
@@ -1523,7 +1528,7 @@ table {
 }
 
 .shelf_books_block {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -1543,6 +1548,7 @@ table {
 .font_13pt {
     font-size: 13pt;
 }
+
 .font_12pt {
     font-size: 12pt;
 }
@@ -1614,6 +1620,11 @@ table {
     font-size: 20pt;
 }
 
+.auth_checkbox {
+    height: 20px;
+    width: 20px;
+}
+
 .auth_input_field {
     width: 346px;
     height: 45px;
@@ -1625,7 +1636,7 @@ table {
     outline: none;
 }
 
-.auth_td{
+.auth_td {
     padding: 10px 60px 0 60px;
 }
 
@@ -1643,8 +1654,14 @@ table {
 }
 
 .auth_submit_btn:hover {
-    background: #F75F48;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.auth_submit_btn_disabled {
+    background: #C9C9C9;
+    border: 1px solid #C9C9C9;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    cursor: default;
 }
 
 .-display_flex {
@@ -1661,6 +1678,11 @@ table {
     justify-content: right;
 }
 
+.-justify_content_left {
+    display: flex;
+    justify-content: left;
+}
+
 .-flex_direction_column {
     flex-direction: column;
 }
@@ -1675,7 +1697,7 @@ table {
 
 .auth_password_input_field {
     width: 314px;
-    border:0;
+    border: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -1688,6 +1710,9 @@ table {
     width: 50%;
 }
 
+.-height_100percent {
+    height: 100%;
+}
 
 .auth_psw_block {
     border-radius: 10px;
@@ -1764,7 +1789,7 @@ table {
     margin-top: 20px;
 }
 
-.profile_levels_table tr{
+.profile_levels_table tr {
     font-size: 14pt;
     font-weight: 600;
     line-height: 30px;
@@ -1772,7 +1797,7 @@ table {
     text-align: left;
 }
 
-.profile_levels_table tr .--tire{
+.profile_levels_table tr .--tire {
     text-align: center;
     padding-right: 10px;
 }
@@ -1835,4 +1860,8 @@ table {
     color: white;
     background: red;
     border-color: white;
+}
+
+.-no_text_decoration {
+    text-decoration: none;
 }
