@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'marketplace'
 ]
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,8 +68,15 @@ WSGI_APPLICATION = 'SocialLib.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'SocialLib',
+        'USER': 'SocialLib_user',
+        'PASSWORD': 'Yu$Ru$L1bFr13nds',
+        'HOST': '45.91.8.77',
+        'PORT': '3306',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
     }
 }
 
@@ -111,6 +120,10 @@ MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
 
 STATIC_URL = 'static/'
 

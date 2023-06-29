@@ -15,6 +15,8 @@ urlpatterns = [
     path('category/<int:category_id>/', views.category_books_page, name='category_books'),
     path('book_search', views.search_result_page, name='book_search'),
     path('profile/<int:tab_id>/', views.user_profile_page, name='user_profile'),
+    path('withdraw_money', views.withdraw_money, name='withdraw_money'),
+
     path('book_shelf', views.books_shelf_page, name='book_shelf'),
     path('book_donate', views.book_donate_page, name='book_donate'),
     path('order_book/<int:book_id>/', views.order_book_page, name='order_book'),

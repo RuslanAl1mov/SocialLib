@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@
                 <div class="main_books_content_block">
                     <div class="main_upper_block">
                         <div style="width: 100%;">
-                            <h1 class="category_books_page_content_block_title">Моя <span class="orange_text">книжная полка</span>
+                            <h1 class="category_books_page_content_block_title">{% trans 'Моя ' %}<span class="orange_text">{% trans 'книжная полка' %}</span>
                             </h1>
                         </div>
                     </div>
@@ -31,13 +32,13 @@
                     <div class="margin_top_30px"></div>
 
                     <input class="radio_input" type="radio" name="tabs" id="tab_1" checked/>
-                    <label class="radio_label" for="tab_1">Избранные</label>
+                    <label class="radio_label" for="tab_1">{% trans 'Избранные' %}</label>
                     <input class="radio_input" type="radio" name="tabs" id="tab_2"/>
-                    <label class="radio_label" for="tab_2">В ожидании...</label>
+                    <label class="radio_label" for="tab_2">{% trans 'В ожидании...' %}</label>
                     <input class="radio_input" type="radio" name="tabs" id="tab_3"/>
-                    <label class="radio_label" for="tab_3">Я читаю</label>
+                    <label class="radio_label" for="tab_3">{% trans 'Я читаю' %}</label>
                     <input class="radio_input" type="radio" name="tabs" id="tab_4"/>
-                    <label class="radio_label" for="tab_4">Прочтенные</label>
+                    <label class="radio_label" for="tab_4">{% trans 'Прочтенные' %}</label>
                     <div class="margin_bottom_30px"></div>
 
 
@@ -52,21 +53,21 @@
                                         <img class="book_small_cover" src="{{ book.book.img.url }}" alt="">
                                         <p class="catalog_book_cover_name">{{ book.book.short_name }}</p>
                                         <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
-                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
+                                        <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2" >
-                                    <p class="search_book_table_book_author_str grey_paragraph">Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)</p>
+                                    <p class="search_book_table_book_author_str grey_paragraph">{% trans 'Вы можете взять эту
+                                        книгу сроком на 30 дней (Бесплатно)' %}</p>
                                     <div class="column_flex">
                                         <form action="{% url 'order_book' book.book.id  %}" method="POST">
                                             {% csrf_token %}
                                             <input type="hidden" name="order_id" value="None">
-                                            <button class="rent_book_button" type="submit">Заказать</button>
+                                            <button class="rent_book_button" type="submit">{% trans 'Заказать' %}</button>
                                         </form>
                                         <form action="{% url 'del_favorites' book.book.id  %}" method="POST">
                                             {% csrf_token %}
-                                            <button class="return_book_button" type="submit">Удалить</button>
+                                            <button class="return_book_button" type="submit">{% trans 'Удалить' %}</button>
                                         </form>
                                     </div>
                                 </div>
@@ -88,13 +89,12 @@
                                              alt="">
                                         <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
                                         <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
-                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
+                                        <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str">Ожидайте звонка с
-                                        подтверждением <span class="underlined_text">отправки</span> вам вашей <span
-                                                class="underlined_text">книги</span>.</p>
+                                    <p class="search_book_table_book_author_str">{% trans 'Ожидайте звонка с подтверждением ' %}<span class="underlined_text">{% trans 'отправки' %}</span>{% trans ' вам вашей ' %}<span
+                                                class="underlined_text">{% trans 'книги' %}</span>.</p>
                                     <div class="column_flex">
                                     </div>
                                 </div>
@@ -110,12 +110,11 @@
                                              alt="">
                                         <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
                                         <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
-                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
+                                        <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
-                                    <p class="search_book_table_book_author_str">Ожидайте звонка с подтверждением
-                                        регистрации <span class="underlined_text">возврата вашей книги</span>.</p>
+                                    <p class="search_book_table_book_author_str">{% trans 'Ожидайте звонка с подтверждением регистрации ' %}<span class="underlined_text">{% trans 'возврата вашей книги' %}</span>.</p>
                                     <div class="column_flex">
                                     </div>
                                 </div>
@@ -137,20 +136,18 @@
                                              alt="">
                                         <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
                                         <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
-                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
+                                        <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
                                     <div>
                                         <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                получения:</p>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">{% trans 'Дата получения:' %}</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
                                                {{ book.date_sending.date  }}</p>
                                         </div>
                                         <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">{% trans 'Дата возврата:' %}</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
                                                 {{ book.date_deadline.date  }}</p>
                                         </div>
@@ -158,7 +155,7 @@
                                     <div class="column_flex">
                                         <form method="POST" action="{% url 'return_to_book' book.id %}">
                                             {% csrf_token %}
-                                            <button class="return_book_button" type="submit">Оформить возврат</button>
+                                            <button class="return_book_button" type="submit">{% trans 'Оформить возврат' %}</button>
                                         </form>
                                     </div>
                                 </div>
@@ -180,20 +177,18 @@
                                              alt="">
                                         <p class="catalog_book_cover_name">{{ book.book.short_name  }}</p>
                                         <p class="catalog_book_cover_author_name">{{ book.book.author.first.name }}</p>
-                                        <p class="catalog_book_cover_author_name">Язык: {{ book.book.get_language_display }}</p>
+                                        <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.book.get_language_display }}</p>
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2">
                                     <div>
                                         <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                получения:</p>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">{% trans 'Дата получения:' %}</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">
                                                 {{ book.date_sending.date  }}</p>
                                         </div>
                                         <div>
-                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">Дата
-                                                возврата:</p>
+                                            <p class="search_book_table_book_author_str bold_paragraph font_13pt">{% trans 'Дата возврата:' %}</p>
                                             <p class="search_book_table_book_author_str catalog_book_cover_author_name font_12pt">{{ book.date_return.date  }}</p>
                                         </div>
                                     </div>

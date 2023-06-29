@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +24,8 @@
                 <div class="main_books_content_block">
                     <div class="main_upper_block">
                         <div style="width: 100%;">
-                            <h1 class="category_books_page_content_block_title">Категория: {{ name_category.name }}</h1>
-                            <p class="main_books_content_block_secondary_title">Подборка для Вас</p>
+                            <h1 class="category_books_page_content_block_title">{% trans 'Категория:' %} {{ name_category.name }}</h1>
+                            <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' %}</p>
                         </div>
                         <div class="to_set_right_bottom_position_block">
                             <nav class="header_menu sort_settings_menu header_block_shadow">
@@ -35,14 +36,14 @@
                                                 <use height="22px" width="22px" fill="#F76B56"
                                                      href="{% static 'marketplace/img/icons.svg' %}#sort_arrow_up"></use>
                                             </svg>
-                                            Сортировать<i class="arrow down"></i></button>
+                                            {% trans 'Сортировать' %}<i class="arrow down"></i></button>
                                         <form action="{% url 'category_books' name_category.id %}" method="get">
                                             <div class="header_menu_dropdown_content_block">
                                                 <div class="header_menu_dropdown_content sort_settings_dropdown_content">
-                                                    <a class="header_menu_item" href="?sort=full_name">Название</a>
-                                                    <a class="header_menu_item" href="?sort=author">Автор</a>
-                                                    <a class="header_menu_item" href="?sort=year">Год издания</a>
-                                                    <a class="header_menu_item" href="?sort=price">Цена</a>
+                                                    <a class="header_menu_item" href="?sort=full_name">{% trans 'Название' %}</a>
+                                                    <a class="header_menu_item" href="?sort=author">{% trans 'Автор' %}</a>
+                                                    <a class="header_menu_item" href="?sort=year">{% trans 'Год издания' %}</a>
+                                                    <a class="header_menu_item" href="?sort=price">{% trans 'Цена' %}</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -63,7 +64,7 @@
                                  alt="">
                             <p class="catalog_book_cover_name">{{ books.short_name }}</p>
                             <p class="catalog_book_cover_author_name">{{ books.author.first.name }}</p>
-                            <p class="catalog_book_cover_author_name">Язык: {{ books.get_language_display }}</p>
+                            <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ books.get_language_display }}</p>
                         </div>
                         </a>
                         {% endfor %}

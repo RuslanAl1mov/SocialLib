@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +25,8 @@
             <div class="main_content_container">
                 <div class="main_upper_block">
                     <div style="width:100%">
-                        <h1 class="category_books_page_content_block_title">Поиск: <q>{{ search_value }}</q></h1>
-                        <p class="main_books_content_block_secondary_title">Результаты поиска: {{search_quantity}}</p>
+                        <h1 class="category_books_page_content_block_title">{% trans 'Поиск:' %} <q>{{ search_value }}</q></h1>
+                        <p class="main_books_content_block_secondary_title">{% trans 'Результаты поиска:' %} {{search_quantity}}</p>
                     </div>
                     <div class="to_set_right_bottom_position_block">
                         <nav class="header_menu sort_settings_menu header_block_shadow">
@@ -36,14 +37,14 @@
                                             <use height="22px" width="22px" fill="#F76B56"
                                                  href="{% static 'marketplace/img/icons.svg' %}#sort_arrow_up"></use>
                                         </svg>
-                                        Сортировать<i class="arrow down"></i></button>
+                                        {% trans 'Сортировать' %}<i class="arrow down"></i></button>
                                     <form action="{% url 'book_search' %}" method="get">
                                         <div class="header_menu_dropdown_content_block">
                                             <div class="header_menu_dropdown_content sort_settings_dropdown_content">
-                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-full_name">Название</a>
-                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-author">Автор</a>
-                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-year">Год издания</a>
-                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-price">Цена</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-full_name">{% trans 'Название' %}</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-author">{% trans 'Автор' %}</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-year">{% trans 'Год издания' %}</a>
+                                                <a class="header_menu_item" href="?search_value={{ search_value }}&sort=-price">{% trans 'Цена' %}</a>
                                             </div>
                                         </div>
                                     </form>
@@ -56,10 +57,10 @@
                     <table class="table_spacing_15">
                         <tbody>
                         <tr class="tr_title">
-                            <th class="th_raw book_search_result_book_info_table_column left_text_align">Название</th>
-                            <th class="th_raw book_search_result_janr_table_column">Жанр</th>
-                            <th class="th_raw book_search_result_book_level_table_column">Доступность</th>
-                            <th class="th_raw book_search_result_shelf_table_column">Просмотр</th>
+                            <th class="th_raw book_search_result_book_info_table_column left_text_align">{% trans 'Название' %}</th>
+                            <th class="th_raw book_search_result_janr_table_column">{% trans 'Жанр' %}</th>
+                            <th class="th_raw book_search_result_book_level_table_column">{% trans 'Доступность' %}</th>
+                            <th class="th_raw book_search_result_shelf_table_column">{% trans 'Просмотр' %}</th>
                         </tr>
                         {% for book in search_books %}
                         <tr class="tr_raw tr_raw_hover">
@@ -77,7 +78,7 @@
                                                                                           {% endfor %}
                                             </p>
                                             <p class="search_book_table_book_author_str">{{book.publications}}-е издание</p>
-                                            <p class="search_book_table_book_author_str">Язык: {{ book.get_language_display }}</p>
+                                            <p class="search_book_table_book_author_str">{% trans 'Язык:' %} {{ book.get_language_display }}</p>
 
                                         </div>
                                         <div class="book_info_paragraph_block">
@@ -92,7 +93,7 @@
                                                      href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                             </svg>
                                             {% endif %}
-                                            <p class="table_book_info_paragraph bold_paragraph">Бумажная книга</p>
+                                            <p class="table_book_info_paragraph bold_paragraph">{% trans 'Бумажная книга' %}</p>
                                             {% if book.is_eBook %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
@@ -104,7 +105,7 @@
                                                      href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                             </svg>
                                             {% endif %}
-                                            <p class="table_book_info_paragraph bold_paragraph">Электронная книга</p>
+                                            <p class="table_book_info_paragraph bold_paragraph">{% trans 'Электронная книга' %}</p>
                                             {% if book.is_audio %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
@@ -116,7 +117,7 @@
                                                      href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                             </svg>
                                             {% endif %}
-                                            <p class="table_book_info_paragraph bold_paragraph">Аудиокнига</p>
+                                            <p class="table_book_info_paragraph bold_paragraph">{% trans 'Аудиокнига' %}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -136,13 +137,13 @@
                             <td class="td_raw book_search_result_book_level_table_column">
                                 <div class="table_book_info_block centralize_with_margin">
                                     <div class="centralize_with_margin">
-                                        <p class="search_book_table_janr_str orange_text">Уровень {{ book.level }}</p>
+                                        <p class="search_book_table_janr_str orange_text">{% trans 'Уровень' %} {{ book.level }}</p>
                                     </div>
                                 </div>
                             </td>
                             <td class="td_raw last_td_raw book_search_result_shelf_table_column">
                                 <div class="table_book_info_block centralize_with_margin">
-                                    <a class="got_to_preview_btn_link" href="{% url 'book' book.pk %}">Посмотреть</a>
+                                    <a class="got_to_preview_btn_link" href="{% url 'book' book.pk %}">{% trans 'Посмотреть' %}</a>
                                 </div>
                             </td>
                         </tr>

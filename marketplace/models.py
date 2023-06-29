@@ -102,7 +102,7 @@ class CustomUser(models.Model):
 
 
 class DepositUser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Пользователь')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     amount = models.DecimalField(max_digits=10, decimal_places=1, verbose_name='Сумма депозита')
     date = models.DateTimeField(auto_now_add=True, verbose_name="Дата", null=True, blank=True)
 
