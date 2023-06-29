@@ -1,0 +1,1587 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-29 11:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\marketplace\templates\account\user_account.html:32
+#: .\marketplace\templates\components\header.html:125
+msgid "Профиль"
+msgstr "Profil"
+
+#: .\marketplace\templates\account\user_account.html:34
+msgid "Пароли и Безопасность"
+msgstr "Parollar va xavfsizlik"
+
+#: .\marketplace\templates\account\user_account.html:36
+msgid "Депозит и Баланс"
+msgstr "Depozit va balans"
+
+#: .\marketplace\templates\account\user_account.html:45
+msgid "Фотография профиля"
+msgstr "Profil fotosurati"
+
+#: .\marketplace\templates\account\user_account.html:76
+msgid "Прочтено"
+msgstr "O'qilgan"
+
+#: .\marketplace\templates\account\user_account.html:91
+msgid "Помощи"
+msgstr "Yordam"
+
+#: .\marketplace\templates\account\user_account.html:106
+msgid "Аренда"
+msgstr "Ijara"
+
+#: .\marketplace\templates\account\user_account.html:121
+msgid "Продажи"
+msgstr "Sotish"
+
+#: .\marketplace\templates\account\user_account.html:132
+#: .\marketplace\templates\account\user_account.html:134
+#: .\marketplace\templates\account\user_account.html:486
+#: .\marketplace\templates\authorization\registration.html:34
+#: .\marketplace\templates\authorization\registration.html:36
+#: .\marketplace\templates\book_donate_page\book_donate.html:46
+#: .\marketplace\templates\book_donate_page\book_donate.html:48
+#: .\marketplace\templates\order_book\order_book.html:132
+#: .\marketplace\templates\order_book\order_book.html:134
+msgid "Имя"
+msgstr "Ism"
+
+#: .\marketplace\templates\account\user_account.html:139
+#: .\marketplace\templates\account\user_account.html:141
+#: .\marketplace\templates\authorization\registration.html:42
+#: .\marketplace\templates\authorization\registration.html:44
+#: .\marketplace\templates\book_donate_page\book_donate.html:52
+#: .\marketplace\templates\book_donate_page\book_donate.html:54
+#: .\marketplace\templates\order_book\order_book.html:139
+#: .\marketplace\templates\order_book\order_book.html:141
+msgid "Фамилия"
+msgstr "Familiya"
+
+#: .\marketplace\templates\account\user_account.html:147
+#: .\marketplace\templates\account\user_account.html:149
+#: .\marketplace\templates\authorization\registration.html:50
+#: .\marketplace\templates\authorization\registration.html:52
+#: .\marketplace\templates\book_donate_page\book_donate.html:59
+#: .\marketplace\templates\book_donate_page\book_donate.html:61
+#: .\marketplace\templates\order_book\order_book.html:147
+#: .\marketplace\templates\order_book\order_book.html:149
+msgid "Номер телефона"
+msgstr "Telefon raqami"
+
+#: .\marketplace\templates\account\user_account.html:153
+#: .\marketplace\templates\account\user_account.html:155
+#: .\marketplace\templates\book_donate_page\book_donate.html:65
+#: .\marketplace\templates\book_donate_page\book_donate.html:67
+msgid "Электронная почта"
+msgstr "Elektron pochta"
+
+#: .\marketplace\templates\account\user_account.html:163
+msgid "Сохранить и продолжить"
+msgstr "Saqlash va davom ettirish"
+
+#: .\marketplace\templates\account\user_account.html:177
+msgid " Изменение пароля"
+msgstr " Parolni o'zgartirish"
+
+#: .\marketplace\templates\account\user_account.html:184
+#: .\marketplace\templates\account\user_account.html:186
+msgid "Старый пароль"
+msgstr "Eski parol"
+
+#: .\marketplace\templates\account\user_account.html:190
+#: .\marketplace\templates\account\user_account.html:192
+msgid "Новый пароль"
+msgstr "Yangi parol"
+
+#: .\marketplace\templates\account\user_account.html:195
+#, fuzzy
+#| msgid "Повтор нового пароля"
+msgid "Повтор нового пароля "
+msgstr "Yangi parolni takrorlang "
+
+#: .\marketplace\templates\account\user_account.html:197
+msgid "Повтор нового пароля"
+msgstr "Yangi parolni takrorlang "
+
+#: .\marketplace\templates\account\user_account.html:204
+msgid "Обновить пароль"
+msgstr "Parolni yangilang "
+
+#: .\marketplace\templates\account\user_account.html:214
+msgid "Информация о"
+msgstr "Depozitingiz "
+
+#: .\marketplace\templates\account\user_account.html:215
+msgid "вашем Депозите"
+msgstr "haqida ma'lumot"
+
+#: .\marketplace\templates\account\user_account.html:218
+msgid "Пополнить баланс депозита"
+msgstr "Depozit balansini to'ldiring"
+
+#: .\marketplace\templates\account\user_account.html:219
+msgid "Обновить данные"
+msgstr "Ma'lumotlarni yangilang"
+
+#: .\marketplace\templates\account\user_account.html:224
+msgid "Информация о балансе"
+msgstr "Balans haqida ma'lumot"
+
+#: .\marketplace\templates\account\user_account.html:229
+msgid "На Балансе:"
+msgstr "Balansda:"
+
+#: .\marketplace\templates\account\user_account.html:229
+#: .\marketplace\templates\account\user_account.html:244
+#: .\marketplace\templates\account\user_account.html:249
+#: .\marketplace\templates\account\user_account.html:254
+#: .\marketplace\templates\account\user_account.html:259
+#: .\marketplace\templates\account\user_account.html:264
+#: .\marketplace\templates\account\user_account.html:269
+#: .\marketplace\templates\account\user_account.html:274
+#: .\marketplace\templates\account\user_account.html:279
+#: .\marketplace\templates\account\user_account.html:284
+#: .\marketplace\templates\account\user_account.html:289
+#: .\marketplace\templates\account\user_account.html:294
+#: .\marketplace\templates\account\user_account.html:299
+#: .\marketplace\templates\account\user_account.html:304
+#: .\marketplace\templates\account\user_account.html:309
+#: .\marketplace\templates\account\user_account.html:314
+msgid "сум"
+msgstr "so'm"
+
+#: .\marketplace\templates\account\user_account.html:230
+msgid "Ваш Уровень:"
+msgstr "Sizning Darajangiz:"
+
+#: .\marketplace\templates\account\user_account.html:233
+msgid "Распределение уровней:"
+msgstr "Darajalarni taqsimlash:"
+
+#: .\marketplace\templates\account\user_account.html:237
+#: .\marketplace\templates\account\user_account.html:242
+#: .\marketplace\templates\account\user_account.html:247
+#: .\marketplace\templates\account\user_account.html:252
+#: .\marketplace\templates\account\user_account.html:257
+#: .\marketplace\templates\account\user_account.html:262
+#: .\marketplace\templates\account\user_account.html:267
+#: .\marketplace\templates\account\user_account.html:272
+#: .\marketplace\templates\account\user_account.html:277
+#: .\marketplace\templates\account\user_account.html:282
+#: .\marketplace\templates\account\user_account.html:287
+#: .\marketplace\templates\account\user_account.html:292
+#: .\marketplace\templates\account\user_account.html:297
+#: .\marketplace\templates\account\user_account.html:302
+#: .\marketplace\templates\account\user_account.html:307
+#: .\marketplace\templates\account\user_account.html:312
+#: .\marketplace\templates\search_result_page\search_result.html:140
+msgid "Уровень"
+msgstr "Daraja"
+
+#: .\marketplace\templates\account\user_account.html:239
+msgid "БЕСПЛАТНО"
+msgstr "Bepul"
+
+#: .\marketplace\templates\account\user_account.html:439
+msgid "Снять все средства с депозита"
+msgstr "Barcha mablag'larni depozitdan olib tashlang"
+
+#: .\marketplace\templates\account\user_account.html:444
+msgid "Пополнение баланса:"
+msgstr "Balansni to'ldirish:"
+
+#: .\marketplace\templates\account\user_account.html:447
+msgid "Переводы доступны только с карт "
+msgstr "O'tkazmalar faqat kartalardan mavjud "
+
+#: .\marketplace\templates\account\user_account.html:447
+msgid "Узбекских Банков"
+msgstr "O'zbekiston Banklari"
+
+#: .\marketplace\templates\account\user_account.html:480
+msgid "Для выполнения перевода выполните следующие действия:"
+msgstr "Tarjimani bajarish uchun quyidagi amallarni bajaring:"
+
+#: .\marketplace\templates\account\user_account.html:482
+msgid "Установить одно из приложений для переводов: PayMe, Click, Uzum."
+msgstr "Tarjima dasturlaridan birini o'rnating: PayMe, Click, Uzum."
+
+#: .\marketplace\templates\account\user_account.html:483
+msgid "Отсканируйте QR-код при помощи камеры телефона."
+msgstr "Telefon kamerasi yordamida QR kodini skanerlang."
+
+#: .\marketplace\templates\account\user_account.html:484
+msgid "Укажите сумму пополнения депозита."
+msgstr "Depozitni to'ldirish miqdorini ko'rsating. "
+
+#: .\marketplace\templates\account\user_account.html:485
+msgid "В поле комментария укажите ваше "
+msgstr " Izoh maydoniga "
+
+#: .\marketplace\templates\account\user_account.html:487
+msgid "Фамилию"
+msgstr " familiyangizni "
+
+#: .\marketplace\templates\account\user_account.html:487
+msgid " и этот номер "
+msgstr " va ushbu raqamni kiriting "
+
+#: .\marketplace\templates\account\user_account.html:490
+msgid "Отправьте перевод и ожидайте звонка."
+msgstr "Pul o'tkazmasini yuboring va qo'ng'iroqni kuting."
+
+#: .\marketplace\templates\additional_content_pages\about_us.html:28
+msgid "О "
+msgstr "Biz "
+
+#: .\marketplace\templates\additional_content_pages\about_us.html:29
+msgid "нас"
+msgstr "haqimizda"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:28
+#: .\marketplace\templates\components\left_menu.html:52
+#: .\marketplace\templates\components\left_menu.html:66
+msgid "Условия пользования"
+msgstr "Foydalanish shartlari"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:29
+#, fuzzy
+#| msgid "WooW сервиса"
+msgid "WooW сервисом"
+msgstr "texnik yordam"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:33
+msgid ""
+"Оферта представляет собой правила предоставления услуг Сервисом раздачи книг "
+"WooW, размещенным на сайтах с доменными именами"
+msgstr ""
+"Taklif-bu kitob tarqatish xizmati tomonidan xizmatlarni taqdim etish "
+"qoidalari Woow domen nomlari saytlarida joylashtirilgan"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:35
+msgid "для неограниченного количества пользователей."
+msgstr "cheksiz foydalanuvchilar uchun."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:38
+msgid "1. Назначение и область применения Оферты."
+msgstr "1. Taklifning maqsadi va ko'lami."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:40
+msgid ""
+"1.1. Оферта Сервиса WooW (далее по тексту – Оферта) устанавливает требования "
+"и содержит описание:"
+msgstr ""
+"1.1. Woow xizmatining taklifi (bundan buyon matnda taklif deb yuritiladi) "
+"talablarni belgilaydi va tavsifni o'z ichiga oladi:"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:42
+msgid "1.1.1. Порядка предоставления услуг Сервиса раздачи книг WooW."
+msgstr "1.1.1. Woow kitob tarqatish xizmati xizmatlarini taqdim etish tartibi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:43
+msgid ""
+"1.1.2. Разграничения ответственности за использование и предоставление услуг "
+"Сервисом WooW."
+msgstr ""
+"1.1.2. Xizmatlardan foydalanish va taqdim etish uchun javobgarlikni farqlash "
+"Woow Xizmati Tomonidan."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:45
+msgid ""
+"1.1.3. Мер по обеспечению безопасности работы Сервиса WooW с неограниченным "
+"кругом лиц, а также пользователями Сервиса."
+msgstr ""
+"1.1.3. Cheksiz WooW xizmatining xavfsizligini ta'minlash bo'yicha chora-"
+"tadbirlar odamlar doirasi, shuningdek xizmat foydalanuvchilari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:47
+msgid ""
+"1.2. Местом оказания услуги Сервиса Пользователю является место запуска "
+"(сайт), на котором происходит учет и обработка данных и операций "
+"Пользователей."
+msgstr ""
+"1.2. Foydalanuvchiga xizmat ko'rsatish joyi-bu ishga tushirish joyi "
+"ma'lumotlar va operatsiyalarni hisobga olish va qayta ishlash amalga "
+"oshiriladigan (sayt)Foydalanuvchilar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:49
+msgid ""
+"1.3. Перед тем, как воспользоваться услугами Сервиса WooW, Пользователь "
+"обязан ознакомиться в полном объеме с условиями настоящих Оферты и "
+"Пользовательского соглашения и принять их, то есть совершить акцепт "
+"посредством совершения ключевого действия – запуска Сервиса и осуществления "
+"первоначального пополнения депозита."
+msgstr ""
+"1.3. Woow xizmatidan foydalanishdan oldin foydalanuvchi ushbu taklif "
+"shartlari va shartlari bilan to'liq tanishishga majburdir Foydalanuvchi "
+"shartnomasi va ularni qabul qilish, ya'ni qabul qilishasosiy harakatni "
+"amalga oshirish orqali – xizmatni ishga tushirish va amalga oshirish "
+"depozitni dastlabki to'ldirish."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:51
+msgid ""
+"1.4. Использование услуг Сервиса возможно, только если Пользователь "
+"принимает все условия настоящей Оферты."
+msgstr ""
+"1.4. Xizmat xizmatlaridan foydalanish faqat foydalanuvchi ushbu taklifning "
+"barcha shartlarini qabul qiladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:53
+msgid ""
+"1.5. Действующая версия Оферты расположена для публичного доступа на сайте "
+msgstr ""
+"1.5. Taklifning amaldagi versiyasi veb-saytida ommaviy kirish uchun "
+"joylashtirilgan."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:56
+msgid ""
+"Администрация Сервиса вправе в любое время в одностороннем порядке изменять "
+"настоящую Оферту. Такие изменения вступают в силу по истечении 3 (трех) "
+"календарных дней с момента размещения новой версии Оферты на сайтах Сервиса, "
+"если иной порядок вступления не предусмотрен специально в новой версии "
+"Оферты. При несогласии Пользователя с внесенными изменениями он обязан "
+"отказаться от доступа к сайту Сервиса и прекратить использование материалов "
+"и услуг Сервиса, направив соответствующее письмо на службу поддержки Сервиса "
+"в мессенджере Телеграмм"
+msgstr ""
+"Xizmat ma'muriyati istalgan vaqtda bir tomonlama o'zgartirish huquqiga ega "
+"haqiqiy taklif. Bunday o'zgarishlar 3 (uch) dan keyin kuchga kiradi "
+"taklifning yangi versiyasi xizmat veb-saytlariga joylashtirilgan kundan "
+"boshlab kalendar kunlar,agar kirishning boshqa tartibi yangi versiyada "
+"maxsus taqdim etilmagan bo'lsa Takliflar. Agar foydalanuvchi kiritilgan "
+"o'zgarishlar bilan rozi bo'lmasa ,uxizmat veb-saytiga kirishni rad eting va "
+"materiallardan foydalanishni to'xtating va xizmatni qo'llab-quvvatlash "
+"xizmatiga tegishli xat yuborish orqali xizmat ko'rsatish xizmatlariTelegram "
+"messenjerida"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:62
+msgid "2. Термины и определения."
+msgstr "2. Atamalar va ta'riflar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:64
+msgid "2.1. Сайт - сайты с доменными именами «woow.uz»."
+msgstr "2.1. Domen nomlari bilan veb-saytlar «woow.uz»."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:67
+msgid ""
+"2.2. Пользователь — любое физическое лицо, использующее функциональные "
+"возможности Сервиса и достигшее возраста полной дееспособности в "
+"соответствии с законодательством страны своего гражданства."
+msgstr ""
+"2.2. Foydalanuvchi-funktsionaldan foydalanadigan har qanday shaxs xizmat "
+"ko'rsatish imkoniyatlari va to'liq qobiliyatlilik yoshiga etgan o' z "
+"fuqaroligi mamlakatining qonun hujjatlariga muvofiq."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:69
+msgid "2.3. Сервис – веб-сайт для раздачи книг с доменным именем "
+msgstr "2.3. Xizmat-domen nomi bilan kitoblarni tarqatish veb-sayti"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:73
+msgid ""
+"2.4. Услуги Сервиса — функционал Сервиса с возможностями для Пользователя, а "
+"также иные услуги, информация о которых размещена на страницах"
+msgstr ""
+"2.4. Xizmat ko'rsatish xizmatlari-foydalanuvchi uchun imkoniyatlarga ega "
+"xizmatning funktsional imkoniyatlari vashuningdek, sahifalarida "
+"joylashtirilgan boshqa xizmatlar"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:74
+#: .\marketplace\templates\components\left_menu.html:46
+#: .\marketplace\templates\components\left_menu.html:60
+msgid "О нас"
+msgstr "Biz haqimizda"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:75
+msgid "на сайте Сервиса."
+msgstr "xizmat veb-saytida."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:79
+msgid "3. Режим работы Сервиса."
+msgstr "3. Xizmat rejimi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:81
+msgid "3.1. Штатный режим работы:"
+msgstr "3.1. Oddiy ish tartibi:"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:83
+msgid ""
+"3.1.1. В данном режиме работы запросы Пользователей обрабатываются в течение "
+"реального времени Сервисом, кроме времени осуществления работ согласно "
+"регламенту технических работ Сервиса или сервера."
+msgstr ""
+"3.1.1. Ushbu ish rejimida foydalanuvchi so'rovlari xizmat tomonidan Real "
+"vaqt, muvofiq ishlarni bajarish vaqtidan tashqarixizmat yoki serverning "
+"texnik ishlarini tartibga solish."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:85
+msgid ""
+"3.1.2. Поддержка Пользователей ведется службой поддержки сайта в "
+"мессенджере, а также по другим каналам связи способами, указанными Сервисом."
+msgstr ""
+"3.1.2. Foydalanuvchilarni qo'llab-quvvatlash saytni qo'llab-quvvatlash "
+"xizmati tomonidan amalga oshiriladimessenjer, shuningdek xizmat tomonidan "
+"ko'rsatilgan boshqa aloqa kanallari orqali."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:89
+msgid "4. Правила пользования Сервисом WooW."
+msgstr "4. Woow xizmatidan foydalanish qoidalari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:91
+msgid ""
+"4.1. Сервис предназначен для использования исключительно в личных целях. "
+"Пользователь соглашается с тем, что не будет использовать какой-либо иной "
+"аккаунт, кроме своего, а также не будет пытаться получить "
+"несанкционированный доступ к аккаунтам других пользователей либо к "
+"инфраструктуре Сервиса."
+msgstr ""
+"4.1. Xizmat faqat shaxsiy foydalanish uchun mo'ljallangan. Foydalanuvchi "
+"boshqa hech narsa ishlatmasligiga rozi hisob, o'z hisobidan tashqari, "
+"shuningdek, olishga harakat qilmaydi boshqa foydalanuvchilarning hisoblariga "
+"ruxsatsiz kirish yoki kirishxizmat infratuzilmasiga."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:93
+msgid ""
+"4.2. Администрация Сервиса может в любое время и по своему собственному "
+"усмотрению отказать Пользователю в возможности получить платные услуги, "
+"заблокировать его или приостановить любую операцию до окончания рассмотрения "
+"конфликтной или спорной ситуации."
+msgstr ""
+"4.2. Xizmat ma'muriyati istalgan vaqtda va o'z xohishiga ko'ra "
+"foydalanuvchiga pullik xizmatlarni olish imkoniyatini rad etishni tanlash,"
+"uni blokirovka qilish yoki ko'rib chiqish tugaguniga qadar har qanday "
+"operatsiyani to'xtatib turishziddiyatli yoki bahsli vaziyat."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:95
+msgid ""
+"4.3 Пользователь соглашается с тем, что будет возвращать полученные им книги "
+"из сервиса в установленные сервисом сроки, указанные при заказе книги."
+msgstr ""
+"4.3 foydalanuvchi olgan kitoblarini qaytarib berishga rozi bo'ladixizmatdan "
+"kitobga buyurtma berishda ko'rsatilgan xizmat tomonidan belgilangan "
+"muddatlarda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:97
+msgid ""
+"4.4 Администрация Сервиса может по своему усмотрению отказать Пользователю в "
+"возврате средств депозита Пользователя при невозврате или порче полученной "
+"Пользователем книги, принадлежащей Сервису."
+msgstr ""
+"4.4 xizmat ma'muriyati o'z xohishiga ko'ra foydalanuvchini rad qilishi "
+"mumkin Foydalanuvchining depozit mablag'larini qaytarib berilmasa yoki "
+"olingan zarar etkazilgan taqdirda qaytarish Xizmatga tegishli kitob "
+"foydalanuvchisi tomonidan."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:101
+msgid "5. Порядок оказания услуг Сервисом."
+msgstr "5. Xizmat ko'rsatish tartibi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:103
+msgid ""
+"5.1. Заказ услуг Сервиса осуществляется Пользователем путем совершения "
+"действий по покупке через ресурсы Сервиса."
+msgstr ""
+"5.1. Xizmat xizmatlariga buyurtma foydalanuvchi tomonidan xizmat resurslari "
+"orqali sotib olish bo'yicha harakatlar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:105
+msgid ""
+"5.2. Воспользовавшись услугами Сервиса, Пользователь подтверждает, что "
+"ознакомлен со всей юридической документацией Сервиса."
+msgstr ""
+"5.2. Xizmat xizmatlaridan foydalangan holda foydalanuvchi xizmatning barcha "
+"huquqiy hujjatlari bilan tanishdim."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:107
+msgid ""
+"5.3. Сервис не принимает электронные деньги в качестве платежа, если данные "
+"средства не принадлежат Пользователю."
+msgstr ""
+"5.3. Agar ma'lumotlar bo'lsa, xizmat elektron pulni to'lov sifatida qabul "
+"qilmaydi mablag'lar Foydalanuvchiga tegishli emas."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:109
+msgid ""
+"5.4. Путем регистрации на сайте Сервиса и принятия всех условий, "
+"Пользователь принимает все изложенные условия."
+msgstr ""
+"5.4. Xizmat veb-saytida ro'yxatdan o'tish va barcha shartlarni qabul qilish "
+"orqali Foydalanuvchi belgilangan barcha shartlarni qabul qiladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:114
+msgid "6. Правила пользования депозитом."
+msgstr "6. Depozitdan foydalanish qoidalari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:116
+msgid ""
+"6.1. После пополнения депозита, Пользователь имеет право вывести свои "
+"средства обратно на банковскую карту, отправив заявку на возврат средств "
+"через сайт или обратившись в техническую поддержку Сервиса."
+msgstr ""
+"6.1. Depozitni to'ldirgandan so'ng, foydalanuvchi uni qaytarib olish "
+"huquqiga ega pulni qaytarib berish uchun ariza yuborish orqali bank "
+"kartasiga mablag'sayt orqali yoki xizmatning texnik yordamiga murojaat "
+"qilish orqali."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:119
+#, fuzzy, python-format
+#| msgid ""
+#| "6.1.1 При снятии средств с депозита пользователя, Пользователю будут "
+#| "отправлены все средства с депозита Пользователя за исключением комиссии "
+#| "за перевод средств, в размере 1%% от переводимых средств."
+msgid ""
+"6.1.1 При снятии средств с депозита пользователя, Пользователю будут "
+"отправлены все средства с депозита Пользователя за исключением комиссии за "
+"перевод средств, в размере 1%% от переводимых средств."
+msgstr ""
+"6.1.1 foydalanuvchi depozitidan pul mablag'larini olib qo'yishda "
+"foydalanuvchi foydalanuvchi depozitidagi barcha mablag'lar komissiya bundan "
+"mustasnomablag' o 'tkazish, o' tkazilayotgan mablag ' larning 1% miqdorida."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:122
+msgid ""
+"6.1.2. После снятия средств с депозита Пользователя, счетчик депозита "
+"Пользователя обнуляется."
+msgstr ""
+"6.1.2. Foydalanuvchi depozitidan pul olgandan so'ng, depozit hisoblagichi "
+"Foydalanuvchi nolga teng."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:125
+msgid ""
+"6.1.3 Возврат средств с депозита Пользователя осуществляется только на "
+"банковскую карту с именем держателя банковской карты, с которой был пополнен "
+"счет депозита первоначально после обнуления счетчика депозита."
+msgstr ""
+"6.1.3 foydalanuvchi depozitidan mablag'larni qaytarish faqat to'ldirilgan "
+"bank kartasi egasining ismi yozilgan bank kartasi depozit hisobvarag'i "
+"dastlab depozit hisoblagichi nolga tenglashtirilgandan so'ng."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:128
+msgid ""
+"6.2 Уровень доступа пользователя к книгам зависит от количества денежных "
+"средств на депозите Пользователя."
+msgstr ""
+"6.2 Foydalanuvchining kitoblarga kirish darajasi pul miqdoriga bog'liq "
+"foydalanuvchi depozitidagi mablag'lar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:131
+msgid ""
+"6.3 Соотношение денежных средств на депозите Пользователя к уровню доступа к "
+"книгам определяется по следующим тарифам:"
+msgstr ""
+"6.3 foydalanuvchi depozitidagi pul mablag'larining kirish darajasiga nisbati "
+"kitoblar quyidagi tariflar bilan belgilanadi:"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:134
+msgid "6.3.1. При наличии денежных средств в размере от 0 сум до 100 000 сум."
+msgstr "6.3.1. Shu bilan bir vaqtda, 0 am uchun 100,000 am jami."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:135
+msgid ""
+"При наличии денежных средств в размере от 0сум до 100 000 сум, пользователь "
+"получает возможность заказывать книги 0-го уровня."
+msgstr ""
+"0sum dan 100 000 so'mgacha pul mablag' lari mavjud bo 'lgan taqdirda, "
+"foydalanuvchi0-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:138
+msgid ""
+"6.3.2. При наличии денежных средств в размере от 101 000 сум до 200 000 сум."
+msgstr "6.3.2. Shu bilan bir vaqtda, $ 101,000 am uchun $ 200,000 am jami."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:139
+msgid ""
+"При наличии денежных средств в размере от 101 000 сум до 200 000 сум, "
+"пользователь получает возможность заказывать книги 1-го уровня включительно."
+msgstr ""
+"101 000 so' mdan 200 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 1-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:142
+msgid ""
+"6.3.3. При наличии денежных средств в размере от 201 000 сум до 300 000 сум."
+msgstr "6.3.3. Shu bilan bir vaqtda,  201,000dan  300,000gacha jami."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:143
+msgid ""
+"При наличии денежных средств в размере от 201 000 сум до 300 000 сум, "
+"пользователь получает возможность заказывать книги 2-го уровня включительно."
+msgstr ""
+"201 000 so' mdan 300 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 2-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:146
+msgid ""
+"6.3.4. При наличии денежных средств в размере от 301 000 сум до 400 000 сум."
+msgstr "6.3.4. Agar 301,000 so'mdan 400,000 so'mgacha pul mablag'lari bo'lsa."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:147
+msgid ""
+"При наличии денежных средств в размере от 301 000 сум до 400 000 сум, "
+"пользователь получает возможность заказывать книги 3-го уровня включительно."
+msgstr ""
+"301 000 so' mdan 400 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 3-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:150
+msgid ""
+"6.3.5. При наличии денежных средств в размере от 401 000 сум до 500 000 сум."
+msgstr "6.3.5. 401,000 sumdan 500,000 sumgacha mablag'lar mavjud bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:151
+msgid ""
+"При наличии денежных средств в размере от 401 000 сум до 500 000 сум, "
+"пользователь получает возможность заказывать книги 4-го уровня включительно."
+msgstr ""
+"401 000 so' mdan 500 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 4-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:154
+msgid ""
+"6.3.6. При наличии денежных средств в размере от 501 000 сум до 600 000 сум."
+msgstr "6.3.6. 501,000 so'mdan 600,000 so'mgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:155
+msgid ""
+"При наличии денежных средств в размере от 501 000 сум до 600 000 сум, "
+"пользователь получает возможность заказывать книги 5-го уровня включительно."
+msgstr ""
+"501 000 so' mdan 600 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 5-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:158
+msgid ""
+"6.3.7. При наличии денежных средств в размере от 601 000 сум до 700 000 сум."
+msgstr "6.3.7. 601,000 sumdan 700,000 sumgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:159
+msgid ""
+"При наличии денежных средств в размере от 601 000 сум до 700 000 сум, "
+"пользователь получает возможность заказывать книги 6-го уровня включительно."
+msgstr ""
+"601 000 so' mdan 700 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 6-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:162
+msgid ""
+"6.3.8. При наличии денежных средств в размере от 701 000 сум до 800 000 сум."
+msgstr "6.3.8. 701,000 sumdan 800,000 sumgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:163
+msgid ""
+"При наличии денежных средств в размере от 701 000 сум до 800 000 сум, "
+"пользователь получает возможность заказывать книги 7-го уровня включительно."
+msgstr ""
+"701 000 so' mdan 800 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 7-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:166
+msgid ""
+"6.3.9. При наличии денежных средств в размере от 801 000 сум до 900 000 сум."
+msgstr "6.3.9. 801,000 so'mdan 900,000 so'mgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:167
+msgid ""
+"При наличии денежных средств в размере от 801 000 сум до 900 000 сум, "
+"пользователь получает возможность заказывать книги 8-го уровня включительно."
+msgstr ""
+"801 000 so' mdan 900 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 8-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:170
+msgid ""
+"6.3.10. При наличии денежных средств в размере от 901 000 сум до 1 000 000 "
+"сум."
+msgstr "6.3.10. 901,000 sumdan 1,000,000 sumgacha pul mavjud bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:171
+msgid ""
+"При наличии денежных средств в размере от 901 000 сум до 1 000 000 сум, "
+"пользователь получает возможность заказывать книги 9-го уровня."
+msgstr ""
+"901 000 so' mdan 1 000 000 so 'mgacha mablag' lar mavjud bo ' lgan taqdirda,"
+"foydalanuvchi 9-darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:174
+msgid ""
+"6.3.11. При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 "
+"сум."
+msgstr ""
+"6.3.11. 1 001 000 sum dan 1 100 000 sum gacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:175
+msgid ""
+"При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 сум, "
+"пользователь получает возможность заказывать книги 10-го уровня включительно."
+msgstr ""
+"1 001 000 so' mdan 1 100 000 so 'mgacha mablag' lar mavjud bo ' lgan "
+"taqdirda,foydalanuvchi 10-darajali kitoblarga buyurtma berish imkoniyatiga "
+"ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:178
+msgid ""
+"6.3.12. При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 "
+"сум."
+msgstr ""
+"6.3.12. 1 101 000 sumdan 1 200 000 sumgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:179
+msgid ""
+"При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 сум, "
+"пользователь получает возможность заказывать книги 11-го уровня включительно."
+msgstr ""
+"1 101 000 so' mdan 1 200 000 so 'mgacha mablag' lar mavjud bo ' lgan "
+"taqdirda,foydalanuvchi 11-darajali kitoblarga buyurtma berish imkoniyatiga "
+"ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:182
+msgid ""
+"6.3.13. При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 "
+"сум."
+msgstr ""
+"6.3.13. 1 201 000 so'mdan 1 300 000 so'mgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:183
+msgid ""
+"При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 сум, "
+"пользователь получает возможность заказывать книги 12-го уровня включительно."
+msgstr ""
+"1 201 000 so' mdan 1 300 000 so 'mgacha mablag' lar mavjud bo ' lgan "
+"taqdirda,foydalanuvchi 12-darajali kitoblarga buyurtma berish imkoniyatiga "
+"ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:186
+msgid ""
+"6.3.14. При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 "
+"сум."
+msgstr ""
+"6.3.14. 1 301 000 sumdan 1 400 000 sumgacha mablag'lar mavjud bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:187
+msgid ""
+"При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 сум, "
+"пользователь получает возможность заказывать книги 13-го уровня включительно."
+msgstr ""
+"1 301 000 so' mdan 1 400 000 so 'mgacha mablag' lar mavjud bo ' lgan "
+"taqdirda,foydalanuvchi 13-darajali kitoblarga buyurtma berish imkoniyatiga "
+"ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:190
+msgid ""
+"6.3.15. При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 "
+"сум."
+msgstr ""
+"6.3.15. 1 401 000 sumdan 1 500 000 sumgacha mavjud mablag'lar bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:191
+msgid ""
+"При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 сум, "
+"пользователь получает возможность заказывать книги 14-го уровня включительно."
+msgstr ""
+"1 401 000 so' mdan 1 500 000 so 'mgacha mablag' lar mavjud bo ' lgan "
+"taqdirda,foydalanuvchi 14-darajali kitoblarga buyurtma berish imkoniyatiga "
+"ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:194
+msgid "6.3.16. При наличии денежных средств в размере от 1 501 000 сум."
+msgstr "6.3.16. 1 501 000 so'mdan yuqori mablag'lar mavjud bo'lganda."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:195
+msgid ""
+"При наличии денежных средств в размере от 1 501 000 сум, пользователь "
+"получает возможность заказывать книги 15-го уровня включительно."
+msgstr ""
+"1 501 000 so' m miqdorida mablag 'mavjud bo' lgan taqdirda, foydalanuvchi15-"
+"darajali kitoblarga buyurtma berish imkoniyatiga ega bo'ladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:198
+msgid ""
+"6.4. Тарифы на оказание услуг определяются Сервисом и публикуются на сайте "
+"Сервиса. Администрация Сервиса вправе менять тарифы без дополнительного "
+"уведомления Пользователей."
+msgstr ""
+"6.4. Xizmat ko'rsatish tariflari xizmat tomonidan belgilanadi va saytda "
+"e'lon qilinadi Xizmatlar. Xizmat ma'muriyati tariflarni qo'shimcha to'lovsiz "
+"o'zgartirish huquqiga ega foydalanuvchi bildirishnomalari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:201
+msgid ""
+"6.5. В случае отправки денежных средств для пополнения депозита "
+"Пользователя, депозит пользователя будет пополнен автоматически в течении "
+"одних суток (24 часа). Если система не получит денежные средства, депозит не "
+"будет пополнен автоматически."
+msgstr ""
+"6.5. Depozitni to'ldirish uchun pul yuborilgan taqdirda Foydalanuvchi, "
+"foydalanuvchi depoziti avtomatik ravishda to'ldiriladi bir kun (24 soat). "
+"Agar tizim naqd pul olmasa, depozit bo'lmaydi avtomatik ravishda "
+"to'ldiriladi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:204
+msgid ""
+"6.6. Если депозит не пополнен автоматически, после успешного подтверждения "
+"перевода и окончания срока ожидания (в течении 24 часов), Пользователь "
+"обязан связаться со службой поддержки Сервиса."
+msgstr ""
+"6.6. Agar depozit avtomatik ravishda to'ldirilmasa, muvaffaqiyatli "
+"tasdiqlangandan so'ng o'tkazish va kutish muddati (24 soat ichida), "
+"foydalanuvchixizmatni qo'llab-quvvatlash xizmatiga murojaat qilish shart."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:207
+msgid ""
+"6.7. Если Пользователь случайно отправил больший платеж, то Пользователь "
+"обязан связаться со службой поддержки Сервиса."
+msgstr ""
+"6.7. Agar foydalanuvchi tasodifan kattaroq to'lovni yuborgan bo'lsa, "
+"foydalanuvchi xizmatni qo'llab-quvvatlash xizmatiga murojaat qilish shart."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:212
+msgid "7. Ответственность."
+msgstr "7. Mas'uliyat."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:214
+msgid ""
+"7.1. Сервис не несет ответственности перед Пользователем и иными лицами за "
+"потери, ущерб и вред, вызванные противоправными действиями третьих лиц."
+msgstr ""
+"7.1. Xizmat foydalanuvchi va boshqa shaxslar uchun javobgar emasuchinchi "
+"shaxslarning noqonuniy xatti-harakatlari natijasida etkazilgan zarar, zarar "
+"va zarar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:216
+msgid ""
+"7.2. Сервис не несет ответственности за любые переводы, которые были "
+"осуществлены с ошибкой или за любые попытки осуществления ошибочного "
+"перевода."
+msgstr ""
+"7.2. Xizmat har qanday pul o'tkazmalari uchun javobgar emas xato bilan yoki "
+"xato qilishga urinish uchun qilingantarjima."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:218
+msgid ""
+"7.3. Сервис презюмирует добросовестность и легальность владения, пользования "
+"и распоряжения Пользователем всех материалов и иных вещей, предоставляемых "
+"при обращении на сайт или ресурсы Сервиса или при осуществлении "
+"взаимодействия с администрацией Сервиса."
+msgstr ""
+"7.3. Xizmat egalik qilish, foydalanishning yaxlitligi va qonuniyligini "
+"anglatadi va foydalanuvchi tomonidan taqdim etilgan barcha materiallar va "
+"boshqa narsalarning buyruqlarisaytga yoki xizmat manbalariga murojaat "
+"qilishda yoki amalga oshirishda xizmat ma'muriyati bilan o'zaro aloqalar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:220
+msgid ""
+"7.4. Сервис и Администрация Сервиса уважает законы, правила и нормы всех "
+"стран. В случае нарушения прав каких-либо лиц Администрация готова к "
+"пресечению противоправных действий Пользователей."
+msgstr ""
+"7.4. Xizmat va xizmat ma'muriyati barchaning qonunlari, qoidalari va "
+"qoidalarini hurmat qiladi mamlakatlar. Agar biron bir shaxsning huquqlari "
+"buzilgan bo'lsa, Ma'muriyat foydalanuvchilarning noqonuniy xatti-"
+"harakatlarini bostirish."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:225
+msgid "8. Форс-мажор."
+msgstr "8. Fors-major holatlari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:227
+msgid ""
+"8.1. Пользователь или Сервис не несут ответственности друг перед другом за "
+"невыполнение обязательств, связанных с оказанием Сервисом услуг, вызванное "
+"обстоятельствами, возникшими помимо воли и желания сторон, которые нельзя "
+"было предвидеть или избежать, включая объявленную или фактическую войну, "
+"гражданские волнения, эпидемии, землетрясения, наводнения, пожары и другие "
+"стихийные бедствия, действия органов власти и прочие непреодолимые "
+"обстоятельства и не могут заявлять ни о каких убытках или ущербе, возникших "
+"из-за таких обстоятельств."
+msgstr ""
+"8.1. Foydalanuvchi yoki xizmat bir-biri uchun javobgar emas xizmat "
+"ko'rsatish bilan bog'liq majburiyatlarning bajarilmasligitomonlarning "
+"irodasi va xohishidan tashqari yuzaga kelgan holatlar, bu mumkin emas "
+"oldindan ko'rish yoki undan qochish, shu jumladan e'lon qilingan yoki "
+"haqiqiy urush,fuqarolik tartibsizliklari, epidemiyalar, zilzilalar, "
+"toshqinlar, yong'inlar va boshqalar tabiiy ofatlar, hokimiyat harakatlari va "
+"boshqa engib bo'lmaydigan narsalar vaziyat va yuzaga kelgan zarar yoki "
+"zararni da'vo qila olmaydibunday holatlar tufayli."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:229
+msgid ""
+"8.2. Сторона, которая не исполняет свое обязательство вследствие действия "
+"непреодолимой силы, должна известить другую Сторону о препятствии и его "
+"влиянии на исполнение обязательств без промедления, но не позднее 3 (трех) "
+"календарных дней с момента наступления указанных обстоятельств."
+msgstr ""
+"8.2. Harakat tufayli o'z majburiyatini bajarmagan tomon fors-major, to'siq "
+"va uning boshqa tomonini xabardor qilishi kerakmajburiyatlarning "
+"bajarilishiga kechiktirmasdan, lekin 3 (uch) dan kechiktirmasdan ta'sir "
+"qilish ushbu holatlar yuzaga kelgan kundan boshlab kalendar kunlar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:231
+msgid ""
+"8.3. Сторона, не известившая другую Сторону о невозможности исполнения своих "
+"обязательств по настоящему договору, теряет право ссылаться на такую "
+"невозможность."
+msgstr ""
+"8.3. Boshqa tomonni o'z ijroining mumkin emasligi to'g'risida xabardor "
+"qilmagan tomon ushbu shartnoma bo'yicha majburiyatlar, unga murojaat qilish "
+"huquqini yo'qotadi mumkin emaslik."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:236
+msgid "9. Заключительные положения."
+msgstr "9. Yakuniy qoidalar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:238
+msgid ""
+"9.1. Информация о Пользователе и о его операциях не хранится на сервере "
+"сайта Сервиса. По запросу Пользователя доступ к аккаунту может быть "
+"ограничен либо удален."
+msgstr ""
+"9.1. Foydalanuvchi va uning operatsiyalari to'g'risidagi ma'lumotlar "
+"serverda saqlanmaydi xizmat veb-sayti. Foydalanuvchining iltimosiga binoan "
+"hisob qaydnomasiga kirish cheklangan yoki olib tashlangan."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:240
+msgid ""
+"9.2. Срок ответа Сервиса на запросы Пользователя составляет до пяти рабочих "
+"дней с момента получения соответствующего запроса Пользователя."
+msgstr ""
+"9.2. Xizmatning foydalanuvchi so'rovlariga javob berish muddati besh "
+"ishchigacha tegishli foydalanuvchi so'rovini olgan kundan boshlab kunlar."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:242
+msgid ""
+"9.3. Условия настоящих Оферты согласовываются с Пользователем при "
+"регистрации. Согласие с Офертой, опубликованной в электронной форме, "
+"является действительным акцептом полного содержания настоящих Оферты."
+msgstr ""
+"9.3. Ushbu taklifning shartlari foydalanuvchi bilan ro'yxatdan o'tish. "
+"Elektron shaklda e'lon qilingan taklifga rozilik,bu haqiqiy taklifning "
+"to'liq mazmunini haqiqiy qabul qilishdir."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:244
+msgid ""
+"9.4. Информация, размещенная на сайте Сервиса, включая все графические "
+"изображения, текстовую информацию, коды программ и т.д. защищена "
+"национальным и международным законодательством об авторских правах и смежных "
+"с ними. Несанкционированное копирование материалов не допускается и влечет "
+"за собой полное возмещение причиненных Сервису убытков."
+msgstr ""
+"9.4. Xizmat veb-saytida joylashtirilgan ma'lumotlar, shu jumladan barcha "
+"grafik rasmlar, matnli ma'lumotlar, dastur kodlari va boshqalar himoyalangan "
+"mualliflik huquqi va turdosh huquqlar to' g 'risidagi milliy va xalqaro "
+"Qonunchilikular bilan. Materiallarni ruxsatsiz nusxalashga yo'l qo'yilmaydi "
+"vaxizmatga etkazilgan zararni to'liq qoplash."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:246
+msgid ""
+"9.5. Все права защищены. Несанкционированное копирование Оферты запрещено."
+msgstr ""
+"9.5. Barcha huquqlar himoyalangan. Taklifni ruxsatsiz nusxalash taqiqlanadi."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:251
+msgid "10. Контактные данные."
+msgstr "10. Aloqa ma'lumotlari."
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:253
+msgid ""
+" 10.1. Пользователь может связаться со специалистами и Администрацией "
+"Сервиса в рабочее время следующими способами:"
+msgstr ""
+" 10.1. Foydalanuvchi mutaxassislar va Ma'muriyat bilan bog'lanishi mumkin "
+"Ish vaqtida xizmat ko'rsatish quyidagi usullar bilan amalga oshiriladi:"
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:256
+msgid "10.1.1. В онлайн-чате Телеграмм – "
+msgstr "10.1.1. Onlayn Telegram chatida – "
+
+#: .\marketplace\templates\additional_content_pages\oferta.html:260
+#, fuzzy
+#| msgid "Путем направления письма на адрес электронной почты: "
+msgid "10.1.2. Путем направления письма на адрес электронной почты:"
+msgstr "10.1.2. Elektron pochta manziliga xat yuborish orqali: "
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:28
+msgid "Техническая поддержка "
+msgstr "WooW xizmatini Texnik yordam"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:29
+msgid "WooW сервиса"
+msgstr "texnik yordam"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:33
+msgid "Добро пожаловать на страницу поддержки сервиса "
+msgstr "Xizmatni qo'llab-quvvatlash sahifasiga xush kelibsiz"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:35
+msgid ""
+"Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы можете "
+"столкнуться."
+msgstr ""
+"Biz har doim sizga mumkin bo'lgan savollar va muammolarni hal qilishda "
+"yordam berishga tayyormizto'qnashmoq."
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:38
+msgid "Способы связаться с нами:"
+msgstr "Biz bilan bog'lanish usullari:"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:41
+msgid "В онлайн-чате Телеграмм – "
+msgstr "Onlayn Telegram chatida –"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:45
+msgid "Путем направления письма на адрес электронной почты: "
+msgstr "Elektron pochta manziliga xat yuborish orqali:"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:50
+msgid ""
+"Мы стремимся обеспечить наших клиентов лучшим обслуживанием, и ваше мнение "
+"имеет для нас большое значение. Если у вас есть предложения по улучшению "
+"нашего сервиса или какие-либо отзывы, пожалуйста, не стесняйтесь сообщить "
+"нам."
+msgstr ""
+"Biz mijozlarimizga eng yaxshi xizmatni taqdim etishga intilamiz va sizning "
+"fikringiz bu biz uchun katta ahamiyatga ega. Agar sizda takomillashtirish "
+"bo'yicha takliflaringiz bo'lsa bizning xizmatimiz yoki har qanday sharhlar, "
+"iltimos, xabar berishdan tortinmangbizga."
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:52
+msgid "Благодарим вас за использование наших услуг!"
+msgstr "Xizmatlarimizdan foydalanganingiz uchun tashakkur!"
+
+#: .\marketplace\templates\additional_content_pages\tech_support.html:55
+msgid "С любовью, команда поддержки WooW"
+msgstr "Sevgi bilan, woow qo'llab-quvvatlash jamoasi"
+
+#: .\marketplace\templates\authorization\authorization.html:25
+#: .\marketplace\templates\authorization\registration.html:23
+msgid "Сервис бесплатной раздачи книг"
+msgstr "Kitoblarni bepul tarqatish xizmati"
+
+#: .\marketplace\templates\authorization\authorization.html:26
+msgid "Авторизация"
+msgstr "Avtorizatsiya"
+
+#: .\marketplace\templates\authorization\authorization.html:38
+#: .\marketplace\templates\authorization\registration.html:59
+msgid "Адрес электронной почты"
+msgstr "Elektron pochta manzili"
+
+#: .\marketplace\templates\authorization\authorization.html:44
+#: .\marketplace\templates\authorization\authorization.html:47
+#: .\marketplace\templates\authorization\registration.html:65
+msgid "Пароль"
+msgstr "Parol"
+
+#: .\marketplace\templates\authorization\authorization.html:60
+msgid "ВОЙТИ В АККАУНТ"
+msgstr "Kirish"
+
+#: .\marketplace\templates\authorization\authorization.html:77
+msgid "У меня нет аккаунта"
+msgstr "Mening akkauntim yo'q"
+
+#: .\marketplace\templates\authorization\registration.html:24
+msgid "Регистрация"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\marketplace\templates\authorization\registration.html:69
+msgid "Придумайте пароль"
+msgstr "Parol O'ylab olish"
+
+#: .\marketplace\templates\authorization\registration.html:81
+msgid "ЗАРЕГИСТРИРОВАТЬСЯ"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\marketplace\templates\authorization\registration.html:97
+msgid "Я уже зарегистрирован"
+msgstr "Men allaqachon ro'yxatdan o'tganman"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:27
+#: .\marketplace\templates\components\left_menu.html:43
+msgid "Делать добро"
+msgstr "Yaxshilik qilish"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:29
+msgid "Инструкция как делать добро"
+msgstr "Qanday qilib yaxshilik qilish bo'yicha ko'rsatmalar"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:35
+msgid "Анкета"
+msgstr "Yaxshilik"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:36
+msgid "добра"
+msgstr "yaxshilik"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:38
+msgid "Личные данные"
+msgstr "Shaxsiy ma'lumotlar"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:39
+msgid ""
+"Личные данные нужны нам, чтобы связаться с вами после отправки вами анкеты."
+msgstr ""
+"Shaxsiy ma'lumotlar sizga so'rovnoma yuborganingizdan so'ng siz bilan "
+"bog'lanishimiz kerak."
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:76
+#: .\marketplace\templates\book_donate_page\book_donate.html:82
+msgid "Информация о книгах"
+msgstr "Kitoblar haqida ma'lumot"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:78
+msgid ""
+"В поле ниже вы можете расписать информацию о книге или книгах, которые вы "
+"хотите передать нашему сервису в качестве благотворительности. "
+msgstr ""
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:80
+msgid "Пример заполнения: \"Война и мир том 1-2\" Толстой.Л.Н 2шт. "
+msgstr ""
+"To'ldirish misoli:\"urush va tinchlik 1-2 jild  \" Tolstoy.L. n 2 dona."
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:85
+msgid "Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт."
+msgstr "To'ldirish misoli: urush va tinchlik jild 1-2 Tolstoy.L. n 2 dona."
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:88
+msgid "После отправки анкеты, вам позвонят с кол-центра нашего сервиса. "
+msgstr ""
+"So'rovnomani yuborganingizdan so'ng, ular bizning xizmatimiz markazidan "
+"qo'ng'iroq qilishadi."
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:88
+msgid "Спасибо за вашу помощь в развитии сервиса!"
+msgstr "Xizmatni rivojlantirishga yordam berganingiz uchun tashakkur!+"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:91
+msgid "Отправить анкету"
+msgstr "Anketani yuboring"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:103
+#, fuzzy
+#| msgid "Инструкция как делать добро"
+msgid "Инструкция как "
+msgstr "Qanday qilib yaxshilik qilish bo'yicha ko'rsatmalar"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:104
+#, fuzzy
+#| msgid "Делать добро"
+msgid "делать добро"
+msgstr "Yaxshilik qilish"
+
+#: .\marketplace\templates\book_info\book_page.html:34
+#: .\marketplace\templates\order_book\order_book.html:42
+msgid "Авторы:"
+msgstr "Mualliflar:"
+
+#: .\marketplace\templates\book_info\book_page.html:47
+#: .\marketplace\templates\order_book\order_book.html:57
+msgid "Год издания:"
+msgstr "Nashr qilingan yil:"
+
+#: .\marketplace\templates\book_info\book_page.html:50
+msgid "-е издание"
+msgstr "-nashr"
+
+#: .\marketplace\templates\book_info\book_page.html:54
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:56
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:92
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:113
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:139
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:180
+#: .\marketplace\templates\category_books_page\category_books.html:67
+#: .\marketplace\templates\home\home.html:77
+#: .\marketplace\templates\order_book\order_book.html:62
+#: .\marketplace\templates\search_result_page\search_result.html:81
+msgid "Язык:"
+msgstr "Til:"
+
+#: .\marketplace\templates\book_info\book_page.html:59
+#: .\marketplace\templates\order_book\order_book.html:67
+msgid "Сейчас читают:"
+msgstr "Endi ular o'qiydilar:"
+
+#: .\marketplace\templates\book_info\book_page.html:61
+#: .\marketplace\templates\order_book\order_book.html:69
+msgid "Уже прочли:"
+msgstr "Allaqachon O'qilgan:"
+
+#: .\marketplace\templates\book_info\book_page.html:63
+#: .\marketplace\templates\order_book\order_book.html:71
+msgid "Всего книг:"
+msgstr "Jami kitoblar:"
+
+#: .\marketplace\templates\book_info\book_page.html:66
+#: .\marketplace\templates\order_book\order_book.html:74
+msgid "Варианты доступа:"
+msgstr "Kirish imkoniyatlari:"
+
+#: .\marketplace\templates\book_info\book_page.html:111
+msgid "ЗАКАЗАТЬ"
+msgstr "Buyurtma kilish"
+
+#: .\marketplace\templates\book_info\book_page.html:116
+msgid "Кинуть на Полку"
+msgstr "Sevimlilar"
+
+#: .\marketplace\templates\book_info\book_page.html:123
+msgid "Аннотация"
+msgstr "Xulosa"
+
+#: .\marketplace\templates\book_info\book_page.html:123
+msgid " к книге:"
+msgstr " : "
+
+#: .\marketplace\templates\book_info\book_page.html:127
+msgid "Ключевые"
+msgstr "Kalit "
+
+#: .\marketplace\templates\book_info\book_page.html:127
+msgid "слова:"
+msgstr "so'zlar:"
+
+#: .\marketplace\templates\book_info\book_page.html:138
+msgid "Еще книги"
+msgstr "Mualliflarning"
+
+#: .\marketplace\templates\book_info\book_page.html:138
+msgid "от Авторов:"
+msgstr "boshqa kitoblari:"
+
+#: .\marketplace\templates\book_info\book_page.html:153
+msgid "Похожие"
+msgstr "O'xshash"
+
+#: .\marketplace\templates\book_info\book_page.html:153
+msgid " Книги:"
+msgstr "kitoblar:"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:27
+msgid "Моя "
+msgstr "Mening"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:27
+msgid "книжная полка"
+msgstr "kitob javonim"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:35
+msgid "Избранные"
+msgstr "Tanlanganlar"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:37
+msgid "В ожидании..."
+msgstr "Kutish..."
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:39
+msgid "Я читаю"
+msgstr "Men o'qiyman"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:41
+msgid "Прочтенные"
+msgstr ""
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:66
+#: .\marketplace\templates\order_book\order_book.html:28
+msgid "Заказать"
+msgstr "Buyurtma"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:70
+msgid "Удалить"
+msgstr "O'chirish"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#, fuzzy
+#| msgid "Ожидайте звонка для подтверждения заказа"
+msgid "Ожидайте звонка с подтверждением "
+msgstr "Buyurtmani tasdiqlash uchun qo'ng'iroqni kuting"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+msgid "отправки"
+msgstr "yuborish"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+msgid " вам вашей "
+msgstr " siz uchun "
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:97
+msgid "книги"
+msgstr "kitoblar"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+#, fuzzy
+#| msgid "Ожидайте звонка для подтверждения возврат"
+msgid "Ожидайте звонка с подтверждением регистрации "
+msgstr "Tasdiqlash uchun qo'ng'iroqni kuting qaytish"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+msgid "возврата вашей книги"
+msgstr "kitobingizni qaytarish"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:145
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:186
+#, fuzzy
+#| msgid "Год издания:"
+msgid "Дата получения:"
+msgstr "Nashr qilingan yil:"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:150
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:191
+#, fuzzy
+#| msgid "Оформить возврат"
+msgid "Дата возврата:"
+msgstr "Kitob qaytarish"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:158
+msgid "Оформить возврат"
+msgstr "Kitob qaytarish"
+
+#: .\marketplace\templates\category_books_page\category_books.html:27
+msgid "Категория:"
+msgstr "Kategoriya:"
+
+#: .\marketplace\templates\category_books_page\category_books.html:28
+#: .\marketplace\templates\home\home.html:68
+msgid "Подборка для Вас"
+msgstr "Siz uchun tanlov"
+
+#: .\marketplace\templates\category_books_page\category_books.html:39
+#: .\marketplace\templates\search_result_page\search_result.html:40
+msgid "Сортировать"
+msgstr "Saralash"
+
+#: .\marketplace\templates\category_books_page\category_books.html:43
+#: .\marketplace\templates\components\header.html:15
+#: .\marketplace\templates\search_result_page\search_result.html:44
+#: .\marketplace\templates\search_result_page\search_result.html:60
+msgid "Название"
+msgstr "Nomi"
+
+#: .\marketplace\templates\category_books_page\category_books.html:44
+#: .\marketplace\templates\components\header.html:17
+#: .\marketplace\templates\search_result_page\search_result.html:45
+msgid "Автор"
+msgstr "Muallif"
+
+#: .\marketplace\templates\category_books_page\category_books.html:45
+#: .\marketplace\templates\search_result_page\search_result.html:46
+msgid "Год издания"
+msgstr "Nashr qilingan yil"
+
+#: .\marketplace\templates\category_books_page\category_books.html:46
+#: .\marketplace\templates\search_result_page\search_result.html:47
+msgid "Цена"
+msgstr "Narxi"
+
+#: .\marketplace\templates\components\header.html:11
+#: .\marketplace\templates\components\header.html:14
+msgid "Все"
+msgstr "Hammasi"
+
+#: .\marketplace\templates\components\header.html:16
+#: .\marketplace\templates\search_result_page\search_result.html:61
+msgid "Жанр"
+msgstr "Janr"
+
+#: .\marketplace\templates\components\header.html:27
+msgid "Искать..."
+msgstr "Qidirish..."
+
+#: .\marketplace\templates\components\header.html:47
+msgid "Каталог"
+msgstr "Katalog"
+
+#: .\marketplace\templates\components\header.html:129
+msgid "Мой аккаунт"
+msgstr "Mening hisobim"
+
+#: .\marketplace\templates\components\header.html:130
+#: .\marketplace\templates\components\left_menu.html:28
+#: .\marketplace\templates\components\left_menu.html:34
+msgid "Моя полка"
+msgstr "Mening javonim"
+
+#: .\marketplace\templates\components\header.html:132
+msgid "Задать вопрос"
+msgstr "Savol bering"
+
+#: .\marketplace\templates\components\header.html:134
+msgid "Выйти"
+msgstr "Chiqish"
+
+#: .\marketplace\templates\components\header.html:136
+msgid "Войти"
+msgstr "Kirish"
+
+#: .\marketplace\templates\components\left_menu.html:20
+msgid "Дом"
+msgstr "Bosh sahifa"
+
+#: .\marketplace\templates\components\left_menu.html:49
+#: .\marketplace\templates\components\left_menu.html:63
+msgid "Поддержка"
+msgstr "Qo'llab-quvvatlash"
+
+#: .\marketplace\templates\home\home.html:25
+msgid "Цитаты дня"
+msgstr "Kunning iqtiboslari"
+
+#: .\marketplace\templates\home\home.html:67
+msgid "Добро пожаловать"
+msgstr "Xush kelibsiz"
+
+#: .\marketplace\templates\notifications\book_reserved.html:28
+msgid "Свободных"
+msgstr "Bepul"
+
+#: .\marketplace\templates\notifications\book_reserved.html:29
+msgid "книг пока нет"
+msgstr "hali kitoblar yo'q"
+
+#: .\marketplace\templates\notifications\book_reserved.html:30
+msgid "Попробуйте заказать книгу позже"
+msgstr "Keyinchalik kitobga buyurtma berishga harakat qiling"
+
+#: .\marketplace\templates\notifications\book_reserved.html:37
+#: .\marketplace\templates\notifications\error_404.html:35
+#: .\marketplace\templates\notifications\order_success.html:37
+#: .\marketplace\templates\notifications\return_success.html:37
+#: .\marketplace\templates\notifications\user_booked_book.html:37
+msgid "Вернуться на главную страницу"
+msgstr "Bosh sahifaga qaytish"
+
+#: .\marketplace\templates\notifications\error_404.html:28
+msgid "Страница"
+msgstr "Sahifa"
+
+#: .\marketplace\templates\notifications\error_404.html:29
+msgid "не найдена"
+msgstr "topilmadi"
+
+#: .\marketplace\templates\notifications\order_success.html:28
+#: .\marketplace\templates\notifications\return_success.html:28
+msgid "Заявка на "
+msgstr "Kitobni"
+
+#: .\marketplace\templates\notifications\order_success.html:29
+msgid "заказ книги отправлена"
+msgstr "buyurtma berish uchun ariza ko'rib "
+
+#: .\marketplace\templates\notifications\order_success.html:29
+#: .\marketplace\templates\notifications\return_success.html:29
+msgid " на рассмотрение"
+msgstr "chiqish uchun yuborilgan"
+
+#: .\marketplace\templates\notifications\order_success.html:30
+msgid "Ожидайте звонка для подтверждения заказа"
+msgstr "Buyurtmani tasdiqlash uchun qo'ng'iroqni kuting"
+
+#: .\marketplace\templates\notifications\return_success.html:29
+msgid "возврат книги отправлена"
+msgstr "qaytarish uchun ariza yuborildi"
+
+#: .\marketplace\templates\notifications\return_success.html:30
+msgid "Ожидайте звонка для подтверждения возврат"
+msgstr "Tasdiqlash uchun qo'ng'iroqni kuting qaytish"
+
+#: .\marketplace\templates\notifications\user_booked_book.html:28
+msgid "В данный момент "
+msgstr "Ayni paytda sizda"
+
+#: .\marketplace\templates\notifications\user_booked_book.html:29
+msgid " 1 книга находится у вас"
+msgstr " 1 ta kitob bor"
+
+#: .\marketplace\templates\notifications\user_booked_book.html:30
+msgid "Попробуйте заказать новую книгу после возврата предыдущей"
+msgstr ""
+"Oldingi kitobni qaytarib bergandan keyin yangi kitobga buyurtma berishga "
+"harakat qiling"
+
+#: .\marketplace\templates\order_book\order_book.html:29
+msgid "книгу"
+msgstr " kitobni"
+
+#: .\marketplace\templates\order_book\order_book.html:31
+msgid "Информация о книге"
+msgstr "Kitob haqida ma'lumot"
+
+#: .\marketplace\templates\order_book\order_book.html:88
+#: .\marketplace\templates\search_result_page\search_result.html:96
+msgid "Бумажная книга"
+msgstr "Qog'oz kitobi"
+
+#: .\marketplace\templates\order_book\order_book.html:101
+#: .\marketplace\templates\search_result_page\search_result.html:108
+msgid "Электронная книга"
+msgstr "Elektron kitob"
+
+#: .\marketplace\templates\order_book\order_book.html:114
+#: .\marketplace\templates\search_result_page\search_result.html:120
+msgid "Аудиокнига"
+msgstr "Audiokitob"
+
+#: .\marketplace\templates\order_book\order_book.html:119
+msgid "Открыть страницу книги"
+msgstr "Kitob sahifasini oching"
+
+#: .\marketplace\templates\order_book\order_book.html:127
+msgid "Информация о пользователе"
+msgstr "Foydalanuvchi haqida ma'lumot"
+
+#: .\marketplace\templates\order_book\order_book.html:154
+#: .\marketplace\templates\order_book\order_book.html:156
+msgid "Адрес доставки"
+msgstr "Yetkazib berish manzili"
+
+#: .\marketplace\templates\order_book\order_book.html:161
+msgid "Приблизительная дата возврата книги"
+msgstr "Kitobni qaytarishning taxminiy sanasi"
+
+#: .\marketplace\templates\order_book\order_book.html:171
+msgid "Я передумал(а)"
+msgstr "Men fikrimni o'zgartirdim (a)"
+
+#: .\marketplace\templates\order_book\order_book.html:175
+msgid "Отправить заявку на получение книги"
+msgstr "Kitob uchun ariza yuboring"
+
+#: .\marketplace\templates\search_result_page\search_result.html:28
+msgid "Поиск:"
+msgstr "Qidiruv:"
+
+#: .\marketplace\templates\search_result_page\search_result.html:29
+msgid "Результаты поиска:"
+msgstr "Qidiruv natijalari:"
+
+#: .\marketplace\templates\search_result_page\search_result.html:62
+msgid "Доступность"
+msgstr "Mavjudligi"
+
+#: .\marketplace\templates\search_result_page\search_result.html:63
+msgid "Просмотр"
+msgstr "Ko'rish"
+
+#: .\marketplace\templates\search_result_page\search_result.html:146
+msgid "Посмотреть"
+msgstr "Qarang"
+
+#, fuzzy
+#~| msgid "Поиск:"
+#~ msgid "Поиск..."
+#~ msgstr "Qidiruv:"
