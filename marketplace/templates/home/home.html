@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +22,7 @@
             <div class="main_content_container">
                 <div class="main_upper_block">
                     <div class="quote_block">
-                        <p class="quote_title">Цитаты дня</p>
+                        <p class="quote_title">{% trans 'Цитаты дня' %}</p>
                         <div class="slides">
                             <input type="radio" name="r" id="r1" checked>
                             <input type="radio" name="r" id="r2">
@@ -64,8 +64,8 @@
                     </div>
                 </div>
                 <div class="main_books_content_block">
-                    <h1 class="main_books_content_block_title">Добро пожаловать</h1>
-                    <p class="main_books_content_block_secondary_title">Подборка для Вас</p>
+                    <h1 class="main_books_content_block_title">{% trans 'Добро пожаловать' %}</h1>
+                    <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' %}</p>
 
                     <div class="books_catalog_block">
                         {% for book in new_books %}
@@ -74,7 +74,7 @@
                                     <img class="book_small_cover" src="{{ book.img.url }}" alt="">
                                     <p class="catalog_book_cover_name">{{ book.short_name }}</p>
                                     <p class="catalog_book_cover_author_name">{{ book.author.first.name }}</p>
-                                    <p class="catalog_book_cover_author_name">Язык: {{ book.get_language_display }}</p>
+                                    <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.get_language_display }}</p>
                                 </div>
                             </a>
                         {% endfor %}

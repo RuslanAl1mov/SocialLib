@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +31,7 @@
                     <div class="main_book_info_block">
                         <p class="book_info_book_name">{{ book_info.short_name }}</p>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">Авторы:</p>
+                            <p class="book_info_paragraph">{% trans 'Авторы:' %}</p>
                             {% for author in book_info.author.all %}
                                 <form method="POST" action="{% url 'book_search' %}" class="book_info_author_form">
                                     {% csrf_token %}
@@ -42,26 +44,26 @@
                             {% endfor %}
                         </div>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">Год издания:</p>
+                            <p class="book_info_paragraph">{% trans 'Год издания:' %}</p>
                             <p class="book_info_paragraph">{{ book_info.year }}</p>
                             {% if book_info.publications%}
-                            <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}-е издание</p>
+                            <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}{% trans '-е издание' %}</p>
                             {% endif %}
                         </div>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">Язык: {{ book_info.get_language_display }}</p>
+                            <p class="book_info_paragraph">{% trans 'Язык:' %} {{ book_info.get_language_display }}</p>
 
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
-                            <p class="book_info_paragraph bold_paragraph">Сейчас читают:</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Сейчас читают:' %}</p>
                             <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_currently_reading }}</p>
-                            <p class="book_info_paragraph bold_paragraph">Уже прочли:</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Уже прочли:' %}</p>
                             <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_already_read }}</p>
-                            <p class="book_info_paragraph bold_paragraph">Всего книг:</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Всего книг:' %}</p>
                             <p class="book_info_paragraph bold_paragraph">{{ total_books }}</p>
                         </div>
-                        <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">Варианты доступа:</p>
+                        <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' %}</p>
                         <div class="book_info_paragraph_block">
                             <div class="book_info_paragraph_block" style="margin-top:15px">
                                 {% if book_info.is_paper %}
@@ -106,23 +108,23 @@
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
-                            <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">ЗАКАЗАТЬ</a>
+                            <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">{% trans 'ЗАКАЗАТЬ' %}</a>
                             <a class="put_on_shelf_button_link" href="{% url 'favorites' book_info.id %}">
                                 <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
-                                Кинуть на Полку</a>
+                                {% trans 'Кинуть на Полку' %}</a>
                         </div>
 
 
                     </div>
                 </div>
                 <div class="main_description_block">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">Аннотация</span> к книге:</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Аннотация' %}</span>{% trans ' к книге:' %}</h1>
                     <p class="text_paragraph">{{ book_info.caption }}</p>
                 </div>
                 <div class="main_description_block">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">Ключевые</span> слова:</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Ключевые' %}</span> {% trans 'слова:' %}</h1>
                     <form method="POST" action="{% url 'book_search' %}">
                         {% csrf_token %}
                         <div class="book_info_keywords_block">
@@ -133,7 +135,7 @@
                     </form>
                 </div>
                 <div class="main_description_block" style="margin-top:50px;">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">Еще книги</span> от Авторов:</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Еще книги' %}</span> {% trans 'от Авторов:' %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
                             {% for books in author_books%}
@@ -148,7 +150,7 @@
                     </div>
                 </div>
                 <div class="main_description_block" style="margin-top:20px;">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">Похожие</span> Книги:</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Похожие' %}</span>{% trans ' Книги:' %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
                             {% for books in similar_books%}

@@ -1,8 +1,9 @@
 import random, telebot
+from decimal import Decimal
 from django.db.models import Q
 from django.db.models import Count
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, DonateBook, History_User_Book
+from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, DonateBook, History_User_Book, DepositUser
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
@@ -258,11 +259,34 @@ def user_profile_page(request, tab_id):
     user = request.user
     read_book_count = History_User_Book.objects.filter(status=5, first_name=user.first_name,
                                                   last_name=user.last_name, email=user.email).count()
+
     donate_book = DonateBook.objects.filter(first_name=user.first_name, last_name=user.last_name).count()
+
+    deposit_user = DepositUser.objects.filter(user=user)
+    total_amount = 0
+
+    for deposit in deposit_user:
+        total_amount += deposit.amount
+
+    min_value = -165
+    max_value = 403
+    num_levels = 15
+    step = (max_value - min_value) / num_levels
+
+    level = int(total_amount / 100000)
+
+    bottom = int(min_value + level * step) + 15
+    tipa_water = level * 38 +15
+
     context = {"tab": tab_id,
                'list_category': Genres.objects.all(),
                "read_books": read_book_count,
-                "help_pro": donate_book}
+                "help_pro": donate_book,
+               'bottom':bottom,
+               'tipa_water':tipa_water,
+               'level': level,
+               'total_amount': total_amount}
+
     if request.method == "POST":
         user = request.user
         if 'first_name' in request.POST:
@@ -286,6 +310,18 @@ def user_profile_page(request, tab_id):
                 return render(request, template, context)
 
     return render(request, template, context)
+
+
+def withdraw_money(request):
+    user = request.user
+    custom_user = get_object_or_404(CustomUser, user=user)
+
+    text = f"‼️ #Обнулил_Депозит ‼️ \n\n"
+    text += f"🆔 ФИО: {user.first_name} {user.last_name}\n"
+    text += f"☎️Номер телефона: {custom_user.phone_number}\n"
+    text += f"ℹ️️У меня бешеное желание обнулить депозит\n"
+    bot.send_message(-983213057, text)
+    return redirect('home')
 
 
 def books_shelf_page(request):
@@ -374,9 +410,20 @@ def order_book_page(request, book_id):
     else: # Просто страница оформления
         template = 'order_book/order_book.html'
         previous_page = request.META.get('HTTP_REFERER', None)
-        context = { 'previous_page': previous_page,
-            'list_category': Genres.objects.all() }
+
+
         book_info = get_object_or_404(Books, pk=book_id)
+        books_being_read = History_User_Book.objects.filter(status='3', book__full_name=book_info.full_name)
+        count_being_read = books_being_read.count()
+        books_already_read = History_User_Book.objects.filter(status='5', book__full_name=book_info.full_name)
+        count_already_read = books_already_read.count()
+        book_count = Books.objects.filter(full_name=book_info.full_name).count()
+        context = {'previous_page': previous_page,
+                   'list_category': Genres.objects.all(),
+                   "books_currently_reading": count_being_read,
+                   "books_already_read": count_already_read,
+                   "total_books": book_count,
+                   }
         user = request.user
         user_booked_book = History_User_Book.objects.filter(first_name=user.first_name,
                                                    last_name=user.last_name, email=user.email,

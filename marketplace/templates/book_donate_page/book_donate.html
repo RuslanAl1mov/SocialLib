@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,48 +24,47 @@
             <div class="main_content_container">
 
                 <input class="radio_input" type="radio" name="tabs" id="tab_1" checked/>
-                <label class="radio_label" for="tab_1">Делать добро</label>
+                <label class="radio_label" for="tab_1">{% trans 'Делать добро' %}</label>
                 <input class="radio_input" type="radio" name="tabs" id="tab_2"/>
-                <label class="radio_label" for="tab_2">Инструкция как делать добро</label>
+                <label class="radio_label" for="tab_2">{% trans 'Инструкция как делать добро' %}</label>
 
                 <div class="tab _1_tab">
                     <div class="profile_white_block">
                         <form class="margin_left_40px" action="{% url 'book_donate' %}" method="POST">
                             {% csrf_token %}
-                            <h1 class="category_books_page_content_block_title margin_top_15px">Анкета
-                                <span class="orange_text">добра</span></h1>
+                            <h1 class="category_books_page_content_block_title margin_top_15px">{% trans 'Анкета' %}
+                                <span class="orange_text">{% trans 'добра' %}</span></h1>
                             <p class="main_books_content_block_secondary_title margin_0 margin_top_30px bold_paragraph">
-                                Личные данные</p>
-                            <p class="book_info_paragraph grey_paragraph margin_top_15px">Личные
-                                данные нужны нам, чтобы связаться с вами после отправки вами анкеты.</p>
+                                {% trans 'Личные данные' %}</p>
+                            <p class="book_info_paragraph grey_paragraph margin_top_15px">{% trans 'Личные данные нужны нам, чтобы связаться с вами после отправки вами анкеты.' %}</p>
 
                             <div>
                                 <table>
                                     <tbody>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td book_donate_input_paddings">
-                                            <label class="input_label_bold" for="first_name">Имя</label>
+                                            <label class="input_label_bold" for="first_name">{% trans 'Имя' %}</label>
                                             <input class="profile_input_field" type="text" name="first_name"
-                                                   placeholder="Имя" id="first_name" value="{{request.user.first_name}}" required>
+                                                   placeholder="{% trans 'Имя' %}" id="first_name" value="{{request.user.first_name}}" required>
 
                                         </td>
                                         <td class="td_raw user_profile_td book_donate_input_paddings">
-                                            <label class="input_label_bold" for="last_name">Фамилия</label>
+                                            <label class="input_label_bold" for="last_name">{% trans 'Фамилия' %}</label>
                                             <input class="profile_input_field" type="text" name="last_name"
-                                                   placeholder="Фамилия" id="last_name" value="{{ request.user.last_name }}" required>
+                                                   placeholder="{% trans 'Фамилия' %}" id="last_name" value="{{ request.user.last_name }}" required>
                                         </td>
                                     </tr>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td book_donate_input_paddings">
-                                            <label class="input_label_bold" for="phone">Номер телефона</label>
+                                            <label class="input_label_bold" for="phone">{% trans 'Номер телефона' %}</label>
                                             <input class="profile_input_field" type="tel" name="phone_number" id="phone"
-                                                   placeholder="Номер телефона" value="{{request.user.customuser.phone_number}}"
+                                                   placeholder="{% trans 'Номер телефона' %}" value="{{request.user.customuser.phone_number}}"
                                                    required>
                                         </td>
                                         <td class="td_raw user_profile_td book_donate_input_paddings">
-                                            <label class="input_label_bold" for="email">Электронная почта</label>
+                                            <label class="input_label_bold" for="email">{% trans 'Электронная почта' %}</label>
                                             <input class="profile_input_field" type="email" name="email"
-                                                   placeholder="Электронная почта" id="email"
+                                                   placeholder="{% trans 'Электронная почта' %}" id="email"
                                                    value="{{request.user.email}}" required>
 
                                         </td>
@@ -73,25 +73,22 @@
                                 </table>
 
                                 <p class="main_books_content_block_secondary_title margin_0 margin_top_60px bold_paragraph">
-                                    Информация о книгах</p>
+                                    {% trans 'Информация о книгах' %}</p>
 
-                                <p class="book_info_paragraph grey_paragraph  margin_top_30px">В поле
-                                    ниже вы можете расписать информацию о книге или книгах, которые вы хотите передать
-                                    нашему сервису в качестве благотворительности. </p>
+                                <p class="book_info_paragraph grey_paragraph  margin_top_30px">{% trans 'В поле ниже вы можете расписать информацию о книге или книгах, которые вы хотите передать нашему сервису в качестве благотворительности. ' %}</p>
                                 <p class="book_info_paragraph grey_paragraph line_height_30">
-                                    Пример заполнения: "Война и мир том 1-2" Толстой.Л.Н 2шт. </p>
+                                    {% trans 'Пример заполнения: "Война и мир том 1-2" Толстой.Л.Н 2шт. ' %}</p>
 
-                                <label class="input_label_bold margin_top_30px " for="books_info">Информация
-                                    о книгах</label>
+                                <label class="input_label_bold margin_top_30px " for="books_info">{% trans 'Информация о книгах' %}</label>
                                 <textarea class="profile_input_field profile_textarea_field book_donate_input_paddings" name="product_keywords_ru"
                                           id="books_info"
-                                          placeholder='Пример заполнения: "Война и мир том 1-2" Толстой.Л.Н 2шт.'></textarea>
+                                          placeholder="{% trans 'Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт.' %}"></textarea>
 
 
-                                <p class="book_info_paragraph grey_paragraph margin_top_50px">После отправки анкеты, вам позвонят с кол-центра нашего сервиса. <span class="orange_text">Спасибо за вашу помощь в развитии сервиса!</span></p>
+                                <p class="book_info_paragraph grey_paragraph margin_top_50px">{% trans 'После отправки анкеты, вам позвонят с кол-центра нашего сервиса. ' %}<span class="orange_text">{% trans 'Спасибо за вашу помощь в развитии сервиса!' %}</span></p>
 
                                 <div class="bottom_button_block">
-                                    <input class="input_submit_btn" type="submit" value="Отправить анкету">
+                                    <input class="input_submit_btn" type="submit" value="{% trans 'Отправить анкету' %}">
                                 </div>
 
 
@@ -103,8 +100,8 @@
                 <div class="tab _2_tab">
                     <div class="profile_white_block">
                         <div class="main_upper_block margin_top_30px">
-                            <h1 class="category_books_page_content_block_title">Инструкция как <span
-                                    class="orange_text">делать добро</span></h1>
+                            <h1 class="category_books_page_content_block_title">{% trans 'Инструкция как ' %}<span
+                                    class="orange_text">{% trans 'делать добро' %}</span></h1>
                         </div>
                     </div>
                 </div>
