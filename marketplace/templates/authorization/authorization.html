@@ -1,6 +1,9 @@
 {% load static %}
+<<<<<<< HEAD
 {% load i18n %}
 
+=======
+>>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +26,18 @@
             <div class="auth_logo_block">
                 <img class="auth_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
             </div>
+<<<<<<< HEAD
             <p class="auth_logo_text margin_top_10px darkgrey_paragraph">{% trans 'Сервис бесплатной раздачи книг' %}</p>
             <h1 class="auth_title margin_top_10px margin_top_40px">{% trans 'Авторизация' %}</h1>
         </div>
 
+=======
+            <p class="auth_logo_text margin_top_10px darkgrey_paragraph">Сервис бесплатной раздачи книг</p>
+            <h1 class="auth_title margin_top_10px margin_top_40px">Авторизация</h1>
+        </div>
+
+
+>>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
         <form action="{% url 'authorization' %}" method="POST">
             {% csrf_token %}
             <div class="auth_info_block">
@@ -34,18 +45,31 @@
                     <tbody>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
+<<<<<<< HEAD
                             <label class="input_label_bold" for="email">E-mail</label>
                             <input class="auth_input_field" type="email" name="email"
                                    placeholder="{% trans 'Адрес электронной почты' %}" id="email" required>
+=======
+                            <label class="input_label_bold" for="email">E-mail или номер телефона</label>
+                            <input class="auth_input_field" type="text" name="email"
+                                   placeholder="Адрес электронной почты или номер телефона" id="email" required>
+>>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
 
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
+<<<<<<< HEAD
                                 <label class="input_label_bold" for="password">{% trans 'Пароль' %}</label>
                             <div class="auth_psw_block">
                                 <input class="auth_input_field auth_password_input_field " type="password" name="password"
                                        placeholder="{% trans 'Пароль' %}" id="password" required>
+=======
+                                <label class="input_label_bold" for="password">Пароль</label>
+                            <div class="auth_psw_block">
+                                <input class="auth_input_field auth_password_input_field " type="password" name="password"
+                                       placeholder="Пароль" id="password" required>
+>>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
                                 <div class="-justify_content_center -align_items_center psw_eye_block">
                                 <i onclick="pswToggle()" class="far fa-eye -psw_eye_block" id="togglePassword"></i>
                                 </div>
@@ -58,6 +82,7 @@
             </div>
 
             <div class="bottom_button_block -justify_content_center -flex_direction_column -align_items_center">
+<<<<<<< HEAD
                 <input class="auth_submit_btn" type="submit" value="{% trans 'ВОЙТИ В АККАУНТ' %}">
 
 <!--                <div class=" -justify_content_center -align_items_center margin_top_30px">-->
@@ -78,6 +103,28 @@
                 <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'registration' %}">{% trans 'У меня нет аккаунта' %}</a>
             </div>
 
+=======
+                <input class="auth_submit_btn" type="submit" value="ВОЙТИ В АККАУНТ">
+
+                <div class=" -justify_content_center -align_items_center margin_top_30px">
+                    <a class="menu_item_link" href="#">
+                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">
+                            <use height="43" width="43"
+                                 href="{% static 'marketplace/img/icons.svg' %}#google_plus"></use>
+                        </svg>
+                    </a>
+                    <a class="menu_item_link margin_left_7px" href="#">
+                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">
+                            <use height="43" width="43"
+                                 href="{% static 'marketplace/img/icons.svg' %}#facebook_circle"></use>
+                        </svg>
+                        </a>
+                </div>
+              
+                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'registration' %}">У меня нет аккаунта</a>
+              
+            </div>
+>>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
         </form>
 
     </div>

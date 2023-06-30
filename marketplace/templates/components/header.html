@@ -8,13 +8,13 @@
                 <nav class="header_menu header_search_menu">
                   <ul class="header_menu_list">
                     <li class="header_menu_dropdown header_search_menu_dropdown">
-                      <button id="dropdown_button" class="header_menu_dropbtn header_search_menu_dropbtn" onclick="toggleDropdown()">{% trans 'Все' %}<i class="arrow down"></i></button>
+                      <button id="dropdown_button" class="header_menu_dropbtn header_search_menu_dropbtn" onclick="toggleDropdown()">Все<i class="arrow down"></i></button>
                       <div id="dropdown_content" class="header_menu_dropdown_content_block header_search_menu_dropdown_content">
                         <div class="header_menu_dropdown_content">
-                          <a class="header_menu_item header_menu_item_active" onclick="setSearchValue(this, 'Все')">{% trans 'Все' %}</a>
-                          <a class="header_menu_item" onclick="setSearchValue(this, 'Название')">{% trans 'Название' %}</a>
-                          <a class="header_menu_item" onclick="setSearchValue(this, 'Жанр')">{% trans 'Жанр' %}</a>
-                          <a class="header_menu_item" onclick="setSearchValue(this, 'Автор')">{% trans 'Автор' %}</a>
+                          <a class="header_menu_item header_menu_item_active" onclick="setSearchValue(this, 'Все')">Все</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Название')">Название</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Жанр')">Жанр</a>
+                          <a class="header_menu_item" onclick="setSearchValue(this, 'Автор')">Автор</a>
                         </div>
                       </div>
                     </li>
@@ -24,7 +24,7 @@
                     {% csrf_token %}
                     <input id="search_value_input" type="hidden" name="search_type" value="{{ search_type }}">
                     <input class="search_text_input" type="text"
-                           placeholder="{% trans 'Искать...' %}" name="search_value">
+                           placeholder="Поиск" name="search_value">
                     <button type="submit" class="search_submit">
                         <svg class="header_search_submit_icon">
                             <use height="17px" width="16px" fill="#F76B56"
@@ -44,11 +44,12 @@
                                 <use height="17px" width="16px" fill="#F76B56"
                                      href="{% static 'marketplace/img/icons.svg' %}#menu"></use>
                             </svg>
-                            {% trans 'Каталог' %}<i class="arrow down"></i></button>
+                            Каталог<i class="arrow down"></i></button>
 
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_catalog_menu_dropdown_content">
                                 <div class="content_list">
+
                                     {% for category in list_category %}
                                     <a class="header_menu_item header_catalog_menu_item" href="{% url 'category_books' category.id %}">{{ category.name }}</a>
                                     {% endfor %}
@@ -122,18 +123,18 @@
             <nav class="header_menu header_avatar_menu">
                 <ul class="header_menu_list">
                     <li class="header_menu_dropdown">
-                        <button class="header_menu_dropbtn">{% trans 'Профиль' %}<i class="arrow down"></i></button>
+                        <button class="header_menu_dropbtn">Профиль<i class="arrow down"></i></button>
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_menu_account_dropdown_content">
                                 {% if request.user.is_authenticated %}
-                                <a class="header_menu_item" href="{% url 'user_profile' 1 %}">{% trans 'Мой аккаунт' %}</a>
-                                <a class="header_menu_item " href="{% url 'book_shelf' %}">{% trans 'Моя полка' %}</a>
+                                <a class="header_menu_item" href="{% url 'user_profile' 1 %}">Мой аккаунт</a>
+                                <a class="header_menu_item " href="{% url 'book_shelf' %}">Моя полка</a>
                                 {% endif %}
-                                <a class="header_menu_item " href="{% url 'tech_support' %}">{% trans 'Задать вопрос' %}</a>
+                                <a class="header_menu_item " href="{% url 'tech_support' %}">Задать вопрос</a>
                                 {% if request.user.is_authenticated %}
-                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'log_out' %}">{% trans 'Выйти' %}</a>
+                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'log_out' %}">Выйти</a>
                                 {% else %}
-                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'authorization' %}">{% trans 'Войти' %}</a>
+                                <a class="header_menu_item header_menu_item_red_text" href="{% url 'authorization' %}">Войти</a>
                                 {% endif %}
                             </div>
                         </div>

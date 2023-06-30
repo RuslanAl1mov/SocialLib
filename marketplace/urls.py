@@ -22,6 +22,7 @@ urlpatterns = [
     path('order_book/<int:book_id>/', views.order_book_page, name='order_book'),
     path('return_to_book/<int:id>/', views.return_to_book, name='return_to_book'),
 
+
     path('page_not_found', views.not_found_page, name='page_not_found'),
     path('book_is_reserved', views.book_reserved_page, name='book_reserved'),
     path('success_order', views.order_success_page, name='order_success'),
@@ -34,4 +35,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
