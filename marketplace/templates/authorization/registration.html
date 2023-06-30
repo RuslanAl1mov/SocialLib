@@ -1,0 +1,106 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Social Lib</title>
+    <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+</head>
+
+<body>
+<section class="main_layout">
+    <div class="profile_white_block registration_block">
+        <div class="auth_logo_str_block">
+            <div class="auth_logo_block">
+                <img class="auth_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
+            </div>
+            <p class="auth_logo_text margin_top_10px darkgrey_paragraph">{% trans 'Сервис бесплатной раздачи книг' %}</p>
+            <h1 class="auth_title margin_top_10px margin_top_40px">{% trans 'Регистрация' %}</h1>
+        </div>
+
+        <form action="{% url 'registration' %}" method="POST">
+            {% csrf_token %}
+            <div class="auth_info_block">
+                <table>
+                    <tbody>
+                    <tr class="tr_raw">
+                        <td class="td_raw auth_td">
+                            <label class="input_label_bold" for="first_name">{% trans 'Имя' %}</label>
+                            <input class="auth_input_field" type="text" name="first_name"
+                                   placeholder="{% trans 'Имя' %}" id="first_name" required>
+
+                        </td>
+                    </tr>
+                    <tr class="tr_raw">
+                        <td class="td_raw auth_td">
+                            <label class="input_label_bold" for="last_name">{% trans 'Фамилия' %}</label>
+                            <input class="auth_input_field" type="text" name="last_name"
+                                   placeholder="{% trans 'Фамилия' %}" id="last_name" required>
+
+                        </td>
+                    </tr>
+                    <tr class="tr_raw">
+                        <td class="td_raw auth_td">
+                            <label class="input_label_bold" for="phone">{% trans 'Номер телефона' %}</label>
+                            <input class="auth_input_field" type="tel" name="phone_number" id="phone"
+                                   placeholder="{% trans 'Номер телефона' %}">
+                        </td>
+                    </tr>
+                    <tr class="tr_raw">
+                        <td class="td_raw auth_td">
+                            <label class="input_label_bold" for="email">E-mail</label>
+                            <input class="auth_input_field" type="email" name="email"
+                                   placeholder="{% trans 'Адрес электронной почты' %}" id="email" required>
+
+                        </td>
+                    </tr>
+                    <tr class="tr_raw">
+                        <td class="td_raw auth_td">
+                            <label class="input_label_bold" for="password">{% trans 'Пароль' %}</label>
+                            <div class="auth_psw_block">
+                                <input class="auth_input_field auth_password_input_field " type="password"
+                                       name="password"
+                                       placeholder="{% trans 'Придумайте пароль' %}" id="password" required>
+                                <div class="-justify_content_center -align_items_center psw_eye_block">
+                                    <i onclick="pswToggle()" class="far fa-eye -psw_eye_block" id="togglePassword"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bottom_button_block -justify_content_center -flex_direction_column -align_items_center">
+                <input class="auth_submit_btn" type="submit" value="{% trans 'ЗАРЕГИСТРИРОВАТЬСЯ' %}">
+
+<!--                <div class=" -justify_content_center -align_items_center margin_top_30px">-->
+<!--                    <a class="menu_item_link" href="#">-->
+<!--                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">-->
+<!--                            <use height="43" width="43"-->
+<!--                                 href="{% static 'marketplace/img/icons.svg' %}#google_plus"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    <a class="menu_item_link margin_left_7px" href="#">-->
+<!--                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">-->
+<!--                            <use height="43" width="43"-->
+<!--                                 href="{% static 'marketplace/img/icons.svg' %}#facebook_circle"></use>-->
+<!--                        </svg>-->
+<!--                        </a>-->
+<!--                </div>-->
+                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'authorization' %}">{% trans 'Я уже зарегистрирован' %}</a>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+</body>
+</html>
+
