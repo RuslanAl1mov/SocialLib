@@ -82,7 +82,7 @@
 
                                         </div>
                                         <div class="book_info_paragraph_block">
-                                            {% if book.is_paper %}
+                                            {% if book.type_book == '1' %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
                                                      href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
@@ -94,7 +94,7 @@
                                             </svg>
                                             {% endif %}
                                             <p class="table_book_info_paragraph bold_paragraph">{% trans 'Бумажная книга' %}</p>
-                                            {% if book.is_eBook %}
+                                            {% if book.type_book == '2' %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
                                                      href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
@@ -106,7 +106,7 @@
                                             </svg>
                                             {% endif %}
                                             <p class="table_book_info_paragraph bold_paragraph">{% trans 'Электронная книга' %}</p>
-                                            {% if book.is_audio %}
+                                            {% if book.type_book == '3' %}
                                             <svg class="header_menu_icon margin_right_4px">
                                                 <use height="18px" width="18px" fill="#42BB4E"
                                                      href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>

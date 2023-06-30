@@ -24,9 +24,9 @@ class AuthorAdmin(TranslationAdmin):
     }
 
 
-class BooksAdmin(TranslationAdmin):
-    list_display = ('short_name', 'caption', 'level', 'is_occupied', 'is_removed', 'language')
-    list_filter = ('is_occupied', 'is_removed', 'level', 'language')
+class BooksAdmin(admin.ModelAdmin):
+    list_display = ('short_name',  'is_occupied', 'is_removed', 'type_book')
+    list_filter = ('is_occupied', 'is_removed', 'type_book', 'language')
     list_editable = ('is_occupied', 'is_removed',)
     search_fields = ('short_name', 'full_name', 'genre__name', 'keyword__name', 'author__name')
 

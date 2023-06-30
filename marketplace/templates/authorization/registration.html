@@ -1,8 +1,5 @@
 {% load static %}
-<<<<<<< HEAD
 {% load i18n %}
-=======
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +20,8 @@
             <div class="auth_logo_block">
                 <img class="auth_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
             </div>
-<<<<<<< HEAD
             <p class="auth_logo_text margin_top_10px darkgrey_paragraph">{% trans 'Сервис бесплатной раздачи книг' %}</p>
             <h1 class="auth_title margin_top_10px margin_top_40px">{% trans 'Регистрация' %}</h1>
-=======
-            <p class="auth_logo_text margin_top_10px darkgrey_paragraph">Сервис бесплатной раздачи книг</p>
-            <h1 class="auth_title margin_top_10px margin_top_40px">Регистрация</h1>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
         </div>
 
         <form action="{% url 'registration' %}" method="POST">
@@ -39,74 +31,41 @@
                     <tbody>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
-<<<<<<< HEAD
                             <label class="input_label_bold" for="first_name">{% trans 'Имя' %}</label>
                             <input class="auth_input_field" type="text" name="first_name"
                                    placeholder="{% trans 'Имя' %}" id="first_name" required>
-=======
-                            <label class="input_label_bold" for="first_name">Имя</label>
-                            <input class="auth_input_field" type="text" name="first_name"
-                                   placeholder="Имя" id="first_name" required>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
-
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
-<<<<<<< HEAD
                             <label class="input_label_bold" for="last_name">{% trans 'Фамилия' %}</label>
                             <input class="auth_input_field" type="text" name="last_name"
                                    placeholder="{% trans 'Фамилия' %}" id="last_name" required>
-=======
-                            <label class="input_label_bold" for="last_name">Фамилия</label>
-                            <input class="auth_input_field" type="text" name="last_name"
-                                   placeholder="Фамилия" id="last_name" required>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
-
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
-<<<<<<< HEAD
                             <label class="input_label_bold" for="phone">{% trans 'Номер телефона' %}</label>
                             <input class="auth_input_field" type="tel" name="phone_number" id="phone"
-                                   placeholder="{% trans 'Номер телефона' %}">
-=======
-                            <label class="input_label_bold" for="phone">Номер телефона</label>
-                            <input class="auth_input_field" type="tel" name="phone_number" id="phone"
-                                   placeholder="Номер телефона"
+                                   placeholder="{% trans 'Номер телефона' %}"
                                    pattern="[0-9]{12}"
                                    required>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
                             <label class="input_label_bold" for="email">E-mail</label>
                             <input class="auth_input_field" type="email" name="email"
-<<<<<<< HEAD
-                                   placeholder="{% trans 'Адрес электронной почты' %}" id="email" required>
-=======
-                                   placeholder="Адрес электронной почты" id="email" autocomplete="off" required>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
-
+                                   placeholder="{% trans 'Адрес электронной почты' %}" id="email" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
-<<<<<<< HEAD
                             <label class="input_label_bold" for="password">{% trans 'Пароль' %}</label>
                             <div class="auth_psw_block">
                                 <input class="auth_input_field auth_password_input_field " type="password"
-                                       name="password"
-                                       placeholder="{% trans 'Придумайте пароль' %}" id="password" required>
-=======
-                            <label class="input_label_bold" for="password">Пароль</label>
-                            <div class="auth_psw_block">
-                                <input class="auth_input_field auth_password_input_field " type="password"
                                        name="password" autocomplete="new-password" onfocus="this.removeAttribute('readonly')"
-                                       placeholder="Придумайте пароль" id="password" required>
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
+                                       placeholder="{% trans 'Придумайте пароль' %}" id="password" required>
                                 <div class="-justify_content_center -align_items_center psw_eye_block">
                                     <i onclick="pswToggle()" class="far fa-eye -psw_eye_block" id="togglePassword"></i>
                                 </div>
@@ -118,25 +77,6 @@
             </div>
 
             <div class="bottom_button_block -justify_content_center -flex_direction_column -align_items_center">
-<<<<<<< HEAD
-                <input class="auth_submit_btn" type="submit" value="{% trans 'ЗАРЕГИСТРИРОВАТЬСЯ' %}">
-
-<!--                <div class=" -justify_content_center -align_items_center margin_top_30px">-->
-<!--                    <a class="menu_item_link" href="#">-->
-<!--                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">-->
-<!--                            <use height="43" width="43"-->
-<!--                                 href="{% static 'marketplace/img/icons.svg' %}#google_plus"></use>-->
-<!--                        </svg>-->
-<!--                    </a>-->
-<!--                    <a class="menu_item_link margin_left_7px" href="#">-->
-<!--                        <svg class="auth_google_icon" style="padding: 0 5px 0 4px">-->
-<!--                            <use height="43" width="43"-->
-<!--                                 href="{% static 'marketplace/img/icons.svg' %}#facebook_circle"></use>-->
-<!--                        </svg>-->
-<!--                        </a>-->
-<!--                </div>-->
-                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'authorization' %}">{% trans 'Я уже зарегистрирован' %}</a>
-=======
                 <div class="-display_flex margin_bottom_30px">
                     <input class="auth_checkbox margin_right_4px" type="checkbox" id="reg_check"
                            onchange="document.getElementById('registr_btn').disabled = !this.checked;
@@ -144,7 +84,7 @@
                                      "/>
                     <label for="reg_check">Я принимаю условия <a class="orange_text" href="{% url 'terms_of_use' %}">Пользовательской оферты</a>.</label>
                 </div>
-                <input class="auth_submit_btn auth_submit_btn_disabled" type="submit" id="registr_btn" value="ЗАРЕГИСТРИРОВАТЬСЯ" disabled="disabled">
+                <input class="auth_submit_btn auth_submit_btn_disabled" type="submit" id="registr_btn" value="{% trans 'ЗАРЕГИСТРИРОВАТЬСЯ' %}" disabled="disabled">
 
                 <div class=" -justify_content_center -align_items_center margin_top_30px">
                     <a class="menu_item_link" href="#">
@@ -160,11 +100,7 @@
                         </svg>
                     </a>
                 </div>
-
-                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'authorization' %}">Я уже
-                    зарегистрирован</a>
-
->>>>>>> 5b119be80e8e2f608ba62d6763f412c372126b9e
+                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'authorization' %}">{% trans 'Я уже зарегистрирован' %}</a>
             </div>
         </form>
 

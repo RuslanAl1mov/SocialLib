@@ -47,25 +47,28 @@ class Books(models.Model):
         ('uz', "O'zbek"),
         ('en', 'English'),
     )
+    Type_BOOK_CHOICES = (
+        ('1', 'Бумажная книга'),
+        ('2', "Электронная книга"),
+        ('3', 'АудиоКнига'),
+    )
     genre = models.ManyToManyField(Genres, verbose_name='Жанры')
     keyword = models.ManyToManyField(Keywords, verbose_name='Ключевые слова')
     full_name = models.CharField(max_length=700, verbose_name='Полное Название')
     short_name = models.CharField(max_length=700, verbose_name='Просто Название')
-    quantity = models.PositiveIntegerField(verbose_name='Кол-во книг')
-    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, verbose_name='Язык')
-    year = models.IntegerField(verbose_name="Год издания", null=True, blank=True)
-    publications = models.IntegerField(verbose_name="Издания", null=True, blank=True)
+    number_pages = models.IntegerField(verbose_name="Кол-во страниц", null=True, blank=True)
+    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, verbose_name='Язык', default='ru')
+    year = models.IntegerField(verbose_name="Год издания", null=True, blank=True, default='0')
+    publications = models.IntegerField(verbose_name="Издание", null=True, blank=True, default='1')
     author = models.ManyToManyField(Author, verbose_name='Автор')
     caption = models.TextField(verbose_name='Аннотация к книге', null=True, blank=True)
-    img = models.ImageField(upload_to='covers/', verbose_name='270x210', null=True, blank=True)
+    img = models.ImageField(upload_to='books/', verbose_name='Иллюстрация', null=True, blank=True)
     price = models.IntegerField(verbose_name="Стоимость", null=True, blank=True)
-    level = models.IntegerField(verbose_name="Уровень", null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True, verbose_name="Дата добавления", null=True, blank=True)
     is_occupied = models.BooleanField(verbose_name='Занята ли')
     is_removed = models.BooleanField(verbose_name='Удалена ли')
-    is_paper = models.BooleanField(verbose_name='Бумажная книга')
-    is_eBook = models.BooleanField(verbose_name='Электронная книга')
-    is_audio = models.BooleanField(verbose_name='АудиоКнига')
+    type_book = models.CharField(max_length=2, choices=Type_BOOK_CHOICES, verbose_name='Тип книги', default='1')
+
 
     class Meta:
         verbose_name = 'книгу'
@@ -90,8 +93,8 @@ class Quotes(models.Model):
 
 class CustomUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Пользователь')
-    img = models.ImageField(upload_to='covers/', verbose_name='Аватарка', null=True, blank=True)
-    phone_number = models.BigIntegerField(verbose_name="Телефон")
+    img = models.ImageField(upload_to='users/', verbose_name='Аватарка', null=True, blank=True, default='covers/default.jpg')
+    phone_number = models.CharField(max_length=700, verbose_name='Телефон')
 
     class Meta:
         verbose_name = 'пользователь'
