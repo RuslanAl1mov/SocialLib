@@ -1,0 +1,67 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Social Lib</title>
+    <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+</head>
+
+<body>
+<section class="main_layout">
+    {% include 'components/left_menu.html' %}
+
+    <section class="content_layout">
+        {% include 'components/header.html' %}
+
+        <main class="main_content_layout">
+            <div class="main_content_container">
+
+                <div class="profile_white_block margin_0">
+                    <div class="main_upper_block margin_top_30px margin_left_40px">
+                        <h1 class="category_books_page_content_block_title">{% trans 'Техническая поддержка ' %}<span
+                                class="orange_text">{% trans 'WooW сервиса' %}</span></h1>
+                    </div>
+                    <div class="main_upper_block margin_top_30px -justify_content_center -flex_direction_column margin_left_40px"
+                         style="line-height: 35px;">
+                        <p class="main_books_content_block_secondary_title font_15pt bold_paragraph">{% trans 'Добро пожаловать на страницу поддержки сервиса ' %}<a href="{% url 'home' %}" class="orange_text" target="_blank">WooW.uz</a>!
+                        </p>
+                        <p class="main_books_content_block_secondary_title font_15pt bold_paragraph">{% trans 'Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы можете столкнуться.' %}
+                        </p>
+
+                        <p class="main_books_content_block_secondary_title font_15pt bold_paragraph margin_0">{% trans 'Способы связаться с нами:' %}</p>
+                        <dl class="main_books_content_block_secondary_title font_15pt">
+                            <dd>
+                                {% trans 'В онлайн-чате Телеграмм – ' %}<a class="orange_text bold_paragraph"
+                                                             href="https://t.me/WooW_support">@WooW_support</a>.
+                            </dd>
+                            <dd>
+                                {% trans 'Путем направления письма на адрес электронной почты: ' %}<a
+                                    class="orange_text bold_paragraph" href="mailto:arlimuniversal@gmail.com">arlimuniversal@gmail.com</a>
+                            </dd>
+                        </dl>
+
+                        <p class="main_books_content_block_secondary_title font_15pt">{% trans 'Мы стремимся обеспечить наших клиентов лучшим обслуживанием, и ваше мнение имеет для нас большое значение. Если у вас есть предложения по улучшению нашего сервиса или какие-либо отзывы, пожалуйста, не стесняйтесь сообщить нам.' %}
+                            <br><br>
+                            {% trans 'Благодарим вас за использование наших услуг!' %}
+                        </p>
+                        <p class="main_books_content_block_secondary_title font_15pt bold_paragraph">
+                            {% trans 'С любовью, команда поддержки WooW' %} ❤️</p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </section>
+</section>
+
+
+</body>
+</html>
+

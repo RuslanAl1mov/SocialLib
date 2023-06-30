@@ -1,0 +1,41 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Social Lib</title>
+    <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+</head>
+
+<body>
+<section class="main_layout">
+    {% include 'components/left_menu.html' %}
+
+    <section class="content_layout">
+        {% include 'components/header.html' %}
+
+        <main class="main_content_layout">
+            <div class="main_content_container">
+
+                <div class="profile_white_block margin_top_15px">
+                    <div class="main_upper_block margin_top_30px margin_left_40px">
+                        <h1 class="category_books_page_content_block_title">{% trans "О " %}<span
+                                class="orange_text">{% trans "нас" %}</span></h1>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </section>
+</section>
+
+
+</body>
+</html>
+
