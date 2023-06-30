@@ -125,16 +125,26 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale'
 ]
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
 
 STATICFILES_DIRS = [
-    BASE_DIR / "SocialLib/static/"
+    BASE_DIR / "SocialLib/static"
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'SocialLib/static/books/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'SocialLib/static/media')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = [
+#     '/var/www/SocialLib/static',
+# ]
+#
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = '/var/www/SocialLib/static/media'
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

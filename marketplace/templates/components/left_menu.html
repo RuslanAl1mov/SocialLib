@@ -20,7 +20,7 @@
                                 {% trans 'Дом' %}</a>
                         </dt>
                         <dt class="menu_item">
-                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_authenticated and not request.user.is_superuser %}
 
                             <a class="menu_item_link" href="{% url 'book_shelf' %}">
                                 <svg class="menu_item_icon">

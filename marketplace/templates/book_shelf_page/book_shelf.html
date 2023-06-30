@@ -57,8 +57,7 @@
                                     </a>
                                 </div>
                                 <div class="shelf_book_info_container_2" >
-                                    <p class="search_book_table_book_author_str grey_paragraph">{% trans 'Вы можете взять эту
-                                        книгу сроком на 30 дней (Бесплатно)' %}</p>
+                                    <p class="search_book_table_book_author_str grey_paragraph">{% trans 'Вы можете взять эту книгу сроком на 30 дней (Бесплатно)' %}</p>
                                     <div class="column_flex">
                                         <form action="{% url 'order_book' book.book.id  %}" method="POST">
                                             {% csrf_token %}

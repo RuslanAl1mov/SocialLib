@@ -66,7 +66,7 @@
                         <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' %}</p>
                         <div class="book_info_paragraph_block">
                             <div class="book_info_paragraph_block" style="margin-top:15px">
-                                {% if book_info.is_paper %}
+                                {% if book_info.type_book == '1' %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
                                          href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
@@ -79,7 +79,7 @@
                                 {% endif %}
                                 <p class="book_info_paragraph bold_paragraph">Бумажная книга</p>
 
-                                {% if book_info.is_eBook %}
+                                {% if book_info.type_book == '2' %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
                                          href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
@@ -92,7 +92,7 @@
                                 {% endif %}
                                 <p class="book_info_paragraph bold_paragraph">Электронная книга</p>
 
-                                {% if book_info.is_audio %}
+                                {% if book_info.type_book == '3' %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
                                          href="{% static 'marketplace/img/icons.svg' %}#checked_in_circle"></use>
@@ -108,12 +108,21 @@
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
+                            {% if request.user.is_authenticated and not request.user.is_superuser %}
                             <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">{% trans 'ЗАКАЗАТЬ' %}</a>
                             <a class="put_on_shelf_button_link" href="{% url 'favorites' book_info.id %}">
                                 <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
                                 {% trans 'Кинуть на Полку' %}</a>
+                            {% else %}
+                            <a class="borrow_button_link" href="{% url 'authorization'  %}">{% trans 'ЗАКАЗАТЬ' %}</a>
+                            <a class="put_on_shelf_button_link" href="{% url 'authorization' %}">
+                                <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
+                                    <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
+                                </svg>
+                                {% trans 'Кинуть на Полку' %}</a>
+                            {% endif %}
                         </div>
 
 
@@ -134,11 +143,12 @@
                         </div>
                     </form>
                 </div>
+                {% if author_books%}
                 <div class="main_description_block" style="margin-top:50px;">
                     <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Еще книги' %}</span> {% trans 'от Авторов:' %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
-                            {% for books in author_books%}
+                            {% for books in author_books %}
                             <a href="{% url 'book' books.pk %}">
                             <div class="book_cover_only_block" title="{{ books.full_name }}">
                                 <img class="book_small_cover"
@@ -149,6 +159,8 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
+                {% if similar_books%}
                 <div class="main_description_block" style="margin-top:20px;">
                     <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Похожие' %}</span>{% trans ' Книги:' %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
@@ -164,6 +176,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
             </div>
         </main>
     </section>

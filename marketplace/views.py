@@ -1,4 +1,4 @@
-
+from datetime import datetime, timedelta
 import random, telebot
 from decimal import Decimal
 from django.db.models import Q
@@ -44,7 +44,11 @@ def registration_page(request):
 def authorization_page(request):
     template = 'authorization/authorization.html'
     if request.method == "POST":
-        user = authenticate(username=request.POST["email"], password=request.POST["password"])
+        if request.POST["email"].isdigit():
+            custom_user = get_object_or_404(CustomUser, phone_number=request.POST["email"])
+            user = authenticate(username=custom_user.user.username, password=request.POST["password"])
+        else:
+            user = authenticate(username=request.POST["email"], password=request.POST["password"])
         if user is not None:
             login(request, user)
             return redirect('home')
@@ -403,6 +407,7 @@ def order_book_page(request, book_id):
             order_info.last_name = request.POST['last_name']
             order_info.number_phone = request.POST['phone_number']
             order_info.address = request.POST['address']
+            order_info.date_deadline = datetime.now() + timedelta(days=33)
             order_info.save()
             text = f"‼️ #Забрать_Книгу ‼️ \n\n"
             text += f"🆔 ФИО: {request.POST['first_name']} {request.POST['last_name']}\n"
@@ -423,11 +428,13 @@ def order_book_page(request, book_id):
         books_already_read = History_User_Book.objects.filter(status='5', book__full_name=book_info.full_name)
         count_already_read = books_already_read.count()
         book_count = Books.objects.filter(full_name=book_info.full_name).count()
+        date_of_expire = datetime.now().date() + timedelta(days=33)
         context = {'previous_page': previous_page,
                    'list_category': Genres.objects.all(),
                    "books_currently_reading": count_being_read,
                    "books_already_read": count_already_read,
                    "total_books": book_count,
+                   'date_of_expire': date_of_expire
                    }
         user = request.user
         user_booked_book = History_User_Book.objects.filter(first_name=user.first_name,

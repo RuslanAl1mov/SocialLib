@@ -50,22 +50,14 @@
                             <div class="header_menu_dropdown_content header_catalog_menu_dropdown_content">
                                 <div class="content_list">
 
-                                    {% for category in list_category %}
+                                    {% for category in list_category_2 %}
                                     <a class="header_menu_item header_catalog_menu_item" href="{% url 'category_books' category.id %}">{{ category.name }}</a>
                                     {% endfor %}
                                 </div>
                                 <div class="content_list">
-                                    <a class="header_menu_item header_catalog_menu_item">Исторические детективы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Исторические приключения</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Историческая фантастика</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Биографии и мемуары</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Книги о путешествиях</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Книги о войне</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Морские приключения</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Исторические любовные романы</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Красота</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Спорт</a>
-                                    <a class="header_menu_item header_catalog_menu_item">Медицина и здоровье</a>
+                                    {% for category in list_category_1 %}
+                                    <a class="header_menu_item header_catalog_menu_item" href="{% url 'category_books' category.id %}">{{ category.name }}</a>
+                                    {% endfor %}
                                 </div>
                             </div>
 
@@ -126,7 +118,7 @@
                         <button class="header_menu_dropbtn">Профиль<i class="arrow down"></i></button>
                         <div class="header_menu_dropdown_content_block">
                             <div class="header_menu_dropdown_content header_menu_account_dropdown_content">
-                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_authenticated and not request.user.is_superuser %}
                                 <a class="header_menu_item" href="{% url 'user_profile' 1 %}">Мой аккаунт</a>
                                 <a class="header_menu_item " href="{% url 'book_shelf' %}">Моя полка</a>
                                 {% endif %}
