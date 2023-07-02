@@ -1,6 +1,7 @@
 {% load static %}
 {% load i18n %}
-
+{% load socialaccount %}
+{% providers_media_js %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,13 +63,13 @@
                 <input class="auth_submit_btn" type="submit" value="ВОЙТИ В АККАУНТ">
 
                 <div class=" -justify_content_center -align_items_center margin_top_30px">
-                    <a class="menu_item_link" href="#">
+                    <a class="menu_item_link" href="{% provider_login_url 'google'%}">
                         <svg class="auth_google_icon" style="padding: 0 5px 0 4px">
                             <use height="43" width="43"
                                  href="{% static 'marketplace/img/icons.svg' %}#google_plus"></use>
                         </svg>
                     </a>
-                    <a class="menu_item_link margin_left_7px" href="#">
+                    <a class="menu_item_link margin_left_7px" href="{% provider_login_url 'facebook' method='js_sdk' %}">
                         <svg class="auth_google_icon" style="padding: 0 5px 0 4px">
                             <use height="43" width="43"
                                  href="{% static 'marketplace/img/icons.svg' %}#facebook_circle"></use>

@@ -26,8 +26,38 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'marketplace'
+    'django.contrib.sites',
+    'marketplace',
+
+# Add the following django-allauth apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 ]
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
 
 
 
@@ -127,7 +157,6 @@ LOCALE_PATHS = [
 
 STATIC_URL = '/static/'
 
-
 STATICFILES_DIRS = [
     BASE_DIR / "SocialLib/static"
 ]
@@ -135,16 +164,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'SocialLib/static/media')
 
-
-# STATIC_URL = '/static/'
-#
-# STATICFILES_DIRS = [
-#     '/var/www/SocialLib/static',
-# ]
-#
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = '/var/www/SocialLib/static/media'
-
-
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
