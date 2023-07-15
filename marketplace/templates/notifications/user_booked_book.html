@@ -25,16 +25,16 @@
 
                 <div class="profile_white_block margin_0">
                     <div class="main_upper_block padding_left_30px -justify_content_center -flex_direction_column margin_top_30px">
-                        <h1 class="category_books_page_content_block_title">{% trans 'В данный момент ' %}<span
-                                class="orange_text">{% trans ' 1 книга находится у вас' %}</span></h1>
-                        <p class="main_books_content_block_secondary_title">{% trans 'Попробуйте заказать новую книгу после возврата предыдущей' %}</p>
+                        <h1 class="category_books_page_content_block_title">{% trans 'В данный момент ' context 'В данный момент 1 книга находится у вас 1' %}<span
+                                class="orange_text">{% trans ' 1 книга находится у вас' context 'В данный момент 1 книга находится у вас 2' %}</span></h1>
+                        <p class="main_books_content_block_secondary_title">{% trans 'Попробуйте заказать новую книгу после возврата предыдущей' context 'Попробуйте заказать новую книгу после возврата предыдущей' %}</p>
                     </div>
                     <div class="main_upper_block -justify_content_center margin_top_80px">
                         <img width="700px" src="{% static 'marketplace/img/book_reserved.svg' %}" alt="4o4"/>
                     </div>
 
                     <div class="bottom_button_block -justify_content_right padding_top_10px">
-                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' %}</a>
+                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' context 'Вернуться на главную страницу' %}</a>
                     </div>
                 </div>
 

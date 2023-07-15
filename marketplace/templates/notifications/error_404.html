@@ -25,14 +25,14 @@
 
                 <div class="profile_white_block margin_0">
                     <div class="main_upper_block padding_left_30px margin_top_30px">
-                        <h1 class="category_books_page_content_block_title">{% trans 'Страница' %} <span
+                        <h1 class="category_books_page_content_block_title">{% trans 'Страница' context "Страница не найдена" %} <span
                                 class="orange_text">{% trans 'не найдена' %}</span></h1>
                     </div>
                     <div class="main_upper_block -justify_content_center margin_top_30px">
                         <img width="800px" src="{% static 'marketplace/img/error_404.jpg' %}" alt="4o4"/>
                     </div>
                     <div class="bottom_button_block -justify_content_right padding_top_10px">
-                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' %}</a>
+                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' context "Вернуться на главную страницу" %}</a>
                     </div>
                 </div>
 

@@ -31,7 +31,7 @@
                     <div class="main_book_info_block">
                         <p class="book_info_book_name">{{ book_info.short_name }}</p>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">{% trans 'Авторы:' %}</p>
+                            <p class="book_info_paragraph">{% trans 'Авторы:' context "Авторы:" %}</p>
                             {% for author in book_info.author.all %}
                                 <form method="POST" action="{% url 'book_search' %}" class="book_info_author_form">
                                     {% csrf_token %}
@@ -44,26 +44,26 @@
                             {% endfor %}
                         </div>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">{% trans 'Год издания:' %}</p>
+                            <p class="book_info_paragraph">{% trans 'Год издания:' context "Год издания:" %}</p>
                             <p class="book_info_paragraph">{{ book_info.year }}</p>
                             {% if book_info.publications%}
-                            <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}{% trans '-е издание' %}</p>
+                            <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}{% trans '-е издание' context "-е издание" %}</p>
                             {% endif %}
                         </div>
                         <div class="book_info_paragraph_block">
-                            <p class="book_info_paragraph">{% trans 'Язык:' %} {{ book_info.get_language_display }}</p>
+                            <p class="book_info_paragraph">{% trans 'Язык:' context "Язык:" %} {{ book_info.get_language_display }}</p>
 
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
-                            <p class="book_info_paragraph bold_paragraph">{% trans 'Сейчас читают:' %}</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Сейчас читают:' context "Сейчас читают:" %}</p>
                             <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_currently_reading }}</p>
-                            <p class="book_info_paragraph bold_paragraph">{% trans 'Уже прочли:' %}</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Уже прочли:' context "Уже прочли:" %}</p>
                             <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_already_read }}</p>
-                            <p class="book_info_paragraph bold_paragraph">{% trans 'Всего книг:' %}</p>
+                            <p class="book_info_paragraph bold_paragraph">{% trans 'Всего книг:' context "Всего книг:" %}</p>
                             <p class="book_info_paragraph bold_paragraph">{{ total_books }}</p>
                         </div>
-                        <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' %}</p>
+                        <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' context "Варианты доступа:" %}</p>
                         <div class="book_info_paragraph_block">
                             <div class="book_info_paragraph_block" style="margin-top:15px">
                                 {% if book_info.type_book == '1' %}
@@ -77,7 +77,7 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">Бумажная книга</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Бумажная книга' context "Бумажная книга" %}</p>
 
                                 {% if book_info.type_book == '2' %}
                                 <svg class="header_menu_icon">
@@ -90,7 +90,7 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">Электронная книга</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Электронная книга' context "Электронная книга" %}</p>
 
                                 {% if book_info.type_book == '3' %}
                                 <svg class="header_menu_icon">
@@ -103,25 +103,25 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">Аудиокнига</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Аудиокнига' context "Аудиокнига" %}</p>
                             </div>
                         </div>
 
                         <div class="book_info_paragraph_block" style="margin-top:30px">
                             {% if request.user.is_authenticated and not request.user.is_superuser %}
-                            <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">{% trans 'ЗАКАЗАТЬ' %}</a>
+                            <a class="borrow_button_link" href="{% url 'order_book' book_info.id  %}">{% trans 'ЗАКАЗАТЬ' context "ЗАКАЗАТЬ" %}</a>
                             <a class="put_on_shelf_button_link" href="{% url 'favorites' book_info.id %}">
                                 <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
-                                {% trans 'Кинуть на Полку' %}</a>
+                                {% trans 'Кинуть на Полку' context "Кинуть на Полку" %}</a>
                             {% else %}
-                            <a class="borrow_button_link" href="{% url 'authorization'  %}">{% trans 'ЗАКАЗАТЬ' %}</a>
+                            <a class="borrow_button_link" href="{% url 'authorization'  %}">{% trans 'ЗАКАЗАТЬ' context "ЗАКАЗАТЬ" %}</a>
                             <a class="put_on_shelf_button_link" href="{% url 'authorization' %}">
                                 <svg width="30px" height="30px" fill="white" style="margin-right: 10px">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
-                                {% trans 'Кинуть на Полку' %}</a>
+                                {% trans 'Кинуть на Полку' context "Кинуть на Полку" %}</a>
                             {% endif %}
                         </div>
 
@@ -129,11 +129,11 @@
                     </div>
                 </div>
                 <div class="main_description_block">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Аннотация' %}</span>{% trans ' к книге:' %}</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Аннотация' context "Аннотация  к книге: 1" %}</span>{% trans ' к книге:' context "Аннотация  к книге: 2" %}</h1>
                     <p class="text_paragraph">{{ book_info.caption }}</p>
                 </div>
                 <div class="main_description_block">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Ключевые' %}</span> {% trans 'слова:' %}</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Ключевые' context "Ключевые слова 1" %}</span> {% trans 'слова:' context "Ключевые слова 2" %}</h1>
                     <form method="POST" action="{% url 'book_search' %}">
                         {% csrf_token %}
                         <div class="book_info_keywords_block">
@@ -145,7 +145,7 @@
                 </div>
                 {% if author_books%}
                 <div class="main_description_block" style="margin-top:50px;">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Еще книги' %}</span> {% trans 'от Авторов:' %}</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Еще книги' context "Еще книги от Авторов: 1" %}</span> {% trans 'от Авторов:' context "Еще книги от Авторов: 2" %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
                             {% for books in author_books %}
@@ -162,7 +162,7 @@
                 {% endif %}
                 {% if similar_books%}
                 <div class="main_description_block" style="margin-top:20px;">
-                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Похожие' %}</span>{% trans ' Книги:' %}</h1>
+                    <h1 class="book_info_secondary_title"><span class="orange_text">{% trans 'Похожие' context "Похожие Книги: 1" %}</span>{% trans ' Книги:' context "Похожие Книги: 2" %}</h1>
                     <div class="new_books_info_block book_info_page_more_books_info_block">
                         <div class="new_books_block book_info_more_author_books_block">
                             {% for books in similar_books%}

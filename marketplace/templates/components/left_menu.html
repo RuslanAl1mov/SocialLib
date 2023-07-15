@@ -17,7 +17,7 @@
                                 <svg class="menu_item_icon menu_item_icon_active">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#home"></use>
                                 </svg>
-                                {% trans 'Дом' %}</a>
+                                {% trans 'Дом' context 'Дом' %}</a>
                         </dt>
                         <dt class="menu_item">
                             {% if request.user.is_authenticated and not request.user.is_superuser %}
@@ -26,13 +26,13 @@
                                 <svg class="menu_item_icon">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
-                                {% trans 'Моя полка' %}</a>
+                                {% trans 'Моя полка' context 'Моя полка' %}</a>
                             {% else %}
                             <a class="menu_item_link" href="{% url 'authorization' %}">
                                 <svg class="menu_item_icon">
                                     <use href="{% static 'marketplace/img/icons.svg' %}#bookshelf"></use>
                                 </svg>
-                                {% trans 'Моя полка' %}</a>
+                                {% trans 'Моя полка' context 'Моя полка' %}</a>
                             {% endif %}
                         </dt>
                         <dt class="menu_item">
@@ -41,16 +41,16 @@
                                     <use height="17px" width="17px"
                                          href="{% static 'marketplace/img/icons.svg' %}#arm_gift"></use>
                                 </svg>
-                                {% trans 'Делать добро' %}</a>
+                                {% trans 'Делать добро' context 'Делать добро' %}</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="{% url 'about_us' %}">{% trans 'О нас' %}</a>
+                            <a class="menu_item_link" href="{% url 'about_us' %}">{% trans 'О нас' context 'О нас' %}</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="{% url 'tech_support' %}">{% trans 'Поддержка' %}</a>
+                            <a class="menu_item_link" href="{% url 'tech_support' %}">{% trans 'Поддержка' context 'Поддержка' %}</a>
                         </dt>
                         <dt class="menu_item menu_item_invisible">
-                            <a class="menu_item_link" href="{% url 'terms_of_use' %}">{% trans 'Условия пользования' %}</a>
+                            <a class="menu_item_link" href="{% url 'terms_of_use' %}">{% trans 'Условия пользования' context 'Условия пользования' %}</a>
                         </dt>
                     </dl>
                 </nav>
@@ -58,13 +58,13 @@
             <div class="addition_menu_container">
                 <dl style="bottom: 10px ">
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="{% url 'about_us' %}">{% trans 'О нас' %}</a>
+                        <a class="additional_menu_item_link" href="{% url 'about_us' %}">{% trans 'О нас' context 'О нас' %}</a>
                     </dt>
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="{% url 'tech_support' %}">{% trans 'Поддержка' %}</a>
+                        <a class="additional_menu_item_link" href="{% url 'tech_support' %}">{% trans 'Поддержка' context 'Поддержка' %}</a>
                     </dt>
                     <dt class="menu_item">
-                        <a class="additional_menu_item_link" href="{% url 'terms_of_use' %}">{% trans 'Условия пользования' %}</a>
+                        <a class="additional_menu_item_link" href="{% url 'terms_of_use' %}">{% trans 'Условия пользования' context 'Условия пользования' %}</a>
                     </dt>
                 </dl>
             </div>

@@ -25,16 +25,16 @@
 
                 <div class="profile_white_block margin_0">
                     <div class="main_upper_block padding_left_30px -justify_content_center -flex_direction_column margin_top_30px">
-                        <h1 class="category_books_page_content_block_title">{% trans 'Заявка на ' %}<span
-                                class="orange_text">{% trans 'возврат книги отправлена' %}</span>{% trans ' на рассмотрение' %}</h1>
-                        <p class="main_books_content_block_secondary_title">{% trans 'Ожидайте звонка для подтверждения возврат' %}</p>
+                        <h1 class="category_books_page_content_block_title">{% trans 'Заявка на ' context 'Заявка на возврат книги отправлена на рассмотрение 1' %}<span
+                                class="orange_text">{% trans 'возврат книги отправлена' context 'Заявка на возврат книги отправлена на рассмотрение 2' %}</span>{% trans ' на рассмотрение' context 'Заявка на возврат книги отправлена на рассмотрение 3' %}</h1>
+                        <p class="main_books_content_block_secondary_title">{% trans 'Ожидайте звонка для подтверждения возврат' context 'Ожидайте звонка для подтверждения возврат' %}</p>
                     </div>
                     <div class="main_upper_block -justify_content_center">
                         <img width="450px" src="{% static 'marketplace/img/order_success.svg' %}" alt=""/>
                     </div>
 
                     <div class="bottom_button_block -justify_content_right padding_top_10px">
-                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' %}</a>
+                        <a class="orange_link_btn" href="{% url 'home' %}">{% trans 'Вернуться на главную страницу' context 'Вернуться на главную страницу' %}</a>
                     </div>
                 </div>
 

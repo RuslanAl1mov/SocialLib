@@ -22,7 +22,7 @@
             <div class="main_content_container">
                 <div class="main_upper_block">
                     <div class="quote_block">
-                        <p class="quote_title">{% trans 'Цитаты дня' %}</p>
+                        <p class="quote_title">{% trans 'Цитаты дня' context 'Цитаты дня' %}</p>
                         <div class="slides">
                             <input type="radio" name="r" id="r1" checked>
                             <input type="radio" name="r" id="r2">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="new_books_info_block">
-                        <p class="new_books_block_title">{% trans 'Новинки' %}</p>
+                        <p class="new_books_block_title">{% trans 'Новинки' context 'Новинки' %}</p>
                         <div class="new_books_block">
                             {% for book in new_books %}
                                 <div class="book_cover_only_block" title="{{ book.full_name }}">
@@ -64,8 +64,8 @@
                     </div>
                 </div>
                 <div class="main_books_content_block">
-                    <h1 class="main_books_content_block_title">{% trans 'Добро пожаловать' %}</h1>
-                    <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' %}</p>
+                    <h1 class="main_books_content_block_title">{% trans 'Добро пожаловать' context 'Добро пожаловать' %}</h1>
+                    <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' context 'Подборка для Вас' %}</p>
                     <div class="books_catalog_block">
                         {% for book in new_books %}
                             <a href="{% url 'book' book.pk %}">
@@ -73,7 +73,7 @@
                                     <img class="book_small_cover" src="{{ book.img.url }}" alt="">
                                     <p class="catalog_book_cover_name">{{ book.short_name }}</p>
                                     <p class="catalog_book_cover_author_name">{{ book.author.first.name }}</p>
-                                    <p class="catalog_book_cover_author_name">{% trans 'Язык:' %} {{ book.get_language_display }}</p>
+                                    <p class="catalog_book_cover_author_name">{% trans 'Язык:' context 'Язык:' %} {{ book.get_language_display }}</p>
                                 </div>
                             </a>
                         {% endfor %}
