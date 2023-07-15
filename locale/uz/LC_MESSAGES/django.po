@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-29 11:13+0500\n"
+"POT-Creation-Date: 2023-07-15 15:46+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\marketplace\templates\account\user_account.html:32
-#: .\marketplace\templates\components\header.html:125
+#: .\marketplace\templates\components\header.html:115
 msgid "Профиль"
 msgstr "Profil"
 
@@ -35,120 +35,147 @@ msgstr "Depozit va balans"
 msgid "Фотография профиля"
 msgstr "Profil fotosurati"
 
-#: .\marketplace\templates\account\user_account.html:76
+#: .\marketplace\templates\account\user_account.html:68
 msgid "Прочтено"
 msgstr "O'qilgan"
 
-#: .\marketplace\templates\account\user_account.html:91
+#: .\marketplace\templates\account\user_account.html:83
 msgid "Помощи"
 msgstr "Yordam"
 
-#: .\marketplace\templates\account\user_account.html:106
-msgid "Аренда"
-msgstr "Ijara"
-
-#: .\marketplace\templates\account\user_account.html:121
-msgid "Продажи"
-msgstr "Sotish"
-
-#: .\marketplace\templates\account\user_account.html:132
-#: .\marketplace\templates\account\user_account.html:134
-#: .\marketplace\templates\account\user_account.html:486
+#: .\marketplace\templates\account\user_account.html:94
+#: .\marketplace\templates\account\user_account.html:96
+#: .\marketplace\templates\account\user_account.html:447
 #: .\marketplace\templates\authorization\registration.html:34
 #: .\marketplace\templates\authorization\registration.html:36
-#: .\marketplace\templates\book_donate_page\book_donate.html:46
-#: .\marketplace\templates\book_donate_page\book_donate.html:48
+#: .\marketplace\templates\book_donate_page\book_donate.html:47
+#: .\marketplace\templates\book_donate_page\book_donate.html:49
+#: .\marketplace\templates\order_book\order_book.html:130
 #: .\marketplace\templates\order_book\order_book.html:132
-#: .\marketplace\templates\order_book\order_book.html:134
 msgid "Имя"
 msgstr "Ism"
 
-#: .\marketplace\templates\account\user_account.html:139
-#: .\marketplace\templates\account\user_account.html:141
-#: .\marketplace\templates\authorization\registration.html:42
-#: .\marketplace\templates\authorization\registration.html:44
-#: .\marketplace\templates\book_donate_page\book_donate.html:52
-#: .\marketplace\templates\book_donate_page\book_donate.html:54
+#: .\marketplace\templates\account\user_account.html:101
+#: .\marketplace\templates\account\user_account.html:103
+#: .\marketplace\templates\authorization\registration.html:41
+#: .\marketplace\templates\authorization\registration.html:43
+#: .\marketplace\templates\book_donate_page\book_donate.html:53
+#: .\marketplace\templates\book_donate_page\book_donate.html:55
+#: .\marketplace\templates\order_book\order_book.html:137
 #: .\marketplace\templates\order_book\order_book.html:139
-#: .\marketplace\templates\order_book\order_book.html:141
 msgid "Фамилия"
 msgstr "Familiya"
 
-#: .\marketplace\templates\account\user_account.html:147
-#: .\marketplace\templates\account\user_account.html:149
+#: .\marketplace\templates\account\user_account.html:109
+#: .\marketplace\templates\account\user_account.html:111
+#: .\marketplace\templates\authorization\registration.html:48
 #: .\marketplace\templates\authorization\registration.html:50
-#: .\marketplace\templates\authorization\registration.html:52
-#: .\marketplace\templates\book_donate_page\book_donate.html:59
-#: .\marketplace\templates\book_donate_page\book_donate.html:61
+#: .\marketplace\templates\book_donate_page\book_donate.html:60
+#: .\marketplace\templates\book_donate_page\book_donate.html:62
+#: .\marketplace\templates\order_book\order_book.html:145
 #: .\marketplace\templates\order_book\order_book.html:147
-#: .\marketplace\templates\order_book\order_book.html:149
 msgid "Номер телефона"
 msgstr "Telefon raqami"
 
-#: .\marketplace\templates\account\user_account.html:153
-#: .\marketplace\templates\account\user_account.html:155
-#: .\marketplace\templates\book_donate_page\book_donate.html:65
-#: .\marketplace\templates\book_donate_page\book_donate.html:67
+#: .\marketplace\templates\account\user_account.html:115
+#: .\marketplace\templates\account\user_account.html:117
+#: .\marketplace\templates\book_donate_page\book_donate.html:66
+#: .\marketplace\templates\book_donate_page\book_donate.html:68
 msgid "Электронная почта"
 msgstr "Elektron pochta"
 
-#: .\marketplace\templates\account\user_account.html:163
+#: .\marketplace\templates\account\user_account.html:125
 msgid "Сохранить и продолжить"
 msgstr "Saqlash va davom ettirish"
 
-#: .\marketplace\templates\account\user_account.html:177
+#: .\marketplace\templates\account\user_account.html:139
 msgid " Изменение пароля"
 msgstr " Parolni o'zgartirish"
 
-#: .\marketplace\templates\account\user_account.html:184
-#: .\marketplace\templates\account\user_account.html:186
+#: .\marketplace\templates\account\user_account.html:146
+#: .\marketplace\templates\account\user_account.html:148
 msgid "Старый пароль"
 msgstr "Eski parol"
 
-#: .\marketplace\templates\account\user_account.html:190
-#: .\marketplace\templates\account\user_account.html:192
+#: .\marketplace\templates\account\user_account.html:152
+#: .\marketplace\templates\account\user_account.html:154
 msgid "Новый пароль"
 msgstr "Yangi parol"
 
-#: .\marketplace\templates\account\user_account.html:195
+#: .\marketplace\templates\account\user_account.html:157
 #, fuzzy
 #| msgid "Повтор нового пароля"
 msgid "Повтор нового пароля "
 msgstr "Yangi parolni takrorlang "
 
-#: .\marketplace\templates\account\user_account.html:197
+#: .\marketplace\templates\account\user_account.html:159
 msgid "Повтор нового пароля"
 msgstr "Yangi parolni takrorlang "
 
-#: .\marketplace\templates\account\user_account.html:204
+#: .\marketplace\templates\account\user_account.html:166
 msgid "Обновить пароль"
 msgstr "Parolni yangilang "
 
-#: .\marketplace\templates\account\user_account.html:214
+#: .\marketplace\templates\account\user_account.html:176
 msgid "Информация о"
 msgstr "Depozitingiz "
 
-#: .\marketplace\templates\account\user_account.html:215
+#: .\marketplace\templates\account\user_account.html:177
 msgid "вашем Депозите"
 msgstr "haqida ma'lumot"
 
-#: .\marketplace\templates\account\user_account.html:218
+#: .\marketplace\templates\account\user_account.html:180
 msgid "Пополнить баланс депозита"
 msgstr "Depozit balansini to'ldiring"
 
-#: .\marketplace\templates\account\user_account.html:219
+#: .\marketplace\templates\account\user_account.html:181
 msgid "Обновить данные"
 msgstr "Ma'lumotlarni yangilang"
 
-#: .\marketplace\templates\account\user_account.html:224
+#: .\marketplace\templates\account\user_account.html:186
 msgid "Информация о балансе"
 msgstr "Balans haqida ma'lumot"
 
-#: .\marketplace\templates\account\user_account.html:229
+#: .\marketplace\templates\account\user_account.html:191
 msgid "На Балансе:"
 msgstr "Balansda:"
 
+#: .\marketplace\templates\account\user_account.html:191
+#: .\marketplace\templates\account\user_account.html:206
+#: .\marketplace\templates\account\user_account.html:211
+#: .\marketplace\templates\account\user_account.html:216
+#: .\marketplace\templates\account\user_account.html:221
+#: .\marketplace\templates\account\user_account.html:226
+#: .\marketplace\templates\account\user_account.html:231
+#: .\marketplace\templates\account\user_account.html:236
+#: .\marketplace\templates\account\user_account.html:241
+#: .\marketplace\templates\account\user_account.html:246
+#: .\marketplace\templates\account\user_account.html:251
+#: .\marketplace\templates\account\user_account.html:256
+#: .\marketplace\templates\account\user_account.html:261
+#: .\marketplace\templates\account\user_account.html:266
+#: .\marketplace\templates\account\user_account.html:271
+#: .\marketplace\templates\account\user_account.html:276
+msgid "сум"
+msgstr "so'm"
+
+#: .\marketplace\templates\account\user_account.html:192
+msgid "Ваш Уровень:"
+msgstr "Sizning Darajangiz:"
+
+#: .\marketplace\templates\account\user_account.html:195
+msgid "Распределение уровней:"
+msgstr "Darajalarni taqsimlash:"
+
+#: .\marketplace\templates\account\user_account.html:199
+#: .\marketplace\templates\account\user_account.html:204
+#: .\marketplace\templates\account\user_account.html:209
+#: .\marketplace\templates\account\user_account.html:214
+#: .\marketplace\templates\account\user_account.html:219
+#: .\marketplace\templates\account\user_account.html:224
 #: .\marketplace\templates\account\user_account.html:229
+#: .\marketplace\templates\account\user_account.html:234
+#: .\marketplace\templates\account\user_account.html:239
 #: .\marketplace\templates\account\user_account.html:244
 #: .\marketplace\templates\account\user_account.html:249
 #: .\marketplace\templates\account\user_account.html:254
@@ -156,94 +183,59 @@ msgstr "Balansda:"
 #: .\marketplace\templates\account\user_account.html:264
 #: .\marketplace\templates\account\user_account.html:269
 #: .\marketplace\templates\account\user_account.html:274
-#: .\marketplace\templates\account\user_account.html:279
-#: .\marketplace\templates\account\user_account.html:284
-#: .\marketplace\templates\account\user_account.html:289
-#: .\marketplace\templates\account\user_account.html:294
-#: .\marketplace\templates\account\user_account.html:299
-#: .\marketplace\templates\account\user_account.html:304
-#: .\marketplace\templates\account\user_account.html:309
-#: .\marketplace\templates\account\user_account.html:314
-msgid "сум"
-msgstr "so'm"
-
-#: .\marketplace\templates\account\user_account.html:230
-msgid "Ваш Уровень:"
-msgstr "Sizning Darajangiz:"
-
-#: .\marketplace\templates\account\user_account.html:233
-msgid "Распределение уровней:"
-msgstr "Darajalarni taqsimlash:"
-
-#: .\marketplace\templates\account\user_account.html:237
-#: .\marketplace\templates\account\user_account.html:242
-#: .\marketplace\templates\account\user_account.html:247
-#: .\marketplace\templates\account\user_account.html:252
-#: .\marketplace\templates\account\user_account.html:257
-#: .\marketplace\templates\account\user_account.html:262
-#: .\marketplace\templates\account\user_account.html:267
-#: .\marketplace\templates\account\user_account.html:272
-#: .\marketplace\templates\account\user_account.html:277
-#: .\marketplace\templates\account\user_account.html:282
-#: .\marketplace\templates\account\user_account.html:287
-#: .\marketplace\templates\account\user_account.html:292
-#: .\marketplace\templates\account\user_account.html:297
-#: .\marketplace\templates\account\user_account.html:302
-#: .\marketplace\templates\account\user_account.html:307
-#: .\marketplace\templates\account\user_account.html:312
 #: .\marketplace\templates\search_result_page\search_result.html:140
 msgid "Уровень"
 msgstr "Daraja"
 
-#: .\marketplace\templates\account\user_account.html:239
+#: .\marketplace\templates\account\user_account.html:201
 msgid "БЕСПЛАТНО"
 msgstr "Bepul"
 
-#: .\marketplace\templates\account\user_account.html:439
+#: .\marketplace\templates\account\user_account.html:400
 msgid "Снять все средства с депозита"
 msgstr "Barcha mablag'larni depozitdan olib tashlang"
 
-#: .\marketplace\templates\account\user_account.html:444
+#: .\marketplace\templates\account\user_account.html:405
 msgid "Пополнение баланса:"
 msgstr "Balansni to'ldirish:"
 
-#: .\marketplace\templates\account\user_account.html:447
+#: .\marketplace\templates\account\user_account.html:408
 msgid "Переводы доступны только с карт "
 msgstr "O'tkazmalar faqat kartalardan mavjud "
 
-#: .\marketplace\templates\account\user_account.html:447
+#: .\marketplace\templates\account\user_account.html:408
 msgid "Узбекских Банков"
 msgstr "O'zbekiston Banklari"
 
-#: .\marketplace\templates\account\user_account.html:480
+#: .\marketplace\templates\account\user_account.html:441
 msgid "Для выполнения перевода выполните следующие действия:"
 msgstr "Tarjimani bajarish uchun quyidagi amallarni bajaring:"
 
-#: .\marketplace\templates\account\user_account.html:482
+#: .\marketplace\templates\account\user_account.html:443
 msgid "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgstr "Tarjima dasturlaridan birini o'rnating: PayMe, Click, Uzum."
 
-#: .\marketplace\templates\account\user_account.html:483
+#: .\marketplace\templates\account\user_account.html:444
 msgid "Отсканируйте QR-код при помощи камеры телефона."
 msgstr "Telefon kamerasi yordamida QR kodini skanerlang."
 
-#: .\marketplace\templates\account\user_account.html:484
+#: .\marketplace\templates\account\user_account.html:445
 msgid "Укажите сумму пополнения депозита."
 msgstr "Depozitni to'ldirish miqdorini ko'rsating. "
 
-#: .\marketplace\templates\account\user_account.html:485
+#: .\marketplace\templates\account\user_account.html:446
 msgid "В поле комментария укажите ваше "
 msgstr " Izoh maydoniga "
 
-#: .\marketplace\templates\account\user_account.html:487
+#: .\marketplace\templates\account\user_account.html:448
 msgid "Фамилию"
 msgstr " familiyangizni "
 
-#: .\marketplace\templates\account\user_account.html:487
+#: .\marketplace\templates\account\user_account.html:448
 msgid " и этот номер "
 msgstr " va ushbu raqamni kiriting "
 
-#: .\marketplace\templates\account\user_account.html:490
+#: .\marketplace\templates\account\user_account.html:451
 msgid "Отправьте перевод и ожидайте звонка."
 msgstr "Pul o'tkazmasini yuboring va qo'ng'iroqni kuting."
 
@@ -256,8 +248,8 @@ msgid "нас"
 msgstr "haqimizda"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:28
-#: .\marketplace\templates\components\left_menu.html:52
-#: .\marketplace\templates\components\left_menu.html:66
+#: .\marketplace\templates\components\left_menu.html:53
+#: .\marketplace\templates\components\left_menu.html:67
 msgid "Условия пользования"
 msgstr "Foydalanish shartlari"
 
@@ -403,8 +395,8 @@ msgstr ""
 "joylashtirilgan boshqa xizmatlar"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:74
-#: .\marketplace\templates\components\left_menu.html:46
-#: .\marketplace\templates\components\left_menu.html:60
+#: .\marketplace\templates\components\left_menu.html:47
+#: .\marketplace\templates\components\left_menu.html:61
 msgid "О нас"
 msgstr "Biz haqimizda"
 
@@ -1067,52 +1059,44 @@ msgstr "Xizmatlarimizdan foydalanganingiz uchun tashakkur!"
 msgid "С любовью, команда поддержки WooW"
 msgstr "Sevgi bilan, woow qo'llab-quvvatlash jamoasi"
 
-#: .\marketplace\templates\authorization\authorization.html:25
+#: .\marketplace\templates\authorization\authorization.html:27
 #: .\marketplace\templates\authorization\registration.html:23
 msgid "Сервис бесплатной раздачи книг"
 msgstr "Kitoblarni bepul tarqatish xizmati"
 
-#: .\marketplace\templates\authorization\authorization.html:26
+#: .\marketplace\templates\authorization\authorization.html:28
 msgid "Авторизация"
 msgstr "Avtorizatsiya"
 
-#: .\marketplace\templates\authorization\authorization.html:38
+#: .\marketplace\templates\authorization\authorization.html:41
 #: .\marketplace\templates\authorization\registration.html:59
 msgid "Адрес электронной почты"
 msgstr "Elektron pochta manzili"
 
-#: .\marketplace\templates\authorization\authorization.html:44
-#: .\marketplace\templates\authorization\authorization.html:47
-#: .\marketplace\templates\authorization\registration.html:65
+#: .\marketplace\templates\authorization\authorization.html:46
+#: .\marketplace\templates\authorization\authorization.html:49
+#: .\marketplace\templates\authorization\registration.html:64
 msgid "Пароль"
 msgstr "Parol"
-
-#: .\marketplace\templates\authorization\authorization.html:60
-msgid "ВОЙТИ В АККАУНТ"
-msgstr "Kirish"
-
-#: .\marketplace\templates\authorization\authorization.html:77
-msgid "У меня нет аккаунта"
-msgstr "Mening akkauntim yo'q"
 
 #: .\marketplace\templates\authorization\registration.html:24
 msgid "Регистрация"
 msgstr "Ro'yxatdan o'tish"
 
-#: .\marketplace\templates\authorization\registration.html:69
+#: .\marketplace\templates\authorization\registration.html:68
 msgid "Придумайте пароль"
 msgstr "Parol O'ylab olish"
 
-#: .\marketplace\templates\authorization\registration.html:81
+#: .\marketplace\templates\authorization\registration.html:87
 msgid "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgstr "Ro'yxatdan o'tish"
 
-#: .\marketplace\templates\authorization\registration.html:97
+#: .\marketplace\templates\authorization\registration.html:103
 msgid "Я уже зарегистрирован"
 msgstr "Men allaqachon ro'yxatdan o'tganman"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:27
-#: .\marketplace\templates\components\left_menu.html:43
+#: .\marketplace\templates\components\left_menu.html:44
 msgid "Делать добро"
 msgstr "Yaxshilik qilish"
 
@@ -1120,78 +1104,78 @@ msgstr "Yaxshilik qilish"
 msgid "Инструкция как делать добро"
 msgstr "Qanday qilib yaxshilik qilish bo'yicha ko'rsatmalar"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:35
-msgid "Анкета"
-msgstr "Yaxshilik"
-
 #: .\marketplace\templates\book_donate_page\book_donate.html:36
-msgid "добра"
-msgstr "yaxshilik"
+msgid "Анкета"
+msgstr "Yaxshilik "
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:38
+#: .\marketplace\templates\book_donate_page\book_donate.html:37
+msgid "добра"
+msgstr "so'rovnomasi"
+
+#: .\marketplace\templates\book_donate_page\book_donate.html:39
 msgid "Личные данные"
 msgstr "Shaxsiy ma'lumotlar"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:39
+#: .\marketplace\templates\book_donate_page\book_donate.html:40
 msgid ""
 "Личные данные нужны нам, чтобы связаться с вами после отправки вами анкеты."
 msgstr ""
 "Shaxsiy ma'lumotlar sizga so'rovnoma yuborganingizdan so'ng siz bilan "
 "bog'lanishimiz kerak."
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:76
-#: .\marketplace\templates\book_donate_page\book_donate.html:82
+#: .\marketplace\templates\book_donate_page\book_donate.html:77
+#: .\marketplace\templates\book_donate_page\book_donate.html:83
 msgid "Информация о книгах"
 msgstr "Kitoblar haqida ma'lumot"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:78
+#: .\marketplace\templates\book_donate_page\book_donate.html:79
 msgid ""
 "В поле ниже вы можете расписать информацию о книге или книгах, которые вы "
 "хотите передать нашему сервису в качестве благотворительности. "
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:80
+#: .\marketplace\templates\book_donate_page\book_donate.html:81
 msgid "Пример заполнения: \"Война и мир том 1-2\" Толстой.Л.Н 2шт. "
 msgstr ""
 "To'ldirish misoli:\"urush va tinchlik 1-2 jild  \" Tolstoy.L. n 2 dona."
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:85
+#: .\marketplace\templates\book_donate_page\book_donate.html:86
 msgid "Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgstr "To'ldirish misoli: urush va tinchlik jild 1-2 Tolstoy.L. n 2 dona."
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:88
+#: .\marketplace\templates\book_donate_page\book_donate.html:89
 msgid "После отправки анкеты, вам позвонят с кол-центра нашего сервиса. "
 msgstr ""
 "So'rovnomani yuborganingizdan so'ng, ular bizning xizmatimiz markazidan "
 "qo'ng'iroq qilishadi."
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:88
+#: .\marketplace\templates\book_donate_page\book_donate.html:89
 msgid "Спасибо за вашу помощь в развитии сервиса!"
 msgstr "Xizmatni rivojlantirishga yordam berganingiz uchun tashakkur!+"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:91
+#: .\marketplace\templates\book_donate_page\book_donate.html:92
 msgid "Отправить анкету"
 msgstr "Anketani yuboring"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:103
+#: .\marketplace\templates\book_donate_page\book_donate.html:104
 #, fuzzy
 #| msgid "Инструкция как делать добро"
 msgid "Инструкция как "
 msgstr "Qanday qilib yaxshilik qilish bo'yicha ko'rsatmalar"
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:104
+#: .\marketplace\templates\book_donate_page\book_donate.html:105
 #, fuzzy
 #| msgid "Делать добро"
 msgid "делать добро"
 msgstr "Yaxshilik qilish"
 
 #: .\marketplace\templates\book_info\book_page.html:34
-#: .\marketplace\templates\order_book\order_book.html:42
+#: .\marketplace\templates\order_book\order_book.html:43
 msgid "Авторы:"
 msgstr "Mualliflar:"
 
 #: .\marketplace\templates\book_info\book_page.html:47
-#: .\marketplace\templates\order_book\order_book.html:57
+#: .\marketplace\templates\order_book\order_book.html:58
 msgid "Год издания:"
 msgstr "Nashr qilingan yil:"
 
@@ -1201,13 +1185,13 @@ msgstr "-nashr"
 
 #: .\marketplace\templates\book_info\book_page.html:54
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:56
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:92
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:113
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:139
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:180
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:91
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:112
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:138
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:179
 #: .\marketplace\templates\category_books_page\category_books.html:67
-#: .\marketplace\templates\home\home.html:77
-#: .\marketplace\templates\order_book\order_book.html:62
+#: .\marketplace\templates\home\home.html:76
+#: .\marketplace\templates\order_book\order_book.html:63
 #: .\marketplace\templates\search_result_page\search_result.html:81
 msgid "Язык:"
 msgstr "Til:"
@@ -1232,43 +1216,45 @@ msgstr "Jami kitoblar:"
 msgid "Варианты доступа:"
 msgstr "Kirish imkoniyatlari:"
 
-#: .\marketplace\templates\book_info\book_page.html:111
+#: .\marketplace\templates\book_info\book_page.html:112
+#: .\marketplace\templates\book_info\book_page.html:119
 msgid "ЗАКАЗАТЬ"
 msgstr "Buyurtma kilish"
 
-#: .\marketplace\templates\book_info\book_page.html:116
+#: .\marketplace\templates\book_info\book_page.html:117
+#: .\marketplace\templates\book_info\book_page.html:124
 msgid "Кинуть на Полку"
 msgstr "Sevimlilar"
 
-#: .\marketplace\templates\book_info\book_page.html:123
+#: .\marketplace\templates\book_info\book_page.html:132
 msgid "Аннотация"
 msgstr "Xulosa"
 
-#: .\marketplace\templates\book_info\book_page.html:123
+#: .\marketplace\templates\book_info\book_page.html:132
 msgid " к книге:"
 msgstr " : "
 
-#: .\marketplace\templates\book_info\book_page.html:127
+#: .\marketplace\templates\book_info\book_page.html:136
 msgid "Ключевые"
 msgstr "Kalit "
 
-#: .\marketplace\templates\book_info\book_page.html:127
+#: .\marketplace\templates\book_info\book_page.html:136
 msgid "слова:"
 msgstr "so'zlar:"
 
-#: .\marketplace\templates\book_info\book_page.html:138
+#: .\marketplace\templates\book_info\book_page.html:148
 msgid "Еще книги"
 msgstr "Mualliflarning"
 
-#: .\marketplace\templates\book_info\book_page.html:138
+#: .\marketplace\templates\book_info\book_page.html:148
 msgid "от Авторов:"
 msgstr "boshqa kitoblari:"
 
-#: .\marketplace\templates\book_info\book_page.html:153
+#: .\marketplace\templates\book_info\book_page.html:165
 msgid "Похожие"
 msgstr "O'xshash"
 
-#: .\marketplace\templates\book_info\book_page.html:153
+#: .\marketplace\templates\book_info\book_page.html:165
 msgid " Книги:"
 msgstr "kitoblar:"
 
@@ -1278,7 +1264,7 @@ msgstr "Mening"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:27
 msgid "книжная полка"
-msgstr "kitob javonim"
+msgstr " kitob javonim"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:35
 msgid "Избранные"
@@ -1294,60 +1280,60 @@ msgstr "Men o'qiyman"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:41
 msgid "Прочтенные"
-msgstr ""
+msgstr "O'qilgan"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:66
-#: .\marketplace\templates\order_book\order_book.html:28
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:60
+msgid "Вы можете взять эту книгу сроком на 30 дней (Бесплатно)"
+msgstr "Siz ushbu kitobni 30 kun muddatga olishingiz mumkin (Bepul)"
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:65
+#: .\marketplace\templates\order_book\order_book.html:29
 msgid "Заказать"
 msgstr "Buyurtma"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:70
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:69
 msgid "Удалить"
 msgstr "O'chirish"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
 #, fuzzy
 #| msgid "Ожидайте звонка для подтверждения заказа"
 msgid "Ожидайте звонка с подтверждением "
 msgstr "Buyurtmani tasdiqlash uchun qo'ng'iroqni kuting"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
 msgid "отправки"
 msgstr "yuborish"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
 msgid " вам вашей "
 msgstr " siz uchun "
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:97
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
 msgid "книги"
 msgstr "kitoblar"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:116
 #, fuzzy
 #| msgid "Ожидайте звонка для подтверждения возврат"
 msgid "Ожидайте звонка с подтверждением регистрации "
 msgstr "Tasdiqlash uchun qo'ng'iroqni kuting qaytish"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:116
 msgid "возврата вашей книги"
 msgstr "kitobingizni qaytarish"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:145
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:186
-#, fuzzy
-#| msgid "Год издания:"
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:144
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:185
 msgid "Дата получения:"
 msgstr "Nashr qilingan yil:"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:150
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:191
-#, fuzzy
-#| msgid "Оформить возврат"
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:149
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:190
 msgid "Дата возврата:"
 msgstr "Kitob qaytarish"
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:158
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:157
 msgid "Оформить возврат"
 msgstr "Kitob qaytarish"
 
@@ -1399,32 +1385,32 @@ msgid "Жанр"
 msgstr "Janr"
 
 #: .\marketplace\templates\components\header.html:27
-msgid "Искать..."
-msgstr "Qidirish..."
+msgid "Поиск"
+msgstr "Qidiruv"
 
 #: .\marketplace\templates\components\header.html:47
 msgid "Каталог"
 msgstr "Katalog"
 
-#: .\marketplace\templates\components\header.html:129
+#: .\marketplace\templates\components\header.html:119
 msgid "Мой аккаунт"
 msgstr "Mening hisobim"
 
-#: .\marketplace\templates\components\header.html:130
-#: .\marketplace\templates\components\left_menu.html:28
-#: .\marketplace\templates\components\left_menu.html:34
+#: .\marketplace\templates\components\header.html:120
+#: .\marketplace\templates\components\left_menu.html:29
+#: .\marketplace\templates\components\left_menu.html:35
 msgid "Моя полка"
 msgstr "Mening javonim"
 
-#: .\marketplace\templates\components\header.html:132
+#: .\marketplace\templates\components\header.html:122
 msgid "Задать вопрос"
 msgstr "Savol bering"
 
-#: .\marketplace\templates\components\header.html:134
+#: .\marketplace\templates\components\header.html:124
 msgid "Выйти"
 msgstr "Chiqish"
 
-#: .\marketplace\templates\components\header.html:136
+#: .\marketplace\templates\components\header.html:126
 msgid "Войти"
 msgstr "Kirish"
 
@@ -1432,14 +1418,18 @@ msgstr "Kirish"
 msgid "Дом"
 msgstr "Bosh sahifa"
 
-#: .\marketplace\templates\components\left_menu.html:49
-#: .\marketplace\templates\components\left_menu.html:63
+#: .\marketplace\templates\components\left_menu.html:50
+#: .\marketplace\templates\components\left_menu.html:64
 msgid "Поддержка"
 msgstr "Qo'llab-quvvatlash"
 
 #: .\marketplace\templates\home\home.html:25
 msgid "Цитаты дня"
 msgstr "Kunning iqtiboslari"
+
+#: .\marketplace\templates\home\home.html:54
+msgid "Новинки"
+msgstr "Yangiliklar"
 
 #: .\marketplace\templates\home\home.html:67
 msgid "Добро пожаловать"
@@ -1513,11 +1503,11 @@ msgstr ""
 "Oldingi kitobni qaytarib bergandan keyin yangi kitobga buyurtma berishga "
 "harakat qiling"
 
-#: .\marketplace\templates\order_book\order_book.html:29
+#: .\marketplace\templates\order_book\order_book.html:30
 msgid "книгу"
 msgstr " kitobni"
 
-#: .\marketplace\templates\order_book\order_book.html:31
+#: .\marketplace\templates\order_book\order_book.html:32
 msgid "Информация о книге"
 msgstr "Kitob haqida ma'lumot"
 
@@ -1526,38 +1516,38 @@ msgstr "Kitob haqida ma'lumot"
 msgid "Бумажная книга"
 msgstr "Qog'oz kitobi"
 
-#: .\marketplace\templates\order_book\order_book.html:101
+#: .\marketplace\templates\order_book\order_book.html:100
 #: .\marketplace\templates\search_result_page\search_result.html:108
 msgid "Электронная книга"
 msgstr "Elektron kitob"
 
-#: .\marketplace\templates\order_book\order_book.html:114
+#: .\marketplace\templates\order_book\order_book.html:112
 #: .\marketplace\templates\search_result_page\search_result.html:120
 msgid "Аудиокнига"
 msgstr "Audiokitob"
 
-#: .\marketplace\templates\order_book\order_book.html:119
+#: .\marketplace\templates\order_book\order_book.html:117
 msgid "Открыть страницу книги"
 msgstr "Kitob sahifasini oching"
 
-#: .\marketplace\templates\order_book\order_book.html:127
+#: .\marketplace\templates\order_book\order_book.html:125
 msgid "Информация о пользователе"
 msgstr "Foydalanuvchi haqida ma'lumot"
 
+#: .\marketplace\templates\order_book\order_book.html:152
 #: .\marketplace\templates\order_book\order_book.html:154
-#: .\marketplace\templates\order_book\order_book.html:156
 msgid "Адрес доставки"
 msgstr "Yetkazib berish manzili"
 
-#: .\marketplace\templates\order_book\order_book.html:161
+#: .\marketplace\templates\order_book\order_book.html:159
 msgid "Приблизительная дата возврата книги"
 msgstr "Kitobni qaytarishning taxminiy sanasi"
 
-#: .\marketplace\templates\order_book\order_book.html:171
+#: .\marketplace\templates\order_book\order_book.html:169
 msgid "Я передумал(а)"
 msgstr "Men fikrimni o'zgartirdim (a)"
 
-#: .\marketplace\templates\order_book\order_book.html:175
+#: .\marketplace\templates\order_book\order_book.html:173
 msgid "Отправить заявку на получение книги"
 msgstr "Kitob uchun ariza yuboring"
 
@@ -1580,8 +1570,3 @@ msgstr "Ko'rish"
 #: .\marketplace\templates\search_result_page\search_result.html:146
 msgid "Посмотреть"
 msgstr "Qarang"
-
-#, fuzzy
-#~| msgid "Поиск:"
-#~ msgid "Поиск..."
-#~ msgstr "Qidiruv:"
