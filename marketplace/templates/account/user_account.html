@@ -178,7 +178,7 @@
                             </div>
                             <div class="to_set_right_bottom_position_block padding_right_40px">
                                 <a class="blue_link_btn add_money_btn margin_right_30px -text_align_center" href="#poplnit">{% trans "Пополнить баланс депозита" %}</a>
-                                <a class="orange_link_btn update_profile_data_btn" href="{% url 'user_profile' 3 %}">{% trans "Обновить данные" %}</a>
+                                <a class="input_submit_btn" href="{% url 'user_profile' 3 %}">{% trans "Обновить данные" %}</a>
 
                             </div>
                         </div>
@@ -347,57 +347,57 @@
                                         <div class="tipa_water" style="height:{{ tipa_water }}px;"></div>
                                         <div class="sosud_block"></div>
 
-                                        <div class="sosud_long_line {% if level >= 0 %} active_sosud_line {% endif%}" style="bottom: 15px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 15px">0</p>
+                                        <div class="sosud_long_line {% if level >= 0 %} active_sosud_line {% endif %}" style="bottom: 15px"></div>
+                                        <p class="sosud_level_number {% if level >= 0 %} active_sosud_level_number {% endif %}" style="bottom: 15px">0</p>
 
-                                        <div class="sosud_long_line sosud_right_line {% if level >= 1 %} active_sosud_line {% endif%}" style="bottom: 53px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 53px">1</p>
+                                        <div class="sosud_long_line sosud_right_line {% if level >= 1 %} active_sosud_line {% endif %}" style="bottom: 53px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 1 %} active_sosud_level_number {% endif %}" style="bottom: 53px">1</p>
 
                                         <div class="sosud_long_line {% if level >= 2 %} active_sosud_line {% endif%}" style="bottom: 91px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 91px">2</p>
+                                        <p class="sosud_level_number {% if level >= 2 %} active_sosud_level_number {% endif %}" style="bottom: 91px">2</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 3 %} active_sosud_line {% endif%}" style="bottom: 129px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 129px">3</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 3 %} active_sosud_level_number {% endif %}" style="bottom: 129px">3</p>
 
                                         <div class="sosud_long_line {% if level >= 4 %} active_sosud_line {% endif%}" style="bottom: 167px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 167px">4</p>
+                                        <p class="sosud_level_number {% if level >= 4 %} active_sosud_level_number {% endif %}" style="bottom: 167px">4</p>
 
-                                        <div class="sosud_long_line sosud_right_line {% if level >= 5 %} active_sosud_line {% endif%}" style="bottom: 205px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 205px">5</p>
+                                        <div class="sosud_long_line sosud_right_line {% if level >= 5 %} active_sosud_line {% endif %}" style="bottom: 205px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 5 %} active_sosud_level_number {% endif%}" style="bottom: 205px">5</p>
 
                                         <div class="sosud_long_line {% if level >= 6 %} active_sosud_line {% endif%}" style="bottom: 243px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 243px">6</p>
+                                        <p class="sosud_level_number {% if level >= 6 %} active_sosud_level_number {% endif%}" style="bottom: 243px">6</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 7 %} active_sosud_line {% endif%}" style="bottom: 281px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 281px">7</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 7 %} active_sosud_level_number {% endif%}" style="bottom: 281px">7</p>
 
                                         <div class="sosud_long_line {% if level >= 8 %} active_sosud_line {% endif%}" style="bottom: 319px"></div>
-                                        <p class="sosud_level_number" style="bottom: 319px">8</p>
+                                        <p class="sosud_level_number {% if level >= 8 %} active_sosud_level_number {% endif%}" style="bottom: 319px">8</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 9 %} active_sosud_line {% endif%}" style="bottom: 357px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 357px">9</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 9 %} active_sosud_level_number {% endif%}" style="bottom: 357px">9</p>
 
                                         <div class="sosud_long_line {% if level >= 10 %} active_sosud_line {% endif%}" style="bottom: 395px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 395px">10</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 10 %} active_sosud_level_number {% endif%}" style="bottom: 395px">10</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 11 %} active_sosud_line {% endif%}" style="bottom: 433px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 433px">11</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 11 %} active_sosud_level_number {% endif%}" style="bottom: 433px">11</p>
 
                                         <div class="sosud_long_line {% if level >= 12 %} active_sosud_line {% endif%}" style="bottom: 471px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 471px">12</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 12 %} active_sosud_level_number {% endif%}" style="bottom: 471px">12</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 13 %} active_sosud_line {% endif%}" style="bottom: 509px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 509px">13</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 13 %} active_sosud_level_number {% endif%}" style="bottom: 509px">13</p>
 
                                         <div class="sosud_long_line {% if level >= 14 %} active_sosud_line {% endif%}" style="bottom: 547px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 547px">14</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 14 %} active_sosud_level_number {% endif%}" style="bottom: 547px">14</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 15 %} active_sosud_line {% endif%}" style="bottom: 585px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 585px">15</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 15 %} active_sosud_level_number {% endif%}" style="bottom: 585px">15</p>
 
                                     </div>
                                 </div>
-                                <a class="orange_link_btn margin_top_50px" href="{% url 'withdraw_money' %}">{% trans 'Снять все средства с депозита' %}</a>
+                                <a class="input_submit_btn margin_top_50px" href="{% url 'withdraw_money' %}">{% trans 'Снять все средства с депозита' %}</a>
                             </div>
                         </div>
 
