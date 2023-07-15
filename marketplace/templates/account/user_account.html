@@ -47,23 +47,13 @@
                                            id="user_avatar_file" accept=".jpg, .jpeg, .png"
                                            onchange="userAvatarImgPreview(this);">
                                     <label for="user_avatar_file" class="load_avatar_img_label">
-                                        {% if request.user.customuser.img and request.user.customuser.img.url %}
-                                            <img id="user_avatar_preview" src="{{ request.user.customuser.img.url }}" class="load_avatar_img_preview" alt="">
-                                        {% else %}
-                                            <img id="user_avatar_preview" src="{% static 'marketplace/img/default.jpg' %}" class="load_avatar_img_preview" alt="">
-                                        {% endif %}
-                                        <div class="avatar_img_load_btn_block" id="avatar_img_load_btn_block">
-                                            <svg class="add_image_icon"
-                                                 style="width: 35px; height: 35px;">
-                                                <use href="{% static 'marketplace/img/icons.svg' %}#plus"></use>
-                                            </svg>
-                                        </div>
+                                        <img id="user_avatar_preview" src="" class="load_avatar_img_preview" alt="">
                                     </label>
                                     <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>
 
 
-                                <div class="user_statistics_block -center_statistics">
+                                <div class="user_statistics_block margin_left_60px ">
                                     <div class="profile_content_block">
                                         <div class="user_book_statistic_info_block background_orange">
                                             <div class="main_upper_block">
@@ -91,36 +81,6 @@
                                                 <p class="user_statistic_info_number_text">{{ help_pro }}</p>
                                             </div>
                                             <p class="user_statistic_info_text">{% trans "Помощи" %}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="profile_content_block">
-                                        <div class="user_book_statistic_info_block background_pink">
-                                            <div class="main_upper_block">
-                                                <div class="user_statistic_info_icon_block background_white">
-                                                    <svg class="user_statistic_info_icon">
-                                                        <use height="25px" width="25px" fill="#FF5474"
-                                                             href="{% static 'marketplace/img/icons.svg' %}#clock"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="user_statistic_info_number_text">0</p>
-                                            </div>
-                                            <p class="user_statistic_info_text">{% trans "Аренда" %}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="profile_content_block">
-                                        <div class="user_book_statistic_info_block background_green">
-                                            <div class="main_upper_block">
-                                                <div class="user_statistic_info_icon_block background_white">
-                                                    <svg class="user_statistic_info_icon">
-                                                        <use height="25px" width="25px" fill="#42BB4E"
-                                                             href="{% static 'marketplace/img/icons.svg' %}#cash_from_hand_to_hand"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="user_statistic_info_number_text">0</p>
-                                            </div>
-                                            <p class="user_statistic_info_text">{% trans "Продажи" %}</p>
                                         </div>
                                     </div>
 
@@ -387,53 +347,53 @@
                                         <div class="tipa_water" style="height:{{ tipa_water }}px;"></div>
                                         <div class="sosud_block"></div>
 
-                                        <div class="sosud_long_line {% if level >= 0 %} active_sosud_line {% endif%}" style="bottom: 15px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 15px">0</p>
+                                        <div class="sosud_long_line {% if level >= 0 %} active_sosud_line {% endif %}" style="bottom: 15px"></div>
+                                        <p class="sosud_level_number {% if level >= 0 %} active_sosud_level_number {% endif %}" style="bottom: 15px">0</p>
 
-                                        <div class="sosud_long_line sosud_right_line {% if level >= 1 %} active_sosud_line {% endif%}" style="bottom: 53px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 53px">1</p>
+                                        <div class="sosud_long_line sosud_right_line {% if level >= 1 %} active_sosud_line {% endif %}" style="bottom: 53px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 1 %} active_sosud_level_number {% endif %}" style="bottom: 53px">1</p>
 
                                         <div class="sosud_long_line {% if level >= 2 %} active_sosud_line {% endif%}" style="bottom: 91px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 91px">2</p>
+                                        <p class="sosud_level_number {% if level >= 2 %} active_sosud_level_number {% endif %}" style="bottom: 91px">2</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 3 %} active_sosud_line {% endif%}" style="bottom: 129px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 129px">3</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 3 %} active_sosud_level_number {% endif %}" style="bottom: 129px">3</p>
 
                                         <div class="sosud_long_line {% if level >= 4 %} active_sosud_line {% endif%}" style="bottom: 167px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 167px">4</p>
+                                        <p class="sosud_level_number {% if level >= 4 %} active_sosud_level_number {% endif %}" style="bottom: 167px">4</p>
 
-                                        <div class="sosud_long_line sosud_right_line {% if level >= 5 %} active_sosud_line {% endif%}" style="bottom: 205px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right active_sosud_level_number" style="bottom: 205px">5</p>
+                                        <div class="sosud_long_line sosud_right_line {% if level >= 5 %} active_sosud_line {% endif %}" style="bottom: 205px"></div>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 5 %} active_sosud_level_number {% endif%}" style="bottom: 205px">5</p>
 
                                         <div class="sosud_long_line {% if level >= 6 %} active_sosud_line {% endif%}" style="bottom: 243px"></div>
-                                        <p class="sosud_level_number active_sosud_level_number" style="bottom: 243px">6</p>
+                                        <p class="sosud_level_number {% if level >= 6 %} active_sosud_level_number {% endif%}" style="bottom: 243px">6</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 7 %} active_sosud_line {% endif%}" style="bottom: 281px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 281px">7</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 7 %} active_sosud_level_number {% endif%}" style="bottom: 281px">7</p>
 
                                         <div class="sosud_long_line {% if level >= 8 %} active_sosud_line {% endif%}" style="bottom: 319px"></div>
-                                        <p class="sosud_level_number" style="bottom: 319px">8</p>
+                                        <p class="sosud_level_number {% if level >= 8 %} active_sosud_level_number {% endif%}" style="bottom: 319px">8</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 9 %} active_sosud_line {% endif%}" style="bottom: 357px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right" style="bottom: 357px">9</p>
+                                        <p class="sosud_level_number sosud_level_number_right {% if level >= 9 %} active_sosud_level_number {% endif%}" style="bottom: 357px">9</p>
 
                                         <div class="sosud_long_line {% if level >= 10 %} active_sosud_line {% endif%}" style="bottom: 395px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 395px">10</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 10 %} active_sosud_level_number {% endif%}" style="bottom: 395px">10</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 11 %} active_sosud_line {% endif%}" style="bottom: 433px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 433px">11</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 11 %} active_sosud_level_number {% endif%}" style="bottom: 433px">11</p>
 
                                         <div class="sosud_long_line {% if level >= 12 %} active_sosud_line {% endif%}" style="bottom: 471px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 471px">12</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 12 %} active_sosud_level_number {% endif%}" style="bottom: 471px">12</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 13 %} active_sosud_line {% endif%}" style="bottom: 509px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 509px">13</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 13 %} active_sosud_level_number {% endif%}" style="bottom: 509px">13</p>
 
                                         <div class="sosud_long_line {% if level >= 14 %} active_sosud_line {% endif%}" style="bottom: 547px"></div>
-                                        <p class="sosud_level_number sosud_level_number_left_lefter" style="bottom: 547px">14</p>
+                                        <p class="sosud_level_number sosud_level_number_left_lefter {% if level >= 14 %} active_sosud_level_number {% endif%}" style="bottom: 547px">14</p>
 
                                         <div class="sosud_long_line sosud_right_line {% if level >= 15 %} active_sosud_line {% endif%}" style="bottom: 585px"></div>
-                                        <p class="sosud_level_number sosud_level_number_right_lefter" style="bottom: 585px">15</p>
+                                        <p class="sosud_level_number sosud_level_number_right_lefter {% if level >= 15 %} active_sosud_level_number {% endif%}" style="bottom: 585px">15</p>
 
                                     </div>
                                 </div>

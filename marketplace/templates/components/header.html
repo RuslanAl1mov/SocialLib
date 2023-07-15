@@ -157,33 +157,10 @@
     document.getElementById('search_value_input').value = value;
 
     // Установка значения в кнопку "Все"
-    document.getElementById('dropdown_button').innerHTML = value + '<i class="arrow down"></i>';
+    document.getElementById('dropdown_button').innerHTML = element.text + '<i class="arrow down"></i>';
 
     // Закрытие выпадающего списка
     toggleDropdown();
   }
-
-  function updateSearchValue(value) {
-    document.getElementById('search_value_input').value = value;
-  }
-
-  function toggleDropdown() {
-    var dropdownContent = document.getElementById('dropdown_content');
-    dropdownContent.classList.toggle('show');
-  }
-
-  // Закрытие выпадающего списка при клике вне него
-  window.onclick = function(event) {
-    if (!event.target.matches('.header_menu_dropbtn')) {
-      var dropdowns = document.getElementsByClassName('header_menu_dropdown_content_block');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
 
 </script>

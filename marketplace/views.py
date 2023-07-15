@@ -304,6 +304,7 @@ def user_profile_page(request, tab_id):
     step = (max_value - min_value) / num_levels
 
     level = int(total_amount / 100000)
+    print('level', level)
 
     bottom = int(min_value + level * step) + 15
     tipa_water = level * 38 +15
