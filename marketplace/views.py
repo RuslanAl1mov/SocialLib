@@ -1,5 +1,5 @@
-from datetime import datetime, timedelta
 import random, telebot
+from datetime import datetime, timedelta
 from decimal import Decimal
 from django.db.models import Q
 from django.db.models import Count
@@ -7,10 +7,23 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, DonateBook, History_User_Book, DepositUser
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from allauth.account.signals import user_logged_in
+from django.dispatch import receiver
 
 
 token = "6163259210:AAFHkTsuNjxty3wQNSZUdQDd3oO83i7hvqU"
 bot = telebot.TeleBot(token)
+
+
+@receiver(user_logged_in)
+def create_custom_user(sender, request, user, **kwargs):
+    try:
+        custom_user = user.customuser  # Пытаемся получить объект CustomUser для пользователя
+        print("user", user.first_name)
+    except CustomUser.DoesNotExist:
+        # Создаем объект CustomUser, если он не существует
+        custom_user = CustomUser.objects.create(user=user, img='covers/default.jpg', phone_number='000000')
+
 
 
 def registration_page(request):
@@ -86,7 +99,8 @@ def home_page(request):
         "main_books": unique_books[:16],
         'quotes': random_quotes,
 
-        'list_category': Genres.objects.all()
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
     }
     return render(request, template, context)
 
@@ -125,7 +139,8 @@ def book_page(request, book_id):
         "books_currently_reading": count_being_read,
         "books_already_read": count_already_read,
         "total_books": book_count,
-        "list_category": Genres.objects.all(),
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
         "author_books": unique_author_books,
         "similar_books": unique_similar_books
     }
@@ -183,7 +198,8 @@ def category_books_page(request, category_id):
             seen_books.add(book.full_name)
     context = {
         "books_list": unique_books,
-        'list_category': Genres.objects.all(),
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
         'name_category': Genres.objects.get(id=category_id)
     }
     return render(request, template, context)
@@ -193,7 +209,10 @@ def search_result_page(request):
     unique_books = []
     seen_books = set()
     template = 'search_result_page/search_result.html'
-    context = {'list_category': Genres.objects.all(),}
+    context = {
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
+    }
     if request.method == "POST":
         search_value = str(request.POST["search_value"]).replace(",", "")
         search_type = request.POST["search_type"] if "search_type" in request.POST else ""
@@ -260,7 +279,8 @@ def search_result_page(request):
         context['search_books'] = unique_books
         context['search_value'] = search_value
         context['search_quantity'] = len(unique_books)
-    context['list_category'] = Genres.objects.all()
+    context['list_category_1'] = Genres.objects.all()[:10]
+    context['list_category_2'] = Genres.objects.all()[10:20]
     return render(request, template, context)
 
 
@@ -289,7 +309,8 @@ def user_profile_page(request, tab_id):
     tipa_water = level * 38 +15
 
     context = {"tab": tab_id,
-               'list_category': Genres.objects.all(),
+               'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20],
                "read_books": read_book_count,
                 "help_pro": donate_book,
                'bottom':bottom,
@@ -339,7 +360,8 @@ def books_shelf_page(request):
     user = request.user
 
     context = {
-        'list_category': Genres.objects.all(),
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
     "stat_1_books" : History_User_Book.objects.all().filter(status=1, first_name=user.first_name, last_name=user.last_name, email=user.email),
     "stat_2_books" : History_User_Book.objects.all().filter(status=2, first_name=user.first_name, last_name=user.last_name, email=user.email),
     "stat_4_books" : History_User_Book.objects.all().filter(status=4, first_name=user.first_name, last_name=user.last_name, email=user.email),
@@ -351,7 +373,10 @@ def books_shelf_page(request):
 
 def book_donate_page(request):
     template = 'book_donate_page/book_donate.html'
-    context = {'list_category': Genres.objects.all(),}
+    context = {
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20]
+    }
     if request.method == "POST":
         donate = DonateBook(
             first_name= request.POST['first_name'],
@@ -371,7 +396,9 @@ def book_donate_page(request):
 
 
 def not_found_page(request):
-    return render(request, 'notifications/error_404.html', {'list_category': Genres.objects.all(),})
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
+    return render(request, 'notifications/error_404.html', context)
 
 
 def book_reserved_page(request):
@@ -430,25 +457,41 @@ def order_book_page(request, book_id):
         book_count = Books.objects.filter(full_name=book_info.full_name).count()
         date_of_expire = datetime.now().date() + timedelta(days=33)
         context = {'previous_page': previous_page,
-                   'list_category': Genres.objects.all(),
+                   'list_category_1': Genres.objects.all()[:10],
+                   'list_category_2': Genres.objects.all()[10:20],
                    "books_currently_reading": count_being_read,
                    "books_already_read": count_already_read,
                    "total_books": book_count,
                    'date_of_expire': date_of_expire
                    }
         user = request.user
+        custom_user = get_object_or_404(CustomUser, user=user)
         user_booked_book = History_User_Book.objects.filter(first_name=user.first_name,
                                                    last_name=user.last_name, email=user.email,
                                                          status__in=['2', '3', '4'])
         if user_booked_book:
             return render(request, 'notifications/user_booked_book.html')
         else:
-            order_info = History_User_Book.objects.get(book__full_name=book_info.full_name, status=1, first_name=user.first_name,
+            order_info = History_User_Book.objects.filter(book__full_name=book_info.full_name, status=1, first_name=user.first_name,
                                                        last_name=user.last_name, email=user.email)
+            print("order_info", order_info)
             if book_info.is_occupied == 0  and book_info.is_removed == 0: # Книга свободна и не занята
-                context["book_info"] = book_info
-                context["order_id"] = order_info.id
+                if order_info:
+                    context["book_info"] = book_info
+                    context["order_id"] = order_info.id
+                else:
+                    context["book_info"] = book_info
+                    new_history = History_User_Book(
+                        book=book_info,
+                        status=1,
+                        first_name=user.first_name,
+                        last_name=user.last_name,
+                        email=user.email,
+                        number_phone=custom_user.phone_number)
+                    new_history.save()
+                    context["order_id"] = new_history.id
                 return render(request, template, context)
+
             else: # Книга либо занята либо удалена, страница заявки (поведение страницы)
                 new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0, full_name=book_info.full_name).first()
                 if new_book_info: # Если такая же книга есть в базе
@@ -463,6 +506,8 @@ def order_book_page(request, book_id):
 
 
 def return_to_book(request, id):
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
     order_info = get_object_or_404(History_User_Book, pk=id)
     order_info.status = 4
     order_info.save()
@@ -472,21 +517,29 @@ def return_to_book(request, id):
     text += f"🌍️ Адрес: {order_info.address}\n"
     text += f"📚 Книга: {order_info.book.full_name}\n"
     bot.send_message(-983213057, text)
-    return render(request, 'notifications/return_success.html', {'list_category': Genres.objects.all(),})
+    return render(request, 'notifications/return_success.html', context)
 
 
 def order_success_page(request):
-    return render(request, 'notifications/order_success.html', {'list_category': Genres.objects.all(),})
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
+    return render(request, 'notifications/order_success.html', context)
 
 
 def terms_of_use_page(request):
-    return render(request, 'additional_content_pages/oferta.html', {'list_category': Genres.objects.all(),})
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
+    return render(request, 'additional_content_pages/oferta.html', context)
 
 
 def about_us_page(request):
-    return render(request, 'additional_content_pages/about_us.html', {'list_category': Genres.objects.all(),})
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
+    return render(request, 'additional_content_pages/about_us.html', context)
 
 
 def tech_support_page(request):
-    return render(request, 'additional_content_pages/tech_support.html', {'list_category': Genres.objects.all(),})
+    context = {'list_category_1': Genres.objects.all()[:10],
+               'list_category_2': Genres.objects.all()[10:20]}
+    return render(request, 'additional_content_pages/tech_support.html', context)
 

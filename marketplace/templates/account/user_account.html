@@ -49,6 +49,8 @@
                                     <label for="user_avatar_file" class="load_avatar_img_label">
                                         {% if request.user.customuser.img and request.user.customuser.img.url %}
                                             <img id="user_avatar_preview" src="{{ request.user.customuser.img.url }}" class="load_avatar_img_preview" alt="">
+                                        {% else %}
+                                            <img id="user_avatar_preview" src="{% static 'marketplace/img/default.jpg' %}" class="load_avatar_img_preview" alt="">
                                         {% endif %}
                                         <div class="avatar_img_load_btn_block" id="avatar_img_load_btn_block">
                                             <svg class="add_image_icon"

@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="new_books_info_block">
-                        <p class="new_books_block_title">Новинки</p>
+                        <p class="new_books_block_title">{% trans 'Новинки' %}</p>
                         <div class="new_books_block">
                             {% for book in new_books %}
                                 <div class="book_cover_only_block" title="{{ book.full_name }}">
@@ -66,7 +66,6 @@
                 <div class="main_books_content_block">
                     <h1 class="main_books_content_block_title">{% trans 'Добро пожаловать' %}</h1>
                     <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' %}</p>
-
                     <div class="books_catalog_block">
                         {% for book in new_books %}
                             <a href="{% url 'book' book.pk %}">
