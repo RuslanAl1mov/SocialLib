@@ -1080,6 +1080,7 @@ table {
 }
 
 .search_tr_raw {
+    height: 185px;
     max-height: 185px;
 }
 
@@ -1383,6 +1384,7 @@ table {
     display: flex;
     justify-content: space-between;
 }
+
 
 .bottom_button_block {
     padding: 60px 64px;
@@ -1841,8 +1843,12 @@ table {
     border-color: white;
 }
 
+.update_profile_data_btn {
+    width: 210px;
+}
+
 .add_money_btn {
-    width: 300px;
+    width: 320px;
 }
 
 .book_donate_input_paddings {
