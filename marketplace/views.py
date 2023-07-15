@@ -1,5 +1,5 @@
-from datetime import datetime, timedelta
 import random, telebot
+from datetime import datetime, timedelta
 from decimal import Decimal
 from django.db.models import Q
 from django.db.models import Count
@@ -7,10 +7,23 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, DonateBook, History_User_Book, DepositUser
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from allauth.account.signals import user_logged_in
+from django.dispatch import receiver
 
 
 token = "6163259210:AAFHkTsuNjxty3wQNSZUdQDd3oO83i7hvqU"
 bot = telebot.TeleBot(token)
+
+
+@receiver(user_logged_in)
+def create_custom_user(sender, request, user, **kwargs):
+    try:
+        custom_user = user.customuser  # Пытаемся получить объект CustomUser для пользователя
+        print("user", user.first_name)
+    except CustomUser.DoesNotExist:
+        # Создаем объект CustomUser, если он не существует
+        custom_user = CustomUser.objects.create(user=user, img='covers/default.jpg', phone_number='000000')
+
 
 
 def registration_page(request):
@@ -452,18 +465,33 @@ def order_book_page(request, book_id):
                    'date_of_expire': date_of_expire
                    }
         user = request.user
+        custom_user = get_object_or_404(CustomUser, user=user)
         user_booked_book = History_User_Book.objects.filter(first_name=user.first_name,
                                                    last_name=user.last_name, email=user.email,
                                                          status__in=['2', '3', '4'])
         if user_booked_book:
             return render(request, 'notifications/user_booked_book.html')
         else:
-            order_info = History_User_Book.objects.get(book__full_name=book_info.full_name, status=1, first_name=user.first_name,
+            order_info = History_User_Book.objects.filter(book__full_name=book_info.full_name, status=1, first_name=user.first_name,
                                                        last_name=user.last_name, email=user.email)
+            print("order_info", order_info)
             if book_info.is_occupied == 0  and book_info.is_removed == 0: # Книга свободна и не занята
-                context["book_info"] = book_info
-                context["order_id"] = order_info.id
+                if order_info:
+                    context["book_info"] = book_info
+                    context["order_id"] = order_info.id
+                else:
+                    context["book_info"] = book_info
+                    new_history = History_User_Book(
+                        book=book_info,
+                        status=1,
+                        first_name=user.first_name,
+                        last_name=user.last_name,
+                        email=user.email,
+                        number_phone=custom_user.phone_number)
+                    new_history.save()
+                    context["order_id"] = new_history.id
                 return render(request, template, context)
+
             else: # Книга либо занята либо удалена, страница заявки (поведение страницы)
                 new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0, full_name=book_info.full_name).first()
                 if new_book_info: # Если такая же книга есть в базе

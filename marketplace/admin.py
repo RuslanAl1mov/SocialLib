@@ -1,7 +1,7 @@
 from django.contrib import admin
-
 from .models import Genres, Keywords, Author, Books, Quotes, CustomUser, \
     DepositUser, DonateBook, History_User_Book
+
 from modeltranslation.admin import TranslationAdmin
 
 class GenresAdmin(TranslationAdmin):

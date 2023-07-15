@@ -66,7 +66,6 @@
                 <div class="main_books_content_block">
                     <h1 class="main_books_content_block_title">{% trans 'Добро пожаловать' %}</h1>
                     <p class="main_books_content_block_secondary_title">{% trans 'Подборка для Вас' %}</p>
-
                     <div class="books_catalog_block">
                         {% for book in new_books %}
                             <a href="{% url 'book' book.pk %}">
