@@ -47,7 +47,13 @@
                                            id="user_avatar_file" accept=".jpg, .jpeg, .png"
                                            onchange="userAvatarImgPreview(this);">
                                     <label for="user_avatar_file" class="load_avatar_img_label">
-                                        <img id="user_avatar_preview" src="" class="load_avatar_img_preview" alt="">
+
+                                        {% if custom_user.img.url %}
+                                            <img id="user_avatar_preview" src="{{ custom_user.img.url }}" class="load_avatar_img_preview" alt="">
+                                        {% else %}
+                                            <img id="user_avatar_preview" src="{% static 'marketplace/img/avatardefault.png' %}" class="load_avatar_img_preview" alt="">
+                                        {% endif %}
+
                                     </label>
                                     <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>

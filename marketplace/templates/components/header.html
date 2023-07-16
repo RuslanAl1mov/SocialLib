@@ -108,7 +108,11 @@
         </div>
 
         <div class="header_user_block header_block_shadow">
-            <img class="user_header_avatar" src="{% static 'marketplace/img/default.jpg' %}" alt="">
+            {% if custom_user.img.url %}
+            <img class="user_header_avatar" src="{{ custom_user.img.url }}" alt="">
+            {% else %}
+            <img class="user_header_avatar" src="{% static 'marketplace/img/avatardefault.png' %}" alt="">
+            {% endif %}
             <nav class="header_menu header_avatar_menu">
                 <ul class="header_menu_list">
                     <li class="header_menu_dropdown">

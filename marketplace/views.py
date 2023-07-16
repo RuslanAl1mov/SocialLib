@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from allauth.account.signals import user_logged_in
 from django.dispatch import receiver
-
+from django.http import Http404
 
 token = "6163259210:AAFHkTsuNjxty3wQNSZUdQDd3oO83i7hvqU"
 bot = telebot.TeleBot(token)
@@ -23,7 +23,6 @@ def create_custom_user(sender, request, user, **kwargs):
     except CustomUser.DoesNotExist:
         # Создаем объект CustomUser, если он не существует
         custom_user = CustomUser.objects.create(user=user, img='covers/default.jpg', phone_number='000000')
-
 
 
 def registration_page(request):
@@ -76,7 +75,6 @@ def log_out(request):
     return redirect('home')
 
 
-
 def home_page(request):
     unique_books = []
     seen_names = set()
@@ -101,7 +99,14 @@ def home_page(request):
 
         'list_category_1': Genres.objects.all()[:10],
         'list_category_2': Genres.objects.all()[10:20],
+
     }
+
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
@@ -113,7 +118,6 @@ def book_page(request, book_id):
     seen_similar_books = set()
 
     book_info = get_object_or_404(Books, pk=book_id)
-
 
     author_books = Books.objects.filter(author__in=book_info.author.all(), is_occupied=0, is_removed=0).exclude(
         pk=book_info.pk)
@@ -133,7 +137,6 @@ def book_page(request, book_id):
     books_already_read = History_User_Book.objects.filter(status='5', book__full_name=book_info.full_name)
     count_already_read = books_already_read.count()
     book_count = Books.objects.filter(full_name=book_info.full_name).count()
-
     context = {
         "book_info": book_info,
         "books_currently_reading": count_being_read,
@@ -142,8 +145,13 @@ def book_page(request, book_id):
         'list_category_1': Genres.objects.all()[:10],
         'list_category_2': Genres.objects.all()[10:20],
         "author_books": unique_author_books,
-        "similar_books": unique_similar_books
+        "similar_books": unique_similar_books,
     }
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
@@ -152,32 +160,32 @@ def favorites(request, book_id):
     user = request.user
     custom_user = get_object_or_404(CustomUser, user=user)
     order_info = History_User_Book.objects.filter(book__full_name=book_info.full_name, status=1,
-                                               first_name=user.first_name,
-                                               last_name=user.last_name, email=user.email)
+                                                  first_name=user.first_name,
+                                                  last_name=user.last_name, email=user.email)
     if order_info:
         pass
     else:
         new_history = History_User_Book(
-            book = book_info,
-            status = 1,
-            first_name = user.first_name,
-            last_name = user.last_name,
-            email = user.email,
-            number_phone = custom_user.phone_number)
+            book=book_info,
+            status=1,
+            first_name=user.first_name,
+            last_name=user.last_name,
+            email=user.email,
+            number_phone=custom_user.phone_number)
         new_history.save()
     return redirect('book_shelf')
 
-def del_favorites(request, book_id):
 
+def del_favorites(request, book_id):
     user = request.user
     custom_user = get_object_or_404(CustomUser, user=user)
     new_history = get_object_or_404(History_User_Book,
-                                    book = get_object_or_404(Books, pk=book_id),
-                                    status = 1,
-                                    first_name = user.first_name,
-                                    last_name = user.last_name,
-                                    email = user.email,
-                                    number_phone = custom_user.phone_number)
+                                    book=get_object_or_404(Books, pk=book_id),
+                                    status=1,
+                                    first_name=user.first_name,
+                                    last_name=user.last_name,
+                                    email=user.email,
+                                    number_phone=custom_user.phone_number)
     new_history.delete()
     return redirect('book_shelf')
 
@@ -196,12 +204,18 @@ def category_books_page(request, category_id):
         if book.full_name not in seen_books:
             unique_books.append(book)
             seen_books.add(book.full_name)
+
     context = {
         "books_list": unique_books,
         'list_category_1': Genres.objects.all()[:10],
         'list_category_2': Genres.objects.all()[10:20],
-        'name_category': Genres.objects.get(id=category_id)
+        'name_category': Genres.objects.get(id=category_id),
     }
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
@@ -249,7 +263,6 @@ def search_result_page(request):
             ).filter(
                 Q(author__name__icontains=search_value))
 
-
         for book in search_books:
             if book.full_name not in seen_books:
                 unique_books.append(book)
@@ -281,6 +294,11 @@ def search_result_page(request):
         context['search_quantity'] = len(unique_books)
     context['list_category_1'] = Genres.objects.all()[:10]
     context['list_category_2'] = Genres.objects.all()[10:20]
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
@@ -288,7 +306,7 @@ def user_profile_page(request, tab_id):
     template = 'account/user_account.html'
     user = request.user
     read_book_count = History_User_Book.objects.filter(status=5, first_name=user.first_name,
-                                                  last_name=user.last_name, email=user.email).count()
+                                                       last_name=user.last_name, email=user.email).count()
 
     donate_book = DonateBook.objects.filter(first_name=user.first_name, last_name=user.last_name).count()
 
@@ -307,17 +325,19 @@ def user_profile_page(request, tab_id):
     print('level', level)
 
     bottom = int(min_value + level * step) + 15
-    tipa_water = level * 38 +15
+    tipa_water = level * 38 + 15
 
     context = {"tab": tab_id,
                'list_category_1': Genres.objects.all()[:10],
                'list_category_2': Genres.objects.all()[10:20],
                "read_books": read_book_count,
-                "help_pro": donate_book,
-               'bottom':bottom,
-               'tipa_water':tipa_water,
+               "help_pro": donate_book,
+               'bottom': bottom,
+               'tipa_water': tipa_water,
                'level': level,
                'total_amount': total_amount}
+    user = request.user
+
 
     if request.method == "POST":
         user = request.user
@@ -339,8 +359,15 @@ def user_profile_page(request, tab_id):
                 user.save()
             else:
                 context["tab"] = 2
+                try:
+                    context['custom_user'] = get_object_or_404(CustomUser, user=user)
+                except (Http404, TypeError):
+                    pass
                 return render(request, template, context)
-
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
@@ -359,32 +386,47 @@ def withdraw_money(request):
 def books_shelf_page(request):
     template = 'book_shelf_page/book_shelf.html'
     user = request.user
-
     context = {
         'list_category_1': Genres.objects.all()[:10],
         'list_category_2': Genres.objects.all()[10:20],
-    "stat_1_books" : History_User_Book.objects.all().filter(status=1, first_name=user.first_name, last_name=user.last_name, email=user.email),
-    "stat_2_books" : History_User_Book.objects.all().filter(status=2, first_name=user.first_name, last_name=user.last_name, email=user.email),
-    "stat_4_books" : History_User_Book.objects.all().filter(status=4, first_name=user.first_name, last_name=user.last_name, email=user.email),
-    "stat_3_books" : History_User_Book.objects.all().filter(status=3, first_name=user.first_name, last_name=user.last_name, email=user.email),
-    "stat_5_books" : History_User_Book.objects.all().filter(status=5, first_name=user.first_name, last_name=user.last_name, email=user.email)
-               }
+        "stat_1_books": History_User_Book.objects.all().filter(status=1, first_name=user.first_name,
+                                                               last_name=user.last_name, email=user.email),
+        "stat_2_books": History_User_Book.objects.all().filter(status=2, first_name=user.first_name,
+                                                               last_name=user.last_name, email=user.email),
+        "stat_4_books": History_User_Book.objects.all().filter(status=4, first_name=user.first_name,
+                                                               last_name=user.last_name, email=user.email),
+        "stat_3_books": History_User_Book.objects.all().filter(status=3, first_name=user.first_name,
+                                                               last_name=user.last_name, email=user.email),
+        "stat_5_books": History_User_Book.objects.all().filter(status=5, first_name=user.first_name,
+                                                               last_name=user.last_name, email=user.email),
+    }
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, template, context)
 
 
 def book_donate_page(request):
     template = 'book_donate_page/book_donate.html'
+
     context = {
         'list_category_1': Genres.objects.all()[:10],
-        'list_category_2': Genres.objects.all()[10:20]
+        'list_category_2': Genres.objects.all()[10:20],
     }
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
+
     if request.method == "POST":
         donate = DonateBook(
-            first_name= request.POST['first_name'],
-            last_name = request.POST['last_name'],
-            email = request.POST['email'],
-            phone_number = request.POST['phone_number'],
-            donateBookList = request.POST['product_keywords_ru']
+            first_name=request.POST['first_name'],
+            last_name=request.POST['last_name'],
+            email=request.POST['email'],
+            phone_number=request.POST['phone_number'],
+            donateBookList=request.POST['product_keywords_ru']
         )
         donate.save()
         text = f"‼️ #Новый_Донат ‼️ \n\n"
@@ -397,19 +439,29 @@ def book_donate_page(request):
 
 
 def not_found_page(request):
-    context = {'list_category_1': Genres.objects.all()[:10],
-               'list_category_2': Genres.objects.all()[10:20]}
+    context = {
+        'list_category_1': Genres.objects.all()[:10],
+        'list_category_2': Genres.objects.all()[10:20],
+    }
+    user = request.user
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, 'notifications/error_404.html', context)
 
 
 def book_reserved_page(request):
     return render(request, 'notifications/book_reserved.html')
 
+
 def order_book_page(request, book_id):
-    if request.method == "POST" and request.POST['order_id'] != "None": # Оформление книги
-        order_info = get_object_or_404(History_User_Book, id=int(request.POST['order_id'])) # Информация о брони книги со стороны пользователя
-        if order_info.book.is_occupied: # Если занята
-            new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0, full_name=order_info.book.full_name).first()
+    if request.method == "POST" and request.POST['order_id'] != "None":  # Оформление книги
+        order_info = get_object_or_404(History_User_Book, id=int(
+            request.POST['order_id']))  # Информация о брони книги со стороны пользователя
+        if order_info.book.is_occupied:  # Если занята
+            new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0,
+                                                       full_name=order_info.book.full_name).first()
             if new_book_info:  # Поиск такой же книги (свободной) в базе
                 order_info.book = new_book_info
                 order_info.status = 2
@@ -427,9 +479,9 @@ def order_book_page(request, book_id):
                 return redirect("order_success")
             else:
                 return redirect("book_reserved")
-        elif order_info.book.is_removed: # Если книги удалена
+        elif order_info.book.is_removed:  # Если книги удалена
             return redirect("book_reserved")
-        else: # Книги свободна и не удалена при оформлении
+        else:  # Книги свободна и не удалена при оформлении
             order_info.status = 2
             order_info.first_name = request.POST['first_name']
             order_info.last_name = request.POST['last_name']
@@ -445,10 +497,9 @@ def order_book_page(request, book_id):
             bot.send_message(-983213057, text)
             return redirect("order_success")
 
-    else: # Просто страница оформления
+    else:  # Просто страница оформления
         template = 'order_book/order_book.html'
         previous_page = request.META.get('HTTP_REFERER', None)
-
 
         book_info = get_object_or_404(Books, pk=book_id)
         books_being_read = History_User_Book.objects.filter(status='3', book__full_name=book_info.full_name)
@@ -457,25 +508,30 @@ def order_book_page(request, book_id):
         count_already_read = books_already_read.count()
         book_count = Books.objects.filter(full_name=book_info.full_name).count()
         date_of_expire = datetime.now().date() + timedelta(days=33)
+        user = request.user
         context = {'previous_page': previous_page,
                    'list_category_1': Genres.objects.all()[:10],
                    'list_category_2': Genres.objects.all()[10:20],
                    "books_currently_reading": count_being_read,
                    "books_already_read": count_already_read,
                    "total_books": book_count,
-                   'date_of_expire': date_of_expire
+                   'date_of_expire': date_of_expire,
                    }
-        user = request.user
+        try:
+            context['custom_user'] = get_object_or_404(CustomUser, user=user)
+        except (Http404, TypeError):
+            pass
         custom_user = get_object_or_404(CustomUser, user=user)
         user_booked_book = History_User_Book.objects.filter(first_name=user.first_name,
-                                                   last_name=user.last_name, email=user.email,
-                                                         status__in=['2', '3', '4'])
+                                                            last_name=user.last_name, email=user.email,
+                                                            status__in=['2', '3', '4'])
         if user_booked_book:
             return render(request, 'notifications/user_booked_book.html')
         else:
-            order_info = History_User_Book.objects.filter(book__full_name=book_info.full_name, status=1, first_name=user.first_name,
-                                                       last_name=user.last_name, email=user.email).first()
-            if book_info.is_occupied == 0 and book_info.is_removed == 0: # Книга свободна и не занята
+            order_info = History_User_Book.objects.filter(book__full_name=book_info.full_name, status=1,
+                                                          first_name=user.first_name,
+                                                          last_name=user.last_name, email=user.email).first()
+            if book_info.is_occupied == 0 and book_info.is_removed == 0:  # Книга свободна и не занята
                 if order_info:
                     context["book_info"] = book_info
                     context["order_id"] = order_info.id
@@ -491,9 +547,10 @@ def order_book_page(request, book_id):
                     new_history.save()
                     context["order_id"] = new_history.id
                 return render(request, template, context)
-            else: # Книга либо занята либо удалена, страница заявки (поведение страницы)
-                new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0, full_name=book_info.full_name).first()
-                if new_book_info: # Если такая же книга есть в базе
+            else:  # Книга либо занята либо удалена, страница заявки (поведение страницы)
+                new_book_info = Books.objects.all().filter(is_occupied=0, is_removed=0,
+                                                           full_name=book_info.full_name).first()
+                if new_book_info:  # Если такая же книга есть в базе
                     context["book_info"] = new_book_info
                     context["order_id"] = order_info.id
 
@@ -502,12 +559,16 @@ def order_book_page(request, book_id):
                     return redirect("book_reserved")
 
 
-
-
-
 def return_to_book(request, id):
-    context = {'list_category_1': Genres.objects.all()[:10],
-               'list_category_2': Genres.objects.all()[10:20]}
+    user = request.user
+    context = {
+                'list_category_1': Genres.objects.all()[:10],
+                'list_category_2': Genres.objects.all()[10:20],
+    }
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     order_info = get_object_or_404(History_User_Book, pk=id)
     order_info.status = 4
     order_info.save()
@@ -521,25 +582,47 @@ def return_to_book(request, id):
 
 
 def order_success_page(request):
-    context = {'list_category_1': Genres.objects.all()[:10],
-               'list_category_2': Genres.objects.all()[10:20]}
+    user = request.user
+
+    context = {
+                'list_category_1': Genres.objects.all()[:10],
+                'list_category_2': Genres.objects.all()[10:20],
+               }
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, 'notifications/order_success.html', context)
 
 
 def terms_of_use_page(request):
+    user = request.user
     context = {'list_category_1': Genres.objects.all()[:10],
-               'list_category_2': Genres.objects.all()[10:20]}
+                'list_category_2': Genres.objects.all()[10:20]}
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, 'additional_content_pages/oferta.html', context)
 
 
 def about_us_page(request):
+    user = request.user
     context = {'list_category_1': Genres.objects.all()[:10],
-               'list_category_2': Genres.objects.all()[10:20]}
+                'list_category_2': Genres.objects.all()[10:20]}
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, 'additional_content_pages/about_us.html', context)
 
 
 def tech_support_page(request):
+    user = request.user
     context = {'list_category_1': Genres.objects.all()[:10],
                'list_category_2': Genres.objects.all()[10:20]}
+    try:
+        context['custom_user'] = get_object_or_404(CustomUser, user=user)
+    except (Http404, TypeError):
+        pass
     return render(request, 'additional_content_pages/tech_support.html', context)
-
