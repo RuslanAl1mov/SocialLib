@@ -20,43 +20,31 @@ msgstr ""
 
 #: .\marketplace\templates\account\user_account.html:32
 #: .\marketplace\templates\components\header.html:115
-#, fuzzy
-#| msgid "Профиль"
 msgctxt "Профиль"
 msgid "Профиль"
 msgstr "Profile"
 
 #: .\marketplace\templates\account\user_account.html:34
-#, fuzzy
-#| msgid "Пароли и Безопасность"
 msgctxt "Пароли и Безопасность"
 msgid "Пароли и Безопасность"
 msgstr "Passwords and Security"
 
 #: .\marketplace\templates\account\user_account.html:36
-#, fuzzy
-#| msgid "Депозит и Баланс"
 msgctxt "Депозит и Баланс"
 msgid "Депозит и Баланс"
 msgstr "Deposit and Balance"
 
 #: .\marketplace\templates\account\user_account.html:45
-#, fuzzy
-#| msgid "Фотография профиля"
 msgctxt "Фотография профиля"
 msgid "Фотография профиля"
 msgstr "Profile Photo"
 
 #: .\marketplace\templates\account\user_account.html:68
-#, fuzzy
-#| msgid "Прочтено"
 msgctxt "Прочтено"
 msgid "Прочтено"
 msgstr "Read"
 
 #: .\marketplace\templates\account\user_account.html:83
-#, fuzzy
-#| msgid "Помощи"
 msgctxt "Помощи"
 msgid "Помощи"
 msgstr "Help"
@@ -70,8 +58,6 @@ msgstr "Help"
 #: .\marketplace\templates\book_donate_page\book_donate.html:49
 #: .\marketplace\templates\order_book\order_book.html:130
 #: .\marketplace\templates\order_book\order_book.html:132
-#, fuzzy
-#| msgid "Имя"
 msgctxt "Имя"
 msgid "Имя"
 msgstr "Name"
@@ -84,8 +70,6 @@ msgstr "Name"
 #: .\marketplace\templates\book_donate_page\book_donate.html:55
 #: .\marketplace\templates\order_book\order_book.html:137
 #: .\marketplace\templates\order_book\order_book.html:139
-#, fuzzy
-#| msgid "Фамилия"
 msgctxt "Фамилия"
 msgid "Фамилия"
 msgstr "Surname"
@@ -98,8 +82,6 @@ msgstr "Surname"
 #: .\marketplace\templates\book_donate_page\book_donate.html:62
 #: .\marketplace\templates\order_book\order_book.html:145
 #: .\marketplace\templates\order_book\order_book.html:147
-#, fuzzy
-#| msgid "Номер телефона"
 msgctxt "Номер телефона"
 msgid "Номер телефона"
 msgstr "Phone number"
@@ -108,122 +90,88 @@ msgstr "Phone number"
 #: .\marketplace\templates\account\user_account.html:117
 #: .\marketplace\templates\book_donate_page\book_donate.html:66
 #: .\marketplace\templates\book_donate_page\book_donate.html:68
-#, fuzzy
-#| msgid "Электронная почта"
 msgctxt "Электронная почта"
 msgid "Электронная почта"
 msgstr "Email"
 
 #: .\marketplace\templates\account\user_account.html:125
-#, fuzzy
-#| msgid "Сохранить и продолжить"
 msgctxt "Сохранить и продолжить"
 msgid "Сохранить и продолжить"
 msgstr "Save and continue"
 
 #: .\marketplace\templates\account\user_account.html:139
-#, fuzzy
-#| msgid " Изменение пароля"
 msgctxt " Изменение пароля"
 msgid " Изменение пароля"
 msgstr "Changing the password"
 
 #: .\marketplace\templates\account\user_account.html:146
 #: .\marketplace\templates\account\user_account.html:148
-#, fuzzy
-#| msgid "Старый пароль"
 msgctxt "Старый пароль"
 msgid "Старый пароль"
 msgstr "Old password"
 
 #: .\marketplace\templates\account\user_account.html:152
 #: .\marketplace\templates\account\user_account.html:154
-#, fuzzy
-#| msgid "Новый пароль"
 msgctxt "Новый пароль"
 msgid "Новый пароль"
 msgstr "New password"
 
 #: .\marketplace\templates\account\user_account.html:157
-#, fuzzy
-#| msgid "Повтор нового пароля"
 msgctxt "Повтор нового пароля "
 msgid "Повтор нового пароля "
 msgstr "Repeating a new password"
 
 #: .\marketplace\templates\account\user_account.html:159
-#, fuzzy
-#| msgid "Повтор нового пароля"
 msgctxt "Повтор нового пароля"
 msgid "Повтор нового пароля"
 msgstr "Repeating a new password"
 
 #: .\marketplace\templates\account\user_account.html:166
-#, fuzzy
-#| msgid "Обновить пароль"
 msgctxt ""
 msgid "Обновить пароль"
 msgstr "Update Password"
 
 #: .\marketplace\templates\account\user_account.html:176
-#, fuzzy
-#| msgid "Информация о"
 msgctxt "Информация о"
 msgid "Информация о"
 msgstr "Information about"
 
 #: .\marketplace\templates\account\user_account.html:177
-#, fuzzy
-#| msgid "вашем Депозите"
 msgctxt "вашем Депозите"
 msgid "вашем Депозите"
 msgstr "your Deposit"
 
 #: .\marketplace\templates\account\user_account.html:180
-#, fuzzy
-#| msgid "Пополнить баланс депозита"
 msgctxt "Пополнить баланс депозита"
 msgid "Пополнить баланс депозита"
 msgstr "Top up the deposit balance"
 
 #: .\marketplace\templates\account\user_account.html:181
-#, fuzzy
-#| msgid "Обновить данные"
 msgctxt "Обновить данные"
 msgid "Обновить данные"
 msgstr "Update data"
 
 #: .\marketplace\templates\account\user_account.html:186
-#, fuzzy
-#| msgid "Информация о балансе"
 msgctxt "Информация о балансе"
 msgid "Информация о балансе"
 msgstr "Balance Information"
 
 #: .\marketplace\templates\account\user_account.html:191
-#, fuzzy
-#| msgid "На Балансе:"
 msgctxt "На Балансе:"
 msgid "На Балансе:"
 msgstr "On Balance:"
 
 #: .\marketplace\templates\account\user_account.html:191
-#, fuzzy
-#| msgid "сум"
 msgctxt "сум"
 msgid "сум"
 msgstr "sum"
 
 #: .\marketplace\templates\account\user_account.html:192
-#, fuzzy
-#| msgid "Ваш Уровень:"
 msgctxt "Ваш Уровень:"
 msgid "Ваш Уровень:"
 msgstr "Your Level:"
 
 #: .\marketplace\templates\account\user_account.html:195
-#, fuzzy
-#| msgid "Распределение уровней:"
 msgctxt "Распределение уровней:"
 msgid "Распределение уровней:"
 msgstr "Distribution of levels:"
@@ -248,8 +196,6 @@ msgid "Уровень"
 msgstr "Level"
 
 #: .\marketplace\templates\account\user_account.html:201
-#, fuzzy
-#| msgid "БЕСПЛАТНО"
 msgctxt "БЕСПЛАТНО"
 msgid "БЕСПЛАТНО"
 msgstr "FREE"
@@ -273,99 +219,71 @@ msgid "сум"
 msgstr "sum"
 
 #: .\marketplace\templates\account\user_account.html:400
-#, fuzzy
-#| msgid "Снять все средства с депозита"
 msgctxt "Снять все средства с депозита"
 msgid "Снять все средства с депозита"
 msgstr "Withdraw all funds from the deposit"
 
 #: .\marketplace\templates\account\user_account.html:405
-#, fuzzy
-#| msgid "Пополнение баланса:"
 msgctxt "Пополнение баланса:"
 msgid "Пополнение баланса:"
 msgstr "Replenishment of the balance:"
 
 #: .\marketplace\templates\account\user_account.html:408
-#, fuzzy
-#| msgid "Переводы доступны только с карт "
 msgctxt "Переводы доступны только с карт "
 msgid "Переводы доступны только с карт "
 msgstr "Transfers are only available from cards "
 
 #: .\marketplace\templates\account\user_account.html:408
-#, fuzzy
-#| msgid "Узбекских Банков"
 msgctxt "Узбекских Банков"
 msgid "Узбекских Банков"
 msgstr "Uzbek Banks"
 
 #: .\marketplace\templates\account\user_account.html:441
-#, fuzzy
-#| msgid "Для выполнения перевода выполните следующие действия:"
 msgctxt "Для выполнения перевода выполните следующие действия:"
 msgid "Для выполнения перевода выполните следующие действия:"
 msgstr "To perform the translation, follow these steps:"
 
 #: .\marketplace\templates\account\user_account.html:443
-#, fuzzy
-#| msgid "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgctxt "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgid "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgstr "Install one of the translation apps: PayMe, Click, Uzum. "
 
 #: .\marketplace\templates\account\user_account.html:444
-#, fuzzy
-#| msgid "Отсканируйте QR-код при помощи камеры телефона."
 msgctxt "Отсканируйте QR-код при помощи камеры телефона."
 msgid "Отсканируйте QR-код при помощи камеры телефона."
 msgstr "Scan the QR code using your phone's camera."
 
 #: .\marketplace\templates\account\user_account.html:445
-#, fuzzy
-#| msgid "Укажите сумму пополнения депозита."
 msgctxt "Укажите сумму пополнения депозита."
 msgid "Укажите сумму пополнения депозита."
 msgstr "Specify the amount of deposit replenishment."
 
 #: .\marketplace\templates\account\user_account.html:446
-#, fuzzy
-#| msgid "В поле комментария укажите ваше "
 msgctxt "В поле комментария укажите ваше "
 msgid "В поле комментария укажите ваше "
 msgstr "In the comment field, specify your "
 
 #: .\marketplace\templates\account\user_account.html:448
-#, fuzzy
-#| msgid "Фамилию"
 msgctxt "Фамилию"
 msgid "Фамилию"
 msgstr "Last name "
 
 #: .\marketplace\templates\account\user_account.html:448
-#, fuzzy
-#| msgid " и этот номер "
 msgctxt " и этот номер "
 msgid " и этот номер "
 msgstr "and this number"
 
 #: .\marketplace\templates\account\user_account.html:451
-#, fuzzy
-#| msgid "Отправьте перевод и ожидайте звонка."
 msgctxt "Отправьте перевод и ожидайте звонка."
 msgid "Отправьте перевод и ожидайте звонка."
 msgstr "Send the transfer and wait for the call."
 
 #: .\marketplace\templates\additional_content_pages\about_us.html:28
-#, fuzzy
-#| msgid "О "
 msgctxt "О "
 msgid "О "
 msgstr "About"
 
 #: .\marketplace\templates\additional_content_pages\about_us.html:29
-#, fuzzy
-#| msgid "нас"
 msgctxt "нас"
 msgid "нас"
 msgstr "us"
@@ -373,24 +291,16 @@ msgstr "us"
 #: .\marketplace\templates\additional_content_pages\oferta.html:28
 #: .\marketplace\templates\components\left_menu.html:53
 #: .\marketplace\templates\components\left_menu.html:67
-#, fuzzy
-#| msgid "Условия пользования"
 msgctxt "Условия пользования"
 msgid "Условия пользования"
 msgstr "Terms of Use"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:29
-#, fuzzy
-#| msgid "WooW сервиса"
 msgctxt "WooW сервисом"
 msgid "WooW сервисом"
 msgstr "Wow service"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:33
-#, fuzzy
-#| msgid ""
-#| "Оферта представляет собой правила предоставления услуг Сервисом раздачи "
-#| "книг WooW, размещенным на сайтах с доменными именами"
 msgctxt "Оферта представляет собой правила...."
 msgid ""
 "Оферта представляет собой правила предоставления услуг Сервисом раздачи книг "
@@ -400,24 +310,16 @@ msgstr ""
 "Distribution ServiceWow, hosted on sites with domain names"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:35
-#, fuzzy
-#| msgid "для неограниченного количества пользователей."
 msgctxt "для неограниченного количества пользователей."
 msgid "для неограниченного количества пользователей."
 msgstr "for an unlimited number of users."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:38
-#, fuzzy
-#| msgid "1. Назначение и область применения Оферты."
 msgctxt "1. Назначение и область"
 msgid "1. Назначение и область применения Оферты."
 msgstr "1. Purpose and scope of the Offer."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:40
-#, fuzzy
-#| msgid ""
-#| "1.1. Оферта Сервиса WooW (далее по тексту – Оферта) устанавливает "
-#| "требования и содержит описание:"
 msgctxt "1.1"
 msgid ""
 "1.1. Оферта Сервиса WooW (далее по тексту – Оферта) устанавливает требования "
@@ -427,8 +329,6 @@ msgstr ""
 "establishes the requirements and contains a description:"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:42
-#, fuzzy
-#| msgid "1.1.1. Порядка предоставления услуг Сервиса раздачи книг WooW."
 msgctxt "1.1.1"
 msgid "1.1.1. Порядка предоставления услуг Сервиса раздачи книг WooW."
 msgstr ""
@@ -436,10 +336,6 @@ msgstr ""
 "Distribution Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:43
-#, fuzzy
-#| msgid ""
-#| "1.1.2. Разграничения ответственности за использование и предоставление "
-#| "услуг Сервисом WooW."
 msgctxt "1.1.2"
 msgid ""
 "1.1.2. Разграничения ответственности за использование и предоставление услуг "
@@ -449,10 +345,6 @@ msgstr ""
 "by WooW Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:45
-#, fuzzy
-#| msgid ""
-#| "1.1.3. Мер по обеспечению безопасности работы Сервиса WooW с "
-#| "неограниченным кругом лиц, а также пользователями Сервиса."
 msgctxt "1.1.3"
 msgid ""
 "1.1.3. Мер по обеспечению безопасности работы Сервиса WooW с неограниченным "
@@ -462,11 +354,6 @@ msgstr ""
 "circle of persons, as well as users of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:47
-#, fuzzy
-#| msgid ""
-#| "1.2. Местом оказания услуги Сервиса Пользователю является место запуска "
-#| "(сайт), на котором происходит учет и обработка данных и операций "
-#| "Пользователей."
 msgctxt "1.2"
 msgid ""
 "1.2. Местом оказания услуги Сервиса Пользователю является место запуска "
@@ -477,13 +364,6 @@ msgstr ""
 "(website), where the data and operations of Users are recorded and processed."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:49
-#, fuzzy
-#| msgid ""
-#| "1.3. Перед тем, как воспользоваться услугами Сервиса WooW, Пользователь "
-#| "обязан ознакомиться в полном объеме с условиями настоящих Оферты и "
-#| "Пользовательского соглашения и принять их, то есть совершить акцепт "
-#| "посредством совершения ключевого действия – запуска Сервиса и "
-#| "осуществления первоначального пополнения депозита."
 msgctxt "1.3"
 msgid ""
 "1.3. Перед тем, как воспользоваться услугами Сервиса WooW, Пользователь "
@@ -498,10 +378,6 @@ msgstr ""
 "launching the Service and making the initial deposit replenishment."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:51
-#, fuzzy
-#| msgid ""
-#| "1.4. Использование услуг Сервиса возможно, только если Пользователь "
-#| "принимает все условия настоящей Оферты."
 msgctxt "1.4"
 msgid ""
 "1.4. Использование услуг Сервиса возможно, только если Пользователь "
@@ -511,10 +387,6 @@ msgstr ""
 "accepts all the terms of this Offer."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:53
-#, fuzzy
-#| msgid ""
-#| "1.5. Действующая версия Оферты расположена для публичного доступа на "
-#| "сайте "
 msgctxt "1.5."
 msgid ""
 "1.5. Действующая версия Оферты расположена для публичного доступа на сайте "
@@ -523,16 +395,6 @@ msgstr ""
 "website "
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:56
-#, fuzzy
-#| msgid ""
-#| "Администрация Сервиса вправе в любое время в одностороннем порядке "
-#| "изменять настоящую Оферту. Такие изменения вступают в силу по истечении 3 "
-#| "(трех) календарных дней с момента размещения новой версии Оферты на "
-#| "сайтах Сервиса, если иной порядок вступления не предусмотрен специально в "
-#| "новой версии Оферты. При несогласии Пользователя с внесенными изменениями "
-#| "он обязан отказаться от доступа к сайту Сервиса и прекратить "
-#| "использование материалов и услуг Сервиса, направив соответствующее письмо "
-#| "на службу поддержки Сервиса в мессенджере Телеграмм"
 msgctxt "Администрация Сервиса вправе в любое время в одностороннем порядке..."
 msgid ""
 "Администрация Сервиса вправе в любое время в одностороннем порядке изменять "
@@ -554,25 +416,16 @@ msgstr ""
 "to the Service support service in the Telegram messenger"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:62
-#, fuzzy
-#| msgid "2. Термины и определения."
 msgctxt "2. Термины и определения."
 msgid "2. Термины и определения."
 msgstr "2. Terms and definitions."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:64
-#, fuzzy
-#| msgid "2.1. Сайт - сайты с доменными именами «woow.uz»."
 msgctxt "2.1."
 msgid "2.1. Сайт - сайты с доменными именами «woow.uz»."
 msgstr "2.1. Website - websites with domain names «woow.uz»."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:67
-#, fuzzy
-#| msgid ""
-#| "2.2. Пользователь — любое физическое лицо, использующее функциональные "
-#| "возможности Сервиса и достигшее возраста полной дееспособности в "
-#| "соответствии с законодательством страны своего гражданства."
 msgctxt "2.2."
 msgid ""
 "2.2. Пользователь — любое физическое лицо, использующее функциональные "
@@ -584,18 +437,11 @@ msgstr ""
 "legislation of the country of his citizenship."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:69
-#, fuzzy
-#| msgid "Сервис бесплатной раздачи книг"
 msgctxt "2.3."
 msgid "2.3. Сервис – веб-сайт для раздачи книг с доменным именем "
 msgstr "Free book distribution service"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:73
-#, fuzzy
-#| msgid ""
-#| "2.4. Услуги Сервиса — функционал Сервиса с возможностями для "
-#| "Пользователя, а также иные услуги, информация о которых размещена на "
-#| "страницах"
 msgctxt "2.4."
 msgid ""
 "2.4. Услуги Сервиса — функционал Сервиса с возможностями для Пользователя, а "
@@ -606,39 +452,26 @@ msgstr ""
 "is posted on the pages"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:74
-#, fuzzy
-#| msgid "О нас"
 msgctxt "О нас на сайте Сервиса."
 msgid "О нас"
 msgstr "About us"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:75
-#, fuzzy
-#| msgid "на сайте Сервиса."
 msgctxt "на сайте Сервиса."
 msgid "на сайте Сервиса."
 msgstr "on the Service's website"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:79
-#, fuzzy
-#| msgid "3. Режим работы Сервиса."
 msgctxt "3. Режим работы Сервиса."
 msgid "3. Режим работы Сервиса."
 msgstr "3. The mode of operation of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:81
-#, fuzzy
-#| msgid "3.1. Штатный режим работы:"
 msgctxt "3.1."
 msgid "3.1. Штатный режим работы:"
 msgstr "3.1. Regular operation mode:"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:83
-#, fuzzy
-#| msgid ""
-#| "3.1.1. В данном режиме работы запросы Пользователей обрабатываются в "
-#| "течение реального времени Сервисом, кроме времени осуществления работ "
-#| "согласно регламенту технических работ Сервиса или сервера."
 msgctxt "3.1.1."
 msgid ""
 "3.1.1. В данном режиме работы запросы Пользователей обрабатываются в течение "
@@ -650,11 +483,6 @@ msgstr ""
 "regulations of technical work of the Service or server."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:85
-#, fuzzy
-#| msgid ""
-#| "3.1.2. Поддержка Пользователей ведется службой поддержки сайта в "
-#| "мессенджере, а также по другим каналам связи способами, указанными "
-#| "Сервисом."
 msgctxt "3.1.2"
 msgid ""
 "3.1.2. Поддержка Пользователей ведется службой поддержки сайта в "
@@ -665,20 +493,11 @@ msgstr ""
 "Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:89
-#, fuzzy
-#| msgid "4. Правила пользования Сервисом WooW."
 msgctxt "4. Правила пользования Сервисом WooW"
 msgid "4. Правила пользования Сервисом WooW."
 msgstr "Terms of Use"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:91
-#, fuzzy
-#| msgid ""
-#| "4.1. Сервис предназначен для использования исключительно в личных целях. "
-#| "Пользователь соглашается с тем, что не будет использовать какой-либо иной "
-#| "аккаунт, кроме своего, а также не будет пытаться получить "
-#| "несанкционированный доступ к аккаунтам других пользователей либо к "
-#| "инфраструктуре Сервиса."
 msgctxt "4.1."
 msgid ""
 "4.1. Сервис предназначен для использования исключительно в личных целях. "
@@ -693,12 +512,6 @@ msgstr ""
 "users or to the infrastructure of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:93
-#, fuzzy
-#| msgid ""
-#| "4.2. Администрация Сервиса может в любое время и по своему собственному "
-#| "усмотрению отказать Пользователю в возможности получить платные услуги, "
-#| "заблокировать его или приостановить любую операцию до окончания "
-#| "рассмотрения конфликтной или спорной ситуации."
 msgctxt "4.2."
 msgid ""
 "4.2. Администрация Сервиса может в любое время и по своему собственному "
@@ -712,11 +525,6 @@ msgstr ""
 "aconflict or disputable situation."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:95
-#, fuzzy
-#| msgid ""
-#| "4.3 Пользователь соглашается с тем, что будет возвращать полученные им "
-#| "книги из сервиса в установленные сервисом сроки, указанные при заказе "
-#| "книги."
 msgctxt "4.3."
 msgid ""
 "4.3 Пользователь соглашается с тем, что будет возвращать полученные им книги "
@@ -727,11 +535,6 @@ msgstr ""
 "book."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:97
-#, fuzzy
-#| msgid ""
-#| "4.4 Администрация Сервиса может по своему усмотрению отказать "
-#| "Пользователю в возврате средств депозита Пользователя при невозврате или "
-#| "порче полученной Пользователем книги, принадлежащей Сервису."
 msgctxt "4.5."
 msgid ""
 "4.4 Администрация Сервиса может по своему усмотрению отказать Пользователю в "
@@ -743,17 +546,11 @@ msgstr ""
 "damageof the book received by the User belonging to the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:101
-#, fuzzy
-#| msgid "5. Порядок оказания услуг Сервисом."
 msgctxt "5. Порядок оказания услуг Сервисом"
 msgid "5. Порядок оказания услуг Сервисом."
 msgstr "5. The procedure for the provision of services by the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:103
-#, fuzzy
-#| msgid ""
-#| "5.1. Заказ услуг Сервиса осуществляется Пользователем путем совершения "
-#| "действий по покупке через ресурсы Сервиса."
 msgctxt "5.1."
 msgid ""
 "5.1. Заказ услуг Сервиса осуществляется Пользователем путем совершения "
@@ -763,10 +560,6 @@ msgstr ""
 "performing purchase actions through the resources of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:105
-#, fuzzy
-#| msgid ""
-#| "5.2. Воспользовавшись услугами Сервиса, Пользователь подтверждает, что "
-#| "ознакомлен со всей юридической документацией Сервиса."
 msgctxt "5.2."
 msgid ""
 "5.2. Воспользовавшись услугами Сервиса, Пользователь подтверждает, что "
@@ -776,10 +569,6 @@ msgstr ""
 "familiar with all the legal documentation of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:107
-#, fuzzy
-#| msgid ""
-#| "5.3. Сервис не принимает электронные деньги в качестве платежа, если "
-#| "данные средства не принадлежат Пользователю."
 msgctxt "5.3."
 msgid ""
 "5.3. Сервис не принимает электронные деньги в качестве платежа, если данные "
@@ -789,10 +578,6 @@ msgstr ""
 "funds do not belong to the User."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:109
-#, fuzzy
-#| msgid ""
-#| "5.4. Путем регистрации на сайте Сервиса и принятия всех условий, "
-#| "Пользователь принимает все изложенные условия."
 msgctxt "5.4."
 msgid ""
 "5.4. Путем регистрации на сайте Сервиса и принятия всех условий, "
@@ -802,18 +587,11 @@ msgstr ""
 "conditions, The User accepts all the conditions set forth."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:114
-#, fuzzy
-#| msgid "6. Правила пользования депозитом."
 msgctxt "6. Правила пользования депозитом."
 msgid "6. Правила пользования депозитом."
 msgstr "Specify the amount of deposit replenishment."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:116
-#, fuzzy
-#| msgid ""
-#| "6.1. После пополнения депозита, Пользователь имеет право вывести свои "
-#| "средства обратно на банковскую карту, отправив заявку на возврат средств "
-#| "через сайт или обратившись в техническую поддержку Сервиса."
 msgctxt "6.1."
 msgid ""
 "6.1. После пополнения депозита, Пользователь имеет право вывести свои "
@@ -825,11 +603,6 @@ msgstr ""
 "website or by contacting the technical support of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:119
-#, fuzzy, python-format
-#| msgid ""
-#| "6.1.1 При снятии средств с депозита пользователя, Пользователю будут "
-#| "отправлены все средства с депозита Пользователя за исключением комиссии "
-#| "за перевод средств, в размере 1%% от переводимых средств."
 msgctxt "6.1.1."
 msgid ""
 "6.1.1 При снятии средств с депозита пользователя, Пользователю будут "
@@ -841,10 +614,6 @@ msgstr ""
 "transfer of funds, in the amount of 1%% of the funds transferred."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:122
-#, fuzzy
-#| msgid ""
-#| "6.1.2. После снятия средств с депозита Пользователя, счетчик депозита "
-#| "Пользователя обнуляется."
 msgctxt "6.1.2."
 msgid ""
 "6.1.2. После снятия средств с депозита Пользователя, счетчик депозита "
@@ -854,11 +623,6 @@ msgstr ""
 "counteris reset to zero."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:125
-#, fuzzy
-#| msgid ""
-#| "6.1.3 Возврат средств с депозита Пользователя осуществляется только на "
-#| "банковскую карту с именем держателя банковской карты, с которой был "
-#| "пополнен счет депозита первоначально после обнуления счетчика депозита."
 msgctxt "6.1.3."
 msgid ""
 "6.1.3 Возврат средств с депозита Пользователя осуществляется только на "
@@ -870,10 +634,6 @@ msgstr ""
 "replenished initially after the deposit counter was reset."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:128
-#, fuzzy
-#| msgid ""
-#| "6.2 Уровень доступа пользователя к книгам зависит от количества денежных "
-#| "средств на депозите Пользователя."
 msgctxt "6.2."
 msgid ""
 "6.2 Уровень доступа пользователя к книгам зависит от количества денежных "
@@ -883,10 +643,6 @@ msgstr ""
 "the User's deposit."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:131
-#, fuzzy
-#| msgid ""
-#| "6.3 Соотношение денежных средств на депозите Пользователя к уровню "
-#| "доступа к книгам определяется по следующим тарифам:"
 msgctxt "6.3."
 msgid ""
 "6.3 Соотношение денежных средств на депозите Пользователя к уровню доступа к "
@@ -896,18 +652,11 @@ msgstr ""
 "is determined by the following tariffs:"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:134
-#, fuzzy
-#| msgid ""
-#| "6.3.1. При наличии денежных средств в размере от 0 сум до 100 000 сум."
 msgctxt "6.3.1.0"
 msgid "6.3.1. При наличии денежных средств в размере от 0 сум до 100 000 сум."
 msgstr "6.3.1. At the same time, a total of 0 am to 100,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:135
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 0сум до 100 000 сум, "
-#| "пользователь получает возможность заказывать книги 0-го уровня."
 msgctxt "6.3.1.1"
 msgid ""
 "При наличии денежных средств в размере от 0сум до 100 000 сум, пользователь "
@@ -917,21 +666,12 @@ msgstr ""
 "the opportunity to order level 0 books."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:138
-#, fuzzy
-#| msgid ""
-#| "6.3.2. При наличии денежных средств в размере от 101 000 сум до 200 000 "
-#| "сум."
 msgctxt "6.3.2.0"
 msgid ""
 "6.3.2. При наличии денежных средств в размере от 101 000 сум до 200 000 сум."
 msgstr "6.3.2. At the same time, a total of $ 101,000 am to $ 200,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:139
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 101 000 сум до 200 000 сум, "
-#| "пользователь получает возможность заказывать книги 1-го уровня "
-#| "включительно."
 msgctxt "6.3.2.1"
 msgid ""
 "При наличии денежных средств в размере от 101 000 сум до 200 000 сум, "
@@ -941,21 +681,12 @@ msgstr ""
 "gets the opportunity to order books of the 1st level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:142
-#, fuzzy
-#| msgid ""
-#| "6.3.3. При наличии денежных средств в размере от 201 000 сум до 300 000 "
-#| "сум."
 msgctxt "6.3.3.0"
 msgid ""
 "6.3.3. При наличии денежных средств в размере от 201 000 сум до 300 000 сум."
 msgstr "6.3.3. At the same time, a total of $ 201,000 am to $ 300,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:143
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 201 000 сум до 300 000 сум, "
-#| "пользователь получает возможность заказывать книги 2-го уровня "
-#| "включительно."
 msgctxt "6.3.3.1"
 msgid ""
 "При наличии денежных средств в размере от 201 000 сум до 300 000 сум, "
@@ -965,21 +696,12 @@ msgstr ""
 "gets the opportunity to order books of the 2nd level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:146
-#, fuzzy
-#| msgid ""
-#| "6.3.4. При наличии денежных средств в размере от 301 000 сум до 400 000 "
-#| "сум."
 msgctxt "6.3.4.0"
 msgid ""
 "6.3.4. При наличии денежных средств в размере от 301 000 сум до 400 000 сум."
 msgstr "6.3.4. At the same time, a total of $ 301,000 am to $ 400,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:147
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 301 000 сум до 400 000 сум, "
-#| "пользователь получает возможность заказывать книги 3-го уровня "
-#| "включительно."
 msgctxt "6.3.4.1"
 msgid ""
 "При наличии денежных средств в размере от 301 000 сум до 400 000 сум, "
@@ -989,21 +711,12 @@ msgstr ""
 "gets the opportunity to order books of the 3rd level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:150
-#, fuzzy
-#| msgid ""
-#| "6.3.5. При наличии денежных средств в размере от 401 000 сум до 500 000 "
-#| "сум."
 msgctxt "6.3.5.0"
 msgid ""
 "6.3.5. При наличии денежных средств в размере от 401 000 сум до 500 000 сум."
 msgstr "6.3.5. At the same time, a total of $ 401,000 am to $ 500,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:151
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 401 000 сум до 500 000 сум, "
-#| "пользователь получает возможность заказывать книги 4-го уровня "
-#| "включительно."
 msgctxt "6.3.5.1"
 msgid ""
 "При наличии денежных средств в размере от 401 000 сум до 500 000 сум, "
@@ -1013,21 +726,12 @@ msgstr ""
 "gets the opportunity to order books of the 4th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:154
-#, fuzzy
-#| msgid ""
-#| "6.3.6. При наличии денежных средств в размере от 501 000 сум до 600 000 "
-#| "сум."
 msgctxt "6.3.6.0"
 msgid ""
 "6.3.6. При наличии денежных средств в размере от 501 000 сум до 600 000 сум."
 msgstr "6.3.6. At the same time, a total of $ 501,000 am to $ 600,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:155
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 501 000 сум до 600 000 сум, "
-#| "пользователь получает возможность заказывать книги 5-го уровня "
-#| "включительно."
 msgctxt "6.3.6.1"
 msgid ""
 "При наличии денежных средств в размере от 501 000 сум до 600 000 сум, "
@@ -1037,21 +741,12 @@ msgstr ""
 "gets the opportunity to order books of the 5th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:158
-#, fuzzy
-#| msgid ""
-#| "6.3.7. При наличии денежных средств в размере от 601 000 сум до 700 000 "
-#| "сум."
 msgctxt "6.3.7.0"
 msgid ""
 "6.3.7. При наличии денежных средств в размере от 601 000 сум до 700 000 сум."
 msgstr "6.3.7. At the same time, a total of $ 601,000 am to $ 700,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:159
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 601 000 сум до 700 000 сум, "
-#| "пользователь получает возможность заказывать книги 6-го уровня "
-#| "включительно."
 msgctxt "6.3.7.1"
 msgid ""
 "При наличии денежных средств в размере от 601 000 сум до 700 000 сум, "
@@ -1061,10 +756,6 @@ msgstr ""
 "gets the opportunity to order books of the 6th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:162
-#, fuzzy
-#| msgid ""
-#| "6.3.8. При наличии денежных средств в размере от 701 000 сум до 800 000 "
-#| "сум."
 msgctxt "6.3.8.0"
 msgid ""
 "6.3.8. При наличии денежных средств в размере от 701 000 сум до 800 000 сум."
@@ -1072,11 +763,6 @@ msgstr ""
 "6.3.8. При наличии денежных средств в размере от 701 000 сум до 800 000 сум."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:163
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 701 000 сум до 800 000 сум, "
-#| "пользователь получает возможность заказывать книги 7-го уровня "
-#| "включительно."
 msgctxt "6.3.7.1"
 msgid ""
 "При наличии денежных средств в размере от 701 000 сум до 800 000 сум, "
@@ -1086,21 +772,12 @@ msgstr ""
 "gets the opportunity to order books of the 7th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:166
-#, fuzzy
-#| msgid ""
-#| "6.3.9. При наличии денежных средств в размере от 801 000 сум до 900 000 "
-#| "сум."
 msgctxt "6.3.9.0"
 msgid ""
 "6.3.9. При наличии денежных средств в размере от 801 000 сум до 900 000 сум."
 msgstr "6.3.9. At the same time, a total of 801,000 am to 900,000 am."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:167
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 801 000 сум до 900 000 сум, "
-#| "пользователь получает возможность заказывать книги 8-го уровня "
-#| "включительно."
 msgctxt "6.3.9.1"
 msgid ""
 "При наличии денежных средств в размере от 801 000 сум до 900 000 сум, "
@@ -1110,10 +787,6 @@ msgstr ""
 "gets the opportunity to order books of the 8th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:170
-#, fuzzy
-#| msgid ""
-#| "6.3.10. При наличии денежных средств в размере от 901 000 сум до 1 000 "
-#| "000 сум."
 msgctxt "6.3.10.0"
 msgid ""
 "6.3.10. При наличии денежных средств в размере от 901 000 сум до 1 000 000 "
@@ -1122,10 +795,6 @@ msgstr ""
 "6.3.10. If there are funds in the amount of 901,000 soums to 1,000,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:171
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 901 000 сум до 1 000 000 сум, "
-#| "пользователь получает возможность заказывать книги 9-го уровня."
 msgctxt "6.3.10."
 msgid ""
 "При наличии денежных средств в размере от 901 000 сум до 1 000 000 сум, "
@@ -1135,10 +804,6 @@ msgstr ""
 "user gets the opportunity to order books of the 9th level."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:174
-#, fuzzy
-#| msgid ""
-#| "6.3.11. При наличии денежных средств в размере от 1 001 000 сум до 1 100 "
-#| "000 сум."
 msgctxt "6.3.11.0"
 msgid ""
 "6.3.11. При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 "
@@ -1148,11 +813,6 @@ msgstr ""
 "1,100,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:175
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 сум, "
-#| "пользователь получает возможность заказывать книги 10-го уровня "
-#| "включительно."
 msgctxt "6.3.11.1"
 msgid ""
 "При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 сум, "
@@ -1162,10 +822,6 @@ msgstr ""
 "user gets the opportunity to order books of the 10th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:178
-#, fuzzy
-#| msgid ""
-#| "6.3.12. При наличии денежных средств в размере от 1 101 000 сум до 1 200 "
-#| "000 сум."
 msgctxt "6.3.12.0"
 msgid ""
 "6.3.12. При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 "
@@ -1175,11 +831,6 @@ msgstr ""
 "1,200,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:179
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 сум, "
-#| "пользователь получает возможность заказывать книги 11-го уровня "
-#| "включительно."
 msgctxt "6.3.12.1"
 msgid ""
 "При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 сум, "
@@ -1189,10 +840,6 @@ msgstr ""
 "user gets the opportunity to order books of the 11th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:182
-#, fuzzy
-#| msgid ""
-#| "6.3.13. При наличии денежных средств в размере от 1 201 000 сум до 1 300 "
-#| "000 сум."
 msgctxt "6.3.13.0"
 msgid ""
 "6.3.13. При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 "
@@ -1202,11 +849,6 @@ msgstr ""
 "1,300,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:183
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 сум, "
-#| "пользователь получает возможность заказывать книги 12-го уровня "
-#| "включительно."
 msgctxt "6.3.13.1"
 msgid ""
 "При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 сум, "
@@ -1216,10 +858,6 @@ msgstr ""
 "user gets the opportunity to order books of the 12th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:186
-#, fuzzy
-#| msgid ""
-#| "6.3.14. При наличии денежных средств в размере от 1 301 000 сум до 1 400 "
-#| "000 сум."
 msgctxt "6.3.14.0"
 msgid ""
 "6.3.14. При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 "
@@ -1229,11 +867,6 @@ msgstr ""
 "1,400,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:187
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 сум, "
-#| "пользователь получает возможность заказывать книги 13-го уровня "
-#| "включительно."
 msgctxt "6.3.140.1"
 msgid ""
 "При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 сум, "
@@ -1243,10 +876,6 @@ msgstr ""
 "user gets the opportunity to order books of the 13th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:190
-#, fuzzy
-#| msgid ""
-#| "6.3.15. При наличии денежных средств в размере от 1 401 000 сум до 1 500 "
-#| "000 сум."
 msgctxt "6.3.15.0"
 msgid ""
 "6.3.15. При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 "
@@ -1256,11 +885,6 @@ msgstr ""
 "1,500,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:191
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 сум, "
-#| "пользователь получает возможность заказывать книги 14-го уровня "
-#| "включительно."
 msgctxt "6.3.15.1"
 msgid ""
 "При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 сум, "
@@ -1270,17 +894,11 @@ msgstr ""
 "user gets the opportunity to order books of the 14th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:194
-#, fuzzy
-#| msgid "6.3.16. При наличии денежных средств в размере от 1 501 000 сум."
 msgctxt "6.3.16."
 msgid "6.3.16. При наличии денежных средств в размере от 1 501 000 сум."
 msgstr "6.3.16. In the presence of funds in the amount of 1,501,000 soums."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:195
-#, fuzzy
-#| msgid ""
-#| "При наличии денежных средств в размере от 1 501 000 сум, пользователь "
-#| "получает возможность заказывать книги 15-го уровня включительно."
 msgctxt "6.3.16.1"
 msgid ""
 "При наличии денежных средств в размере от 1 501 000 сум, пользователь "
@@ -1290,11 +908,6 @@ msgstr ""
 "opportunity to order books of the 15th level inclusive."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:198
-#, fuzzy
-#| msgid ""
-#| "6.4. Тарифы на оказание услуг определяются Сервисом и публикуются на "
-#| "сайте Сервиса. Администрация Сервиса вправе менять тарифы без "
-#| "дополнительного уведомления Пользователей."
 msgctxt "6.4."
 msgid ""
 "6.4. Тарифы на оказание услуг определяются Сервисом и публикуются на сайте "
@@ -1306,12 +919,6 @@ msgstr ""
 "right to change tariffs without additional notification of Users."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:201
-#, fuzzy
-#| msgid ""
-#| "6.5. В случае отправки денежных средств для пополнения депозита "
-#| "Пользователя, депозит пользователя будет пополнен автоматически в течении "
-#| "одних суток (24 часа). Если система не получит денежные средства, депозит "
-#| "не будет пополнен автоматически."
 msgctxt "6.5."
 msgid ""
 "6.5. В случае отправки денежных средств для пополнения депозита "
@@ -1325,11 +932,6 @@ msgstr ""
 "automatically."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:204
-#, fuzzy
-#| msgid ""
-#| "6.6. Если депозит не пополнен автоматически, после успешного "
-#| "подтверждения перевода и окончания срока ожидания (в течении 24 часов), "
-#| "Пользователь обязан связаться со службой поддержки Сервиса."
 msgctxt "6.6."
 msgid ""
 "6.6. Если депозит не пополнен автоматически, после успешного подтверждения "
@@ -1341,10 +943,6 @@ msgstr ""
 "hours), the User is obliged to contact the Service support service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:207
-#, fuzzy
-#| msgid ""
-#| "6.7. Если Пользователь случайно отправил больший платеж, то Пользователь "
-#| "обязан связаться со службой поддержки Сервиса."
 msgctxt "6.7."
 msgid ""
 "6.7. Если Пользователь случайно отправил больший платеж, то Пользователь "
@@ -1354,17 +952,11 @@ msgstr ""
 "contact the Service support service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:212
-#, fuzzy
-#| msgid "7. Ответственность."
 msgctxt "7. Ответственность."
 msgid "7. Ответственность."
 msgstr "7. Responsibility."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:214
-#, fuzzy
-#| msgid ""
-#| "7.1. Сервис не несет ответственности перед Пользователем и иными лицами "
-#| "за потери, ущерб и вред, вызванные противоправными действиями третьих лиц."
 msgctxt "7.1."
 msgid ""
 "7.1. Сервис не несет ответственности перед Пользователем и иными лицами за "
@@ -1374,11 +966,6 @@ msgstr ""
 "damages and harm caused by illegal actions of third parties."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:216
-#, fuzzy
-#| msgid ""
-#| "7.2. Сервис не несет ответственности за любые переводы, которые были "
-#| "осуществлены с ошибкой или за любые попытки осуществления ошибочного "
-#| "перевода."
 msgctxt "7.2."
 msgid ""
 "7.2. Сервис не несет ответственности за любые переводы, которые были "
@@ -1389,12 +976,6 @@ msgstr ""
 "error or for any attempts to make an erroneous transfer."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:218
-#, fuzzy
-#| msgid ""
-#| "7.3. Сервис презюмирует добросовестность и легальность владения, "
-#| "пользования и распоряжения Пользователем всех материалов и иных вещей, "
-#| "предоставляемых при обращении на сайт или ресурсы Сервиса или при "
-#| "осуществлении взаимодействия с администрацией Сервиса."
 msgctxt "7.3."
 msgid ""
 "7.3. Сервис презюмирует добросовестность и легальность владения, пользования "
@@ -1408,11 +989,6 @@ msgstr ""
 "wheninteracting with the administration of the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:220
-#, fuzzy
-#| msgid ""
-#| "7.4. Сервис и Администрация Сервиса уважает законы, правила и нормы всех "
-#| "стран. В случае нарушения прав каких-либо лиц Администрация готова к "
-#| "пресечению противоправных действий Пользователей."
 msgctxt "7.4."
 msgid ""
 "7.4. Сервис и Администрация Сервиса уважает законы, правила и нормы всех "
@@ -1424,23 +1000,11 @@ msgstr ""
 "of any persons, the Administration is ready to stop illegal actions of Users."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:225
-#, fuzzy
-#| msgid "8. Форс-мажор."
 msgctxt "8. Форс-мажор"
 msgid "8. Форс-мажор."
 msgstr "8. Force majeure."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:227
-#, fuzzy
-#| msgid ""
-#| "8.1. Пользователь или Сервис не несут ответственности друг перед другом "
-#| "за невыполнение обязательств, связанных с оказанием Сервисом услуг, "
-#| "вызванное обстоятельствами, возникшими помимо воли и желания сторон, "
-#| "которые нельзя было предвидеть или избежать, включая объявленную или "
-#| "фактическую войну, гражданские волнения, эпидемии, землетрясения, "
-#| "наводнения, пожары и другие стихийные бедствия, действия органов власти и "
-#| "прочие непреодолимые обстоятельства и не могут заявлять ни о каких "
-#| "убытках или ущербе, возникших из-за таких обстоятельств."
 msgctxt "8.1."
 msgid ""
 "8.1. Пользователь или Сервис не несут ответственности друг перед другом за "
@@ -1462,12 +1026,6 @@ msgstr ""
 "circumstances."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:229
-#, fuzzy
-#| msgid ""
-#| "8.2. Сторона, которая не исполняет свое обязательство вследствие действия "
-#| "непреодолимой силы, должна известить другую Сторону о препятствии и его "
-#| "влиянии на исполнение обязательств без промедления, но не позднее 3 "
-#| "(трех) календарных дней с момента наступления указанных обстоятельств."
 msgctxt "8.2."
 msgid ""
 "8.2. Сторона, которая не исполняет свое обязательство вследствие действия "
@@ -1482,11 +1040,6 @@ msgstr ""
 "circumstances."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:231
-#, fuzzy
-#| msgid ""
-#| "8.3. Сторона, не известившая другую Сторону о невозможности исполнения "
-#| "своих обязательств по настоящему договору, теряет право ссылаться на "
-#| "такую невозможность."
 msgctxt "8.3."
 msgid ""
 "8.3. Сторона, не известившая другую Сторону о невозможности исполнения своих "
@@ -1498,18 +1051,11 @@ msgstr ""
 "suchimpossibility."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:236
-#, fuzzy
-#| msgid "9. Заключительные положения."
 msgctxt "9. Заключительные положения."
 msgid "9. Заключительные положения."
 msgstr "9. Final provisions."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:238
-#, fuzzy
-#| msgid ""
-#| "9.1. Информация о Пользователе и о его операциях не хранится на сервере "
-#| "сайта Сервиса. По запросу Пользователя доступ к аккаунту может быть "
-#| "ограничен либо удален."
 msgctxt "9.1."
 msgid ""
 "9.1. Информация о Пользователе и о его операциях не хранится на сервере "
@@ -1521,10 +1067,6 @@ msgstr ""
 "account can be restricted or deleted."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:240
-#, fuzzy
-#| msgid ""
-#| "9.2. Срок ответа Сервиса на запросы Пользователя составляет до пяти "
-#| "рабочих дней с момента получения соответствующего запроса Пользователя."
 msgctxt "9.2."
 msgid ""
 "9.2. Срок ответа Сервиса на запросы Пользователя составляет до пяти рабочих "
@@ -1534,11 +1076,6 @@ msgstr ""
 "from the date of receipt of the corresponding User request."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:242
-#, fuzzy
-#| msgid ""
-#| "9.3. Условия настоящих Оферты согласовываются с Пользователем при "
-#| "регистрации. Согласие с Офертой, опубликованной в электронной форме, "
-#| "является действительным акцептом полного содержания настоящих Оферты."
 msgctxt "9.3."
 msgid ""
 "9.3. Условия настоящих Оферты согласовываются с Пользователем при "
@@ -1550,13 +1087,6 @@ msgstr ""
 "of the full content of these Offers."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:244
-#, fuzzy
-#| msgid ""
-#| "9.4. Информация, размещенная на сайте Сервиса, включая все графические "
-#| "изображения, текстовую информацию, коды программ и т.д. защищена "
-#| "национальным и международным законодательством об авторских правах и "
-#| "смежных с ними. Несанкционированное копирование материалов не допускается "
-#| "и влечет за собой полное возмещение причиненных Сервису убытков."
 msgctxt "9.4."
 msgid ""
 "9.4. Информация, размещенная на сайте Сервиса, включая все графические "
@@ -1572,26 +1102,17 @@ msgstr ""
 "the Service."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:246
-#, fuzzy
-#| msgid ""
-#| "9.5. Все права защищены. Несанкционированное копирование Оферты запрещено."
 msgctxt "9.5."
 msgid ""
 "9.5. Все права защищены. Несанкционированное копирование Оферты запрещено."
 msgstr "All rights reserved. Unauthorized copying of the Offer is prohibited."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:251
-#, fuzzy
-#| msgid "10. Контактные данные."
 msgctxt "10. Контактные данные."
 msgid "10. Контактные данные."
 msgstr "10. Contact details."
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:253
-#, fuzzy
-#| msgid ""
-#| " 10.1. Пользователь может связаться со специалистами и Администрацией "
-#| "Сервиса в рабочее время следующими способами:"
 msgctxt "10.1."
 msgid ""
 " 10.1. Пользователь может связаться со специалистами и Администрацией "
@@ -1601,45 +1122,31 @@ msgstr ""
 "Service during working hours in the following ways:"
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:256
-#, fuzzy
-#| msgid "10.1.1. В онлайн-чате Телеграмм – "
 msgctxt "10.1.1."
 msgid "10.1.1. В онлайн-чате Телеграмм – "
 msgstr "10.1.1. In the Telegram online chat – "
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:260
-#, fuzzy
-#| msgid "10.1.2. Путем направления письма на адрес электронной почты:"
 msgctxt "10.1.2."
 msgid "10.1.2. Путем направления письма на адрес электронной почты:"
 msgstr "10.1.2. By sending a letter to the email address: "
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:28
-#, fuzzy
-#| msgid "Техническая поддержка "
 msgctxt "Техническая поддержка 1"
 msgid "Техническая поддержка "
 msgstr "Technical support"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:29
-#, fuzzy
-#| msgid "WooW сервиса"
 msgctxt "1 WooW сервиса"
 msgid "WooW сервиса"
 msgstr "Wow service"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:33
-#, fuzzy
-#| msgid "Добро пожаловать на страницу поддержки сервиса "
 msgctxt "Добро пожаловать на страницу поддержки сервиса "
 msgid "Добро пожаловать на страницу поддержки сервиса "
 msgstr "Welcome to the support page of the service"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:35
-#, fuzzy
-#| msgid ""
-#| "Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы "
-#| "можете столкнуться."
 msgctxt ""
 "Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы можете "
 "столкнуться."
@@ -1651,33 +1158,21 @@ msgstr ""
 "mayencounter."
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:38
-#, fuzzy
-#| msgid "Способы связаться с нами:"
 msgctxt "Способы связаться с нами:"
 msgid "Способы связаться с нами:"
 msgstr "Ways to contact us:"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:41
-#, fuzzy
-#| msgid "В онлайн-чате Телеграмм – "
 msgctxt "В онлайн-чате Телеграмм – "
 msgid "В онлайн-чате Телеграмм – "
 msgstr "In the Telegram online chat –"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:45
-#, fuzzy
-#| msgid "Путем направления письма на адрес электронной почты: "
 msgctxt "Путем направления письма на адрес электронной почты: "
 msgid "Путем направления письма на адрес электронной почты: "
 msgstr "By sending a letter to the email address:"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:50
-#, fuzzy
-#| msgid ""
-#| "Мы стремимся обеспечить наших клиентов лучшим обслуживанием, и ваше "
-#| "мнение имеет для нас большое значение. Если у вас есть предложения по "
-#| "улучшению нашего сервиса или какие-либо отзывы, пожалуйста, не "
-#| "стесняйтесь сообщить нам."
 msgctxt "Мы стремимся обеспечить наших клиентов лучшим обслуживанием..."
 msgid ""
 "Мы стремимся обеспечить наших клиентов лучшим обслуживанием, и ваше мнение "
@@ -1690,38 +1185,28 @@ msgstr ""
 "service or any feedback, please feel free to let us know."
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:52
-#, fuzzy
-#| msgid "Благодарим вас за использование наших услуг!"
 msgctxt "Благодарим вас за использование наших услуг!"
 msgid "Благодарим вас за использование наших услуг!"
 msgstr "Thank you for using our services!"
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:55
-#, fuzzy
-#| msgid "С любовью, команда поддержки WooW"
 msgctxt "С любовью, команда поддержки WooW"
 msgid "С любовью, команда поддержки WooW"
 msgstr "With love, Wow support team"
 
 #: .\marketplace\templates\authorization\authorization.html:27
 #: .\marketplace\templates\authorization\registration.html:23
-#, fuzzy
-#| msgid "Сервис бесплатной раздачи книг"
 msgctxt "Сервис бесплатной раздачи книг"
 msgid "Сервис бесплатной раздачи книг"
 msgstr "Free book distribution service"
 
 #: .\marketplace\templates\authorization\authorization.html:28
-#, fuzzy
-#| msgid "Авторизация"
 msgctxt "Авторизация"
 msgid "Авторизация"
 msgstr "Authorization"
 
 #: .\marketplace\templates\authorization\authorization.html:41
 #: .\marketplace\templates\authorization\registration.html:59
-#, fuzzy
-#| msgid "Адрес электронной почты"
 msgctxt "Адрес электронной почты"
 msgid "Адрес электронной почты"
 msgstr "Email address"
@@ -1729,36 +1214,26 @@ msgstr "Email address"
 #: .\marketplace\templates\authorization\authorization.html:46
 #: .\marketplace\templates\authorization\authorization.html:49
 #: .\marketplace\templates\authorization\registration.html:64
-#, fuzzy
-#| msgid "Пароль"
 msgctxt "Пароль"
 msgid "Пароль"
 msgstr "Password"
 
 #: .\marketplace\templates\authorization\authorization.html:63
-#, fuzzy
-#| msgid "ВОЙТИ В АККАУНТ"
 msgctxt "ВОЙТИ В АККАУНТ"
 msgid "ВОЙТИ В АККАУНТ"
 msgstr "LOG IN TO YOUR ACCOUNT"
 
 #: .\marketplace\templates\authorization\authorization.html:80
-#, fuzzy
-#| msgid "У меня нет аккаунта"
 msgctxt "У меня нет аккаунта"
 msgid "У меня нет аккаунта"
 msgstr "I don't have an account"
 
 #: .\marketplace\templates\authorization\registration.html:24
-#, fuzzy
-#| msgid "Регистрация"
 msgctxt "Регистрация"
 msgid "Регистрация"
 msgstr "Registration"
 
 #: .\marketplace\templates\authorization\registration.html:68
-#, fuzzy
-#| msgid "Придумайте пароль"
 msgctxt "Придумайте пароль"
 msgid "Придумайте пароль"
 msgstr "Come up with a password"
@@ -1766,68 +1241,50 @@ msgstr "Come up with a password"
 #: .\marketplace\templates\authorization\registration.html:85
 msgctxt "Я принимаю условия "
 msgid "Я принимаю условия "
-msgstr ""
+msgstr "I accept the terms"
 
 #: .\marketplace\templates\authorization\registration.html:85
 msgctxt "Пользовательской оферты"
 msgid "Пользовательской оферты"
-msgstr ""
+msgstr "User offer"
 
 #: .\marketplace\templates\authorization\registration.html:87
-#, fuzzy
-#| msgid "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgctxt "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgid "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgstr "REGISTER"
 
 #: .\marketplace\templates\authorization\registration.html:103
-#, fuzzy
-#| msgid "Я уже зарегистрирован"
 msgctxt "Я уже зарегистрирован"
 msgid "Я уже зарегистрирован"
 msgstr "I am already registered"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:27
 #: .\marketplace\templates\components\left_menu.html:44
-#, fuzzy
-#| msgid "Делать добро"
 msgctxt "Делать добро"
 msgid "Делать добро"
 msgstr "Donate"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:29
-#, fuzzy
-#| msgid "Инструкция как делать добро"
 msgctxt "Инструкция как делать добро"
 msgid "Инструкция как делать добро"
 msgstr "Instructions on how to do good"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:36
-#, fuzzy
-#| msgid "Анкета"
 msgctxt "Анкета добра 1"
 msgid "Анкета"
 msgstr "Questionnaire"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:37
-#, fuzzy
-#| msgid "добра"
 msgctxt "Анкета добра 2"
 msgid "добра"
 msgstr "goodness"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:39
-#, fuzzy
-#| msgid "Личные данные"
 msgctxt "Личные данные"
 msgid "Личные данные"
 msgstr "Personal data"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:40
-#, fuzzy
-#| msgid ""
-#| "Личные данные нужны нам, чтобы связаться с вами после отправки вами "
-#| "анкеты."
 msgctxt "Личные данные нужны нам, чтобы связаться с вами..."
 msgid ""
 "Личные данные нужны нам, чтобы связаться с вами после отправки вами анкеты."
@@ -1836,17 +1293,11 @@ msgstr ""
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:77
 #: .\marketplace\templates\book_donate_page\book_donate.html:83
-#, fuzzy
-#| msgid "Информация о книгах"
 msgctxt "Информация о книгах"
 msgid "Информация о книгах"
 msgstr "Information about books"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:79
-#, fuzzy
-#| msgid ""
-#| "В поле ниже вы можете расписать информацию о книге или книгах, которые вы "
-#| "хотите передать нашему сервису в качестве благотворительности. "
 msgctxt "В поле ниже вы можете расписать информацию о книге...."
 msgid ""
 "В поле ниже вы можете расписать информацию о книге или книгах, которые вы "
@@ -1856,22 +1307,16 @@ msgstr ""
 "you want to give to our service as a charity. "
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:81
-#, fuzzy
-#| msgid "Пример заполнения: \"Война и мир том 1-2\" Толстой.Л.Н 2шт. "
 msgctxt "Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgid "Пример заполнения: \"Война и мир том 1-2\" Толстой.Л.Н 2шт. "
 msgstr "Example of filling: \"War and peace volume 1-2\" Tolstoy.L.N. 2 pcs."
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:86
-#, fuzzy
-#| msgid "Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgctxt "Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgid "Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgstr "Example of filling: War and Peace volume 1-2 Tolstoy.L.N. 2 pcs."
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:89
-#, fuzzy
-#| msgid "После отправки анкеты, вам позвонят с кол-центра нашего сервиса. "
 msgctxt "После отправки анкеты, вам позвонят с кол-центра нашего сервиса."
 msgid "После отправки анкеты, вам позвонят с кол-центра нашего сервиса. "
 msgstr ""
@@ -1879,52 +1324,38 @@ msgstr ""
 "center of our service."
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:89
-#, fuzzy
-#| msgid "Спасибо за вашу помощь в развитии сервиса!"
 msgctxt "Спасибо за вашу помощь в развитии сервиса!"
 msgid "Спасибо за вашу помощь в развитии сервиса!"
 msgstr "Thank you for your help in developing the service!"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:92
-#, fuzzy
-#| msgid "Отправить анкету"
 msgctxt "Отправить анкету"
 msgid "Отправить анкету"
 msgstr "Send a questionnaire"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:104
-#, fuzzy
-#| msgid "Инструкция как делать добро"
 msgctxt "Инструкция как делать добро 1"
 msgid "Инструкция как "
 msgstr "Instructions on how to do good"
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:105
-#, fuzzy
-#| msgid "Делать добро"
 msgctxt "Инструкция как делать добро 2"
 msgid "делать добро"
 msgstr "Doing good"
 
 #: .\marketplace\templates\book_info\book_page.html:34
 #: .\marketplace\templates\order_book\order_book.html:43
-#, fuzzy
-#| msgid "Авторы:"
 msgctxt "Авторы:"
 msgid "Авторы:"
 msgstr "Authors:"
 
 #: .\marketplace\templates\book_info\book_page.html:47
 #: .\marketplace\templates\order_book\order_book.html:58
-#, fuzzy
-#| msgid "Год издания:"
 msgctxt "Год издания:"
 msgid "Год издания:"
 msgstr "Year of publication:"
 
 #: .\marketplace\templates\book_info\book_page.html:50
-#, fuzzy
-#| msgid "-е издание"
 msgctxt "-е издание"
 msgid "-е издание"
 msgstr "edition"
@@ -1939,40 +1370,30 @@ msgstr "edition"
 #: .\marketplace\templates\home\home.html:76
 #: .\marketplace\templates\order_book\order_book.html:63
 #: .\marketplace\templates\search_result_page\search_result.html:81
-#, fuzzy
-#| msgid "Язык:"
 msgctxt "Язык:"
 msgid "Язык:"
 msgstr "Language:"
 
 #: .\marketplace\templates\book_info\book_page.html:59
 #: .\marketplace\templates\order_book\order_book.html:67
-#, fuzzy
-#| msgid "Сейчас читают:"
 msgctxt "Сейчас читают:"
 msgid "Сейчас читают:"
 msgstr "Now they are reading:"
 
 #: .\marketplace\templates\book_info\book_page.html:61
 #: .\marketplace\templates\order_book\order_book.html:69
-#, fuzzy
-#| msgid "Уже прочли:"
 msgctxt "Уже прочли:"
 msgid "Уже прочли:"
 msgstr "Have you read it yet:"
 
 #: .\marketplace\templates\book_info\book_page.html:63
 #: .\marketplace\templates\order_book\order_book.html:71
-#, fuzzy
-#| msgid "Всего книг:"
 msgctxt "Всего книг:"
 msgid "Всего книг:"
 msgstr "Total books:"
 
 #: .\marketplace\templates\book_info\book_page.html:66
 #: .\marketplace\templates\order_book\order_book.html:74
-#, fuzzy
-#| msgid "Варианты доступа:"
 msgctxt "Варианты доступа:"
 msgid "Варианты доступа:"
 msgstr "Access options:"
@@ -1980,8 +1401,6 @@ msgstr "Access options:"
 #: .\marketplace\templates\book_info\book_page.html:80
 #: .\marketplace\templates\order_book\order_book.html:88
 #: .\marketplace\templates\search_result_page\search_result.html:96
-#, fuzzy
-#| msgid "Бумажная книга"
 msgctxt "Бумажная книга"
 msgid "Бумажная книга"
 msgstr "Paper Book"
@@ -1989,8 +1408,6 @@ msgstr "Paper Book"
 #: .\marketplace\templates\book_info\book_page.html:93
 #: .\marketplace\templates\order_book\order_book.html:100
 #: .\marketplace\templates\search_result_page\search_result.html:108
-#, fuzzy
-#| msgid "Электронная книга"
 msgctxt "Электронная книга"
 msgid "Электронная книга"
 msgstr "E-book"
@@ -1998,122 +1415,88 @@ msgstr "E-book"
 #: .\marketplace\templates\book_info\book_page.html:106
 #: .\marketplace\templates\order_book\order_book.html:112
 #: .\marketplace\templates\search_result_page\search_result.html:120
-#, fuzzy
-#| msgid "Аудиокнига"
 msgctxt "Аудиокнига"
 msgid "Аудиокнига"
 msgstr "Audiobook"
 
 #: .\marketplace\templates\book_info\book_page.html:112
 #: .\marketplace\templates\book_info\book_page.html:119
-#, fuzzy
-#| msgid "ЗАКАЗАТЬ"
 msgctxt "ЗАКАЗАТЬ"
 msgid "ЗАКАЗАТЬ"
 msgstr "Order"
 
 #: .\marketplace\templates\book_info\book_page.html:117
 #: .\marketplace\templates\book_info\book_page.html:124
-#, fuzzy
-#| msgid "Кинуть на Полку"
 msgctxt "Кинуть на Полку"
 msgid "Кинуть на Полку"
 msgstr "Throw it on the Shelf"
 
 #: .\marketplace\templates\book_info\book_page.html:132
-#, fuzzy
-#| msgid "Аннотация"
 msgctxt "Аннотация  к книге: 1"
 msgid "Аннотация"
 msgstr "Summary "
 
 #: .\marketplace\templates\book_info\book_page.html:132
-#, fuzzy
-#| msgid " к книге:"
 msgctxt "Аннотация  к книге: 2"
 msgid " к книге:"
 msgstr "of the book:"
 
 #: .\marketplace\templates\book_info\book_page.html:136
-#, fuzzy
-#| msgid "Ключевые"
 msgctxt "Ключевые слова 1"
 msgid "Ключевые"
 msgstr "Keywords"
 
 #: .\marketplace\templates\book_info\book_page.html:136
-#, fuzzy
-#| msgid "слова:"
 msgctxt "Ключевые слова 2"
 msgid "слова:"
 msgstr ":"
 
 #: .\marketplace\templates\book_info\book_page.html:148
-#, fuzzy
-#| msgid "Еще книги"
 msgctxt "Еще книги от Авторов: 1"
 msgid "Еще книги"
 msgstr "More books"
 
 #: .\marketplace\templates\book_info\book_page.html:148
-#, fuzzy
-#| msgid "от Авторов:"
 msgctxt "Еще книги от Авторов: 2"
 msgid "от Авторов:"
 msgstr "from the Authors:"
 
 #: .\marketplace\templates\book_info\book_page.html:165
-#, fuzzy
-#| msgid "Похожие"
 msgctxt "Похожие Книги: 1"
 msgid "Похожие"
 msgstr "Similar"
 
 #: .\marketplace\templates\book_info\book_page.html:165
-#, fuzzy
-#| msgid " Книги:"
 msgctxt "Похожие Книги: 2"
 msgid " Книги:"
 msgstr " Books:"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:27
-#, fuzzy
-#| msgid "Моя "
 msgctxt "Моя книжная полка 1."
 msgid "Моя "
 msgstr "My "
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:27
-#, fuzzy
-#| msgid "книжная полка"
 msgctxt "Моя книжная полка 2."
 msgid "книжная полка"
 msgstr "bookshelf"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:35
-#, fuzzy
-#| msgid "Избранные"
 msgctxt "Избранные"
 msgid "Избранные"
 msgstr "Favorites"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:37
-#, fuzzy
-#| msgid "В ожидании..."
 msgctxt "В ожидании..."
 msgid "В ожидании..."
 msgstr "Waiting..."
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:39
-#, fuzzy
-#| msgid "Я читаю"
 msgctxt "Я читаю"
 msgid "Я читаю"
 msgstr "I'm reading"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:41
-#, fuzzy
-#| msgid "Прочтенные"
 msgctxt "Прочтенные"
 msgid "Прочтенные"
 msgstr "Read"
@@ -2121,106 +1504,78 @@ msgstr "Read"
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:60
 msgctxt "Вы можете взять эту книгу сроком на 30 дней (Бесплатно)"
 msgid "Вы можете взять эту книгу сроком на 30 дней (Бесплатно)"
-msgstr ""
+msgstr "You can borrow this book for a period of 30 days (Free of charge)"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:65
-#, fuzzy
-#| msgid "Заказать"
 msgctxt "Заказать"
 msgid "Заказать"
 msgstr "To order"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:69
-#, fuzzy
-#| msgid "Удалить"
 msgctxt "Удалить"
 msgid "Удалить"
 msgstr "Remove"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:95
-#, fuzzy
-#| msgid "Ожидайте звонка для подтверждения заказа"
 msgctxt "Ожидайте звонка с подтверждением "
 msgid "Ожидайте звонка с подтверждением "
 msgstr "Wait for a call to confirm the order"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:95
-#, fuzzy
-#| msgid "отправки"
 msgctxt "отправки../"
 msgid "отправки"
 msgstr "sending"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:95
-#, fuzzy
-#| msgid " вам вашей "
 msgctxt " вам вашей ../"
 msgid " вам вашей "
 msgstr "to you your"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:96
-#, fuzzy
-#| msgid "книги"
 msgctxt "книги../"
 msgid "книги"
 msgstr "books"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:116
-#, fuzzy
-#| msgid "Ожидайте звонка для подтверждения возврат"
 msgctxt "Ожидайте звонка с подтверждением регистрации "
 msgid "Ожидайте звонка с подтверждением регистрации "
 msgstr "Wait for a call to confirm the refund"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:116
-#, fuzzy
-#| msgid "возврата вашей книги"
 msgctxt "возврата вашей книги..."
 msgid "возврата вашей книги"
 msgstr "return of your book"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:144
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:185
-#, fuzzy
-#| msgid "Год издания:"
 msgctxt "Дата получения:"
 msgid "Дата получения:"
 msgstr "Year of publication:"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:149
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:190
-#, fuzzy
-#| msgid "Оформить возврат"
 msgctxt "Дата возврата:"
 msgid "Дата возврата:"
 msgstr "Issue a refund"
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:157
-#, fuzzy
-#| msgid "Оформить возврат"
 msgctxt "Оформить возврат"
 msgid "Оформить возврат"
 msgstr "Issue a refund"
 
 #: .\marketplace\templates\category_books_page\category_books.html:27
-#, fuzzy
-#| msgid "Категория:"
 msgctxt "Категория:"
 msgid "Категория:"
 msgstr "Category:"
 
 #: .\marketplace\templates\category_books_page\category_books.html:28
 #: .\marketplace\templates\home\home.html:68
-#, fuzzy
-#| msgid "Подборка для Вас"
 msgctxt "Подборка для Вас"
 msgid "Подборка для Вас"
 msgstr "A selection for you"
 
 #: .\marketplace\templates\category_books_page\category_books.html:39
 #: .\marketplace\templates\search_result_page\search_result.html:40
-#, fuzzy
-#| msgid "Сортировать"
 msgctxt "Сортировать"
 msgid "Сортировать"
 msgstr "Sort"
@@ -2229,8 +1584,6 @@ msgstr "Sort"
 #: .\marketplace\templates\components\header.html:15
 #: .\marketplace\templates\search_result_page\search_result.html:44
 #: .\marketplace\templates\search_result_page\search_result.html:60
-#, fuzzy
-#| msgid "Название"
 msgctxt "Название"
 msgid "Название"
 msgstr "Title"
@@ -2238,61 +1591,45 @@ msgstr "Title"
 #: .\marketplace\templates\category_books_page\category_books.html:44
 #: .\marketplace\templates\components\header.html:17
 #: .\marketplace\templates\search_result_page\search_result.html:45
-#, fuzzy
-#| msgid "Автор"
 msgctxt "Автор"
 msgid "Автор"
 msgstr "Author"
 
 #: .\marketplace\templates\category_books_page\category_books.html:45
 #: .\marketplace\templates\search_result_page\search_result.html:46
-#, fuzzy
-#| msgid "Год издания"
 msgctxt "Год издания"
 msgid "Год издания"
 msgstr "Year of publication"
 
 #: .\marketplace\templates\category_books_page\category_books.html:46
 #: .\marketplace\templates\search_result_page\search_result.html:47
-#, fuzzy
-#| msgid "Цена"
 msgctxt "Цена"
 msgid "Цена"
 msgstr "Price"
 
 #: .\marketplace\templates\components\header.html:11
 #: .\marketplace\templates\components\header.html:14
-#, fuzzy
-#| msgid "Все"
 msgctxt "Все"
 msgid "Все"
 msgstr "All"
 
 #: .\marketplace\templates\components\header.html:16
 #: .\marketplace\templates\search_result_page\search_result.html:61
-#, fuzzy
-#| msgid "Жанр"
 msgctxt "Жанр"
 msgid "Жанр"
 msgstr "Genre"
 
 #: .\marketplace\templates\components\header.html:27
-#, fuzzy
-#| msgid "Поиск"
 msgctxt "Поиск"
 msgid "Поиск"
 msgstr "Search"
 
 #: .\marketplace\templates\components\header.html:47
-#, fuzzy
-#| msgid "Каталог"
 msgctxt "Каталог"
 msgid "Каталог"
 msgstr "Catalog"
 
 #: .\marketplace\templates\components\header.html:119
-#, fuzzy
-#| msgid "Мой аккаунт"
 msgctxt "Мой аккаунт"
 msgid "Мой аккаунт"
 msgstr "My account"
@@ -2300,94 +1637,68 @@ msgstr "My account"
 #: .\marketplace\templates\components\header.html:120
 #: .\marketplace\templates\components\left_menu.html:29
 #: .\marketplace\templates\components\left_menu.html:35
-#, fuzzy
-#| msgid "Моя полка"
 msgctxt "Моя полка"
 msgid "Моя полка"
 msgstr "My shelf"
 
 #: .\marketplace\templates\components\header.html:122
-#, fuzzy
-#| msgid "Задать вопрос"
 msgctxt "Задать вопрос"
 msgid "Задать вопрос"
 msgstr "Ask a question"
 
 #: .\marketplace\templates\components\header.html:124
-#, fuzzy
-#| msgid "Выйти"
 msgctxt "Выйти"
 msgid "Выйти"
 msgstr "Exit"
 
 #: .\marketplace\templates\components\header.html:126
-#, fuzzy
-#| msgid "Войти"
 msgctxt "Войти"
 msgid "Войти"
 msgstr "Login"
 
 #: .\marketplace\templates\components\left_menu.html:20
-#, fuzzy
-#| msgid "Дом"
 msgctxt "Дом"
 msgid "Дом"
 msgstr "House"
 
 #: .\marketplace\templates\components\left_menu.html:47
 #: .\marketplace\templates\components\left_menu.html:61
-#, fuzzy
-#| msgid "О нас"
 msgctxt "О нас"
 msgid "О нас"
 msgstr "About us"
 
 #: .\marketplace\templates\components\left_menu.html:50
 #: .\marketplace\templates\components\left_menu.html:64
-#, fuzzy
-#| msgid "Поддержка"
 msgctxt "Поддержка"
 msgid "Поддержка"
 msgstr "Support"
 
 #: .\marketplace\templates\home\home.html:25
-#, fuzzy
-#| msgid "Цитаты дня"
 msgctxt "Цитаты дня"
 msgid "Цитаты дня"
 msgstr "Quotes of the Day"
 
 #: .\marketplace\templates\home\home.html:54
-#, fuzzy
-#| msgid "Новинки"
 msgctxt "Новинки"
 msgid "Новинки"
 msgstr "New books"
 
 #: .\marketplace\templates\home\home.html:67
-#, fuzzy
-#| msgid "Добро пожаловать"
 msgctxt "Добро пожаловать"
 msgid "Добро пожаловать"
 msgstr "Welcome"
 
 #: .\marketplace\templates\notifications\book_reserved.html:28
-#, fuzzy
-#| msgid "Свободных"
 msgctxt "Свободных книг пока нет 1"
 msgid "Свободных"
 msgstr "There are no"
 
 #: .\marketplace\templates\notifications\book_reserved.html:29
-#, fuzzy
-#| msgid "книг пока нет"
 msgctxt "Свободных книг пока нет 2"
 msgid "книг пока нет"
 msgstr "free books yet"
 
 #: .\marketplace\templates\notifications\book_reserved.html:30
-#, fuzzy
-#| msgid "Попробуйте заказать книгу позже"
 msgctxt "Попробуйте заказать книгу позже"
 msgid "Попробуйте заказать книгу позже"
 msgstr "Try ordering the book later"
@@ -2397,15 +1708,11 @@ msgstr "Try ordering the book later"
 #: .\marketplace\templates\notifications\order_success.html:37
 #: .\marketplace\templates\notifications\return_success.html:37
 #: .\marketplace\templates\notifications\user_booked_book.html:37
-#, fuzzy
-#| msgid "Вернуться на главную страницу"
 msgctxt "Вернуться на главную страницу"
 msgid "Вернуться на главную страницу"
 msgstr "Go back to the main page"
 
 #: .\marketplace\templates\notifications\error_404.html:28
-#, fuzzy
-#| msgid "Страница"
 msgctxt "Страница не найдена"
 msgid "Страница"
 msgstr "Page"
@@ -2415,191 +1722,137 @@ msgid "не найдена"
 msgstr "not found"
 
 #: .\marketplace\templates\notifications\order_success.html:28
-#, fuzzy
-#| msgid "Заявка на "
 msgctxt "Заявка на заказ книги отправлена на рассмотрение 1"
 msgid "Заявка на "
 msgstr "The request for the"
 
 #: .\marketplace\templates\notifications\order_success.html:29
-#, fuzzy
-#| msgid "заказ книги отправлена"
 msgctxt "Заявка на заказ книги отправлена на рассмотрение 2"
 msgid "заказ книги отправлена"
 msgstr "order of the book has been sent "
 
 #: .\marketplace\templates\notifications\order_success.html:29
-#, fuzzy
-#| msgid " на рассмотрение"
 msgctxt "Заявка на заказ книги отправлена на рассмотрение 3"
 msgid " на рассмотрение"
 msgstr "for consideration"
 
 #: .\marketplace\templates\notifications\order_success.html:30
-#, fuzzy
-#| msgid "Ожидайте звонка для подтверждения заказа"
 msgctxt "Ожидайте звонка для подтверждения заказа"
 msgid "Ожидайте звонка для подтверждения заказа"
 msgstr "Wait for a call to confirm the order"
 
 #: .\marketplace\templates\notifications\return_success.html:28
-#, fuzzy
-#| msgid "Заявка на "
 msgctxt "Заявка на возврат книги отправлена на рассмотрение 1"
 msgid "Заявка на "
 msgstr "The request for the"
 
 #: .\marketplace\templates\notifications\return_success.html:29
-#, fuzzy
-#| msgid "возврат книги отправлена"
 msgctxt "Заявка на возврат книги отправлена на рассмотрение 2"
 msgid "возврат книги отправлена"
 msgstr "return of the book has been sent"
 
 #: .\marketplace\templates\notifications\return_success.html:29
-#, fuzzy
-#| msgid " на рассмотрение"
 msgctxt "Заявка на возврат книги отправлена на рассмотрение 3"
 msgid " на рассмотрение"
 msgstr "for consideration"
 
 #: .\marketplace\templates\notifications\return_success.html:30
-#, fuzzy
-#| msgid "Ожидайте звонка для подтверждения возврат"
 msgctxt "Ожидайте звонка для подтверждения возврат"
 msgid "Ожидайте звонка для подтверждения возврат"
 msgstr "Wait for a call to confirm the refund"
 
 #: .\marketplace\templates\notifications\user_booked_book.html:28
-#, fuzzy
-#| msgid "В данный момент "
 msgctxt "В данный момент 1 книга находится у вас 1"
 msgid "В данный момент "
 msgstr "At the moment"
 
 #: .\marketplace\templates\notifications\user_booked_book.html:29
-#, fuzzy
-#| msgid " 1 книга находится у вас"
 msgctxt "В данный момент 1 книга находится у вас 2"
 msgid " 1 книга находится у вас"
 msgstr "1 book is in your possession"
 
 #: .\marketplace\templates\notifications\user_booked_book.html:30
-#, fuzzy
-#| msgid "Попробуйте заказать новую книгу после возврата предыдущей"
 msgctxt "Попробуйте заказать новую книгу после возврата предыдущей"
 msgid "Попробуйте заказать новую книгу после возврата предыдущей"
 msgstr "Try to order a new book after returning the previous one"
 
 #: .\marketplace\templates\order_book\order_book.html:29
-#, fuzzy
-#| msgid "Заказать"
 msgctxt "Заказать книгу 1"
 msgid "Заказать"
 msgstr "To order"
 
 #: .\marketplace\templates\order_book\order_book.html:30
-#, fuzzy
-#| msgid "книгу"
 msgctxt "Заказать книгу 2"
 msgid "книгу"
 msgstr "a book"
 
 #: .\marketplace\templates\order_book\order_book.html:32
-#, fuzzy
-#| msgid "Информация о книге"
 msgctxt "Информация о книге"
 msgid "Информация о книге"
 msgstr "Information about the book"
 
 #: .\marketplace\templates\order_book\order_book.html:60
-#, fuzzy
-#| msgid "-е издание"
 msgctxt "-е издание../"
 msgid "-е издание"
 msgstr "edition"
 
 #: .\marketplace\templates\order_book\order_book.html:117
-#, fuzzy
-#| msgid "Открыть страницу книги"
 msgctxt "Открыть страницу книги"
 msgid "Открыть страницу книги"
 msgstr "Open a book page"
 
 #: .\marketplace\templates\order_book\order_book.html:125
-#, fuzzy
-#| msgid "Информация о пользователе"
 msgctxt "Информация о пользователе"
 msgid "Информация о пользователе"
 msgstr "User Information"
 
 #: .\marketplace\templates\order_book\order_book.html:152
 #: .\marketplace\templates\order_book\order_book.html:154
-#, fuzzy
-#| msgid "Адрес доставки"
 msgctxt "Адрес доставки"
 msgid "Адрес доставки"
 msgstr "Delivery address"
 
 #: .\marketplace\templates\order_book\order_book.html:159
-#, fuzzy
-#| msgid "Приблизительная дата возврата книги"
 msgctxt "Приблизительная дата возврата книги"
 msgid "Приблизительная дата возврата книги"
 msgstr "Approximate return date of the book"
 
 #: .\marketplace\templates\order_book\order_book.html:169
-#, fuzzy
-#| msgid "Я передумал(а)"
 msgctxt "Я передумал(а)"
 msgid "Я передумал(а)"
 msgstr "I changed my mind"
 
 #: .\marketplace\templates\order_book\order_book.html:173
-#, fuzzy
-#| msgid "Отправить заявку на получение книги"
 msgctxt "Отправить заявку на получение книги"
 msgid "Отправить заявку на получение книги"
 msgstr "Send a request for a book"
 
 #: .\marketplace\templates\search_result_page\search_result.html:28
-#, fuzzy
-#| msgid "Поиск:"
 msgctxt "Поиск:"
 msgid "Поиск:"
 msgstr "Search:"
 
 #: .\marketplace\templates\search_result_page\search_result.html:29
-#, fuzzy
-#| msgid "Результаты поиска:"
 msgctxt "Результаты поиска:"
 msgid "Результаты поиска:"
 msgstr "Search results:"
 
 #: .\marketplace\templates\search_result_page\search_result.html:62
-#, fuzzy
-#| msgid "Доступность"
 msgctxt "Доступность"
 msgid "Доступность"
 msgstr "Availability"
 
 #: .\marketplace\templates\search_result_page\search_result.html:63
-#, fuzzy
-#| msgid "Просмотр"
 msgctxt "Просмотр"
 msgid "Просмотр"
 msgstr "Viewing"
 
 #: .\marketplace\templates\search_result_page\search_result.html:140
-#, fuzzy
-#| msgid "Уровень"
 msgctxt "Уровень"
 msgid "Уровень"
 msgstr "Level"
 
 #: .\marketplace\templates\search_result_page\search_result.html:146
-#, fuzzy
-#| msgid "Посмотреть"
 msgctxt "Посмотреть"
 msgid "Посмотреть"
 msgstr "Watch"
