@@ -26,10 +26,10 @@
 
                 <div class="profile_white_block padding_left_70px margin_top_15px">
                     <div class="main_upper_block margin_top_30px -flex_direction_column">
-                        <h1 class="category_books_page_content_block_title">{% trans 'Заказать' %} <span
-                                class="orange_text">{% trans 'книгу' %}</span></h1>
+                        <h1 class="category_books_page_content_block_title">{% trans 'Заказать' context 'Заказать книгу 1' %} <span
+                                class="orange_text">{% trans 'книгу' context 'Заказать книгу 2' %}</span></h1>
                         <p class="main_books_content_block_secondary_title padding_0 margin_0 margin_top_30px bold_paragraph">
-                            {% trans 'Информация о книге' %}</p>
+                            {% trans 'Информация о книге' context 'Информация о книге' %}</p>
                     </div>
                     <div class="main_upper_block">
                         <div class="big_book_cover_block">
@@ -40,7 +40,7 @@
                         <div class="main_book_info_block">
                             <p class="book_info_book_name">{{ book_info.short_name }}</p>
                             <div class="book_info_paragraph_block">
-                                <p class="book_info_paragraph">{% trans 'Авторы:' %}</p>
+                                <p class="book_info_paragraph">{% trans 'Авторы:' context 'Авторы:' %}</p>
                                 {% for author in book_info.author.all %}
                                 <form method="POST" action="{% url 'book_search' %}" class="book_info_author_form">
                                     {% csrf_token %}
@@ -55,23 +55,23 @@
 
                             </div>
                             <div class="book_info_paragraph_block">
-                                <p class="book_info_paragraph">{% trans 'Год издания:' %}</p>
+                                <p class="book_info_paragraph">{% trans 'Год издания:' context 'Год издания:' %}</p>
                                 <p class="book_info_paragraph">{{ book_info.year }}</p>
-                                <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}-е издание</p>
+                                <p class="book_info_paragraph grey_paragraph margin_left_20px">{{ book_info.publications }}{% trans '-е издание' context '-е издание../' %}</p>
                             </div>
                             <div class="book_info_paragraph_block">
-                                <p class="book_info_paragraph">{% trans 'Язык:' %} {{ book_info.get_language_display }}</p>
+                                <p class="book_info_paragraph">{% trans 'Язык:' context 'Язык:' %} {{ book_info.get_language_display }}</p>
                             </div>
 
                             <div class="book_info_paragraph_block" style="margin-top:30px">
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Сейчас читают:' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Сейчас читают:' context 'Сейчас читают:' %}</p>
                                 <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_currently_reading }}</p>
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Уже прочли:' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Уже прочли:' context 'Уже прочли:' %}</p>
                                 <p class="book_info_paragraph bold_paragraph margin_right_30px">{{ books_already_read }}</p>
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Всего книг:' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Всего книг:' context 'Всего книг:' %}</p>
                                 <p class="book_info_paragraph bold_paragraph">{{ total_books }}</p>
                             </div>
-                            <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' %}</p>
+                            <p class="book_info_paragraph bold_paragraph" style="margin-top:30px">{% trans 'Варианты доступа:' context 'Варианты доступа:' %}</p>
                             <div class="book_info_paragraph_block">
                             <div class="book_info_paragraph_block" style="margin-top:15px">
                                 {% if book_info.is_paper %}
@@ -85,7 +85,7 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Бумажная книга' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Бумажная книга' context 'Бумажная книга' %}</p>
                                 {% if book_info.is_eBook %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
@@ -97,7 +97,7 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Электронная книга' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Электронная книга' context 'Электронная книга' %}</p>
                                 {% if book_info.is_audio %}
                                 <svg class="header_menu_icon">
                                     <use height="20px" width="20px" fill="#42BB4E"
@@ -109,12 +109,12 @@
                                          href="{% static 'marketplace/img/icons.svg' %}#cross_in_circle"></use>
                                 </svg>
                                 {% endif %}
-                                <p class="book_info_paragraph bold_paragraph">{% trans 'Аудиокнига' %}</p>
+                                <p class="book_info_paragraph bold_paragraph">{% trans 'Аудиокнига' context 'Аудиокнига' %}</p>
                             </div>
                         </div>
 
                             <div class="book_info_paragraph_block" style="margin-top:30px">
-                                <a class="put_on_shelf_button_link margin_0 -width_50percent" href="{% url 'book' book_info.id %}">{% trans 'Открыть страницу книги' %}</a>
+                                <a class="put_on_shelf_button_link margin_0 -width_50percent" href="{% url 'book' book_info.id %}">{% trans 'Открыть страницу книги' context 'Открыть страницу книги' %}</a>
                             </div>
                         </div>
                     </div>
@@ -122,41 +122,41 @@
                         <form method="POST" action="{% url 'order_book' book_info.id %}" class="book_info_author_form">
                             {% csrf_token %}
                         <p class="main_books_content_block_secondary_title padding_0 margin_0 margin_top_50px bold_paragraph">
-                            {% trans 'Информация о пользователе' %}</p>
+                            {% trans 'Информация о пользователе' context 'Информация о пользователе' %}</p>
                         <table>
                             <tbody>
                             <tr class="tr_raw">
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="first_name">{% trans 'Имя' %}</label>
+                                    <label class="input_label_bold" for="first_name">{% trans 'Имя' context 'Имя' %}</label>
                                     <input class="profile_input_field" type="text" name="first_name"
-                                           placeholder="{% trans 'Имя' %}" id="first_name"
+                                           placeholder="{% trans 'Имя' context 'Имя' %}" id="first_name"
                                            value="{{request.user.first_name}}" required>
 
                                 </td>
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="last_name">{% trans 'Фамилия' %}</label>
+                                    <label class="input_label_bold" for="last_name">{% trans 'Фамилия' context 'Фамилия' %}</label>
                                     <input class="profile_input_field" type="text" name="last_name"
-                                           placeholder="{% trans 'Фамилия' %}" id="last_name"
+                                           placeholder="{% trans 'Фамилия' context 'Фамилия' %}" id="last_name"
                                            value="{{request.user.last_name}}" required>
                                 </td>
                             </tr>
                             <tr class="tr_raw">
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="phone">{% trans 'Номер телефона' %}</label>
+                                    <label class="input_label_bold" for="phone">{% trans 'Номер телефона' context 'Номер телефона' %}</label>
                                     <input class="profile_input_field" type="tel" name="phone_number" id="phone"
-                                           placeholder="{% trans 'Номер телефона' %}"
+                                           placeholder="{% trans 'Номер телефона' context 'Номер телефона' %}"
                                            value="{{request.user.customuser.phone_number}}"
                                            required>
                                 </td>
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="text">{% trans 'Адрес доставки' %}</label>
+                                    <label class="input_label_bold" for="text">{% trans 'Адрес доставки' context 'Адрес доставки' %}</label>
                                     <input class="profile_input_field" type="text" name="address"
-                                           placeholder="{% trans 'Адрес доставки' %}" id="text">
+                                           placeholder="{% trans 'Адрес доставки' context 'Адрес доставки' %}" id="text">
                                 </td>
                             </tr>
                             <tr>
                                 <td class="td_raw book_donate_input_paddings">
-                                    <label class="input_label_bold" for="text">{% trans 'Приблизительная дата возврата книги' %}</label>
+                                    <label class="input_label_bold" for="text">{% trans 'Приблизительная дата возврата книги' context 'Приблизительная дата возврата книги' %}</label>
                                     <input class="profile_input_field bold_paragraph" type="text" name="date_of_expire"
                                            id="text" disabled value="{{ date_of_expire }}">
                                 </td>
@@ -166,11 +166,11 @@
                         </table>
                         <div class="bottom_button_block -display_flex padding_0 padding_bottom_40px padding_left_20px padding_right_30px margin_top_70px">
                             <div class="main_upper_block -width_100percent">
-                                <a class="input_submit_btn red_color_button" href="{{ previous_page }}">{% trans 'Я передумал(а)' %}</a>
+                                <a class="input_submit_btn red_color_button" href="{{ previous_page }}">{% trans 'Я передумал(а)' context 'Я передумал(а)' %}</a>
                             </div>
                             <div class="main_upper_block -justify_content_center -justify_content_right -width_100percent">
                                 <input class="input_submit_btn" type="submit" name="input_submit"
-                                       value="{% trans 'Отправить заявку на получение книги' %}">
+                                       value="{% trans 'Отправить заявку на получение книги' context 'Отправить заявку на получение книги' %}">
                             </div>
                         </div>
                         </form>

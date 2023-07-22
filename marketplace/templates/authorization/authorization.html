@@ -24,8 +24,8 @@
             <div class="auth_logo_block">
                 <img class="auth_logo" src="{% static 'marketplace/img/main_logo.png' %}" alt="Logo">
             </div>
-            <p class="auth_logo_text margin_top_10px darkgrey_paragraph">{% trans 'Сервис бесплатной раздачи книг' %}</p>
-            <h1 class="auth_title margin_top_10px margin_top_40px">{% trans 'Авторизация' %}</h1>
+            <p class="auth_logo_text margin_top_10px darkgrey_paragraph">{% trans 'Сервис бесплатной раздачи книг' context "Сервис бесплатной раздачи книг" %}</p>
+            <h1 class="auth_title margin_top_10px margin_top_40px">{% trans 'Авторизация' context "Авторизация" %}</h1>
         </div>
 
 
@@ -38,15 +38,15 @@
                         <td class="td_raw auth_td">
                             <label class="input_label_bold" for="email">E-mail</label>
                             <input class="auth_input_field" type="email" name="email"
-                                   placeholder="{% trans 'Адрес электронной почты' %}" id="email" required>
+                                   placeholder="{% trans 'Адрес электронной почты' context 'Адрес электронной почты' %}" id="email" required>
                         </td>
                     </tr>
                     <tr class="tr_raw">
                         <td class="td_raw auth_td">
-                                <label class="input_label_bold" for="password">{% trans 'Пароль' %}</label>
+                                <label class="input_label_bold" for="password">{% trans 'Пароль' context 'Пароль' %}</label>
                             <div class="auth_psw_block">
                                 <input class="auth_input_field auth_password_input_field " type="password" name="password"
-                                       placeholder="{% trans 'Пароль' %}" id="password" required>
+                                       placeholder="{% trans 'Пароль' context 'Пароль' %}" id="password" required>
                                 <div class="-justify_content_center -align_items_center psw_eye_block">
                                 <i onclick="pswToggle()" class="far fa-eye -psw_eye_block" id="togglePassword"></i>
                                 </div>
@@ -60,7 +60,7 @@
 
             <div class="bottom_button_block -justify_content_center -flex_direction_column -align_items_center">
 
-                <input class="auth_submit_btn" type="submit" value="ВОЙТИ В АККАУНТ">
+                <input class="auth_submit_btn" type="submit" value="{% trans 'ВОЙТИ В АККАУНТ' context 'ВОЙТИ В АККАУНТ' %}">
 
 <!--                <div class=" -justify_content_center -align_items_center margin_top_30px">-->
 <!--                    <a class="menu_item_link" href="{% provider_login_url 'google' method='js_sdk' %}">-->
@@ -77,7 +77,7 @@
 <!--                        </a>-->
 <!--                </div>-->
               
-                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'registration' %}">У меня нет аккаунта</a>
+                <a class="auth_registration_link orange_text margin_top_30px" href="{% url 'registration' %}">{% trans 'У меня нет аккаунта' context 'У меня нет аккаунта' %}</a>
               
             </div>
 

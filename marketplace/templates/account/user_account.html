@@ -29,11 +29,11 @@
             <div class="main_content_container">
 
                 <input class="radio_input" type="radio" name="tabs" id="tab_1" {% if tab == 1 %} checked {% endif %}/>
-                <label class="radio_label" for="tab_1">{% trans "Профиль" %}</label>
+                <label class="radio_label" for="tab_1">{% trans "Профиль" context "Профиль" %}</label>
                 <input class="radio_input" type="radio" name="tabs" id="tab_2" {% if tab == 2 %} checked {% endif %}/>
-                <label class="radio_label" for="tab_2">{% trans "Пароли и Безопасность" %}</label>
+                <label class="radio_label" for="tab_2">{% trans "Пароли и Безопасность" context "Пароли и Безопасность" %}</label>
                 <input class="radio_input" type="radio" name="tabs" id="tab_3" {% if tab == 3 %} checked {% endif %}/>
-                <label class="radio_label" for="tab_3">{% trans "Депозит и Баланс" %}</label>
+                <label class="radio_label" for="tab_3">{% trans "Депозит и Баланс" context "Депозит и Баланс" %}</label>
 
                 <div class="tab _1_tab">
                     <div class="profile_white_block">
@@ -42,12 +42,18 @@
                             <div class="main_upper_block -block_space-between">
 
                                 <div class="profile_content_block">
-                                    <p class="profile_photo_text">{% trans "Фотография профиля" %}</p>
+                                    <p class="profile_photo_text">{% trans "Фотография профиля" context "Фотография профиля" %}</p>
                                     <input type="file" name="user_avatar" class="user_avatar_input"
                                            id="user_avatar_file" accept=".jpg, .jpeg, .png"
                                            onchange="userAvatarImgPreview(this);">
                                     <label for="user_avatar_file" class="load_avatar_img_label">
-                                        <img id="user_avatar_preview" src="" class="load_avatar_img_preview" alt="">
+
+                                        {% if custom_user.img.url %}
+                                            <img id="user_avatar_preview" src="{{ custom_user.img.url }}" class="load_avatar_img_preview" alt="">
+                                        {% else %}
+                                            <img id="user_avatar_preview" src="{% static 'marketplace/img/avatardefault.png' %}" class="load_avatar_img_preview" alt="">
+                                        {% endif %}
+
                                     </label>
                                     <p class="profile_id_text">ID: {{ request.user.id }}</p>
                                 </div>
@@ -65,7 +71,7 @@
                                                 </div>
                                                 <p class="user_statistic_info_number_text">{{ read_books }}</p>
                                             </div>
-                                            <p class="user_statistic_info_text">{% trans "Прочтено" %}</p>
+                                            <p class="user_statistic_info_text">{% trans "Прочтено" context "Прочтено" %}</p>
                                         </div>
                                     </div>
 
@@ -80,7 +86,7 @@
                                                 </div>
                                                 <p class="user_statistic_info_number_text">{{ help_pro }}</p>
                                             </div>
-                                            <p class="user_statistic_info_text">{% trans "Помощи" %}</p>
+                                            <p class="user_statistic_info_text">{% trans "Помощи" context "Помощи" %}</p>
                                         </div>
                                     </div>
 
@@ -91,30 +97,30 @@
                                     <tbody>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="first_name">{% trans "Имя" %}</label>
+                                            <label class="input_label_bold" for="first_name">{% trans "Имя" context "Имя" %}</label>
                                             <input class="profile_input_field" type="text" name="first_name"
-                                                   placeholder="{% trans 'Имя' %}" id="first_name"
+                                                   placeholder="{% trans 'Имя' context 'Имя' %}" id="first_name"
                                                    value="{{request.user.first_name}}" required>
 
                                         </td>
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="last_name">{% trans "Фамилия" %}</label>
+                                            <label class="input_label_bold" for="last_name">{% trans "Фамилия" context 'Фамилия' %}</label>
                                             <input class="profile_input_field" type="text" name="last_name"
-                                                   placeholder="{% trans 'Фамилия' %}" id="last_name"
+                                                   placeholder="{% trans 'Фамилия' context 'Фамилия' %}" id="last_name"
                                                    value="{{request.user.last_name}}" required>
                                         </td>
                                     </tr>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="phone">{% trans "Номер телефона" %}</label>
+                                            <label class="input_label_bold" for="phone">{% trans "Номер телефона" context 'Номер телефона' %}</label>
                                             <input class="profile_input_field" type="tel" name="phone_number" id="phone"
-                                                   placeholder="{% trans 'Номер телефона' %}" value="{{request.user.customuser.phone_number}}"
+                                                   placeholder="{% trans 'Номер телефона' context 'Номер телефона' %}" value="{{request.user.customuser.phone_number}}"
                                                    required>
                                         </td>
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="email">{% trans "Электронная почта" %}</label>
+                                            <label class="input_label_bold" for="email">{% trans "Электронная почта" context 'Электронная почта' %}</label>
                                             <input class="profile_input_field" type="email" name="email"
-                                                   placeholder="{% trans 'Электронная почта' %}" id="email"
+                                                   placeholder="{% trans 'Электронная почта' context 'Электронная почта' %}" id="email"
                                                    value="{{request.user.email}}" required>
 
                                         </td>
@@ -122,7 +128,7 @@
                                     </tbody>
                                 </table>
                                 <div class="bottom_button_block">
-                                    <input class="input_submit_btn" type="submit" value="{% trans 'Сохранить и продолжить' %}">
+                                    <input class="input_submit_btn" type="submit" value="{% trans 'Сохранить и продолжить' context 'Сохранить и продолжить' %}">
                                 </div>
 
 
@@ -136,34 +142,34 @@
                         <form action="{% url 'user_profile' 2 %}" method="POST">
                              {% csrf_token %}
                             <div class="main_upper_block margin_left_40px margin_top_30px">
-                                <h1 class="category_books_page_content_block_title ">{% trans ' Изменение пароля' %}</h1>
+                                <h1 class="category_books_page_content_block_title ">{% trans ' Изменение пароля' context ' Изменение пароля' %}</h1>
                             </div>
                             <div class="main_upper_block -block_space-between">
                                 <table>
                                     <tbody>
                                     <tr class="tr_raw">
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="past_password">{% trans 'Старый пароль' %}</label>
+                                            <label class="input_label_bold" for="past_password">{% trans 'Старый пароль' context 'Старый пароль' %}</label>
                                             <input class="profile_input_field" type="text" name="past_password"
-                                                   placeholder="{% trans 'Старый пароль' %}" id="past_password" required>
+                                                   placeholder="{% trans 'Старый пароль' context 'Старый пароль' %}" id="past_password" required>
 
                                         </td>
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="new_password">{% trans 'Новый пароль' %}</label>
+                                            <label class="input_label_bold" for="new_password">{% trans 'Новый пароль' context 'Новый пароль' %}</label>
                                             <input class="profile_input_field" type="text" name="new_password"
-                                                   placeholder="{% trans 'Новый пароль' %}" id="new_password" required>
+                                                   placeholder="{% trans 'Новый пароль' context 'Новый пароль' %}" id="new_password" required>
                                         </td>
                                         <td class="td_raw user_profile_td">
-                                            <label class="input_label_bold" for="new_password_replay">{% trans 'Повтор нового пароля ' %}</label>
+                                            <label class="input_label_bold" for="new_password_replay">{% trans 'Повтор нового пароля ' context 'Повтор нового пароля ' %}</label>
                                             <input class="profile_input_field" type="text" name="new_password_replay"
-                                                   placeholder="{% trans 'Повтор нового пароля' %}" id="new_password_replay" required>
+                                                   placeholder="{% trans 'Повтор нового пароля' context 'Повтор нового пароля' %}" id="new_password_replay" required>
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="bottom_button_block">
-                                <input class="input_submit_btn" type="submit" value="{% trans 'Обновить пароль' %}">
+                                <input class="input_submit_btn" type="submit" value="{% trans 'Обновить пароль' context '' %}">
                             </div>
                         </form>
                     </div>
@@ -173,32 +179,32 @@
                     <div class="profile_white_block padding_bottom_50px">
                         <div class="main_upper_block margin_left_40px margin_top_30px">
                             <div class="-width_100percent">
-                                <h1 class="category_books_page_content_block_title ">{% trans "Информация о" %} <span
-                                        class="orange_text">{% trans "вашем Депозите" %}</span></h1>
+                                <h1 class="category_books_page_content_block_title ">{% trans "Информация о" context 'Информация о' %} <span
+                                        class="orange_text">{% trans "вашем Депозите" context 'вашем Депозите' %}</span></h1>
                             </div>
                             <div class="to_set_right_bottom_position_block padding_right_40px">
-                                <a class="blue_link_btn add_money_btn margin_right_30px -text_align_center" href="#poplnit">{% trans "Пополнить баланс депозита" %}</a>
-                                <a class="orange_link_btn update_profile_data_btn" href="{% url 'user_profile' 3 %}">{% trans "Обновить данные" %}</a>
+                                <a class="blue_link_btn add_money_btn margin_right_30px -text_align_center" href="#poplnit">{% trans "Пополнить баланс депозита" context 'Пополнить баланс депозита' %}</a>
+                                <a class="orange_link_btn update_profile_data_btn" href="{% url 'user_profile' 3 %}">{% trans "Обновить данные" context 'Обновить данные' %}</a>
 
                             </div>
                         </div>
                         <div class="main_upper_block -block_space-between margin_left_40px">
-                            <p class="book_info_book_name">{% trans "Информация о балансе" %}</p>
+                            <p class="book_info_book_name">{% trans "Информация о балансе" context 'Информация о балансе' %}</p>
                         </div>
 
                         <div class="main_upper_block">
                             <div class="user_money_info_block margin_left_60px">
-                                <p class=" font_16pt">{% trans "На Балансе:" %}<span class="bold_paragraph"> {{ total_amount }} {% trans "сум" %}.</span></p>
-                                <p class=" font_16pt margin_top_20px">{% trans "Ваш Уровень:" %}<span
+                                <p class=" font_16pt">{% trans "На Балансе:" context 'На Балансе:' %}<span class="bold_paragraph"> {{ total_amount }} {% trans "сум" context 'сум' %}.</span></p>
+                                <p class=" font_16pt margin_top_20px">{% trans "Ваш Уровень:" context 'Ваш Уровень:' %}<span
                                         class="bold_paragraph"> {{ level }}.</span></p>
                                 <div class="main_upper_block margin_top_50px -flex_direction_column margin_left_60px">
-                                    <p class="book_info_book_name grey_paragraph margin_0">{% trans "Распределение уровней:" %}</p>
+                                    <p class="book_info_book_name grey_paragraph margin_0">{% trans "Распределение уровней:" context 'Распределение уровней:' %}</p>
                                     <table class="profile_levels_table margin_left_20px">
                                         <tbody>
                                         <tr class="tr_raw">
                                             <td class="td_raw">{% trans "Уровень" %} 0</td>
                                             <td class="td_raw --tire">—</td>
-                                            <td class="td_raw">{% trans "БЕСПЛАТНО" %}</td>
+                                            <td class="td_raw">{% trans "БЕСПЛАТНО" context 'БЕСПЛАТНО' %}</td>
                                         </tr>
                                         <tr class="tr_raw">
                                             <td class="td_raw">{% trans "Уровень" %} 1</td>
@@ -397,15 +403,15 @@
 
                                     </div>
                                 </div>
-                                <a class="orange_link_btn margin_top_50px" href="{% url 'withdraw_money' %}">{% trans 'Снять все средства с депозита' %}</a>
+                                <a class="orange_link_btn margin_top_50px" href="{% url 'withdraw_money' %}">{% trans 'Снять все средства с депозита' context 'Снять все средства с депозита' %}</a>
                             </div>
                         </div>
 
                         <div class="main_upper_block margin_top_50px -flex_direction_column margin_left_60px">
-                            <p class="book_info_book_name" id="poplnit">{% trans "Пополнение баланса:" %}</p>
+                            <p class="book_info_book_name" id="poplnit">{% trans "Пополнение баланса:" context 'Пополнение баланса:' %}</p>
                             <div class="main_upper_block margin_top_30px margin_left_20px -flex_direction_column">
 
-                                <p class="main_books_content_block_secondary_title font_15pt">{% trans "Переводы доступны только с карт " %}<span class="bold_paragraph">{% trans "Узбекских Банков" %}</span>!</p>
+                                <p class="main_books_content_block_secondary_title font_15pt">{% trans "Переводы доступны только с карт " context 'Переводы доступны только с карт ' %}<span class="bold_paragraph">{% trans "Узбекских Банков" context 'Узбекских Банков' %}</span>!</p>
 
                                 <div class="shelf_books_block">
                                     <div class="profile_payment_qr_block">
@@ -438,17 +444,17 @@
                                 </div>
 
                                 <p class="main_books_content_block_secondary_title font_15pt margin_top_30px">
-                                    {% trans "Для выполнения перевода выполните следующие действия:" %}</p>
+                                    {% trans "Для выполнения перевода выполните следующие действия:" context 'Для выполнения перевода выполните следующие действия:' %}</p>
                                 <ul class="main_books_content_block_secondary_title font_15pt">
-                                    <li>{% trans "Установить одно из приложений для переводов: PayMe, Click, Uzum." %}</li>
-                                    <li>{% trans "Отсканируйте QR-код при помощи камеры телефона." %}</li>
-                                    <li>{% trans "Укажите сумму пополнения депозита." %}</li>
-                                    <li>{% trans "В поле комментария укажите ваше " %}<span
-                                            class="underlined_text orange_text">{% trans "Имя" %}</span>, <span
-                                            class="underlined_text orange_text">{% trans "Фамилию" %}</span>{% trans " и этот номер " %}<span
+                                    <li>{% trans "Установить одно из приложений для переводов: PayMe, Click, Uzum." context 'Установить одно из приложений для переводов: PayMe, Click, Uzum.' %}</li>
+                                    <li>{% trans "Отсканируйте QR-код при помощи камеры телефона." context 'Отсканируйте QR-код при помощи камеры телефона.' %}</li>
+                                    <li>{% trans "Укажите сумму пополнения депозита." context 'Укажите сумму пополнения депозита.' %}</li>
+                                    <li>{% trans "В поле комментария укажите ваше " context 'В поле комментария укажите ваше ' %}<span
+                                            class="underlined_text orange_text">{% trans "Имя" context 'Имя' %}</span>, <span
+                                            class="underlined_text orange_text">{% trans "Фамилию" context 'Фамилию' %}</span>{% trans " и этот номер " context ' и этот номер ' %}<span
                                             class="underlined_text orange_text">123456789</span>.
                                     </li>
-                                    <li>{% trans "Отправьте перевод и ожидайте звонка." %}</li>
+                                    <li>{% trans "Отправьте перевод и ожидайте звонка." context 'Отправьте перевод и ожидайте звонка.' %}</li>
                                 </ul>
                             </div>
                         </div>

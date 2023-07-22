@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-29 11:08+0500\n"
+"POT-Creation-Date: 2023-07-16 03:40+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,134 +21,172 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\marketplace\templates\account\user_account.html:32
-#: .\marketplace\templates\components\header.html:125
+#: .\marketplace\templates\components\header.html:115
+msgctxt "Профиль"
 msgid "Профиль"
 msgstr ""
 
 #: .\marketplace\templates\account\user_account.html:34
+msgctxt "Пароли и Безопасность"
 msgid "Пароли и Безопасность"
 msgstr ""
 
 #: .\marketplace\templates\account\user_account.html:36
+msgctxt "Депозит и Баланс"
 msgid "Депозит и Баланс"
 msgstr ""
 
 #: .\marketplace\templates\account\user_account.html:45
+msgctxt "Фотография профиля"
 msgid "Фотография профиля"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:76
+#: .\marketplace\templates\account\user_account.html:68
+msgctxt "Прочтено"
 msgid "Прочтено"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:91
+#: .\marketplace\templates\account\user_account.html:83
+msgctxt "Помощи"
 msgid "Помощи"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:106
-msgid "Аренда"
-msgstr ""
-
-#: .\marketplace\templates\account\user_account.html:121
-msgid "Продажи"
-msgstr ""
-
-#: .\marketplace\templates\account\user_account.html:132
-#: .\marketplace\templates\account\user_account.html:134
-#: .\marketplace\templates\account\user_account.html:486
+#: .\marketplace\templates\account\user_account.html:94
+#: .\marketplace\templates\account\user_account.html:96
+#: .\marketplace\templates\account\user_account.html:447
 #: .\marketplace\templates\authorization\registration.html:34
 #: .\marketplace\templates\authorization\registration.html:36
-#: .\marketplace\templates\book_donate_page\book_donate.html:46
-#: .\marketplace\templates\book_donate_page\book_donate.html:48
+#: .\marketplace\templates\book_donate_page\book_donate.html:47
+#: .\marketplace\templates\book_donate_page\book_donate.html:49
+#: .\marketplace\templates\order_book\order_book.html:130
 #: .\marketplace\templates\order_book\order_book.html:132
-#: .\marketplace\templates\order_book\order_book.html:134
+msgctxt "Имя"
 msgid "Имя"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:139
-#: .\marketplace\templates\account\user_account.html:141
-#: .\marketplace\templates\authorization\registration.html:42
-#: .\marketplace\templates\authorization\registration.html:44
-#: .\marketplace\templates\book_donate_page\book_donate.html:52
-#: .\marketplace\templates\book_donate_page\book_donate.html:54
+#: .\marketplace\templates\account\user_account.html:101
+#: .\marketplace\templates\account\user_account.html:103
+#: .\marketplace\templates\authorization\registration.html:41
+#: .\marketplace\templates\authorization\registration.html:43
+#: .\marketplace\templates\book_donate_page\book_donate.html:53
+#: .\marketplace\templates\book_donate_page\book_donate.html:55
+#: .\marketplace\templates\order_book\order_book.html:137
 #: .\marketplace\templates\order_book\order_book.html:139
-#: .\marketplace\templates\order_book\order_book.html:141
+msgctxt "Фамилия"
 msgid "Фамилия"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:147
-#: .\marketplace\templates\account\user_account.html:149
+#: .\marketplace\templates\account\user_account.html:109
+#: .\marketplace\templates\account\user_account.html:111
+#: .\marketplace\templates\authorization\registration.html:48
 #: .\marketplace\templates\authorization\registration.html:50
-#: .\marketplace\templates\authorization\registration.html:52
-#: .\marketplace\templates\book_donate_page\book_donate.html:59
-#: .\marketplace\templates\book_donate_page\book_donate.html:61
+#: .\marketplace\templates\book_donate_page\book_donate.html:60
+#: .\marketplace\templates\book_donate_page\book_donate.html:62
+#: .\marketplace\templates\order_book\order_book.html:145
 #: .\marketplace\templates\order_book\order_book.html:147
-#: .\marketplace\templates\order_book\order_book.html:149
+msgctxt "Номер телефона"
 msgid "Номер телефона"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:153
-#: .\marketplace\templates\account\user_account.html:155
-#: .\marketplace\templates\book_donate_page\book_donate.html:65
-#: .\marketplace\templates\book_donate_page\book_donate.html:67
+#: .\marketplace\templates\account\user_account.html:115
+#: .\marketplace\templates\account\user_account.html:117
+#: .\marketplace\templates\book_donate_page\book_donate.html:66
+#: .\marketplace\templates\book_donate_page\book_donate.html:68
+msgctxt "Электронная почта"
 msgid "Электронная почта"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:163
+#: .\marketplace\templates\account\user_account.html:125
+msgctxt "Сохранить и продолжить"
 msgid "Сохранить и продолжить"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:177
+#: .\marketplace\templates\account\user_account.html:139
+msgctxt " Изменение пароля"
 msgid " Изменение пароля"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:184
-#: .\marketplace\templates\account\user_account.html:186
+#: .\marketplace\templates\account\user_account.html:146
+#: .\marketplace\templates\account\user_account.html:148
+msgctxt "Старый пароль"
 msgid "Старый пароль"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:190
-#: .\marketplace\templates\account\user_account.html:192
+#: .\marketplace\templates\account\user_account.html:152
+#: .\marketplace\templates\account\user_account.html:154
+msgctxt "Новый пароль"
 msgid "Новый пароль"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:195
+#: .\marketplace\templates\account\user_account.html:157
+msgctxt "Повтор нового пароля "
 msgid "Повтор нового пароля "
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:197
+#: .\marketplace\templates\account\user_account.html:159
+msgctxt "Повтор нового пароля"
 msgid "Повтор нового пароля"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:204
+#: .\marketplace\templates\account\user_account.html:166
+msgctxt ""
 msgid "Обновить пароль"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:214
+#: .\marketplace\templates\account\user_account.html:176
+msgctxt "Информация о"
 msgid "Информация о"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:215
+#: .\marketplace\templates\account\user_account.html:177
+msgctxt "вашем Депозите"
 msgid "вашем Депозите"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:218
+#: .\marketplace\templates\account\user_account.html:180
+msgctxt "Пополнить баланс депозита"
 msgid "Пополнить баланс депозита"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:219
+#: .\marketplace\templates\account\user_account.html:181
+msgctxt "Обновить данные"
 msgid "Обновить данные"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:224
+#: .\marketplace\templates\account\user_account.html:186
+msgctxt "Информация о балансе"
 msgid "Информация о балансе"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:229
+#: .\marketplace\templates\account\user_account.html:191
+msgctxt "На Балансе:"
 msgid "На Балансе:"
 msgstr ""
 
+#: .\marketplace\templates\account\user_account.html:191
+msgctxt "сум"
+msgid "сум"
+msgstr ""
+
+#: .\marketplace\templates\account\user_account.html:192
+msgctxt "Ваш Уровень:"
+msgid "Ваш Уровень:"
+msgstr ""
+
+#: .\marketplace\templates\account\user_account.html:195
+msgctxt "Распределение уровней:"
+msgid "Распределение уровней:"
+msgstr ""
+
+#: .\marketplace\templates\account\user_account.html:199
+#: .\marketplace\templates\account\user_account.html:204
+#: .\marketplace\templates\account\user_account.html:209
+#: .\marketplace\templates\account\user_account.html:214
+#: .\marketplace\templates\account\user_account.html:219
+#: .\marketplace\templates\account\user_account.html:224
 #: .\marketplace\templates\account\user_account.html:229
+#: .\marketplace\templates\account\user_account.html:234
+#: .\marketplace\templates\account\user_account.html:239
 #: .\marketplace\templates\account\user_account.html:244
 #: .\marketplace\templates\account\user_account.html:249
 #: .\marketplace\templates\account\user_account.html:254
@@ -156,152 +194,159 @@ msgstr ""
 #: .\marketplace\templates\account\user_account.html:264
 #: .\marketplace\templates\account\user_account.html:269
 #: .\marketplace\templates\account\user_account.html:274
-#: .\marketplace\templates\account\user_account.html:279
-#: .\marketplace\templates\account\user_account.html:284
-#: .\marketplace\templates\account\user_account.html:289
-#: .\marketplace\templates\account\user_account.html:294
-#: .\marketplace\templates\account\user_account.html:299
-#: .\marketplace\templates\account\user_account.html:304
-#: .\marketplace\templates\account\user_account.html:309
-#: .\marketplace\templates\account\user_account.html:314
-msgid "сум"
-msgstr ""
-
-#: .\marketplace\templates\account\user_account.html:230
-msgid "Ваш Уровень:"
-msgstr ""
-
-#: .\marketplace\templates\account\user_account.html:233
-msgid "Распределение уровней:"
-msgstr ""
-
-#: .\marketplace\templates\account\user_account.html:237
-#: .\marketplace\templates\account\user_account.html:242
-#: .\marketplace\templates\account\user_account.html:247
-#: .\marketplace\templates\account\user_account.html:252
-#: .\marketplace\templates\account\user_account.html:257
-#: .\marketplace\templates\account\user_account.html:262
-#: .\marketplace\templates\account\user_account.html:267
-#: .\marketplace\templates\account\user_account.html:272
-#: .\marketplace\templates\account\user_account.html:277
-#: .\marketplace\templates\account\user_account.html:282
-#: .\marketplace\templates\account\user_account.html:287
-#: .\marketplace\templates\account\user_account.html:292
-#: .\marketplace\templates\account\user_account.html:297
-#: .\marketplace\templates\account\user_account.html:302
-#: .\marketplace\templates\account\user_account.html:307
-#: .\marketplace\templates\account\user_account.html:312
-#: .\marketplace\templates\search_result_page\search_result.html:140
 msgid "Уровень"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:239
+#: .\marketplace\templates\account\user_account.html:201
+msgctxt "БЕСПЛАТНО"
 msgid "БЕСПЛАТНО"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:439
+#: .\marketplace\templates\account\user_account.html:206
+#: .\marketplace\templates\account\user_account.html:211
+#: .\marketplace\templates\account\user_account.html:216
+#: .\marketplace\templates\account\user_account.html:221
+#: .\marketplace\templates\account\user_account.html:226
+#: .\marketplace\templates\account\user_account.html:231
+#: .\marketplace\templates\account\user_account.html:236
+#: .\marketplace\templates\account\user_account.html:241
+#: .\marketplace\templates\account\user_account.html:246
+#: .\marketplace\templates\account\user_account.html:251
+#: .\marketplace\templates\account\user_account.html:256
+#: .\marketplace\templates\account\user_account.html:261
+#: .\marketplace\templates\account\user_account.html:266
+#: .\marketplace\templates\account\user_account.html:271
+#: .\marketplace\templates\account\user_account.html:276
+msgid "сум"
+msgstr ""
+
+#: .\marketplace\templates\account\user_account.html:400
+msgctxt "Снять все средства с депозита"
 msgid "Снять все средства с депозита"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:444
+#: .\marketplace\templates\account\user_account.html:405
+msgctxt "Пополнение баланса:"
 msgid "Пополнение баланса:"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:447
+#: .\marketplace\templates\account\user_account.html:408
+msgctxt "Переводы доступны только с карт "
 msgid "Переводы доступны только с карт "
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:447
+#: .\marketplace\templates\account\user_account.html:408
+msgctxt "Узбекских Банков"
 msgid "Узбекских Банков"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:480
+#: .\marketplace\templates\account\user_account.html:441
+msgctxt "Для выполнения перевода выполните следующие действия:"
 msgid "Для выполнения перевода выполните следующие действия:"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:482
+#: .\marketplace\templates\account\user_account.html:443
+msgctxt "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgid "Установить одно из приложений для переводов: PayMe, Click, Uzum."
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:483
+#: .\marketplace\templates\account\user_account.html:444
+msgctxt "Отсканируйте QR-код при помощи камеры телефона."
 msgid "Отсканируйте QR-код при помощи камеры телефона."
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:484
+#: .\marketplace\templates\account\user_account.html:445
+msgctxt "Укажите сумму пополнения депозита."
 msgid "Укажите сумму пополнения депозита."
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:485
+#: .\marketplace\templates\account\user_account.html:446
+msgctxt "В поле комментария укажите ваше "
 msgid "В поле комментария укажите ваше "
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:487
+#: .\marketplace\templates\account\user_account.html:448
+msgctxt "Фамилию"
 msgid "Фамилию"
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:487
+#: .\marketplace\templates\account\user_account.html:448
+msgctxt " и этот номер "
 msgid " и этот номер "
 msgstr ""
 
-#: .\marketplace\templates\account\user_account.html:490
+#: .\marketplace\templates\account\user_account.html:451
+msgctxt "Отправьте перевод и ожидайте звонка."
 msgid "Отправьте перевод и ожидайте звонка."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\about_us.html:28
+msgctxt "О "
 msgid "О "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\about_us.html:29
+msgctxt "нас"
 msgid "нас"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:28
-#: .\marketplace\templates\components\left_menu.html:52
-#: .\marketplace\templates\components\left_menu.html:66
+#: .\marketplace\templates\components\left_menu.html:53
+#: .\marketplace\templates\components\left_menu.html:67
+msgctxt "Условия пользования"
 msgid "Условия пользования"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:29
+msgctxt "WooW сервисом"
 msgid "WooW сервисом"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:33
+msgctxt "Оферта представляет собой правила...."
 msgid ""
 "Оферта представляет собой правила предоставления услуг Сервисом раздачи книг "
 "WooW, размещенным на сайтах с доменными именами"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:35
+msgctxt "для неограниченного количества пользователей."
 msgid "для неограниченного количества пользователей."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:38
+msgctxt "1. Назначение и область"
 msgid "1. Назначение и область применения Оферты."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:40
+msgctxt "1.1"
 msgid ""
 "1.1. Оферта Сервиса WooW (далее по тексту – Оферта) устанавливает требования "
 "и содержит описание:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:42
+msgctxt "1.1.1"
 msgid "1.1.1. Порядка предоставления услуг Сервиса раздачи книг WooW."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:43
+msgctxt "1.1.2"
 msgid ""
 "1.1.2. Разграничения ответственности за использование и предоставление услуг "
 "Сервисом WooW."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:45
+msgctxt "1.1.3"
 msgid ""
 "1.1.3. Мер по обеспечению безопасности работы Сервиса WooW с неограниченным "
 "кругом лиц, а также пользователями Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:47
+msgctxt "1.2"
 msgid ""
 "1.2. Местом оказания услуги Сервиса Пользователю является место запуска "
 "(сайт), на котором происходит учет и обработка данных и операций "
@@ -309,6 +354,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:49
+msgctxt "1.3"
 msgid ""
 "1.3. Перед тем, как воспользоваться услугами Сервиса WooW, Пользователь "
 "обязан ознакомиться в полном объеме с условиями настоящих Оферты и "
@@ -318,17 +364,20 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:51
+msgctxt "1.4"
 msgid ""
 "1.4. Использование услуг Сервиса возможно, только если Пользователь "
 "принимает все условия настоящей Оферты."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:53
+msgctxt "1.5."
 msgid ""
 "1.5. Действующая версия Оферты расположена для публичного доступа на сайте "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:56
+msgctxt "Администрация Сервиса вправе в любое время в одностороннем порядке..."
 msgid ""
 "Администрация Сервиса вправе в любое время в одностороннем порядке изменять "
 "настоящую Оферту. Такие изменения вступают в силу по истечении 3 (трех) "
@@ -341,14 +390,17 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:62
+msgctxt "2. Термины и определения."
 msgid "2. Термины и определения."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:64
+msgctxt "2.1."
 msgid "2.1. Сайт - сайты с доменными именами «woow.uz»."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:67
+msgctxt "2.2."
 msgid ""
 "2.2. Пользователь — любое физическое лицо, использующее функциональные "
 "возможности Сервиса и достигшее возраста полной дееспособности в "
@@ -356,34 +408,39 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:69
+msgctxt "2.3."
 msgid "2.3. Сервис – веб-сайт для раздачи книг с доменным именем "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:73
+msgctxt "2.4."
 msgid ""
 "2.4. Услуги Сервиса — функционал Сервиса с возможностями для Пользователя, а "
 "также иные услуги, информация о которых размещена на страницах"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:74
-#: .\marketplace\templates\components\left_menu.html:46
-#: .\marketplace\templates\components\left_menu.html:60
+msgctxt "О нас на сайте Сервиса."
 msgid "О нас"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:75
+msgctxt "на сайте Сервиса."
 msgid "на сайте Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:79
+msgctxt "3. Режим работы Сервиса."
 msgid "3. Режим работы Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:81
+msgctxt "3.1."
 msgid "3.1. Штатный режим работы:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:83
+msgctxt "3.1.1."
 msgid ""
 "3.1.1. В данном режиме работы запросы Пользователей обрабатываются в течение "
 "реального времени Сервисом, кроме времени осуществления работ согласно "
@@ -391,16 +448,19 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:85
+msgctxt "3.1.2"
 msgid ""
 "3.1.2. Поддержка Пользователей ведется службой поддержки сайта в "
 "мессенджере, а также по другим каналам связи способами, указанными Сервисом."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:89
+msgctxt "4. Правила пользования Сервисом WooW"
 msgid "4. Правила пользования Сервисом WooW."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:91
+msgctxt "4.1."
 msgid ""
 "4.1. Сервис предназначен для использования исключительно в личных целях. "
 "Пользователь соглашается с тем, что не будет использовать какой-либо иной "
@@ -410,6 +470,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:93
+msgctxt "4.2."
 msgid ""
 "4.2. Администрация Сервиса может в любое время и по своему собственному "
 "усмотрению отказать Пользователю в возможности получить платные услуги, "
@@ -418,12 +479,14 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:95
+msgctxt "4.3."
 msgid ""
 "4.3 Пользователь соглашается с тем, что будет возвращать полученные им книги "
 "из сервиса в установленные сервисом сроки, указанные при заказе книги."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:97
+msgctxt "4.5."
 msgid ""
 "4.4 Администрация Сервиса может по своему усмотрению отказать Пользователю в "
 "возврате средств депозита Пользователя при невозврате или порче полученной "
@@ -431,38 +494,45 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:101
+msgctxt "5. Порядок оказания услуг Сервисом"
 msgid "5. Порядок оказания услуг Сервисом."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:103
+msgctxt "5.1."
 msgid ""
 "5.1. Заказ услуг Сервиса осуществляется Пользователем путем совершения "
 "действий по покупке через ресурсы Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:105
+msgctxt "5.2."
 msgid ""
 "5.2. Воспользовавшись услугами Сервиса, Пользователь подтверждает, что "
 "ознакомлен со всей юридической документацией Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:107
+msgctxt "5.3."
 msgid ""
 "5.3. Сервис не принимает электронные деньги в качестве платежа, если данные "
 "средства не принадлежат Пользователю."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:109
+msgctxt "5.4."
 msgid ""
 "5.4. Путем регистрации на сайте Сервиса и принятия всех условий, "
 "Пользователь принимает все изложенные условия."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:114
+msgctxt "6. Правила пользования депозитом."
 msgid "6. Правила пользования депозитом."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:116
+msgctxt "6.1."
 msgid ""
 "6.1. После пополнения депозита, Пользователь имеет право вывести свои "
 "средства обратно на банковскую карту, отправив заявку на возврат средств "
@@ -471,6 +541,7 @@ msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:119
 #, python-format
+msgctxt "6.1.1."
 msgid ""
 "6.1.1 При снятии средств с депозита пользователя, Пользователю будут "
 "отправлены все средства с депозита Пользователя за исключением комиссии за "
@@ -478,12 +549,14 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:122
+msgctxt "6.1.2."
 msgid ""
 "6.1.2. После снятия средств с депозита Пользователя, счетчик депозита "
 "Пользователя обнуляется."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:125
+msgctxt "6.1.3."
 msgid ""
 "6.1.3 Возврат средств с депозита Пользователя осуществляется только на "
 "банковскую карту с именем держателя банковской карты, с которой был пополнен "
@@ -491,198 +564,233 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:128
+msgctxt "6.2."
 msgid ""
 "6.2 Уровень доступа пользователя к книгам зависит от количества денежных "
 "средств на депозите Пользователя."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:131
+msgctxt "6.3."
 msgid ""
 "6.3 Соотношение денежных средств на депозите Пользователя к уровню доступа к "
 "книгам определяется по следующим тарифам:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:134
+msgctxt "6.3.1.0"
 msgid "6.3.1. При наличии денежных средств в размере от 0 сум до 100 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:135
+msgctxt "6.3.1.1"
 msgid ""
 "При наличии денежных средств в размере от 0сум до 100 000 сум, пользователь "
 "получает возможность заказывать книги 0-го уровня."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:138
+msgctxt "6.3.2.0"
 msgid ""
 "6.3.2. При наличии денежных средств в размере от 101 000 сум до 200 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:139
+msgctxt "6.3.2.1"
 msgid ""
 "При наличии денежных средств в размере от 101 000 сум до 200 000 сум, "
 "пользователь получает возможность заказывать книги 1-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:142
+msgctxt "6.3.3.0"
 msgid ""
 "6.3.3. При наличии денежных средств в размере от 201 000 сум до 300 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:143
+msgctxt "6.3.3.1"
 msgid ""
 "При наличии денежных средств в размере от 201 000 сум до 300 000 сум, "
 "пользователь получает возможность заказывать книги 2-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:146
+msgctxt "6.3.4.0"
 msgid ""
 "6.3.4. При наличии денежных средств в размере от 301 000 сум до 400 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:147
+msgctxt "6.3.4.1"
 msgid ""
 "При наличии денежных средств в размере от 301 000 сум до 400 000 сум, "
 "пользователь получает возможность заказывать книги 3-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:150
+msgctxt "6.3.5.0"
 msgid ""
 "6.3.5. При наличии денежных средств в размере от 401 000 сум до 500 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:151
+msgctxt "6.3.5.1"
 msgid ""
 "При наличии денежных средств в размере от 401 000 сум до 500 000 сум, "
 "пользователь получает возможность заказывать книги 4-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:154
+msgctxt "6.3.6.0"
 msgid ""
 "6.3.6. При наличии денежных средств в размере от 501 000 сум до 600 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:155
+msgctxt "6.3.6.1"
 msgid ""
 "При наличии денежных средств в размере от 501 000 сум до 600 000 сум, "
 "пользователь получает возможность заказывать книги 5-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:158
+msgctxt "6.3.7.0"
 msgid ""
 "6.3.7. При наличии денежных средств в размере от 601 000 сум до 700 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:159
+msgctxt "6.3.7.1"
 msgid ""
 "При наличии денежных средств в размере от 601 000 сум до 700 000 сум, "
 "пользователь получает возможность заказывать книги 6-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:162
+msgctxt "6.3.8.0"
 msgid ""
 "6.3.8. При наличии денежных средств в размере от 701 000 сум до 800 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:163
+msgctxt "6.3.7.1"
 msgid ""
 "При наличии денежных средств в размере от 701 000 сум до 800 000 сум, "
 "пользователь получает возможность заказывать книги 7-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:166
+msgctxt "6.3.9.0"
 msgid ""
 "6.3.9. При наличии денежных средств в размере от 801 000 сум до 900 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:167
+msgctxt "6.3.9.1"
 msgid ""
 "При наличии денежных средств в размере от 801 000 сум до 900 000 сум, "
 "пользователь получает возможность заказывать книги 8-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:170
+msgctxt "6.3.10.0"
 msgid ""
 "6.3.10. При наличии денежных средств в размере от 901 000 сум до 1 000 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:171
+msgctxt "6.3.10."
 msgid ""
 "При наличии денежных средств в размере от 901 000 сум до 1 000 000 сум, "
 "пользователь получает возможность заказывать книги 9-го уровня."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:174
+msgctxt "6.3.11.0"
 msgid ""
 "6.3.11. При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:175
+msgctxt "6.3.11.1"
 msgid ""
 "При наличии денежных средств в размере от 1 001 000 сум до 1 100 000 сум, "
 "пользователь получает возможность заказывать книги 10-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:178
+msgctxt "6.3.12.0"
 msgid ""
 "6.3.12. При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:179
+msgctxt "6.3.12.1"
 msgid ""
 "При наличии денежных средств в размере от 1 101 000 сум до 1 200 000 сум, "
 "пользователь получает возможность заказывать книги 11-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:182
+msgctxt "6.3.13.0"
 msgid ""
 "6.3.13. При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:183
+msgctxt "6.3.13.1"
 msgid ""
 "При наличии денежных средств в размере от 1 201 000 сум до 1 300 000 сум, "
 "пользователь получает возможность заказывать книги 12-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:186
+msgctxt "6.3.14.0"
 msgid ""
 "6.3.14. При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:187
+msgctxt "6.3.140.1"
 msgid ""
 "При наличии денежных средств в размере от 1 301 000 сум до 1 400 000 сум, "
 "пользователь получает возможность заказывать книги 13-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:190
+msgctxt "6.3.15.0"
 msgid ""
 "6.3.15. При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 "
 "сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:191
+msgctxt "6.3.15.1"
 msgid ""
 "При наличии денежных средств в размере от 1 401 000 сум до 1 500 000 сум, "
 "пользователь получает возможность заказывать книги 14-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:194
+msgctxt "6.3.16."
 msgid "6.3.16. При наличии денежных средств в размере от 1 501 000 сум."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:195
+msgctxt "6.3.16.1"
 msgid ""
 "При наличии денежных средств в размере от 1 501 000 сум, пользователь "
 "получает возможность заказывать книги 15-го уровня включительно."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:198
+msgctxt "6.4."
 msgid ""
 "6.4. Тарифы на оказание услуг определяются Сервисом и публикуются на сайте "
 "Сервиса. Администрация Сервиса вправе менять тарифы без дополнительного "
@@ -690,6 +798,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:201
+msgctxt "6.5."
 msgid ""
 "6.5. В случае отправки денежных средств для пополнения депозита "
 "Пользователя, депозит пользователя будет пополнен автоматически в течении "
@@ -698,6 +807,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:204
+msgctxt "6.6."
 msgid ""
 "6.6. Если депозит не пополнен автоматически, после успешного подтверждения "
 "перевода и окончания срока ожидания (в течении 24 часов), Пользователь "
@@ -705,22 +815,26 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:207
+msgctxt "6.7."
 msgid ""
 "6.7. Если Пользователь случайно отправил больший платеж, то Пользователь "
 "обязан связаться со службой поддержки Сервиса."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:212
+msgctxt "7. Ответственность."
 msgid "7. Ответственность."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:214
+msgctxt "7.1."
 msgid ""
 "7.1. Сервис не несет ответственности перед Пользователем и иными лицами за "
 "потери, ущерб и вред, вызванные противоправными действиями третьих лиц."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:216
+msgctxt "7.2."
 msgid ""
 "7.2. Сервис не несет ответственности за любые переводы, которые были "
 "осуществлены с ошибкой или за любые попытки осуществления ошибочного "
@@ -728,6 +842,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:218
+msgctxt "7.3."
 msgid ""
 "7.3. Сервис презюмирует добросовестность и легальность владения, пользования "
 "и распоряжения Пользователем всех материалов и иных вещей, предоставляемых "
@@ -736,6 +851,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:220
+msgctxt "7.4."
 msgid ""
 "7.4. Сервис и Администрация Сервиса уважает законы, правила и нормы всех "
 "стран. В случае нарушения прав каких-либо лиц Администрация готова к "
@@ -743,10 +859,12 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:225
+msgctxt "8. Форс-мажор"
 msgid "8. Форс-мажор."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:227
+msgctxt "8.1."
 msgid ""
 "8.1. Пользователь или Сервис не несут ответственности друг перед другом за "
 "невыполнение обязательств, связанных с оказанием Сервисом услуг, вызванное "
@@ -759,6 +877,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:229
+msgctxt "8.2."
 msgid ""
 "8.2. Сторона, которая не исполняет свое обязательство вследствие действия "
 "непреодолимой силы, должна известить другую Сторону о препятствии и его "
@@ -767,6 +886,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:231
+msgctxt "8.3."
 msgid ""
 "8.3. Сторона, не известившая другую Сторону о невозможности исполнения своих "
 "обязательств по настоящему договору, теряет право ссылаться на такую "
@@ -774,10 +894,12 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:236
+msgctxt "9. Заключительные положения."
 msgid "9. Заключительные положения."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:238
+msgctxt "9.1."
 msgid ""
 "9.1. Информация о Пользователе и о его операциях не хранится на сервере "
 "сайта Сервиса. По запросу Пользователя доступ к аккаунту может быть "
@@ -785,12 +907,14 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:240
+msgctxt "9.2."
 msgid ""
 "9.2. Срок ответа Сервиса на запросы Пользователя составляет до пяти рабочих "
 "дней с момента получения соответствующего запроса Пользователя."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:242
+msgctxt "9.3."
 msgid ""
 "9.3. Условия настоящих Оферты согласовываются с Пользователем при "
 "регистрации. Согласие с Офертой, опубликованной в электронной форме, "
@@ -798,6 +922,7 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:244
+msgctxt "9.4."
 msgid ""
 "9.4. Информация, размещенная на сайте Сервиса, включая все графические "
 "изображения, текстовую информацию, коды программ и т.д. защищена "
@@ -807,59 +932,74 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:246
+msgctxt "9.5."
 msgid ""
 "9.5. Все права защищены. Несанкционированное копирование Оферты запрещено."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:251
+msgctxt "10. Контактные данные."
 msgid "10. Контактные данные."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:253
+msgctxt "10.1."
 msgid ""
 " 10.1. Пользователь может связаться со специалистами и Администрацией "
 "Сервиса в рабочее время следующими способами:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:256
+msgctxt "10.1.1."
 msgid "10.1.1. В онлайн-чате Телеграмм – "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\oferta.html:260
+msgctxt "10.1.2."
 msgid "10.1.2. Путем направления письма на адрес электронной почты:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:28
+msgctxt "Техническая поддержка 1"
 msgid "Техническая поддержка "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:29
+msgctxt "1 WooW сервиса"
 msgid "WooW сервиса"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:33
+msgctxt "Добро пожаловать на страницу поддержки сервиса "
 msgid "Добро пожаловать на страницу поддержки сервиса "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:35
+msgctxt ""
+"Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы можете "
+"столкнуться."
 msgid ""
 "Мы всегда готовы помочь вам решить вопросы и проблемы, с которыми вы можете "
 "столкнуться."
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:38
+msgctxt "Способы связаться с нами:"
 msgid "Способы связаться с нами:"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:41
+msgctxt "В онлайн-чате Телеграмм – "
 msgid "В онлайн-чате Телеграмм – "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:45
+msgctxt "Путем направления письма на адрес электронной почты: "
 msgid "Путем направления письма на адрес электронной почты: "
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:50
+msgctxt "Мы стремимся обеспечить наших клиентов лучшим обслуживанием..."
 msgid ""
 "Мы стремимся обеспечить наших клиентов лучшим обслуживанием, и ваше мнение "
 "имеет для нас большое значение. Если у вас есть предложения по улучшению "
@@ -868,291 +1008,393 @@ msgid ""
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:52
+msgctxt "Благодарим вас за использование наших услуг!"
 msgid "Благодарим вас за использование наших услуг!"
 msgstr ""
 
 #: .\marketplace\templates\additional_content_pages\tech_support.html:55
+msgctxt "С любовью, команда поддержки WooW"
 msgid "С любовью, команда поддержки WooW"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:25
+#: .\marketplace\templates\authorization\authorization.html:27
 #: .\marketplace\templates\authorization\registration.html:23
+msgctxt "Сервис бесплатной раздачи книг"
 msgid "Сервис бесплатной раздачи книг"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:26
+#: .\marketplace\templates\authorization\authorization.html:28
+msgctxt "Авторизация"
 msgid "Авторизация"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:38
+#: .\marketplace\templates\authorization\authorization.html:41
 #: .\marketplace\templates\authorization\registration.html:59
+msgctxt "Адрес электронной почты"
 msgid "Адрес электронной почты"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:44
-#: .\marketplace\templates\authorization\authorization.html:47
-#: .\marketplace\templates\authorization\registration.html:65
+#: .\marketplace\templates\authorization\authorization.html:46
+#: .\marketplace\templates\authorization\authorization.html:49
+#: .\marketplace\templates\authorization\registration.html:64
+msgctxt "Пароль"
 msgid "Пароль"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:60
+#: .\marketplace\templates\authorization\authorization.html:63
+msgctxt "ВОЙТИ В АККАУНТ"
 msgid "ВОЙТИ В АККАУНТ"
 msgstr ""
 
-#: .\marketplace\templates\authorization\authorization.html:77
+#: .\marketplace\templates\authorization\authorization.html:80
+msgctxt "У меня нет аккаунта"
 msgid "У меня нет аккаунта"
 msgstr ""
 
 #: .\marketplace\templates\authorization\registration.html:24
+msgctxt "Регистрация"
 msgid "Регистрация"
 msgstr ""
 
-#: .\marketplace\templates\authorization\registration.html:69
+#: .\marketplace\templates\authorization\registration.html:68
+msgctxt "Придумайте пароль"
 msgid "Придумайте пароль"
 msgstr ""
 
-#: .\marketplace\templates\authorization\registration.html:81
+#: .\marketplace\templates\authorization\registration.html:85
+msgctxt "Я принимаю условия "
+msgid "Я принимаю условия "
+msgstr ""
+
+#: .\marketplace\templates\authorization\registration.html:85
+msgctxt "Пользовательской оферты"
+msgid "Пользовательской оферты"
+msgstr ""
+
+#: .\marketplace\templates\authorization\registration.html:87
+msgctxt "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgid "ЗАРЕГИСТРИРОВАТЬСЯ"
 msgstr ""
 
-#: .\marketplace\templates\authorization\registration.html:97
+#: .\marketplace\templates\authorization\registration.html:103
+msgctxt "Я уже зарегистрирован"
 msgid "Я уже зарегистрирован"
 msgstr ""
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:27
-#: .\marketplace\templates\components\left_menu.html:43
+#: .\marketplace\templates\components\left_menu.html:44
+msgctxt "Делать добро"
 msgid "Делать добро"
 msgstr ""
 
 #: .\marketplace\templates\book_donate_page\book_donate.html:29
+msgctxt "Инструкция как делать добро"
 msgid "Инструкция как делать добро"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:35
+#: .\marketplace\templates\book_donate_page\book_donate.html:36
+msgctxt "Анкета добра 1"
 msgid "Анкета"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:36
+#: .\marketplace\templates\book_donate_page\book_donate.html:37
+msgctxt "Анкета добра 2"
 msgid "добра"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:38
+#: .\marketplace\templates\book_donate_page\book_donate.html:39
+msgctxt "Личные данные"
 msgid "Личные данные"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:39
+#: .\marketplace\templates\book_donate_page\book_donate.html:40
+msgctxt "Личные данные нужны нам, чтобы связаться с вами..."
 msgid ""
 "Личные данные нужны нам, чтобы связаться с вами после отправки вами анкеты."
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:76
-#: .\marketplace\templates\book_donate_page\book_donate.html:82
+#: .\marketplace\templates\book_donate_page\book_donate.html:77
+#: .\marketplace\templates\book_donate_page\book_donate.html:83
+msgctxt "Информация о книгах"
 msgid "Информация о книгах"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:78
+#: .\marketplace\templates\book_donate_page\book_donate.html:79
+msgctxt "В поле ниже вы можете расписать информацию о книге...."
 msgid ""
 "В поле ниже вы можете расписать информацию о книге или книгах, которые вы "
 "хотите передать нашему сервису в качестве благотворительности. "
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:80
+#: .\marketplace\templates\book_donate_page\book_donate.html:81
+msgctxt "Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgid "Пример заполнения: \"Война и мир том 1-2\" Толстой.Л.Н 2шт. "
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:85
+#: .\marketplace\templates\book_donate_page\book_donate.html:86
+msgctxt "Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgid "Пример заполнения: Война и мир том 1-2 Толстой.Л.Н 2шт."
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:88
+#: .\marketplace\templates\book_donate_page\book_donate.html:89
+msgctxt "После отправки анкеты, вам позвонят с кол-центра нашего сервиса."
 msgid "После отправки анкеты, вам позвонят с кол-центра нашего сервиса. "
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:88
+#: .\marketplace\templates\book_donate_page\book_donate.html:89
+msgctxt "Спасибо за вашу помощь в развитии сервиса!"
 msgid "Спасибо за вашу помощь в развитии сервиса!"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:91
+#: .\marketplace\templates\book_donate_page\book_donate.html:92
+msgctxt "Отправить анкету"
 msgid "Отправить анкету"
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:103
+#: .\marketplace\templates\book_donate_page\book_donate.html:104
+msgctxt "Инструкция как делать добро 1"
 msgid "Инструкция как "
 msgstr ""
 
-#: .\marketplace\templates\book_donate_page\book_donate.html:104
+#: .\marketplace\templates\book_donate_page\book_donate.html:105
+msgctxt "Инструкция как делать добро 2"
 msgid "делать добро"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:34
-#: .\marketplace\templates\order_book\order_book.html:42
+#: .\marketplace\templates\order_book\order_book.html:43
+msgctxt "Авторы:"
 msgid "Авторы:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:47
-#: .\marketplace\templates\order_book\order_book.html:57
+#: .\marketplace\templates\order_book\order_book.html:58
+msgctxt "Год издания:"
 msgid "Год издания:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:50
+msgctxt "-е издание"
 msgid "-е издание"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:54
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:56
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:92
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:113
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:139
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:180
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:91
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:112
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:138
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:179
 #: .\marketplace\templates\category_books_page\category_books.html:67
-#: .\marketplace\templates\home\home.html:77
-#: .\marketplace\templates\order_book\order_book.html:62
+#: .\marketplace\templates\home\home.html:76
+#: .\marketplace\templates\order_book\order_book.html:63
 #: .\marketplace\templates\search_result_page\search_result.html:81
+msgctxt "Язык:"
 msgid "Язык:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:59
 #: .\marketplace\templates\order_book\order_book.html:67
+msgctxt "Сейчас читают:"
 msgid "Сейчас читают:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:61
 #: .\marketplace\templates\order_book\order_book.html:69
+msgctxt "Уже прочли:"
 msgid "Уже прочли:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:63
 #: .\marketplace\templates\order_book\order_book.html:71
+msgctxt "Всего книг:"
 msgid "Всего книг:"
 msgstr ""
 
 #: .\marketplace\templates\book_info\book_page.html:66
 #: .\marketplace\templates\order_book\order_book.html:74
+msgctxt "Варианты доступа:"
 msgid "Варианты доступа:"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:111
+#: .\marketplace\templates\book_info\book_page.html:80
+#: .\marketplace\templates\order_book\order_book.html:88
+#: .\marketplace\templates\search_result_page\search_result.html:96
+msgctxt "Бумажная книга"
+msgid "Бумажная книга"
+msgstr ""
+
+#: .\marketplace\templates\book_info\book_page.html:93
+#: .\marketplace\templates\order_book\order_book.html:100
+#: .\marketplace\templates\search_result_page\search_result.html:108
+msgctxt "Электронная книга"
+msgid "Электронная книга"
+msgstr ""
+
+#: .\marketplace\templates\book_info\book_page.html:106
+#: .\marketplace\templates\order_book\order_book.html:112
+#: .\marketplace\templates\search_result_page\search_result.html:120
+msgctxt "Аудиокнига"
+msgid "Аудиокнига"
+msgstr ""
+
+#: .\marketplace\templates\book_info\book_page.html:112
+#: .\marketplace\templates\book_info\book_page.html:119
+msgctxt "ЗАКАЗАТЬ"
 msgid "ЗАКАЗАТЬ"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:116
+#: .\marketplace\templates\book_info\book_page.html:117
+#: .\marketplace\templates\book_info\book_page.html:124
+msgctxt "Кинуть на Полку"
 msgid "Кинуть на Полку"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:123
+#: .\marketplace\templates\book_info\book_page.html:132
+msgctxt "Аннотация  к книге: 1"
 msgid "Аннотация"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:123
+#: .\marketplace\templates\book_info\book_page.html:132
+msgctxt "Аннотация  к книге: 2"
 msgid " к книге:"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:127
+#: .\marketplace\templates\book_info\book_page.html:136
+msgctxt "Ключевые слова 1"
 msgid "Ключевые"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:127
+#: .\marketplace\templates\book_info\book_page.html:136
+msgctxt "Ключевые слова 2"
 msgid "слова:"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:138
+#: .\marketplace\templates\book_info\book_page.html:148
+msgctxt "Еще книги от Авторов: 1"
 msgid "Еще книги"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:138
+#: .\marketplace\templates\book_info\book_page.html:148
+msgctxt "Еще книги от Авторов: 2"
 msgid "от Авторов:"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:153
+#: .\marketplace\templates\book_info\book_page.html:165
+msgctxt "Похожие Книги: 1"
 msgid "Похожие"
 msgstr ""
 
-#: .\marketplace\templates\book_info\book_page.html:153
+#: .\marketplace\templates\book_info\book_page.html:165
+msgctxt "Похожие Книги: 2"
 msgid " Книги:"
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:27
+msgctxt "Моя книжная полка 1."
 msgid "Моя "
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:27
+msgctxt "Моя книжная полка 2."
 msgid "книжная полка"
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:35
+msgctxt "Избранные"
 msgid "Избранные"
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:37
+msgctxt "В ожидании..."
 msgid "В ожидании..."
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:39
+msgctxt "Я читаю"
 msgid "Я читаю"
 msgstr ""
 
 #: .\marketplace\templates\book_shelf_page\book_shelf.html:41
+msgctxt "Прочтенные"
 msgid "Прочтенные"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:66
-#: .\marketplace\templates\order_book\order_book.html:28
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:60
+msgctxt "Вы можете взять эту книгу сроком на 30 дней (Бесплатно)"
+msgid "Вы можете взять эту книгу сроком на 30 дней (Бесплатно)"
+msgstr ""
+
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:65
+msgctxt "Заказать"
 msgid "Заказать"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:70
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:69
+msgctxt "Удалить"
 msgid "Удалить"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
+msgctxt "Ожидайте звонка с подтверждением "
 msgid "Ожидайте звонка с подтверждением "
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
+msgctxt "отправки../"
 msgid "отправки"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:95
+msgctxt " вам вашей ../"
 msgid " вам вашей "
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:97
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:96
+msgctxt "книги../"
 msgid "книги"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:116
+msgctxt "Ожидайте звонка с подтверждением регистрации "
 msgid "Ожидайте звонка с подтверждением регистрации "
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:117
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:116
+msgctxt "возврата вашей книги..."
 msgid "возврата вашей книги"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:145
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:186
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:144
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:185
+msgctxt "Дата получения:"
 msgid "Дата получения:"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:150
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:191
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:149
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:190
+msgctxt "Дата возврата:"
 msgid "Дата возврата:"
 msgstr ""
 
-#: .\marketplace\templates\book_shelf_page\book_shelf.html:158
+#: .\marketplace\templates\book_shelf_page\book_shelf.html:157
+msgctxt "Оформить возврат"
 msgid "Оформить возврат"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:27
+msgctxt "Категория:"
 msgid "Категория:"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:28
 #: .\marketplace\templates\home\home.html:68
+msgctxt "Подборка для Вас"
 msgid "Подборка для Вас"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:39
 #: .\marketplace\templates\search_result_page\search_result.html:40
+msgctxt "Сортировать"
 msgid "Сортировать"
 msgstr ""
 
@@ -1160,91 +1402,122 @@ msgstr ""
 #: .\marketplace\templates\components\header.html:15
 #: .\marketplace\templates\search_result_page\search_result.html:44
 #: .\marketplace\templates\search_result_page\search_result.html:60
+msgctxt "Название"
 msgid "Название"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:44
 #: .\marketplace\templates\components\header.html:17
 #: .\marketplace\templates\search_result_page\search_result.html:45
+msgctxt "Автор"
 msgid "Автор"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:45
 #: .\marketplace\templates\search_result_page\search_result.html:46
+msgctxt "Год издания"
 msgid "Год издания"
 msgstr ""
 
 #: .\marketplace\templates\category_books_page\category_books.html:46
 #: .\marketplace\templates\search_result_page\search_result.html:47
+msgctxt "Цена"
 msgid "Цена"
 msgstr ""
 
 #: .\marketplace\templates\components\header.html:11
 #: .\marketplace\templates\components\header.html:14
+msgctxt "Все"
 msgid "Все"
 msgstr ""
 
 #: .\marketplace\templates\components\header.html:16
 #: .\marketplace\templates\search_result_page\search_result.html:61
+msgctxt "Жанр"
 msgid "Жанр"
 msgstr ""
 
 #: .\marketplace\templates\components\header.html:27
-msgid "Искать..."
+msgctxt "Поиск"
+msgid "Поиск"
 msgstr ""
 
 #: .\marketplace\templates\components\header.html:47
+msgctxt "Каталог"
 msgid "Каталог"
 msgstr ""
 
-#: .\marketplace\templates\components\header.html:129
+#: .\marketplace\templates\components\header.html:119
+msgctxt "Мой аккаунт"
 msgid "Мой аккаунт"
 msgstr ""
 
-#: .\marketplace\templates\components\header.html:130
-#: .\marketplace\templates\components\left_menu.html:28
-#: .\marketplace\templates\components\left_menu.html:34
+#: .\marketplace\templates\components\header.html:120
+#: .\marketplace\templates\components\left_menu.html:29
+#: .\marketplace\templates\components\left_menu.html:35
+msgctxt "Моя полка"
 msgid "Моя полка"
 msgstr ""
 
-#: .\marketplace\templates\components\header.html:132
+#: .\marketplace\templates\components\header.html:122
+msgctxt "Задать вопрос"
 msgid "Задать вопрос"
 msgstr ""
 
-#: .\marketplace\templates\components\header.html:134
+#: .\marketplace\templates\components\header.html:124
+msgctxt "Выйти"
 msgid "Выйти"
 msgstr ""
 
-#: .\marketplace\templates\components\header.html:136
+#: .\marketplace\templates\components\header.html:126
+msgctxt "Войти"
 msgid "Войти"
 msgstr ""
 
 #: .\marketplace\templates\components\left_menu.html:20
+msgctxt "Дом"
 msgid "Дом"
 msgstr ""
 
-#: .\marketplace\templates\components\left_menu.html:49
-#: .\marketplace\templates\components\left_menu.html:63
+#: .\marketplace\templates\components\left_menu.html:47
+#: .\marketplace\templates\components\left_menu.html:61
+msgctxt "О нас"
+msgid "О нас"
+msgstr ""
+
+#: .\marketplace\templates\components\left_menu.html:50
+#: .\marketplace\templates\components\left_menu.html:64
+msgctxt "Поддержка"
 msgid "Поддержка"
 msgstr ""
 
 #: .\marketplace\templates\home\home.html:25
+msgctxt "Цитаты дня"
 msgid "Цитаты дня"
 msgstr ""
 
+#: .\marketplace\templates\home\home.html:54
+msgctxt "Новинки"
+msgid "Новинки"
+msgstr ""
+
 #: .\marketplace\templates\home\home.html:67
+msgctxt "Добро пожаловать"
 msgid "Добро пожаловать"
 msgstr ""
 
 #: .\marketplace\templates\notifications\book_reserved.html:28
+msgctxt "Свободных книг пока нет 1"
 msgid "Свободных"
 msgstr ""
 
 #: .\marketplace\templates\notifications\book_reserved.html:29
+msgctxt "Свободных книг пока нет 2"
 msgid "книг пока нет"
 msgstr ""
 
 #: .\marketplace\templates\notifications\book_reserved.html:30
+msgctxt "Попробуйте заказать книгу позже"
 msgid "Попробуйте заказать книгу позже"
 msgstr ""
 
@@ -1253,10 +1526,12 @@ msgstr ""
 #: .\marketplace\templates\notifications\order_success.html:37
 #: .\marketplace\templates\notifications\return_success.html:37
 #: .\marketplace\templates\notifications\user_booked_book.html:37
+msgctxt "Вернуться на главную страницу"
 msgid "Вернуться на главную страницу"
 msgstr ""
 
 #: .\marketplace\templates\notifications\error_404.html:28
+msgctxt "Страница не найдена"
 msgid "Страница"
 msgstr ""
 
@@ -1265,107 +1540,137 @@ msgid "не найдена"
 msgstr ""
 
 #: .\marketplace\templates\notifications\order_success.html:28
-#: .\marketplace\templates\notifications\return_success.html:28
+msgctxt "Заявка на заказ книги отправлена на рассмотрение 1"
 msgid "Заявка на "
 msgstr ""
 
 #: .\marketplace\templates\notifications\order_success.html:29
+msgctxt "Заявка на заказ книги отправлена на рассмотрение 2"
 msgid "заказ книги отправлена"
 msgstr ""
 
 #: .\marketplace\templates\notifications\order_success.html:29
-#: .\marketplace\templates\notifications\return_success.html:29
+msgctxt "Заявка на заказ книги отправлена на рассмотрение 3"
 msgid " на рассмотрение"
 msgstr ""
 
 #: .\marketplace\templates\notifications\order_success.html:30
+msgctxt "Ожидайте звонка для подтверждения заказа"
 msgid "Ожидайте звонка для подтверждения заказа"
 msgstr ""
 
+#: .\marketplace\templates\notifications\return_success.html:28
+msgctxt "Заявка на возврат книги отправлена на рассмотрение 1"
+msgid "Заявка на "
+msgstr ""
+
 #: .\marketplace\templates\notifications\return_success.html:29
+msgctxt "Заявка на возврат книги отправлена на рассмотрение 2"
 msgid "возврат книги отправлена"
 msgstr ""
 
+#: .\marketplace\templates\notifications\return_success.html:29
+msgctxt "Заявка на возврат книги отправлена на рассмотрение 3"
+msgid " на рассмотрение"
+msgstr ""
+
 #: .\marketplace\templates\notifications\return_success.html:30
+msgctxt "Ожидайте звонка для подтверждения возврат"
 msgid "Ожидайте звонка для подтверждения возврат"
 msgstr ""
 
 #: .\marketplace\templates\notifications\user_booked_book.html:28
+msgctxt "В данный момент 1 книга находится у вас 1"
 msgid "В данный момент "
 msgstr ""
 
 #: .\marketplace\templates\notifications\user_booked_book.html:29
+msgctxt "В данный момент 1 книга находится у вас 2"
 msgid " 1 книга находится у вас"
 msgstr ""
 
 #: .\marketplace\templates\notifications\user_booked_book.html:30
+msgctxt "Попробуйте заказать новую книгу после возврата предыдущей"
 msgid "Попробуйте заказать новую книгу после возврата предыдущей"
 msgstr ""
 
 #: .\marketplace\templates\order_book\order_book.html:29
+msgctxt "Заказать книгу 1"
+msgid "Заказать"
+msgstr ""
+
+#: .\marketplace\templates\order_book\order_book.html:30
+msgctxt "Заказать книгу 2"
 msgid "книгу"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:31
+#: .\marketplace\templates\order_book\order_book.html:32
+msgctxt "Информация о книге"
 msgid "Информация о книге"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:88
-#: .\marketplace\templates\search_result_page\search_result.html:96
-msgid "Бумажная книга"
+#: .\marketplace\templates\order_book\order_book.html:60
+msgctxt "-е издание../"
+msgid "-е издание"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:101
-#: .\marketplace\templates\search_result_page\search_result.html:108
-msgid "Электронная книга"
-msgstr ""
-
-#: .\marketplace\templates\order_book\order_book.html:114
-#: .\marketplace\templates\search_result_page\search_result.html:120
-msgid "Аудиокнига"
-msgstr ""
-
-#: .\marketplace\templates\order_book\order_book.html:119
+#: .\marketplace\templates\order_book\order_book.html:117
+msgctxt "Открыть страницу книги"
 msgid "Открыть страницу книги"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:127
+#: .\marketplace\templates\order_book\order_book.html:125
+msgctxt "Информация о пользователе"
 msgid "Информация о пользователе"
 msgstr ""
 
+#: .\marketplace\templates\order_book\order_book.html:152
 #: .\marketplace\templates\order_book\order_book.html:154
-#: .\marketplace\templates\order_book\order_book.html:156
+msgctxt "Адрес доставки"
 msgid "Адрес доставки"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:161
+#: .\marketplace\templates\order_book\order_book.html:159
+msgctxt "Приблизительная дата возврата книги"
 msgid "Приблизительная дата возврата книги"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:171
+#: .\marketplace\templates\order_book\order_book.html:169
+msgctxt "Я передумал(а)"
 msgid "Я передумал(а)"
 msgstr ""
 
-#: .\marketplace\templates\order_book\order_book.html:175
+#: .\marketplace\templates\order_book\order_book.html:173
+msgctxt "Отправить заявку на получение книги"
 msgid "Отправить заявку на получение книги"
 msgstr ""
 
 #: .\marketplace\templates\search_result_page\search_result.html:28
+msgctxt "Поиск:"
 msgid "Поиск:"
 msgstr ""
 
 #: .\marketplace\templates\search_result_page\search_result.html:29
+msgctxt "Результаты поиска:"
 msgid "Результаты поиска:"
 msgstr ""
 
 #: .\marketplace\templates\search_result_page\search_result.html:62
+msgctxt "Доступность"
 msgid "Доступность"
 msgstr ""
 
 #: .\marketplace\templates\search_result_page\search_result.html:63
+msgctxt "Просмотр"
 msgid "Просмотр"
 msgstr ""
 
+#: .\marketplace\templates\search_result_page\search_result.html:140
+msgctxt "Уровень"
+msgid "Уровень"
+msgstr ""
+
 #: .\marketplace\templates\search_result_page\search_result.html:146
+msgctxt "Посмотреть"
 msgid "Посмотреть"
 msgstr ""
