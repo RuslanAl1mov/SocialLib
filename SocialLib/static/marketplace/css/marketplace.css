@@ -664,6 +664,10 @@ input[name="r"] {
     width: 100%;
 }
 
+.books_catalog_block a{
+    text-decoration: none;
+}
+
 .main_books_content_block {
     width: 100%;
     height: 100%;
